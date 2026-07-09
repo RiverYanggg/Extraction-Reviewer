@@ -1,4 +1,8 @@
 .env
-data/
+data/**
+!data/
+!data/users/
+!data/users/*/
+!data/users/*/assignments.json
 __pycache__/
 *.pyc
