@@ -72,6 +72,7 @@
             <option value="added">已补充</option>
             <option value="no_evidence">缺证据</option>
           </select>
+          <button id="btn-preview" class="btn ghost" title="预览当前 bucket 的 JSON">预览JSON</button>
         </div>
       </div>
       <div id="bucket-rail" class="bucket-rail"></div>
@@ -108,6 +109,41 @@
       <div class="modal-head"><span>标注质量指标（golden=人工标注，pred=原始抽取）</span><button id="metrics-close" class="btn ghost">✕</button></div>
       <div class="modal-body" id="metrics-body"></div>
     </div>
+  </div>
+
+  <!-- ================= JSON preview modal ================= -->
+  <div id="preview-modal" class="modal hidden">
+    <div class="modal-card wide">
+      <div class="modal-head"><span id="preview-title">JSON 预览</span><button id="preview-close" class="btn ghost">✕</button></div>
+      <div class="modal-body"><pre id="preview-body" class="json-preview"></pre></div>
+    </div>
+  </div>
+
+  <!-- ================= Floating window (AI assistant + manual) ================= -->
+  <div id="fab" title="打开助手 / 手册">💬</div>
+  <div id="float-win" class="float-win hidden">
+    <div class="float-head" id="float-head">
+      <div class="float-tabs">
+        <button class="float-tab active" data-ftab="assistant">AI 助手</button>
+        <button class="float-tab" data-ftab="manual">用户手册</button>
+      </div>
+      <div class="float-head-actions">
+        <button id="float-min" class="btn ghost" title="收起">—</button>
+      </div>
+    </div>
+    <!-- assistant -->
+    <div class="float-body" id="float-assistant">
+      <div id="chat-log" class="chat-log"></div>
+      <div class="chat-input">
+        <textarea id="chat-text" rows="2" placeholder="问我：系统怎么用 / 材料概念 / 这个字段对不对…（Enter 发送）"></textarea>
+        <button id="chat-send" class="btn primary">发送</button>
+      </div>
+    </div>
+    <!-- manual -->
+    <div class="float-body hidden" id="float-manual">
+      <div id="manual-view" class="manual-view">加载中…</div>
+    </div>
+    <div class="float-resize" id="float-resize" title="拖动调整大小"></div>
   </div>
 
   <div id="toast" class="toast hidden"></div>

@@ -1,0 +1,103 @@
+// Left panel: evidence-block source, PDF tab, evidence highlighting.
+import { el, ui } from "./dom.js";
+import { store } from "./store.js";
+import { bus } from "./bus.js";
+
+export function renderSourceBlocks() {
+  const frag = document.createDocumentFragment();
+  for (const b of store.data.blocks) {
+    const div = document.createElement("div");
+    div.className = "blk";
+    div.dataset.blockId = b.block_id;
+    div.dataset.kind = b.kind;
+    if (b.level) div.dataset.level = b.level;
+
+    const idTag = document.createElement("span");
+    idTag.className = "blk-id";
+    idTag.textContent = b.block_id;
+    div.appendChild(idTag);
+
+    if (b.kind === "image" && b.image_src) {
+      const img = document.createElement("img");
+      img.src = store.data.asset_base + b.image_src.replace(/^\.?\//, "");
+      img.alt = b.block_id;
+      img.loading = "lazy";
+      img.onerror = () => img.replaceWith(document.createTextNode(`🖼 ${b.image_src}`));
+      div.appendChild(img);
+    } else {
+      const txt = document.createElement("span");
+      txt.textContent = b.kind === "heading" ? b.heading_text : b.text;
+      div.appendChild(txt);
+    }
+    div.addEventListener("click", () => selectFirstFieldCiting(b.block_id));
+    frag.appendChild(div);
+  }
+  el.sourceBlocks.replaceChildren(frag);
+}
+
+function selectFirstFieldCiting(blockId) {
+  const f = store.data.fields.find((f) => store.effectiveRefs(f).includes(blockId));
+  if (f) bus.selectField(f.field_id);
+}
+
+export function preparePdf() {
+  el.pdfView.innerHTML = store.data.has_pdf
+    ? ""
+    : `<div class="pdf-empty">本论文没有可用的 PDF 原文文件。</div>`;
+  ui.pdfLoaded = false;
+}
+
+function ensurePdfLoaded() {
+  if (ui.pdfLoaded || !store.data.has_pdf) return;
+  const frame = document.createElement("iframe");
+  frame.src = store.data.pdf_url;
+  frame.title = "PDF";
+  el.pdfView.replaceChildren(frame);
+  ui.pdfLoaded = true;
+}
+
+export function switchTab(tab) {
+  ui.tab = tab;
+  document.querySelectorAll("#source-tabs .tab").forEach((t) =>
+    t.classList.toggle("active", t.dataset.tab === tab));
+  el.sourceBlocks.classList.toggle("hidden", tab !== "source");
+  el.pdfView.classList.toggle("hidden", tab !== "pdf");
+  if (tab === "pdf") ensurePdfLoaded();
+}
+
+export function highlightEvidence(refs, { scroll } = {}) {
+  el.sourceBlocks.querySelectorAll(".hl-active,.hl-multi,.hl-pulse")
+    .forEach((n) => n.classList.remove("hl-active", "hl-multi", "hl-pulse"));
+
+  if (ui.tab !== "source") switchTab("source");
+
+  if (!refs || !refs.length) {
+    el.evidenceStatus.textContent = "该字段无证据引用";
+    return;
+  }
+  const found = [];
+  refs.forEach((rid, i) => {
+    const node = el.sourceBlocks.querySelector(`[data-block-id="${CSS.escape(rid)}"]`);
+    if (node) { node.classList.add(i === ui.evIndex ? "hl-active" : "hl-multi"); found.push(node); }
+  });
+  const missing = refs.length - found.length;
+  el.evidenceStatus.textContent =
+    `证据 ${refs.length} 块` + (missing ? ` · ${missing} 块无法定位` : "") +
+    (refs.length > 1 ? `（第 ${ui.evIndex + 1}/${refs.length}）` : "");
+
+  const target = el.sourceBlocks.querySelector(`[data-block-id="${CSS.escape(refs[ui.evIndex] || refs[0])}"]`) || found[0];
+  if (target && scroll) {
+    target.classList.add("hl-pulse");
+    target.scrollIntoView({ behavior: "smooth", block: "center" });
+  }
+}
+
+export function cycleEvidence(dir) {
+  const f = store.fieldIndex[ui.selectedFieldId];
+  if (!f) return;
+  const refs = store.effectiveRefs(f);
+  if (refs.length < 2) return;
+  ui.evIndex = (ui.evIndex + dir + refs.length) % refs.length;
+  highlightEvidence(refs, { scroll: true });
+  bus.render();
+}

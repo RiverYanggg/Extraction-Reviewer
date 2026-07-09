@@ -200,11 +200,36 @@
 
 ---
 
-## 9. 技术实现
+## 9. 增强能力（本轮新增）
 
-- **后端**：FastAPI（`app/server.py`）。只读 `extracted/`，写 `annotations/<paper_id>.json`（原子写）；提供 JSON 树、PDF 内联、实时指标、导出打包。
-- **前端**：零构建的原生 ES Module（`app/static/`），三栏工作台 + 客户端状态存储（撤销/重做/自动保存）。
-- **证据高亮**：以 evidence block 为单元渲染与高亮，粒度与抽取引用一致，定位精确。
-- **JSON 树**：服务端解析字段 `path` DSL 还原嵌套结构（同一解析器也用于导出回填），叶子绑定 `field_id`。
-- **指标**：`compute_metrics()` 单一实现，同时服务实时预览 API 与导出文件。
+1. **左侧 PDF 预览**：证据原文 Tab 之外新增「PDF 原文」Tab，内联渲染 `source/mineru/*_origin.pdf`（`/api/papers/{id}/pdf`，懒加载）。
+2. **中间 JSON 树 + 预定义 null 字段**：标注单元升级为「结构化文档的每个叶子（JSON 指针）」，包含 schema 预定义的 `null` 字段（参考 `docs/extraction_schema.json` 实例化）。因此约 40% 的 null 槽位也纳入审核与召回计算。指针作为稳定 id，使证据挂接与导出回填**精确无歧义**（导出 `unapplied_edits`=0）。
+3. **纠错 + 补齐**：错误值就地改；遗漏字段在 JSON 树目标节点点 `＋` 就地补。
+4. **每个 bucket 的 JSON 预览**：中栏「预览JSON」按指针重建该 bucket 的完整 JSON（含 null、反映已改值），语法高亮弹窗展示。
+5. **可移动悬浮窗**：右下角可拖动/缩放浮窗，含两个功能：
+   - **AI 助手**：`/api/assistant`，回答系统操作 / 材料领域 / 具体字段标注判断；provider 可配置（`ENVIZ_ASSISTANT_BASE_URL/_API_KEY/_MODEL`），未配置或不可达时降级为内置 FAQ，始终可用。
+   - **用户手册**：`/api/manual` 加载 `docs/user_manual.md`，浮窗内渲染。
+6. **null 感知指标**：TP=已确认非空；TN=已确认为空（不计入 P/R）；FP=已修改+冲突；FN=把空槽补成有值 + 已补充。
+
+## 10. 技术实现（系统化工程）
+
+后端拆分为 `app/enviz/` 包，各司其职，不再堆在单文件：
+
+| 模块 | 职责 |
+|---|---|
+| `config` / `utils` | 路径常量 / JSON IO |
+| `dsl` | 字段 path DSL ↔ JSON 指针解析（元素定位、链路解析、按指针读写） |
+| `schema` | 用 `extraction_schema.json` 实例化 null 槽位 |
+| `slots` | 槽位模型：枚举所有叶子、挂接证据、bucket 归属、构建 JSON 树 |
+| `evidence` | 证据块 / PDF 定位 |
+| `annotations` | 标注状态持久化 + 进度 |
+| `metrics` | null 感知 P/R/F1 |
+| `export` | 导出包（按指针精确回填） |
+| `assistant` / `manual` | AI 助手 / 用户手册 |
+| `server` | FastAPI 路由（仅编排） |
+
+前端同样按职责拆分为 ES Module：`util`（工具/常量/markdown）、`api`、`store`（状态+撤销/重做+自动保存）、`dom`（元素与 UI 状态）、`bus`（跨模块回调，破除循环依赖）、`source`（左栏）、`tree`（中栏树/预览/补字段）、`inspector`（右栏）、`metrics`、`floating`（悬浮窗）、`app`（编排：boot/render/快捷键）。
+
+- **证据高亮**：以 evidence block 为单元，粒度与抽取引用一致，定位精确。
+- **指标**：`metrics.compute_metrics()` 单一实现，同时服务实时预览 API 与导出文件。
 - **启动**：`./run.sh` → http://127.0.0.1:8765

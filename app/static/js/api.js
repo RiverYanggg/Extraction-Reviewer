@@ -17,5 +17,13 @@ export const api = {
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ annotation }),
     }),
+  metrics: (pid) => j(`/api/papers/${encodeURIComponent(pid)}/metrics`),
   exportUrl: (pid) => `/api/papers/${encodeURIComponent(pid)}/export`,
+  manual: () => j("/api/manual"),
+  assistant: (messages, paper_id, context) =>
+    j("/api/assistant", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ messages, paper_id, context }),
+    }),
 };
