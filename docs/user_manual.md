@@ -128,7 +128,7 @@
 - **领域知识**：如「κ-carbide 是什么？」「固溶处理和时效的区别？」
 - **标注判断**：把拿不准的字段/值/证据贴给它，帮你判断对错与如何修正。
 
-助手使用 DeepSeek Chat Completions 接口，默认模型为 `deepseek-v4-flash`。配置 `DEEPSEEK_API_KEY`（或 `ENVIZ_ASSISTANT_API_KEY`）并重启服务后启用在线 AI；未配置或请求失败时，会自动回落到内置 FAQ。每个对话会保留完整多轮上下文；可点「新建对话」开始新会话，也可用下拉框切换历史对话。对话历史保存在当前浏览器本地。
+助手使用 DeepSeek Chat Completions 接口，默认模型为 `deepseek-v4-flash`。在项目根目录 `.env` 中配置 `DEEPSEEK_API_KEY` 后重启服务即可启用在线 AI；也可用环境变量 `ENVIZ_ASSISTANT_API_KEY` 覆盖。未配置或请求失败时，会自动回落到内置 FAQ。每个对话会保留完整多轮上下文；可点「新建对话」开始新会话，也可用下拉框切换历史对话。对话历史保存在当前浏览器本地。
 
 悬浮窗可用鼠标、触控板或触摸拖动到任意位置；不需要时可收起。
 

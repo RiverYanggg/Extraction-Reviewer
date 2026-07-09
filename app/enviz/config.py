@@ -1,6 +1,7 @@
 """Paths and shared constants."""
 from __future__ import annotations
 
+import os
 from pathlib import Path
 
 APP_DIR = Path(__file__).resolve().parent.parent      # app/
@@ -11,6 +12,24 @@ STATIC_DIR = APP_DIR / "static"
 DOCS_DIR = ROOT / "docs"
 SCHEMA_PATH = DOCS_DIR / "extraction_schema.json"
 MANUAL_PATH = DOCS_DIR / "user_manual.md"
+
+
+def load_env_file(path: Path = ROOT / ".env") -> None:
+    """Load simple KEY=VALUE pairs without overriding existing environment."""
+    if not path.is_file():
+        return
+    for raw in path.read_text(encoding="utf-8").splitlines():
+        line = raw.strip()
+        if not line or line.startswith("#") or "=" not in line:
+            continue
+        key, value = line.split("=", 1)
+        key = key.strip()
+        value = value.strip().strip('"').strip("'")
+        if key and key not in os.environ:
+            os.environ[key] = value
+
+
+load_env_file()
 
 ANNOT_DIR.mkdir(exist_ok=True)
 

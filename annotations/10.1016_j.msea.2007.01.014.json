@@ -1,0 +1,84 @@
+{
+  "paper_id": "10.1016_j.msea.2007.01.014",
+  "schema_version": "annot-v2",
+  "task_status": "in_progress",
+  "created_at": "2026-07-09T14:47:32.771120+00:00",
+  "updated_at": "2026-07-09T14:47:51.355824+00:00",
+  "fields": {
+    "papers/0/paper_id": {
+      "review_status": "confirmed",
+      "updated_at": "2026-07-09T14:47:34.675Z"
+    },
+    "papers/0/title": {
+      "review_status": "modified",
+      "updated_at": "2026-07-09T14:47:39.633Z",
+      "current_value": "Work hardening in Fe–Al alloys3"
+    },
+    "papers/0/authors/0": {
+      "review_status": "modified",
+      "updated_at": "2026-07-09T14:47:43.373Z",
+      "current_value": "D.G. Morris2"
+    },
+    "papers/0/authors/1": {
+      "review_status": "modified",
+      "updated_at": "2026-07-09T14:47:50.517Z",
+      "current_value": "M.A. Munoz-Morris2"
+    }
+  },
+  "added_fields": [],
+  "buckets": {},
+  "audit_log": [
+    {
+      "ts": "2026-07-09T14:47:34.675Z",
+      "field_id": "papers/0/paper_id",
+      "action": "set_status",
+      "to": "confirmed",
+      "path": "papers.10.1016_j.msea.2007.01.014.paper_id"
+    },
+    {
+      "ts": "2026-07-09T14:47:35.615Z",
+      "field_id": "papers/0/title",
+      "action": "set_status",
+      "to": "confirmed",
+      "path": "papers.10.1016_j.msea.2007.01.014.title"
+    },
+    {
+      "ts": "2026-07-09T14:47:39.633Z",
+      "field_id": "papers/0/title",
+      "action": "edit_value",
+      "from": "Work hardening in Fe–Al alloys",
+      "to": "Work hardening in Fe–Al alloys3",
+      "path": "papers.10.1016_j.msea.2007.01.014.title"
+    },
+    {
+      "ts": "2026-07-09T14:47:42.548Z",
+      "field_id": "papers/0/authors/0",
+      "action": "set_status",
+      "to": "conflict",
+      "path": "papers.10.1016_j.msea.2007.01.014.authors[0]"
+    },
+    {
+      "ts": "2026-07-09T14:47:43.373Z",
+      "field_id": "papers/0/authors/0",
+      "action": "edit_value",
+      "from": "D.G. Morris",
+      "to": "D.G. Morris2",
+      "path": "papers.10.1016_j.msea.2007.01.014.authors[0]"
+    },
+    {
+      "ts": "2026-07-09T14:47:47.914Z",
+      "field_id": "papers/0/authors/1",
+      "action": "set_status",
+      "to": "conflict",
+      "path": "papers.10.1016_j.msea.2007.01.014.authors[1]"
+    },
+    {
+      "ts": "2026-07-09T14:47:50.517Z",
+      "field_id": "papers/0/authors/1",
+      "action": "edit_value",
+      "from": "M.A. Munoz-Morris",
+      "to": "M.A. Munoz-Morris2",
+      "path": "papers.10.1016_j.msea.2007.01.014.authors[1]"
+    }
+  ]
+}

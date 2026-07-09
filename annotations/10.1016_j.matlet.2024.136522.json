@@ -3,11 +3,11 @@
   "schema_version": "annot-v2",
   "task_status": "in_progress",
   "created_at": "2026-07-09T14:23:06.975308+00:00",
-  "updated_at": "2026-07-09T14:38:13.193643+00:00",
+  "updated_at": "2026-07-09T14:48:20.427441+00:00",
   "fields": {
     "papers/0/title": {
       "review_status": "confirmed",
-      "updated_at": "2026-07-09T14:23:51.019Z"
+      "updated_at": "2026-07-09T14:44:30.654Z"
     },
     "structures/1/microstructure_list/1/related_sequence": {
       "review_status": "confirmed",
@@ -22,8 +22,8 @@
       "updated_at": "2026-07-09T14:28:54.859Z"
     },
     "papers/0/authors/0": {
-      "review_status": "modified",
-      "updated_at": "2026-07-09T14:36:39.007Z",
+      "review_status": "unprocessed",
+      "updated_at": "2026-07-09T14:44:16.905Z",
       "current_value": ""
     },
     "papers/0/authors/1": {
@@ -33,6 +33,26 @@
     "papers/0/authors/2": {
       "review_status": "needs_review",
       "updated_at": "2026-07-09T14:38:13.119Z"
+    },
+    "alloys/1/aliases/0": {
+      "review_status": "confirmed",
+      "updated_at": "2026-07-09T14:43:45.915Z"
+    },
+    "processing_steps/2/method": {
+      "review_status": "confirmed",
+      "updated_at": "2026-07-09T14:42:33.344Z"
+    },
+    "computational_details/0/analytical_model/0/model_name": {
+      "review_status": "confirmed",
+      "updated_at": "2026-07-09T14:46:48.966Z"
+    },
+    "papers/0/paper_id": {
+      "review_status": "unprocessed",
+      "updated_at": "2026-07-09T14:44:11.551Z"
+    },
+    "papers/0/authors/3": {
+      "review_status": "conflict",
+      "updated_at": "2026-07-09T14:48:19.606Z"
     }
   },
   "added_fields": [],
@@ -157,6 +177,118 @@
       "action": "set_status",
       "to": "needs_review",
       "path": "papers.10.1016_j.matlet.2024.136522.authors[2]"
+    },
+    {
+      "ts": "2026-07-09T14:42:05.349Z",
+      "field_id": "papers/0/authors/0",
+      "action": "set_status",
+      "to": "confirmed",
+      "path": "papers.10.1016_j.matlet.2024.136522.authors[0]"
+    },
+    {
+      "ts": "2026-07-09T14:42:16.365Z",
+      "field_id": "alloys/1/aliases/0",
+      "action": "set_status",
+      "to": "confirmed",
+      "path": "alloys.alloy_fe28mn10al1c3cu.aliases[0]"
+    },
+    {
+      "ts": "2026-07-09T14:42:21.273Z",
+      "field_id": "alloys/1/aliases/0",
+      "action": "set_status",
+      "to": "confirmed",
+      "path": "alloys.alloy_fe28mn10al1c3cu.aliases[0]"
+    },
+    {
+      "ts": "2026-07-09T14:42:33.344Z",
+      "field_id": "processing_steps/2/method",
+      "action": "set_status",
+      "to": "confirmed",
+      "path": "processing_steps.sample_3cu_sol_aged__sequence_1.method"
+    },
+    {
+      "ts": "2026-07-09T14:42:34.494Z",
+      "field_id": "computational_details/0/analytical_model/0/model_name",
+      "action": "set_status",
+      "to": "confirmed",
+      "path": "computational_details.sample_3cu_sol_aged__computation_id_comp_lattice_misfit.analytical_model[0].model_name"
+    },
+    {
+      "ts": "2026-07-09T14:42:35.611Z",
+      "field_id": "computational_details/0/analytical_model/0/model_name",
+      "action": "set_status",
+      "to": "confirmed",
+      "path": "computational_details.sample_3cu_sol_aged__computation_id_comp_lattice_misfit.analytical_model[0].model_name"
+    },
+    {
+      "ts": "2026-07-09T14:43:45.915Z",
+      "field_id": "alloys/1/aliases/0",
+      "action": "set_status",
+      "to": "confirmed",
+      "path": "alloys.alloy_fe28mn10al1c3cu.aliases[0]"
+    },
+    {
+      "ts": "2026-07-09T14:44:07.288Z",
+      "field_id": "papers/0/paper_id",
+      "action": "set_status",
+      "to": "confirmed",
+      "path": "papers.10.1016_j.matlet.2024.136522.paper_id"
+    },
+    {
+      "ts": "2026-07-09T14:44:08.770Z",
+      "field_id": "papers/0/paper_id",
+      "action": "set_status",
+      "to": "confirmed",
+      "path": "papers.10.1016_j.matlet.2024.136522.paper_id"
+    },
+    {
+      "ts": "2026-07-09T14:44:10.322Z",
+      "field_id": "papers/0/paper_id",
+      "action": "set_status",
+      "to": "confirmed",
+      "path": "papers.10.1016_j.matlet.2024.136522.paper_id"
+    },
+    {
+      "ts": "2026-07-09T14:44:11.551Z",
+      "field_id": "papers/0/paper_id",
+      "action": "set_status",
+      "to": "confirmed",
+      "path": "papers.10.1016_j.matlet.2024.136522.paper_id"
+    },
+    {
+      "ts": "2026-07-09T14:44:16.905Z",
+      "field_id": "papers/0/authors/0",
+      "action": "set_status",
+      "to": "confirmed",
+      "path": "papers.10.1016_j.matlet.2024.136522.authors[0]"
+    },
+    {
+      "ts": "2026-07-09T14:44:29.878Z",
+      "field_id": "papers/0/title",
+      "action": "set_status",
+      "to": "confirmed",
+      "path": "papers.10.1016_j.matlet.2024.136522.title"
+    },
+    {
+      "ts": "2026-07-09T14:44:30.654Z",
+      "field_id": "papers/0/title",
+      "action": "set_status",
+      "to": "confirmed",
+      "path": "papers.10.1016_j.matlet.2024.136522.title"
+    },
+    {
+      "ts": "2026-07-09T14:46:48.966Z",
+      "field_id": "computational_details/0/analytical_model/0/model_name",
+      "action": "set_status",
+      "to": "confirmed",
+      "path": "computational_details.sample_3cu_sol_aged__computation_id_comp_lattice_misfit.analytical_model[0].model_name"
+    },
+    {
+      "ts": "2026-07-09T14:48:19.606Z",
+      "field_id": "papers/0/authors/3",
+      "action": "set_status",
+      "to": "conflict",
+      "path": "papers.10.1016_j.matlet.2024.136522.authors[3]"
     }
   ]
 }

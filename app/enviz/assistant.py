@@ -20,6 +20,8 @@ import os
 import urllib.error
 import urllib.request
 
+from .config import load_env_file
+
 SYSTEM_PROMPT = """\
 你是"证据标注工具 (Evidence Note Annotator)"内置的 AI 助手，服务于材料科学论文\
 结构化抽取结果的人工审核工作。用简洁、专业、可操作的中文回答（通常 2-6 句）。
@@ -35,6 +37,7 @@ SYSTEM_PROMPT = """\
 
 # ---- config --------------------------------------------------------------- #
 def _cfg():
+    load_env_file()
     base = (os.environ.get("ENVIZ_ASSISTANT_BASE_URL")
             or os.environ.get("DEEPSEEK_BASE_URL") or "https://api.deepseek.com")
     token = (os.environ.get("ENVIZ_ASSISTANT_API_KEY")
