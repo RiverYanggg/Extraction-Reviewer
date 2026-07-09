@@ -1,0 +1,622 @@
+{
+  "schema_version": "sample-buckets-v2",
+  "bucket_count": 3,
+  "buckets": [
+    {
+      "bucket_id": "paper_level",
+      "bucket_type": "paper_level",
+      "field_ids": [
+        "F00001",
+        "F00002",
+        "F00003",
+        "F00004",
+        "F00005",
+        "F00006",
+        "F00007",
+        "F00008",
+        "F00009",
+        "F00010",
+        "F00011",
+        "F00012",
+        "F00013",
+        "F00014",
+        "F00015",
+        "F00016",
+        "F00017",
+        "F00018",
+        "F00019",
+        "F00020",
+        "F00021",
+        "F00022",
+        "F00023",
+        "F00024",
+        "F00025",
+        "F00026",
+        "F00027",
+        "F00028",
+        "F00029",
+        "F00030",
+        "F00031",
+        "F00032",
+        "F00033",
+        "F00034",
+        "F00035",
+        "F00036",
+        "F00037",
+        "F00038",
+        "F00039",
+        "F00040",
+        "F00041",
+        "F00042",
+        "F00043",
+        "F00044",
+        "F00045",
+        "F00046",
+        "F00047",
+        "F00048",
+        "F00049",
+        "F00050",
+        "F00051",
+        "F00052",
+        "F00053",
+        "F00054",
+        "F00158",
+        "F00159",
+        "F00160",
+        "F00161",
+        "F00184",
+        "F00185",
+        "F00186",
+        "F00187",
+        "F00188",
+        "F00189"
+      ],
+      "field_count": 64,
+      "records": {
+        "paper": {
+          "doi": "10.1016/j.matlet.2024.136522",
+          "title": "Co-precipitation mechanism of Cu-rich phase and κ-carbide precipitates in Fe-28Mn-10Al-1C-3Cu austenitic low-density steel",
+          "authors": [
+            "Xiqiang Ren",
+            "Yanfei Qi",
+            "Yungang Li",
+            "Jingyi Zhou",
+            "Jiahao Gu"
+          ],
+          "publication_year": "2024",
+          "journal": "Materials Letters",
+          "keywords": [
+            "Austenitic low-density steel",
+            "Particles",
+            "Nanosize",
+            "Microstructure",
+            "Co-precipitation mechanism"
+          ],
+          "research_type": "experimental",
+          "paper_scope": "Investigation of co-precipitation mechanism of Cu-rich phase and κ-carbide in Fe-28Mn-10Al-1C-3Cu austenitic low-density steel"
+        },
+        "characterization_methods": [
+          {
+            "characterization_id": "char_all_xrd",
+            "technique": "X-ray diffraction (XRD)",
+            "purpose": "Determine lattice parameters of austenitic matrix",
+            "key_findings": "Lattice parameter of 0Cu steel: a=0.3687 nm; 3Cu steel: a=0.3689 nm (solution treated)."
+          }
+        ],
+        "computational_details": [
+          {
+            "computation_id": "comp_lattice_misfit",
+            "sample_id": "sample_3cu_sol_aged",
+            "simulation_method": "Lattice misfit calculation using formula δ = |a0 - a1| / a0",
+            "validation_against_experiment": "Calculated misfits: κ-carbide/γ=2.3%, Cu-rich/γ=1.0%, κ-carbide/Cu-rich=3.4%.",
+            "analytical_model": [
+              {
+                "model_name": "Lattice misfit formula",
+                "equation_role": "Calculate lattice misfit between phases",
+                "parameters": "a0 and a1: lattice parameters of two phases",
+                "model_note": "Formula (1) in text."
+              },
+              {
+                "model_name": "Composition boundary formula for intragranular κ-carbide precipitation",
+                "equation_role": "Predict precipitation condition for κ-carbide based on composition",
+                "parameters": "0.208(wt.% C) + 0.098(wt.% Al) = 1 - 0.0054(wt.% Mn)",
+                "model_note": "Formula (2) in text; critical Al content for 0Cu steel calculated as 6.52 wt%."
+              }
+            ]
+          }
+        ],
+        "unmapped_findings": [
+          "The Cu-rich phase in ferrite generally precipitates with BCC structure first then transforms to FCC; but in austenite, it precipitates directly in FCC structure.",
+          "Interfacial energy: κ-carbide with austenitic matrix = 0.025 J/m^2; Cu in austenitic matrix = 0.086 J/m^2.",
+          "κ-carbide precipitation follows nucleation and growth mechanism; critical lattice parameter of austenitic matrix for intragranular κ-carbide is about a=0.3670 nm.",
+          "Cu addition increases lattice parameter of austenitic matrix, beneficial for κ-carbide precipitation.",
+          "Cu-rich phase crystal plane spacing (002) = 0.182 nm, consistent with FCC Cu.",
+          "The κ-carbide and Cu-rich phase have good thermal stability due to low lattice misfit."
+        ]
+      }
+    },
+    {
+      "bucket_id": "sample_0cu_sol_aged",
+      "bucket_type": "sample",
+      "field_ids": [
+        "F00055",
+        "F00056",
+        "F00057",
+        "F00058",
+        "F00063",
+        "F00064",
+        "F00065",
+        "F00066",
+        "F00067",
+        "F00068",
+        "F00069",
+        "F00070",
+        "F00071",
+        "F00072",
+        "F00073",
+        "F00074",
+        "F00075",
+        "F00076",
+        "F00077",
+        "F00078",
+        "F00095",
+        "F00096",
+        "F00097",
+        "F00098",
+        "F00099",
+        "F00100",
+        "F00101",
+        "F00102",
+        "F00103",
+        "F00104",
+        "F00105",
+        "F00106",
+        "F00107",
+        "F00108",
+        "F00149",
+        "F00150"
+      ],
+      "field_count": 36,
+      "sample_id": "sample_0cu_sol_aged",
+      "records": {
+        "sample": {
+          "sample_id": "sample_0cu_sol_aged",
+          "alloy_id": "alloy_fe28mn10al1c",
+          "process_id": "proc_solution_aging"
+        },
+        "alloy": {
+          "alloy_id": "alloy_fe28mn10al1c",
+          "alloy_name": "0Cu steel",
+          "aliases": [
+            "Fe-28Mn-10Al-1C"
+          ],
+          "base_element": "Fe",
+          "alloying_elements": [
+            "Mn",
+            "Al",
+            "C"
+          ],
+          "nominal_composition": [
+            {
+              "element": "Mn",
+              "weight_percent": "28"
+            },
+            {
+              "element": "Al",
+              "weight_percent": "10"
+            },
+            {
+              "element": "C",
+              "weight_percent": "1"
+            }
+          ],
+          "alloys_notes": "Austenitic low-density steel without Cu addition."
+        },
+        "process": {
+          "process_id": "proc_solution_aging",
+          "description": "Solution treatment at 1000℃ for 1 h followed by aging treatment at 550℃ for 3 h.",
+          "processes_notes": "Applied to both 0Cu and 3Cu steels."
+        },
+        "processing_steps": [
+          {
+            "sample_id": "sample_0cu_sol_aged",
+            "sequence": "1",
+            "type": "heat_treatment",
+            "method": "solution treatment",
+            "temperature": "1000",
+            "unit": "°C",
+            "duration": "1 h"
+          },
+          {
+            "sample_id": "sample_0cu_sol_aged",
+            "sequence": "2",
+            "type": "heat_treatment",
+            "method": "aging",
+            "temperature": "550",
+            "unit": "°C",
+            "duration": "3 h"
+          }
+        ],
+        "structures": [
+          {
+            "structure_id": "struct_0cu_aged",
+            "sample_id": "sample_0cu_sol_aged",
+            "overall_structure": "Austenitic matrix with intragranular κ-carbide precipitates.",
+            "number_of_phases": "2",
+            "microstructure_list": [
+              {
+                "uuid": "uuid_0cu_kappa",
+                "related_sequence": "2",
+                "phases_present": [
+                  {
+                    "phase_name": "κ-carbide"
+                  }
+                ],
+                "defects": [
+                  {}
+                ],
+                "precipitates": [
+                  {
+                    "precipitate_id": "precip_0cu_kappa",
+                    "type": "κ-carbide",
+                    "coherency": "coherent with austenitic matrix"
+                  }
+                ]
+              },
+              {
+                "uuid": "uuid_0cu_austenite",
+                "related_sequence": "1",
+                "phases_present": [
+                  {
+                    "phase_name": "austenitic matrix (γ)",
+                    "crystal_structure": "FCC"
+                  }
+                ],
+                "defects": [
+                  {}
+                ]
+              }
+            ]
+          }
+        ],
+        "properties": [
+          {
+            "property_set_id": "props_0cu_aged",
+            "sample_id": "sample_0cu_sol_aged",
+            "mechanical": {
+              "tensile_properties": {
+                "yield_strength": [
+                  {}
+                ],
+                "ultimate_tensile_strength": [
+                  {}
+                ],
+                "elongation": [
+                  {}
+                ],
+                "stress_strain_distribution": [
+                  {}
+                ],
+                "strain_hardening_rate": [
+                  {}
+                ]
+              },
+              "hardness": [
+                {}
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "bucket_id": "sample_3cu_sol_aged",
+      "bucket_type": "sample",
+      "field_ids": [
+        "F00059",
+        "F00060",
+        "F00061",
+        "F00062",
+        "F00079",
+        "F00080",
+        "F00081",
+        "F00082",
+        "F00083",
+        "F00084",
+        "F00085",
+        "F00086",
+        "F00087",
+        "F00088",
+        "F00089",
+        "F00090",
+        "F00091",
+        "F00092",
+        "F00093",
+        "F00094",
+        "F00109",
+        "F00110",
+        "F00111",
+        "F00112",
+        "F00113",
+        "F00114",
+        "F00115",
+        "F00116",
+        "F00117",
+        "F00118",
+        "F00119",
+        "F00120",
+        "F00121",
+        "F00122",
+        "F00123",
+        "F00124",
+        "F00125",
+        "F00126",
+        "F00127",
+        "F00128",
+        "F00129",
+        "F00130",
+        "F00131",
+        "F00132",
+        "F00133",
+        "F00134",
+        "F00135",
+        "F00136",
+        "F00137",
+        "F00138",
+        "F00139",
+        "F00140",
+        "F00141",
+        "F00142",
+        "F00143",
+        "F00144",
+        "F00145",
+        "F00146",
+        "F00147",
+        "F00148",
+        "F00151",
+        "F00152",
+        "F00153",
+        "F00154",
+        "F00155",
+        "F00156",
+        "F00157",
+        "F00162",
+        "F00163",
+        "F00164",
+        "F00165",
+        "F00166",
+        "F00167",
+        "F00168",
+        "F00169",
+        "F00170",
+        "F00171",
+        "F00172",
+        "F00173",
+        "F00174",
+        "F00175",
+        "F00176",
+        "F00177",
+        "F00178",
+        "F00179",
+        "F00180",
+        "F00181",
+        "F00182",
+        "F00183"
+      ],
+      "field_count": 89,
+      "sample_id": "sample_3cu_sol_aged",
+      "records": {
+        "sample": {
+          "sample_id": "sample_3cu_sol_aged",
+          "alloy_id": "alloy_fe28mn10al1c3cu",
+          "process_id": "proc_solution_aging"
+        },
+        "alloy": {
+          "alloy_id": "alloy_fe28mn10al1c3cu",
+          "alloy_name": "3Cu steel",
+          "aliases": [
+            "Fe-28Mn-10Al-1C-3Cu"
+          ],
+          "base_element": "Fe",
+          "alloying_elements": [
+            "Mn",
+            "Al",
+            "C",
+            "Cu"
+          ],
+          "nominal_composition": [
+            {
+              "element": "Mn",
+              "weight_percent": "28"
+            },
+            {
+              "element": "Al",
+              "weight_percent": "10"
+            },
+            {
+              "element": "C",
+              "weight_percent": "1"
+            },
+            {
+              "element": "Cu",
+              "weight_percent": "3"
+            }
+          ],
+          "alloys_notes": "Austenitic low-density steel with 3 wt% Cu addition."
+        },
+        "process": {
+          "process_id": "proc_solution_aging",
+          "description": "Solution treatment at 1000℃ for 1 h followed by aging treatment at 550℃ for 3 h.",
+          "processes_notes": "Applied to both 0Cu and 3Cu steels."
+        },
+        "processing_steps": [
+          {
+            "sample_id": "sample_3cu_sol_aged",
+            "sequence": "1",
+            "type": "heat_treatment",
+            "method": "solution treatment",
+            "temperature": "1000",
+            "unit": "°C",
+            "duration": "1 h"
+          },
+          {
+            "sample_id": "sample_3cu_sol_aged",
+            "sequence": "2",
+            "type": "heat_treatment",
+            "method": "aging",
+            "temperature": "550",
+            "unit": "°C",
+            "duration": "3 h"
+          }
+        ],
+        "structures": [
+          {
+            "structure_id": "struct_3cu_aged",
+            "sample_id": "sample_3cu_sol_aged",
+            "overall_structure": "Austenitic matrix with intragranular κ-carbide and Cu-rich phase precipitates.",
+            "number_of_phases": "3",
+            "microstructure_list": [
+              {
+                "uuid": "uuid_3cu_kappa",
+                "related_sequence": "2",
+                "phases_present": [
+                  {
+                    "phase_name": "κ-carbide",
+                    "morphology": "dots or bars",
+                    "texture": "cube-on-cube orientation with austenitic matrix: [100]κ//[100]γ and (100)κ//(100)γ"
+                  }
+                ],
+                "defects": [
+                  {}
+                ],
+                "precipitates": [
+                  {
+                    "precipitate_id": "precip_kappa",
+                    "type": "κ-carbide",
+                    "coherency": "coherent with austenitic matrix"
+                  }
+                ]
+              },
+              {
+                "uuid": "uuid_3cu_cu_rich",
+                "related_sequence": "2",
+                "phases_present": [
+                  {
+                    "phase_name": "Cu-rich phase",
+                    "crystal_structure": "FCC (directly precipitates in FCC structure); also noted as BCC in SAED (see text)",
+                    "morphology": "irregular oval (diameter ~10 nm) and bar shapes (length ~30 nm)",
+                    "texture": "cube-on-cube orientation with austenitic matrix: [110]Cu//[110]γ and (111)Cu//(111)γ"
+                  }
+                ],
+                "defects": [
+                  {
+                    "dislocation_density": "almost no dislocations and stacking faults"
+                  }
+                ],
+                "precipitates": [
+                  {
+                    "precipitate_id": "precip_cu_rich",
+                    "type": "Cu-rich phase",
+                    "coherency": "coherent with austenitic matrix"
+                  }
+                ]
+              },
+              {
+                "uuid": "uuid_3cu_austenite",
+                "related_sequence": "1",
+                "phases_present": [
+                  {
+                    "phase_name": "austenitic matrix (γ)",
+                    "crystal_structure": "FCC"
+                  }
+                ],
+                "defects": [
+                  {}
+                ]
+              }
+            ]
+          }
+        ],
+        "interfaces": [
+          {
+            "interface_set_id": "iface_3cu_aged",
+            "sample_id": "sample_3cu_sol_aged",
+            "phases": [
+              {
+                "interface_id": "iface_kappa_gamma",
+                "microstructure_uuid": "uuid_3cu_kappa",
+                "phase_1_name": "κ-carbide",
+                "phase_2_name": "austenitic matrix",
+                "coherence": "coherent (semicoherent); cube-on-cube orientation: [110]γ//[110]κ, (111)γ//(111)κ"
+              },
+              {
+                "interface_id": "iface_cu_gamma",
+                "microstructure_uuid": "uuid_3cu_cu_rich",
+                "phase_1_name": "Cu-rich phase",
+                "phase_2_name": "austenitic matrix",
+                "coherence": "coherent; cube-on-cube orientation: [110]γ//[110]Cu, (111)γ//(111)Cu"
+              },
+              {
+                "interface_id": "iface_kappa_cu",
+                "phase_1_name": "κ-carbide",
+                "phase_2_name": "Cu-rich phase",
+                "coherence": "coherent (cube-on-cube orientation: [110]κ//[110]Cu, (111)κ//(111)Cu)"
+              }
+            ],
+            "defect_interaction": [
+              {
+                "interaction_id": "int_kappa_cu_precip",
+                "interaction_type": "precipitation promotion",
+                "quality_description": "Cu addition promotes κ-carbide precipitation; κ-carbide precipitation promotes Cu-rich phase precipitation; Cu-rich phase has lower nucleation energy barrier in austenitic matrix than κ-carbide."
+              }
+            ],
+            "interface_notes": [
+              {},
+              {}
+            ],
+            "phase_evolution": "κ-carbide precipitate earlier than Cu-rich phase during aging at 550℃; Cu-rich phase with FCC structure precipitates directly; lattice misfits: κ-carbide/γ 2.3%, Cu-rich/γ 1.0%, κ-carbide/Cu-rich 3.4%."
+          }
+        ],
+        "properties": [
+          {
+            "property_set_id": "props_3cu_aged",
+            "sample_id": "sample_3cu_sol_aged",
+            "mechanical": {
+              "tensile_properties": {
+                "yield_strength": [
+                  {}
+                ],
+                "ultimate_tensile_strength": [
+                  {}
+                ],
+                "elongation": [
+                  {}
+                ],
+                "stress_strain_distribution": [
+                  {}
+                ],
+                "strain_hardening_rate": [
+                  {}
+                ]
+              },
+              "hardness": [
+                {}
+              ]
+            }
+          }
+        ],
+        "performance": [
+          {
+            "performance_id": "perf_3cu_aged",
+            "sample_id": "sample_3cu_sol_aged",
+            "comparative_performance": {
+              "benchmark_alloy": "Fe-28Mn-10Al-1C",
+              "benchmark_process_id": "proc_solution_aging",
+              "benchmark_sample_id": "sample_0cu_sol_aged"
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

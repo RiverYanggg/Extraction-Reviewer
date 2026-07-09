@@ -1,0 +1,71 @@
+{
+  "schema_version": "1.1",
+  "paper_id": "10.1016_j.matlet.2024.136522",
+  "created_at": "2026-07-09T12:14:38.734147+00:00",
+  "import": {
+    "kind": "mineru_input",
+    "source_dir": "/Users/mac/Desktop/SteelDig/datasets/82/mineru/10.1016_j.matlet.2024.136522",
+    "markdown_origin": "/Users/mac/Desktop/SteelDig/datasets/82/mineru/10.1016_j.matlet.2024.136522/full.md",
+    "markdown_method": "mineru_markdown",
+    "mineru_snapshot": "/Users/mac/Desktop/SteelDig/datasets/82/extracted/10.1016_j.matlet.2024.136522/source/mineru"
+  },
+  "artifacts": {
+    "source/mineru": {
+      "path": "/Users/mac/Desktop/SteelDig/datasets/82/extracted/10.1016_j.matlet.2024.136522/source/mineru",
+      "file_count": 10,
+      "size_bytes": 2743688,
+      "files": [
+        {
+          "path": "023c0b92-bbfc-4536-b052-cd990572e11f_content_list.json",
+          "size_bytes": 29600,
+          "sha256": "5bc6d4e59356e0e773e535d338d885d88a4b7bbce53641d0ce14d4ad3764e36b"
+        },
+        {
+          "path": "023c0b92-bbfc-4536-b052-cd990572e11f_content_list_v2.json",
+          "size_bytes": 54655,
+          "sha256": "49227a1a490a4487c6ed0773a12563b9a0a600c76d8b6567d9e28975ca4d8195"
+        },
+        {
+          "path": "023c0b92-bbfc-4536-b052-cd990572e11f_model.json",
+          "size_bytes": 84307,
+          "sha256": "813cfa3fbf59c4e8560825c693d442f477bdfae27a11f905241bc74da7958f31"
+        },
+        {
+          "path": "023c0b92-bbfc-4536-b052-cd990572e11f_origin.pdf",
+          "size_bytes": 2366302,
+          "sha256": "532d48f6786074e0ff24e65ddaae49c5b543b187868f0369abc71fc36b8bfe00"
+        },
+        {
+          "path": "full.md",
+          "size_bytes": 15446,
+          "sha256": "ce5db67235eb3a551a4035fa8798353bb1798d8d95b995931d3b8b73197915cf"
+        }
+      ],
+      "image_count": 5
+    },
+    "preprocess/cleaned_input.md": {
+      "path": "/Users/mac/Desktop/SteelDig/datasets/82/extracted/10.1016_j.matlet.2024.136522/preprocess/cleaned_input.md",
+      "sha256": "a8a11eaa087e90fdc12e135c4d4ebd9962e40f6b598bbbe265006b59ca200134",
+      "size_bytes": 13785
+    },
+    "preprocess/image_groups.json": {
+      "path": "/Users/mac/Desktop/SteelDig/datasets/82/extracted/10.1016_j.matlet.2024.136522/preprocess/image_groups.json",
+      "sha256": "5bd820ac9cf7c29b28d642609851020e63401553c55ddf96f0684b508633b252",
+      "size_bytes": 5547
+    }
+  },
+  "layout": {
+    "source/mineru": "完整 MinerU 输入快照：Markdown、content/middle/model JSON、PDF、images。",
+    "source/xml": "XML 输入快照：Elsevier XML、转换后的 Markdown、可直接给多模态模型读取的 images。",
+    "preprocess": "Markdown 清洗、参考文献剔除、组图分组等确定性预处理结果。",
+    "extraction/text": "文本 LLM 原始响应和解析过程产物。",
+    "extraction/multimodal/raw": "组图多模态 LLM 原始响应。",
+    "extraction/multimodal/parsed": "单个组图响应解析后的中间 JSON。",
+    "extraction/knowledge": "知识抽取 chunks、claims、paper map、synthesis payload 等中间产物。",
+    "final": "下游可直接消费的最终资源：text_extraction.json、multimodal_figures.json、knowledge artifacts。",
+    "extraction_postprocess": "第一阶段抽取后处理：字段事实、sample bucket、evidence refs。",
+    "normalized": "单位标准化后的结构化 JSON 和报告。",
+    "verify": "验证补丁、修复 JSON 和验证报告。",
+    "logs": "模型调用与解析日志。"
+  }
+}

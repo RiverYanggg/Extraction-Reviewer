@@ -1,0 +1,33 @@
+{
+  "paper_id": "10.1016_j.matlet.2024.136522",
+  "source_md_path": "/Users/mac/Desktop/SteelDig/datasets/82/extracted/10.1016_j.matlet.2024.136522/source/mineru/full.md",
+  "cleaned_md_path": "/Users/mac/Desktop/SteelDig/datasets/82/extracted/10.1016_j.matlet.2024.136522/preprocess/cleaned_input.md",
+  "model": "deepseek-v4-flash",
+  "created_at": "2026-07-09T20:16:44.502079",
+  "claim_count": 20,
+  "source_type": "text_only",
+  "paper_map": {
+    "paper_id": "10.1016_j.matlet.2024.136522",
+    "title": "Co-precipitation mechanism of Cu-rich phase and κ-carbide precipitates in Fe-28Mn-10Al-1C-3Cu austenitic low-density steel",
+    "abstract_summary": "This paper investigates the co-precipitation mechanism of Cu-rich phase and κ-carbide in Fe-28Mn-10Al-1C-3Cu austenitic low-density steel. Adding Cu promotes κ-carbide precipitation, and κ-carbide in turn promotes FCC-structured Cu-rich phase precipitation. κ-carbide precipitates preferentially, with both phases exhibiting a cube-on-cube orientation relationship with the austenitic matrix. Key characterization includes HR-TEM, SAED, and EDS to analyze microstructure and lattice misfit.",
+    "research_objective": "To clarify the co-precipitation behavior and mechanism of Cu-rich phase and κ-carbide in Fe-28Mn-10Al-1C-3Cu austenitic low-density steel.",
+    "material_systems": [
+      "Fe-28Mn-10Al-1C-3Cu austenitic low-density steel",
+      "Fe-28Mn-10Al-1C austenitic low-density steel"
+    ],
+    "main_process_variables": [
+      "solution treatment at 1000°C for 1 h",
+      "aging treatment at 550°C for 3 h"
+    ],
+    "sample_aliases": [],
+    "expected_information_axis": [
+      "composition",
+      "processing",
+      "microstructure",
+      "property",
+      "mechanism",
+      "figure_evidence"
+    ],
+    "key_sections": []
+  }
+}

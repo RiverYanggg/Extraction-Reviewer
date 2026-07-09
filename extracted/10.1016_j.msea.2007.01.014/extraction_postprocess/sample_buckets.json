@@ -1,0 +1,938 @@
+{
+  "schema_version": "sample-buckets-v2",
+  "bucket_count": 9,
+  "buckets": [
+    {
+      "bucket_id": "paper_level",
+      "bucket_type": "paper_level",
+      "field_ids": [
+        "F00001",
+        "F00002",
+        "F00003",
+        "F00004",
+        "F00005",
+        "F00006",
+        "F00007",
+        "F00008",
+        "F00009",
+        "F00010",
+        "F00011",
+        "F00012",
+        "F00013",
+        "F00014",
+        "F00015",
+        "F00016",
+        "F00017",
+        "F00018",
+        "F00019",
+        "F00020",
+        "F00021",
+        "F00022",
+        "F00023",
+        "F00024",
+        "F00025",
+        "F00026",
+        "F00027",
+        "F00028",
+        "F00029",
+        "F00030",
+        "F00031",
+        "F00032",
+        "F00033",
+        "F00034",
+        "F00035",
+        "F00036",
+        "F00037",
+        "F00038",
+        "F00039",
+        "F00040",
+        "F00041",
+        "F00042",
+        "F00043",
+        "F00044",
+        "F00045",
+        "F00046",
+        "F00047",
+        "F00048",
+        "F00049",
+        "F00050",
+        "F00051",
+        "F00052",
+        "F00053",
+        "F00054",
+        "F00055",
+        "F00056",
+        "F00057",
+        "F00058",
+        "F00059",
+        "F00060",
+        "F00061",
+        "F00062",
+        "F00063",
+        "F00064",
+        "F00065",
+        "F00066",
+        "F00067",
+        "F00068",
+        "F00069",
+        "F00070",
+        "F00071",
+        "F00072",
+        "F00073",
+        "F00074",
+        "F00075",
+        "F00076",
+        "F00077",
+        "F00078",
+        "F00079",
+        "F00080",
+        "F00081",
+        "F00082",
+        "F00083",
+        "F00084",
+        "F00085",
+        "F00086",
+        "F00087",
+        "F00088",
+        "F00089",
+        "F00090",
+        "F00091",
+        "F00092",
+        "F00273",
+        "F00274",
+        "F00275",
+        "F00276",
+        "F00277",
+        "F00278",
+        "F00279"
+      ],
+      "field_count": 99,
+      "records": {
+        "paper": {
+          "doi": "10.1016/j.msea.2007.01.014",
+          "title": "Work hardening in Fe–Al alloys",
+          "authors": [
+            "D.G. Morris",
+            "M.A. Munoz-Morris",
+            "L.M. Requejo"
+          ],
+          "publication_year": "2007",
+          "journal": "Materials Science and Engineering A",
+          "keywords": [
+            "Iron alloys",
+            "Intermetallic phases—iron aluminides",
+            "Mechanical properties",
+            "Work hardening"
+          ],
+          "research_type": "experimental",
+          "paper_scope": "Examine work hardening variation in polycrystalline Fe–Al alloys (0–40 at.% Al) at room temperature, correlating with dislocation structures and elastic anisotropy."
+        },
+        "unmapped_findings": [
+          "Fig. 1 data: yield stress increases with Al to a maximum at 25 at.% Al, then falls rapidly at 25-28% Al, then slight increase or little change to 40% Al; ductility drops with increasing Al, with slight maximum at 28% Al. (Text and figure caption).",
+          "Fig. 2 data: work hardening rate (secant over 1-1.5% strain) is low for <20% Al, sharp peak at 28-29% Al, moderate above 35% Al; addition of 0.1% B has little consistent effect. (Text and figure caption).",
+          "Fig. 3 data: APB energy variations with Al content; APBI and APBII energies from Refs. [19-21]. (Figure caption).",
+          "Fig. 4 data: elastic stiffness constants C11, C12, C44 and Zener anisotropy factor A = 2C44/(C11-C12) vary with Al content; high anisotropy near Fe3Al composition. (Figure caption).",
+          "The peak work hardening at 28% Al is associated with increased elastic anisotropy and strong Peierls forces favoring screw dislocation orientation; also, sessile <100> edge dislocations from reactions contribute to hardening.",
+          "No APB tubes were observed; hence the APB tube model for work hardening receives little support in this study.",
+          "Considere criterion: the small ductility peak at 28% Al is related to high work hardening rate over the composition range where flow stress is relatively constant."
+        ]
+      }
+    },
+    {
+      "bucket_id": "sample_fe15al_01",
+      "bucket_type": "sample",
+      "field_ids": [
+        "F00093",
+        "F00094",
+        "F00095",
+        "F00096",
+        "F00125",
+        "F00126",
+        "F00127",
+        "F00128",
+        "F00129",
+        "F00130",
+        "F00131",
+        "F00132",
+        "F00133",
+        "F00134",
+        "F00135",
+        "F00136",
+        "F00137",
+        "F00138",
+        "F00139",
+        "F00140",
+        "F00141",
+        "F00142",
+        "F00143",
+        "F00144",
+        "F00145",
+        "F00223",
+        "F00224",
+        "F00225",
+        "F00226",
+        "F00227",
+        "F00228",
+        "F00237",
+        "F00238",
+        "F00239",
+        "F00240",
+        "F00241",
+        "F00242"
+      ],
+      "field_count": 37,
+      "sample_id": "sample_fe15al_01",
+      "records": {
+        "sample": {
+          "sample_id": "sample_fe15al_01",
+          "alloy_id": "alloy_fe15al",
+          "process_id": "proc_feal_01"
+        },
+        "alloy": {
+          "alloy_id": "alloy_fe15al",
+          "alloy_name": "Fe–15%Al",
+          "base_element": "Fe",
+          "alloying_elements": [
+            {
+              "element": "Al",
+              "atomic_percent": "15"
+            }
+          ],
+          "nominal_composition": [
+            {
+              "element": "Al",
+              "atomic_percent": "15"
+            }
+          ]
+        },
+        "process": {
+          "process_id": "proc_feal_01",
+          "description": "As-cast and thermally-relaxed condition: induction melting, drop cast into 25 mm diameter cylindrical copper mould, slow cooling after solidification to allow B2 or DO3 order. Coarse grain size (~0.25 mm). No grain size, solution or particle effects.",
+          "processes_notes": "All alloys studied in this as-cast/annealed state with coarse grains and no solute or precipitates."
+        },
+        "processing_steps": [
+          {
+            "sample_id": "sample_fe15al_01",
+            "sequence": "1",
+            "type": "casting",
+            "method": "induction melting in alumina crucible under inert gas, drop casting into 25 mm diameter cylindrical copper mould",
+            "processing_steps_notes": "Slow cooling after solidification."
+          },
+          {
+            "sample_id": "sample_fe15al_01",
+            "sequence": "2",
+            "type": "mechanical_processing",
+            "method": "compression testing at room temperature",
+            "temperature": "room temperature",
+            "processing_steps_notes": "Strained to 2-3% at nominal strain rate of 3e-4 s-1. Samples cut by spark machining (3 mm diameter or 5 mm square cross-section, height twice diameter/width). Polished on 1500 grade abrasive paper before test."
+          }
+        ],
+        "structures": [
+          {
+            "structure_id": "struct_fe15al_01",
+            "sample_id": "sample_fe15al_01",
+            "overall_structure": "Disordered bcc, single dislocations of Burgers vector (1/2)<111>.",
+            "microstructure_list": [
+              {
+                "uuid": "uuid_fe15al_disloc",
+                "related_sequence": "2",
+                "defects": [
+                  {
+                    "type": "dislocation"
+                  }
+                ],
+                "grain_structure": {
+                  "average_grain_size": {
+                    "value": "250",
+                    "unit": "μm"
+                  }
+                }
+              }
+            ]
+          }
+        ],
+        "properties": [
+          {
+            "property_set_id": "prop_fe15al_01",
+            "sample_id": "sample_fe15al_01",
+            "mechanical": {
+              "tensile_properties": {
+                "yield_strength": [
+                  {
+                    "direction": "compression"
+                  }
+                ],
+                "elongation": [
+                  {
+                    "direction": "compression"
+                  }
+                ],
+                "stress_strain_curves": "Fig. 1 and Fig. 2 data; yield stress and work hardening rate values from literature and present study, but no individual numerical yield stress given in text for specific alloys.",
+                "strain_hardening_rate": [
+                  {
+                    "direction": "compression"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "bucket_id": "sample_fe20al_01",
+      "bucket_type": "sample",
+      "field_ids": [
+        "F00097",
+        "F00098",
+        "F00099",
+        "F00100",
+        "F00146",
+        "F00147",
+        "F00148",
+        "F00149",
+        "F00150",
+        "F00151",
+        "F00152",
+        "F00153",
+        "F00243",
+        "F00244",
+        "F00245",
+        "F00246",
+        "F00247",
+        "F00248"
+      ],
+      "field_count": 18,
+      "sample_id": "sample_fe20al_01",
+      "records": {
+        "sample": {
+          "sample_id": "sample_fe20al_01",
+          "alloy_id": "alloy_fe20al",
+          "process_id": "proc_feal_01"
+        },
+        "alloy": {
+          "alloy_id": "alloy_fe20al",
+          "alloy_name": "Fe–20%Al",
+          "base_element": "Fe",
+          "alloying_elements": [
+            {
+              "element": "Al",
+              "atomic_percent": "20"
+            }
+          ],
+          "nominal_composition": [
+            {
+              "element": "Al",
+              "atomic_percent": "20"
+            }
+          ]
+        },
+        "process": {
+          "process_id": "proc_feal_01",
+          "description": "As-cast and thermally-relaxed condition: induction melting, drop cast into 25 mm diameter cylindrical copper mould, slow cooling after solidification to allow B2 or DO3 order. Coarse grain size (~0.25 mm). No grain size, solution or particle effects.",
+          "processes_notes": "All alloys studied in this as-cast/annealed state with coarse grains and no solute or precipitates."
+        },
+        "structures": [
+          {
+            "structure_id": "struct_fe20al_01",
+            "sample_id": "sample_fe20al_01",
+            "overall_structure": "Disordered/short range ordered; single (1/2)<111> dislocations, smoothly curved, some preference for screw orientations, many edge dipole segments and loops.",
+            "microstructure_list": [
+              {
+                "uuid": "uuid_fe20al_disloc",
+                "related_sequence": "2",
+                "defects": [
+                  {
+                    "type": "dislocation"
+                  }
+                ],
+                "grain_structure": {
+                  "average_grain_size": {
+                    "value": "250",
+                    "unit": "μm"
+                  }
+                }
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "bucket_id": "sample_fe20al_b_01",
+      "bucket_type": "sample",
+      "field_ids": [
+        "F00101",
+        "F00102",
+        "F00103",
+        "F00104"
+      ],
+      "field_count": 4,
+      "sample_id": "sample_fe20al_b_01",
+      "records": {
+        "sample": {
+          "sample_id": "sample_fe20al_b_01",
+          "alloy_id": "alloy_fe20al_b",
+          "process_id": "proc_feal_01"
+        },
+        "alloy": {
+          "alloy_id": "alloy_fe20al_b",
+          "alloy_name": "Fe–20%Al–0.1%B",
+          "base_element": "Fe",
+          "alloying_elements": [
+            {
+              "element": "Al",
+              "atomic_percent": "20"
+            },
+            {
+              "element": "B",
+              "atomic_percent": "0.1"
+            }
+          ],
+          "nominal_composition": [
+            {
+              "element": "Al",
+              "atomic_percent": "20"
+            },
+            {
+              "element": "B",
+              "atomic_percent": "0.1"
+            }
+          ]
+        },
+        "process": {
+          "process_id": "proc_feal_01",
+          "description": "As-cast and thermally-relaxed condition: induction melting, drop cast into 25 mm diameter cylindrical copper mould, slow cooling after solidification to allow B2 or DO3 order. Coarse grain size (~0.25 mm). No grain size, solution or particle effects.",
+          "processes_notes": "All alloys studied in this as-cast/annealed state with coarse grains and no solute or precipitates."
+        }
+      }
+    },
+    {
+      "bucket_id": "sample_fe25al_01",
+      "bucket_type": "sample",
+      "field_ids": [
+        "F00105",
+        "F00106",
+        "F00107",
+        "F00108",
+        "F00154",
+        "F00155",
+        "F00156",
+        "F00157",
+        "F00158",
+        "F00159",
+        "F00160",
+        "F00161",
+        "F00162",
+        "F00163",
+        "F00249",
+        "F00250",
+        "F00251",
+        "F00252",
+        "F00253",
+        "F00254"
+      ],
+      "field_count": 20,
+      "sample_id": "sample_fe25al_01",
+      "records": {
+        "sample": {
+          "sample_id": "sample_fe25al_01",
+          "alloy_id": "alloy_fe25al",
+          "process_id": "proc_feal_01"
+        },
+        "alloy": {
+          "alloy_id": "alloy_fe25al",
+          "alloy_name": "Fe–25%Al",
+          "base_element": "Fe",
+          "alloying_elements": [
+            {
+              "element": "Al",
+              "atomic_percent": "25"
+            }
+          ],
+          "nominal_composition": [
+            {
+              "element": "Al",
+              "atomic_percent": "25"
+            }
+          ],
+          "alloys_notes": "Exhibits DO3 order."
+        },
+        "process": {
+          "process_id": "proc_feal_01",
+          "description": "As-cast and thermally-relaxed condition: induction melting, drop cast into 25 mm diameter cylindrical copper mould, slow cooling after solidification to allow B2 or DO3 order. Coarse grain size (~0.25 mm). No grain size, solution or particle effects.",
+          "processes_notes": "All alloys studied in this as-cast/annealed state with coarse grains and no solute or precipitates."
+        },
+        "structures": [
+          {
+            "structure_id": "struct_fe25al_01",
+            "sample_id": "sample_fe25al_01",
+            "overall_structure": "DO3 ordered; dislocations are loosely coupled superdislocation partials (pairs of (1/2)<111> dislocations), straight near-screw orientations, edge dipole segments, shear APB faults (APBI) trailed.",
+            "microstructure_list": [
+              {
+                "uuid": "uuid_fe25al_disloc",
+                "related_sequence": "2",
+                "phases_present": [
+                  {
+                    "phase_name": "DO3 ordered phase",
+                    "crystal_structure": "DO3"
+                  }
+                ],
+                "defects": [
+                  {
+                    "type": "dislocation"
+                  }
+                ],
+                "grain_structure": {
+                  "average_grain_size": {
+                    "value": "250",
+                    "unit": "μm"
+                  }
+                }
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "bucket_id": "sample_fe28al_01",
+      "bucket_type": "sample",
+      "field_ids": [
+        "F00109",
+        "F00110",
+        "F00111",
+        "F00112",
+        "F00164",
+        "F00165",
+        "F00166",
+        "F00167",
+        "F00168",
+        "F00169",
+        "F00170",
+        "F00171",
+        "F00172",
+        "F00173",
+        "F00194",
+        "F00195",
+        "F00196",
+        "F00197",
+        "F00198",
+        "F00199",
+        "F00200",
+        "F00201",
+        "F00202",
+        "F00203",
+        "F00204",
+        "F00229",
+        "F00230",
+        "F00231",
+        "F00232",
+        "F00233",
+        "F00234",
+        "F00235",
+        "F00236",
+        "F00255",
+        "F00256",
+        "F00257",
+        "F00258",
+        "F00259",
+        "F00260"
+      ],
+      "field_count": 39,
+      "sample_id": "sample_fe28al_01",
+      "records": {
+        "sample": {
+          "sample_id": "sample_fe28al_01",
+          "alloy_id": "alloy_fe28al",
+          "process_id": "proc_feal_01"
+        },
+        "alloy": {
+          "alloy_id": "alloy_fe28al",
+          "alloy_name": "Fe–28%Al",
+          "base_element": "Fe",
+          "alloying_elements": [
+            {
+              "element": "Al",
+              "atomic_percent": "28"
+            }
+          ],
+          "nominal_composition": [
+            {
+              "element": "Al",
+              "atomic_percent": "28"
+            }
+          ],
+          "alloys_notes": "Corresponds to peak work hardening."
+        },
+        "process": {
+          "process_id": "proc_feal_01",
+          "description": "As-cast and thermally-relaxed condition: induction melting, drop cast into 25 mm diameter cylindrical copper mould, slow cooling after solidification to allow B2 or DO3 order. Coarse grain size (~0.25 mm). No grain size, solution or particle effects.",
+          "processes_notes": "All alloys studied in this as-cast/annealed state with coarse grains and no solute or precipitates."
+        },
+        "structures": [
+          {
+            "structure_id": "struct_fe28al_01",
+            "sample_id": "sample_fe28al_01",
+            "overall_structure": "B2 ordered (with some DO3 order); superdislocations composed of two (1/2)<111> partials (B2 superdislocation, imperfect for DO3), nearly all straight screw orientations, many superdislocation dipoles, reaction products (sessile <100> edge dislocations).",
+            "microstructure_list": [
+              {
+                "uuid": "uuid_fe28al_disloc",
+                "related_sequence": "2",
+                "phases_present": [
+                  {
+                    "phase_name": "B2 ordered phase",
+                    "crystal_structure": "B2"
+                  }
+                ],
+                "defects": [
+                  {
+                    "type": "dislocation"
+                  }
+                ],
+                "grain_structure": {
+                  "average_grain_size": {
+                    "value": "250",
+                    "unit": "μm"
+                  }
+                }
+              }
+            ]
+          }
+        ],
+        "interfaces": [
+          {
+            "interface_set_id": "intset_fe28al_01",
+            "sample_id": "sample_fe28al_01",
+            "phases": [
+              {
+                "interface_id": "int_apbii_28al",
+                "microstructure_uuid": "uuid_fe28al_disloc",
+                "phase_1_name": "superdislocation (two (1/2)<111> partials)",
+                "phase_2_name": "APBII fault"
+              }
+            ],
+            "defect_interaction": [
+              {
+                "interaction_id": "interact_r_28al",
+                "microstructure_uuid": "uuid_fe28al_disloc",
+                "interaction_type": "dislocation reaction: [111] + [1-1-1] -> [100] edge dislocations on (001) plane",
+                "quality_description": "Sessile configuration, strong barrier to further glide of <111> superdislocations."
+              }
+            ],
+            "interface_notes": [
+              {},
+              {}
+            ],
+            "phase_evolution": "Superdislocations of B2 lattice (two (1/2)<111> partials) are observed; they destroy DO3 order during movement, trailing APBII faults."
+          }
+        ],
+        "performance": [
+          {
+            "performance_id": "perf_fe28al_01",
+            "sample_id": "sample_fe28al_01",
+            "service_conditions": {
+              "operating_temperature": {
+                "min": "room temperature",
+                "max": "room temperature"
+              },
+              "stress_state": "compression"
+            },
+            "comparative_performance": {
+              "benchmark_alloy": "Fe–15%Al and Fe–20%Al",
+              "benchmark_process_id": "proc_feal_01",
+              "improvement_percentage": "Work hardening rate peak at 28-29% Al; sharp increase relative to disordered alloys (e.g., low for <20% Al, rises to peak at 28-29% Al)."
+            }
+          }
+        ]
+      }
+    },
+    {
+      "bucket_id": "sample_fe30al_01",
+      "bucket_type": "sample",
+      "field_ids": [
+        "F00113",
+        "F00114",
+        "F00115",
+        "F00116",
+        "F00174",
+        "F00175",
+        "F00176",
+        "F00177",
+        "F00178",
+        "F00179",
+        "F00180",
+        "F00181",
+        "F00182",
+        "F00183",
+        "F00205",
+        "F00206",
+        "F00207",
+        "F00208",
+        "F00209",
+        "F00210",
+        "F00211",
+        "F00212",
+        "F00213",
+        "F00214",
+        "F00215",
+        "F00261",
+        "F00262",
+        "F00263",
+        "F00264",
+        "F00265",
+        "F00266"
+      ],
+      "field_count": 31,
+      "sample_id": "sample_fe30al_01",
+      "records": {
+        "sample": {
+          "sample_id": "sample_fe30al_01",
+          "alloy_id": "alloy_fe30al",
+          "process_id": "proc_feal_01"
+        },
+        "alloy": {
+          "alloy_id": "alloy_fe30al",
+          "alloy_name": "Fe–30%Al",
+          "base_element": "Fe",
+          "alloying_elements": [
+            {
+              "element": "Al",
+              "atomic_percent": "30"
+            }
+          ],
+          "nominal_composition": [
+            {
+              "element": "Al",
+              "atomic_percent": "30"
+            }
+          ]
+        },
+        "process": {
+          "process_id": "proc_feal_01",
+          "description": "As-cast and thermally-relaxed condition: induction melting, drop cast into 25 mm diameter cylindrical copper mould, slow cooling after solidification to allow B2 or DO3 order. Coarse grain size (~0.25 mm). No grain size, solution or particle effects.",
+          "processes_notes": "All alloys studied in this as-cast/annealed state with coarse grains and no solute or precipitates."
+        },
+        "structures": [
+          {
+            "structure_id": "struct_fe30al_01",
+            "sample_id": "sample_fe30al_01",
+            "overall_structure": "B2 ordered (weak DO3); superdislocations (two (1/2)<111> partials), straight near-screw dislocations, edge dipoles and loops, dislocation reactions to form stepped structures. APBII fringes observed.",
+            "microstructure_list": [
+              {
+                "uuid": "uuid_fe30al_disloc",
+                "related_sequence": "2",
+                "phases_present": [
+                  {
+                    "phase_name": "B2 ordered phase",
+                    "crystal_structure": "B2"
+                  }
+                ],
+                "defects": [
+                  {
+                    "type": "dislocation"
+                  }
+                ],
+                "grain_structure": {
+                  "average_grain_size": {
+                    "value": "250",
+                    "unit": "μm"
+                  }
+                }
+              }
+            ]
+          }
+        ],
+        "interfaces": [
+          {
+            "interface_set_id": "intset_fe30al_01",
+            "sample_id": "sample_fe30al_01",
+            "phases": [
+              {
+                "interface_id": "int_apbii_30al",
+                "microstructure_uuid": "uuid_fe30al_disloc",
+                "phase_1_name": "superdislocation (two (1/2)<111> partials)",
+                "phase_2_name": "APBII fault"
+              }
+            ],
+            "defect_interaction": [
+              {
+                "interaction_id": "interact_r_30al",
+                "microstructure_uuid": "uuid_fe30al_disloc",
+                "interaction_type": "dislocation reactions between <111> superdislocations",
+                "quality_description": "Produces stepped structures; reaction products are locks."
+              }
+            ],
+            "interface_notes": [
+              {},
+              {}
+            ],
+            "phase_evolution": "Superdislocations with pairs of (1/2)<111> partials; APBII fringes observed, indicating DO3 order destruction during glide."
+          }
+        ]
+      }
+    },
+    {
+      "bucket_id": "sample_fe30al_b_01",
+      "bucket_type": "sample",
+      "field_ids": [
+        "F00117",
+        "F00118",
+        "F00119",
+        "F00120"
+      ],
+      "field_count": 4,
+      "sample_id": "sample_fe30al_b_01",
+      "records": {
+        "sample": {
+          "sample_id": "sample_fe30al_b_01",
+          "alloy_id": "alloy_fe30al_b",
+          "process_id": "proc_feal_01"
+        },
+        "alloy": {
+          "alloy_id": "alloy_fe30al_b",
+          "alloy_name": "Fe–30%Al–0.1%B",
+          "base_element": "Fe",
+          "alloying_elements": [
+            {
+              "element": "Al",
+              "atomic_percent": "30"
+            },
+            {
+              "element": "B",
+              "atomic_percent": "0.1"
+            }
+          ],
+          "nominal_composition": [
+            {
+              "element": "Al",
+              "atomic_percent": "30"
+            },
+            {
+              "element": "B",
+              "atomic_percent": "0.1"
+            }
+          ]
+        },
+        "process": {
+          "process_id": "proc_feal_01",
+          "description": "As-cast and thermally-relaxed condition: induction melting, drop cast into 25 mm diameter cylindrical copper mould, slow cooling after solidification to allow B2 or DO3 order. Coarse grain size (~0.25 mm). No grain size, solution or particle effects.",
+          "processes_notes": "All alloys studied in this as-cast/annealed state with coarse grains and no solute or precipitates."
+        }
+      }
+    },
+    {
+      "bucket_id": "sample_fe35al_01",
+      "bucket_type": "sample",
+      "field_ids": [
+        "F00121",
+        "F00122",
+        "F00123",
+        "F00124",
+        "F00184",
+        "F00185",
+        "F00186",
+        "F00187",
+        "F00188",
+        "F00189",
+        "F00190",
+        "F00191",
+        "F00192",
+        "F00193",
+        "F00216",
+        "F00217",
+        "F00218",
+        "F00219",
+        "F00220",
+        "F00221",
+        "F00222",
+        "F00267",
+        "F00268",
+        "F00269",
+        "F00270",
+        "F00271",
+        "F00272"
+      ],
+      "field_count": 27,
+      "sample_id": "sample_fe35al_01",
+      "records": {
+        "sample": {
+          "sample_id": "sample_fe35al_01",
+          "alloy_id": "alloy_fe35al",
+          "process_id": "proc_feal_01"
+        },
+        "alloy": {
+          "alloy_id": "alloy_fe35al",
+          "alloy_name": "Fe–35%Al",
+          "base_element": "Fe",
+          "alloying_elements": [
+            {
+              "element": "Al",
+              "atomic_percent": "35"
+            }
+          ],
+          "nominal_composition": [
+            {
+              "element": "Al",
+              "atomic_percent": "35"
+            }
+          ]
+        },
+        "process": {
+          "process_id": "proc_feal_01",
+          "description": "As-cast and thermally-relaxed condition: induction melting, drop cast into 25 mm diameter cylindrical copper mould, slow cooling after solidification to allow B2 or DO3 order. Coarse grain size (~0.25 mm). No grain size, solution or particle effects.",
+          "processes_notes": "All alloys studied in this as-cast/annealed state with coarse grains and no solute or precipitates."
+        },
+        "structures": [
+          {
+            "structure_id": "struct_fe35al_01",
+            "sample_id": "sample_fe35al_01",
+            "overall_structure": "B2 ordered; superdislocations (two (1/2)<111> partials close together due to high APBI energy), many straight near-screw superdislocations, many edge dipole segments and loops, residual APB fringes from weak DO3 order.",
+            "microstructure_list": [
+              {
+                "uuid": "uuid_fe35al_disloc",
+                "related_sequence": "2",
+                "phases_present": [
+                  {
+                    "phase_name": "B2 ordered phase",
+                    "crystal_structure": "B2"
+                  }
+                ],
+                "defects": [
+                  {
+                    "type": "dislocation"
+                  }
+                ],
+                "grain_structure": {
+                  "average_grain_size": {
+                    "value": "250",
+                    "unit": "μm"
+                  }
+                }
+              }
+            ]
+          }
+        ],
+        "interfaces": [
+          {
+            "interface_set_id": "intset_fe35al_01",
+            "sample_id": "sample_fe35al_01",
+            "phases": [
+              {
+                "interface_id": "int_apbii_35al",
+                "microstructure_uuid": "uuid_fe35al_disloc",
+                "phase_1_name": "superdislocation (two (1/2)<111> partials)",
+                "phase_2_name": "APBII fault"
+              }
+            ],
+            "interface_notes": [
+              {},
+              {}
+            ],
+            "phase_evolution": "Close partial separation due to high APBI energy; weak DO3 order causes remnant APB fringes."
+          }
+        ]
+      }
+    }
+  ]
+}

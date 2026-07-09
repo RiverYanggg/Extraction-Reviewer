@@ -1,0 +1,11 @@
+{
+  "paper_id": "10.1016_j.msea.2007.01.014",
+  "figure_id": "figure_008",
+  "image_paths": [
+    "images/d2efd49ba2f64e4ca919b33e0f15071a43be093a78feff0c0fe031c3d111608b.jpg"
+  ],
+  "image_count": 1,
+  "image_type": "microscopy_tem",
+  "description": "This figure presents paired transmission electron microscopy (TEM) images of deformed Fe–25% Al alloy showing antiphase boundary (APB) faults and dislocation structures. The left panel is a dark field micrograph obtained with the 1 0 0 beam at the Bragg condition, while the right panel is a weak beam micrograph using the 2 0 0 beam with approximately the 4 0 0 beam excited. Both images were recorded with the zone axis near [0 0 1] and the imaging g vector parallel to 1 0 0, indicated by the white arrow in the right panel. The scale bar represents 0.2 μm. In the dark field image, thermal APBs from coarse B2 domains are marked 't', while shear-produced APBI faults are marked 's'. The weak beam image reveals fine dislocation contrast with residual APB contrast, also marking 's' faults. The images demonstrate that dislocations in this DO3-ordered alloy remain relatively straight in near-screw orientations, with loosely coupled screw dipole configurations. Various pairs of dislocations connected by APB faults are visible in both imaging modes, indicating that APB energies for both APBI and APBII faults are insufficiently high to maintain closely coupled superdislocations. The dislocations largely glide and behave as individual (1/2) 1 1 1 dislocations despite being loosely coupled by weak APB faults. The background speckling in the dark field image may originate from fine DO3 domains or partial disorder, consistent with the alloy composition being near the two-phase disorder + DO3 order coexistence region.",
+  "confidence": 0.9
+}

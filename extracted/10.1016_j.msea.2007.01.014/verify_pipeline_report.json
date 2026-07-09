@@ -1,0 +1,32 @@
+{
+  "paper_id": "10.1016_j.msea.2007.01.014",
+  "mode": "verify_only",
+  "unit_normalization": {
+    "paper_id": "10.1016_j.msea.2007.01.014",
+    "source_path": "/Users/mac/Desktop/SteelDig/datasets/82/extracted/10.1016_j.msea.2007.01.014/final/text_extraction.json",
+    "normalized_path": "/Users/mac/Desktop/SteelDig/datasets/82/extracted/10.1016_j.msea.2007.01.014/normalized/text_extraction_units.json",
+    "report_path": "/Users/mac/Desktop/SteelDig/datasets/82/extracted/10.1016_j.msea.2007.01.014/normalized/unit_normalization_report.json",
+    "converted_count": 6,
+    "unchanged_count": 0,
+    "skipped_count": 0,
+    "ambiguous_count": 2
+  },
+  "verification": {
+    "paper_id": "10.1016_j.msea.2007.01.014",
+    "fixed_path": "/Users/mac/Desktop/SteelDig/datasets/82/extracted/10.1016_j.msea.2007.01.014/verify/text_extraction_fixed.json",
+    "report_path": "/Users/mac/Desktop/SteelDig/datasets/82/extracted/10.1016_j.msea.2007.01.014/verify/verify_report.json",
+    "accepted_patch_count": 0,
+    "rejected_patch_count": 0,
+    "before_error_count": 0,
+    "after_error_count": 0
+  },
+  "extraction_evidence_postprocess": {
+    "paper_id": "10.1016_j.msea.2007.01.014",
+    "output_dir": "/Users/mac/Desktop/SteelDig/datasets/82/extracted/10.1016_j.msea.2007.01.014/extraction_postprocess",
+    "field_evidence_path": "/Users/mac/Desktop/SteelDig/datasets/82/extracted/10.1016_j.msea.2007.01.014/extraction_postprocess/field_evidence.json",
+    "evidence_blocks_without_char_path": "/Users/mac/Desktop/SteelDig/datasets/82/extracted/10.1016_j.msea.2007.01.014/extraction_postprocess/evidence_blocks_without_char.json",
+    "bucket_count": 9,
+    "field_count": 279,
+    "llm_used": true
+  }
+}

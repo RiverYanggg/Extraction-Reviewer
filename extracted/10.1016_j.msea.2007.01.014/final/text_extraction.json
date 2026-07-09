@@ -1,0 +1,797 @@
+{
+  "papers": [
+    {
+      "paper_id": "10.1016_j.msea.2007.01.014",
+      "doi": "10.1016/j.msea.2007.01.014",
+      "title": "Work hardening in Fe–Al alloys",
+      "authors": [
+        "D.G. Morris",
+        "M.A. Munoz-Morris",
+        "L.M. Requejo"
+      ],
+      "publication_year": "2007",
+      "journal": "Materials Science and Engineering A",
+      "keywords": [
+        "Iron alloys",
+        "Intermetallic phases—iron aluminides",
+        "Mechanical properties",
+        "Work hardening"
+      ],
+      "research_type": "experimental",
+      "paper_scope": "Examine work hardening variation in polycrystalline Fe–Al alloys (0–40 at.% Al) at room temperature, correlating with dislocation structures and elastic anisotropy."
+    }
+  ],
+  "alloys": [
+    {
+      "alloy_id": "alloy_fe15al",
+      "paper_id": "10.1016_j.msea.2007.01.014",
+      "alloy_name": "Fe–15%Al",
+      "aliases": [],
+      "base_element": "Fe",
+      "alloying_elements": [
+        {
+          "element": "Al",
+          "weight_percent": null,
+          "atomic_percent": "15"
+        }
+      ],
+      "nominal_composition": [
+        {
+          "element": "Al",
+          "weight_percent": null,
+          "atomic_percent": "15"
+        }
+      ],
+      "alloys_notes": null
+    },
+    {
+      "alloy_id": "alloy_fe20al",
+      "paper_id": "10.1016_j.msea.2007.01.014",
+      "alloy_name": "Fe–20%Al",
+      "aliases": [],
+      "base_element": "Fe",
+      "alloying_elements": [
+        {
+          "element": "Al",
+          "weight_percent": null,
+          "atomic_percent": "20"
+        }
+      ],
+      "nominal_composition": [
+        {
+          "element": "Al",
+          "weight_percent": null,
+          "atomic_percent": "20"
+        }
+      ],
+      "alloys_notes": null
+    },
+    {
+      "alloy_id": "alloy_fe25al",
+      "paper_id": "10.1016_j.msea.2007.01.014",
+      "alloy_name": "Fe–25%Al",
+      "aliases": [],
+      "base_element": "Fe",
+      "alloying_elements": [
+        {
+          "element": "Al",
+          "weight_percent": null,
+          "atomic_percent": "25"
+        }
+      ],
+      "nominal_composition": [
+        {
+          "element": "Al",
+          "weight_percent": null,
+          "atomic_percent": "25"
+        }
+      ],
+      "alloys_notes": "Exhibits DO3 order."
+    },
+    {
+      "alloy_id": "alloy_fe28al",
+      "paper_id": "10.1016_j.msea.2007.01.014",
+      "alloy_name": "Fe–28%Al",
+      "aliases": [],
+      "base_element": "Fe",
+      "alloying_elements": [
+        {
+          "element": "Al",
+          "weight_percent": null,
+          "atomic_percent": "28"
+        }
+      ],
+      "nominal_composition": [
+        {
+          "element": "Al",
+          "weight_percent": null,
+          "atomic_percent": "28"
+        }
+      ],
+      "alloys_notes": "Corresponds to peak work hardening."
+    },
+    {
+      "alloy_id": "alloy_fe30al",
+      "paper_id": "10.1016_j.msea.2007.01.014",
+      "alloy_name": "Fe–30%Al",
+      "aliases": [],
+      "base_element": "Fe",
+      "alloying_elements": [
+        {
+          "element": "Al",
+          "weight_percent": null,
+          "atomic_percent": "30"
+        }
+      ],
+      "nominal_composition": [
+        {
+          "element": "Al",
+          "weight_percent": null,
+          "atomic_percent": "30"
+        }
+      ],
+      "alloys_notes": null
+    },
+    {
+      "alloy_id": "alloy_fe35al",
+      "paper_id": "10.1016_j.msea.2007.01.014",
+      "alloy_name": "Fe–35%Al",
+      "aliases": [],
+      "base_element": "Fe",
+      "alloying_elements": [
+        {
+          "element": "Al",
+          "weight_percent": null,
+          "atomic_percent": "35"
+        }
+      ],
+      "nominal_composition": [
+        {
+          "element": "Al",
+          "weight_percent": null,
+          "atomic_percent": "35"
+        }
+      ],
+      "alloys_notes": null
+    },
+    {
+      "alloy_id": "alloy_fe20al_b",
+      "paper_id": "10.1016_j.msea.2007.01.014",
+      "alloy_name": "Fe–20%Al–0.1%B",
+      "aliases": [],
+      "base_element": "Fe",
+      "alloying_elements": [
+        {
+          "element": "Al",
+          "weight_percent": null,
+          "atomic_percent": "20"
+        },
+        {
+          "element": "B",
+          "weight_percent": null,
+          "atomic_percent": "0.1"
+        }
+      ],
+      "nominal_composition": [
+        {
+          "element": "Al",
+          "weight_percent": null,
+          "atomic_percent": "20"
+        },
+        {
+          "element": "B",
+          "weight_percent": null,
+          "atomic_percent": "0.1"
+        }
+      ],
+      "alloys_notes": null
+    },
+    {
+      "alloy_id": "alloy_fe30al_b",
+      "paper_id": "10.1016_j.msea.2007.01.014",
+      "alloy_name": "Fe–30%Al–0.1%B",
+      "aliases": [],
+      "base_element": "Fe",
+      "alloying_elements": [
+        {
+          "element": "Al",
+          "weight_percent": null,
+          "atomic_percent": "30"
+        },
+        {
+          "element": "B",
+          "weight_percent": null,
+          "atomic_percent": "0.1"
+        }
+      ],
+      "nominal_composition": [
+        {
+          "element": "Al",
+          "weight_percent": null,
+          "atomic_percent": "30"
+        },
+        {
+          "element": "B",
+          "weight_percent": null,
+          "atomic_percent": "0.1"
+        }
+      ],
+      "alloys_notes": null
+    }
+  ],
+  "processes": [
+    {
+      "process_id": "proc_feal_01",
+      "paper_id": "10.1016_j.msea.2007.01.014",
+      "alloy_id": null,
+      "description": "As-cast and thermally-relaxed condition: induction melting, drop cast into 25 mm diameter cylindrical copper mould, slow cooling after solidification to allow B2 or DO3 order. Coarse grain size (~0.25 mm). No grain size, solution or particle effects.",
+      "processes_notes": "All alloys studied in this as-cast/annealed state with coarse grains and no solute or precipitates."
+    }
+  ],
+  "samples": [
+    {
+      "sample_id": "sample_fe15al_01",
+      "paper_id": "10.1016_j.msea.2007.01.014",
+      "alloy_id": "alloy_fe15al",
+      "process_id": "proc_feal_01"
+    },
+    {
+      "sample_id": "sample_fe20al_01",
+      "paper_id": "10.1016_j.msea.2007.01.014",
+      "alloy_id": "alloy_fe20al",
+      "process_id": "proc_feal_01"
+    },
+    {
+      "sample_id": "sample_fe25al_01",
+      "paper_id": "10.1016_j.msea.2007.01.014",
+      "alloy_id": "alloy_fe25al",
+      "process_id": "proc_feal_01"
+    },
+    {
+      "sample_id": "sample_fe28al_01",
+      "paper_id": "10.1016_j.msea.2007.01.014",
+      "alloy_id": "alloy_fe28al",
+      "process_id": "proc_feal_01"
+    },
+    {
+      "sample_id": "sample_fe30al_01",
+      "paper_id": "10.1016_j.msea.2007.01.014",
+      "alloy_id": "alloy_fe30al",
+      "process_id": "proc_feal_01"
+    },
+    {
+      "sample_id": "sample_fe35al_01",
+      "paper_id": "10.1016_j.msea.2007.01.014",
+      "alloy_id": "alloy_fe35al",
+      "process_id": "proc_feal_01"
+    },
+    {
+      "sample_id": "sample_fe20al_b_01",
+      "paper_id": "10.1016_j.msea.2007.01.014",
+      "alloy_id": "alloy_fe20al_b",
+      "process_id": "proc_feal_01"
+    },
+    {
+      "sample_id": "sample_fe30al_b_01",
+      "paper_id": "10.1016_j.msea.2007.01.014",
+      "alloy_id": "alloy_fe30al_b",
+      "process_id": "proc_feal_01"
+    }
+  ],
+  "processing_steps": [
+    {
+      "sample_id": "sample_fe15al_01",
+      "paper_id": "10.1016_j.msea.2007.01.014",
+      "sequence": "1",
+      "type": "casting",
+      "method": "induction melting in alumina crucible under inert gas, drop casting into 25 mm diameter cylindrical copper mould",
+      "temperature": null,
+      "unit": null,
+      "duration": null,
+      "cooling_medium": null,
+      "reduction_ratio": null,
+      "processing_steps_notes": "Slow cooling after solidification."
+    },
+    {
+      "sample_id": "sample_fe15al_01",
+      "paper_id": "10.1016_j.msea.2007.01.014",
+      "sequence": "2",
+      "type": "mechanical_processing",
+      "method": "compression testing at room temperature",
+      "temperature": "room temperature",
+      "unit": null,
+      "duration": null,
+      "cooling_medium": null,
+      "reduction_ratio": null,
+      "processing_steps_notes": "Strained to 2-3% at nominal strain rate of 3e-4 s-1. Samples cut by spark machining (3 mm diameter or 5 mm square cross-section, height twice diameter/width). Polished on 1500 grade abrasive paper before test."
+    }
+  ],
+  "structures": [
+    {
+      "structure_id": "struct_fe15al_01",
+      "sample_id": "sample_fe15al_01",
+      "overall_structure": "Disordered bcc, single dislocations of Burgers vector (1/2)<111>.",
+      "number_of_phases": null,
+      "microstructure_counts": null,
+      "microstructure_list": [
+        {
+          "uuid": "uuid_fe15al_disloc",
+          "related_sequence": "2",
+          "phases_present": [],
+          "defects": [
+            {
+              "type": "dislocation",
+              "porosity": null,
+              "inclusions": [],
+              "dislocation_density": null,
+              "lattice_distortion": null
+            }
+          ],
+          "grain_structure": {
+            "average_grain_size": {
+              "value": "0.25",
+              "unit": "mm"
+            },
+            "grain_size_distribution": null,
+            "texture": null
+          },
+          "precipitates": []
+        }
+      ]
+    },
+    {
+      "structure_id": "struct_fe20al_01",
+      "sample_id": "sample_fe20al_01",
+      "overall_structure": "Disordered/short range ordered; single (1/2)<111> dislocations, smoothly curved, some preference for screw orientations, many edge dipole segments and loops.",
+      "number_of_phases": null,
+      "microstructure_counts": null,
+      "microstructure_list": [
+        {
+          "uuid": "uuid_fe20al_disloc",
+          "related_sequence": "2",
+          "phases_present": [],
+          "defects": [
+            {
+              "type": "dislocation",
+              "porosity": null,
+              "inclusions": [],
+              "dislocation_density": null,
+              "lattice_distortion": null
+            }
+          ],
+          "grain_structure": {
+            "average_grain_size": {
+              "value": "0.25",
+              "unit": "mm"
+            },
+            "grain_size_distribution": null,
+            "texture": null
+          },
+          "precipitates": []
+        }
+      ]
+    },
+    {
+      "structure_id": "struct_fe25al_01",
+      "sample_id": "sample_fe25al_01",
+      "overall_structure": "DO3 ordered; dislocations are loosely coupled superdislocation partials (pairs of (1/2)<111> dislocations), straight near-screw orientations, edge dipole segments, shear APB faults (APBI) trailed.",
+      "number_of_phases": null,
+      "microstructure_counts": null,
+      "microstructure_list": [
+        {
+          "uuid": "uuid_fe25al_disloc",
+          "related_sequence": "2",
+          "phases_present": [
+            {
+              "phase_name": "DO3 ordered phase",
+              "crystal_structure": "DO3",
+              "volume_fraction": null,
+              "morphology": null,
+              "grain_size": null,
+              "texture": null
+            }
+          ],
+          "defects": [
+            {
+              "type": "dislocation",
+              "porosity": null,
+              "inclusions": [],
+              "dislocation_density": null,
+              "lattice_distortion": null
+            }
+          ],
+          "grain_structure": {
+            "average_grain_size": {
+              "value": "0.25",
+              "unit": "mm"
+            },
+            "grain_size_distribution": null,
+            "texture": null
+          },
+          "precipitates": []
+        }
+      ]
+    },
+    {
+      "structure_id": "struct_fe28al_01",
+      "sample_id": "sample_fe28al_01",
+      "overall_structure": "B2 ordered (with some DO3 order); superdislocations composed of two (1/2)<111> partials (B2 superdislocation, imperfect for DO3), nearly all straight screw orientations, many superdislocation dipoles, reaction products (sessile <100> edge dislocations).",
+      "number_of_phases": null,
+      "microstructure_counts": null,
+      "microstructure_list": [
+        {
+          "uuid": "uuid_fe28al_disloc",
+          "related_sequence": "2",
+          "phases_present": [
+            {
+              "phase_name": "B2 ordered phase",
+              "crystal_structure": "B2",
+              "volume_fraction": null,
+              "morphology": null,
+              "grain_size": null,
+              "texture": null
+            }
+          ],
+          "defects": [
+            {
+              "type": "dislocation",
+              "porosity": null,
+              "inclusions": [],
+              "dislocation_density": null,
+              "lattice_distortion": null
+            }
+          ],
+          "grain_structure": {
+            "average_grain_size": {
+              "value": "0.25",
+              "unit": "mm"
+            },
+            "grain_size_distribution": null,
+            "texture": null
+          },
+          "precipitates": []
+        }
+      ]
+    },
+    {
+      "structure_id": "struct_fe30al_01",
+      "sample_id": "sample_fe30al_01",
+      "overall_structure": "B2 ordered (weak DO3); superdislocations (two (1/2)<111> partials), straight near-screw dislocations, edge dipoles and loops, dislocation reactions to form stepped structures. APBII fringes observed.",
+      "number_of_phases": null,
+      "microstructure_counts": null,
+      "microstructure_list": [
+        {
+          "uuid": "uuid_fe30al_disloc",
+          "related_sequence": "2",
+          "phases_present": [
+            {
+              "phase_name": "B2 ordered phase",
+              "crystal_structure": "B2",
+              "volume_fraction": null,
+              "morphology": null,
+              "grain_size": null,
+              "texture": null
+            }
+          ],
+          "defects": [
+            {
+              "type": "dislocation",
+              "porosity": null,
+              "inclusions": [],
+              "dislocation_density": null,
+              "lattice_distortion": null
+            }
+          ],
+          "grain_structure": {
+            "average_grain_size": {
+              "value": "0.25",
+              "unit": "mm"
+            },
+            "grain_size_distribution": null,
+            "texture": null
+          },
+          "precipitates": []
+        }
+      ]
+    },
+    {
+      "structure_id": "struct_fe35al_01",
+      "sample_id": "sample_fe35al_01",
+      "overall_structure": "B2 ordered; superdislocations (two (1/2)<111> partials close together due to high APBI energy), many straight near-screw superdislocations, many edge dipole segments and loops, residual APB fringes from weak DO3 order.",
+      "number_of_phases": null,
+      "microstructure_counts": null,
+      "microstructure_list": [
+        {
+          "uuid": "uuid_fe35al_disloc",
+          "related_sequence": "2",
+          "phases_present": [
+            {
+              "phase_name": "B2 ordered phase",
+              "crystal_structure": "B2",
+              "volume_fraction": null,
+              "morphology": null,
+              "grain_size": null,
+              "texture": null
+            }
+          ],
+          "defects": [
+            {
+              "type": "dislocation",
+              "porosity": null,
+              "inclusions": [],
+              "dislocation_density": null,
+              "lattice_distortion": null
+            }
+          ],
+          "grain_structure": {
+            "average_grain_size": {
+              "value": "0.25",
+              "unit": "mm"
+            },
+            "grain_size_distribution": null,
+            "texture": null
+          },
+          "precipitates": []
+        }
+      ]
+    }
+  ],
+  "interfaces": [
+    {
+      "interface_set_id": "intset_fe28al_01",
+      "sample_id": "sample_fe28al_01",
+      "phases": [
+        {
+          "interface_id": "int_apbii_28al",
+          "microstructure_uuid": "uuid_fe28al_disloc",
+          "phase_1_name": "superdislocation (two (1/2)<111> partials)",
+          "phase_2_name": "APBII fault",
+          "coherence": null
+        }
+      ],
+      "defect_interaction": [
+        {
+          "interaction_id": "interact_r_28al",
+          "microstructure_uuid": "uuid_fe28al_disloc",
+          "interaction_type": "dislocation reaction: [111] + [1-1-1] -> [100] edge dislocations on (001) plane",
+          "quality_description": "Sessile configuration, strong barrier to further glide of <111> superdislocations."
+        }
+      ],
+      "interface_notes": [
+        {
+          "stress_strain_distribution": null
+        },
+        {
+          "slippage_situation": null
+        }
+      ],
+      "phase_evolution": "Superdislocations of B2 lattice (two (1/2)<111> partials) are observed; they destroy DO3 order during movement, trailing APBII faults."
+    },
+    {
+      "interface_set_id": "intset_fe30al_01",
+      "sample_id": "sample_fe30al_01",
+      "phases": [
+        {
+          "interface_id": "int_apbii_30al",
+          "microstructure_uuid": "uuid_fe30al_disloc",
+          "phase_1_name": "superdislocation (two (1/2)<111> partials)",
+          "phase_2_name": "APBII fault",
+          "coherence": null
+        }
+      ],
+      "defect_interaction": [
+        {
+          "interaction_id": "interact_r_30al",
+          "microstructure_uuid": "uuid_fe30al_disloc",
+          "interaction_type": "dislocation reactions between <111> superdislocations",
+          "quality_description": "Produces stepped structures; reaction products are locks."
+        }
+      ],
+      "interface_notes": [
+        {
+          "stress_strain_distribution": null
+        },
+        {
+          "slippage_situation": null
+        }
+      ],
+      "phase_evolution": "Superdislocations with pairs of (1/2)<111> partials; APBII fringes observed, indicating DO3 order destruction during glide."
+    },
+    {
+      "interface_set_id": "intset_fe35al_01",
+      "sample_id": "sample_fe35al_01",
+      "phases": [
+        {
+          "interface_id": "int_apbii_35al",
+          "microstructure_uuid": "uuid_fe35al_disloc",
+          "phase_1_name": "superdislocation (two (1/2)<111> partials)",
+          "phase_2_name": "APBII fault",
+          "coherence": null
+        }
+      ],
+      "defect_interaction": [],
+      "interface_notes": [
+        {
+          "stress_strain_distribution": null
+        },
+        {
+          "slippage_situation": null
+        }
+      ],
+      "phase_evolution": "Close partial separation due to high APBI energy; weak DO3 order causes remnant APB fringes."
+    }
+  ],
+  "properties": [
+    {
+      "property_set_id": "prop_fe15al_01",
+      "sample_id": "sample_fe15al_01",
+      "mechanical": {
+        "tensile_properties": {
+          "yield_strength": [
+            {
+              "direction": "compression",
+              "value": null,
+              "unit": null,
+              "others": {
+                "uncertainty": null
+              }
+            }
+          ],
+          "ultimate_tensile_strength": [],
+          "elongation": [
+            {
+              "direction": "compression",
+              "value": null,
+              "unit": null
+            }
+          ],
+          "youngs_modulus": null,
+          "stress_strain_curves": "Fig. 1 and Fig. 2 data; yield stress and work hardening rate values from literature and present study, but no individual numerical yield stress given in text for specific alloys.",
+          "stress_strain_distribution": [],
+          "strain_hardening_rate": [
+            {
+              "property_id": null,
+              "direction": "compression",
+              "value": null,
+              "unit": null
+            }
+          ]
+        },
+        "hardness": [],
+        "fracture_toughness": {
+          "value": null,
+          "unit": null
+        },
+        "fatigue_properties": {
+          "fatigue_limit": null,
+          "cycles_to_failure": null
+        },
+        "creep_properties": {
+          "steady_state_creep_rate": null,
+          "rupture_life": null
+        }
+      },
+      "physical": {
+        "density": {
+          "value": null,
+          "unit": null
+        },
+        "thermal_properties": {
+          "thermal_conductivity": null,
+          "thermal_expansion_coefficient": null,
+          "specific_heat": null
+        },
+        "electrical_properties": {
+          "electrical_conductivity": null,
+          "resistivity": null
+        },
+        "magnetic_properties": {
+          "magnetic_susceptibility": null,
+          "curie_temperature": null
+        }
+      },
+      "chemical": {
+        "corrosion_resistance": {
+          "test_medium": null,
+          "corrosion_rate": null,
+          "passivation_behavior": null
+        },
+        "oxidation_resistance": {
+          "oxidation_rate_constant": null,
+          "protective_scale": null
+        }
+      },
+      "radiation_properties": {
+        "void_swelling": null,
+        "irradiation_hardening": null,
+        "helium_embrittlement": null
+      }
+    }
+  ],
+  "performance": [
+    {
+      "performance_id": "perf_fe28al_01",
+      "sample_id": "sample_fe28al_01",
+      "service_conditions": {
+        "operating_temperature": {
+          "min": "room temperature",
+          "max": "room temperature",
+          "unit": null
+        },
+        "stress_state": "compression",
+        "environment": null
+      },
+      "lifetime_prediction": {
+        "model_used": null,
+        "predicted_lifetime": null,
+        "confidence_interval": null
+      },
+      "comparative_performance": {
+        "benchmark_alloy": "Fe–15%Al and Fe–20%Al",
+        "benchmark_process_id": "proc_feal_01",
+        "benchmark_sample_id": null,
+        "improvement_percentage": "Work hardening rate peak at 28-29% Al; sharp increase relative to disordered alloys (e.g., low for <20% Al, rises to peak at 28-29% Al)."
+      }
+    }
+  ],
+  "characterization_methods": [
+    {
+      "characterization_id": "char_tem_fe15al_01",
+      "sample_id": "sample_fe15al_01",
+      "microstructure_uuid": "uuid_fe15al_disloc",
+      "technique": "Transmission electron microscopy (TEM)",
+      "purpose": "Examine dislocation structures after 2-3% deformation at room temperature.",
+      "key_findings": "Single dislocation dipoles, loose cellular distribution, smoothly curved dislocations, some straight screw dislocations."
+    },
+    {
+      "characterization_id": "char_tem_fe20al_01",
+      "sample_id": "sample_fe20al_01",
+      "microstructure_uuid": "uuid_fe20al_disloc",
+      "technique": "Transmission electron microscopy (TEM)",
+      "purpose": "Examine dislocation structures after 2-3% deformation at room temperature.",
+      "key_findings": "Curled single dislocations, dipoles and loops, some straight screw dislocations."
+    },
+    {
+      "characterization_id": "char_tem_fe25al_01",
+      "sample_id": "sample_fe25al_01",
+      "microstructure_uuid": "uuid_fe25al_disloc",
+      "technique": "Transmission electron microscopy (TEM) including dark field and weak beam",
+      "purpose": "Examine dislocation structures and APB faults after deformation.",
+      "key_findings": "Loosely coupled superdislocation partials, APBI faults, many near-screw dislocations, some dipole segments."
+    },
+    {
+      "characterization_id": "char_tem_fe28al_01",
+      "sample_id": "sample_fe28al_01",
+      "microstructure_uuid": "uuid_fe28al_disloc",
+      "technique": "Transmission electron microscopy (TEM) in bright field and weak beam",
+      "purpose": "Examine dislocation structures after deformation (peak work hardening composition).",
+      "key_findings": "Straight screw superdislocations (two (1/2)<111> partials), many superdipole and non-dipole pairs, reaction products (sessile <100> edge dislocations)."
+    },
+    {
+      "characterization_id": "char_tem_fe30al_01",
+      "sample_id": "sample_fe30al_01",
+      "microstructure_uuid": "uuid_fe30al_disloc",
+      "technique": "Transmission electron microscopy (TEM)",
+      "purpose": "Examine dislocation structures after deformation.",
+      "key_findings": "Straight near-screw superdislocations, edge dipoles and loops, stepped structures from dislocation reactions, APBII fringes."
+    },
+    {
+      "characterization_id": "char_tem_fe35al_01",
+      "sample_id": "sample_fe35al_01",
+      "microstructure_uuid": "uuid_fe35al_disloc",
+      "technique": "Transmission electron microscopy (TEM)",
+      "purpose": "Examine dislocation structures after deformation.",
+      "key_findings": "Straight near-screw superdislocations with close partials, many edge dipole segments, remnant APB fringes."
+    }
+  ],
+  "computational_details": [],
+  "unmapped_findings": [
+    "Fig. 1 data: yield stress increases with Al to a maximum at 25 at.% Al, then falls rapidly at 25-28% Al, then slight increase or little change to 40% Al; ductility drops with increasing Al, with slight maximum at 28% Al. (Text and figure caption).",
+    "Fig. 2 data: work hardening rate (secant over 1-1.5% strain) is low for <20% Al, sharp peak at 28-29% Al, moderate above 35% Al; addition of 0.1% B has little consistent effect. (Text and figure caption).",
+    "Fig. 3 data: APB energy variations with Al content; APBI and APBII energies from Refs. [19-21]. (Figure caption).",
+    "Fig. 4 data: elastic stiffness constants C11, C12, C44 and Zener anisotropy factor A = 2C44/(C11-C12) vary with Al content; high anisotropy near Fe3Al composition. (Figure caption).",
+    "The peak work hardening at 28% Al is associated with increased elastic anisotropy and strong Peierls forces favoring screw dislocation orientation; also, sessile <100> edge dislocations from reactions contribute to hardening.",
+    "No APB tubes were observed; hence the APB tube model for work hardening receives little support in this study.",
+    "Considere criterion: the small ductility peak at 28% Al is related to high work hardening rate over the composition range where flow stress is relatively constant."
+  ]
+}

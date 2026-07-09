@@ -1,0 +1,13 @@
+{
+  "stage": "verify",
+  "updated_at": "2026-07-09T20:16:47.468218",
+  "paper_id": "10.1016_j.matlet.2024.136522",
+  "llm_used": true,
+  "sample_count": 2,
+  "accepted_patch_count": 0,
+  "rejected_patch_count": 0,
+  "before_error_count": 0,
+  "after_error_count": 0,
+  "fixed_path": "/Users/mac/Desktop/SteelDig/datasets/82/extracted/10.1016_j.matlet.2024.136522/verify/text_extraction_fixed.json",
+  "report_path": "/Users/mac/Desktop/SteelDig/datasets/82/extracted/10.1016_j.matlet.2024.136522/verify/verify_report.json"
+}

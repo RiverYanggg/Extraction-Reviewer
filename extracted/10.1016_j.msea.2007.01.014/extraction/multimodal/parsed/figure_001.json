@@ -1,0 +1,11 @@
+{
+  "paper_id": "10.1016_j.msea.2007.01.014",
+  "figure_id": "figure_001",
+  "image_paths": [
+    "images/69fe8ef65f3a94bc59892578bda9a8e289a48273440d1eb7f65b1662a854e1e5.jpg"
+  ],
+  "image_count": 1,
+  "image_type": "property_mechanical",
+  "description": "This figure presents a dual-axis line plot showing the composition dependence of yield stress and ductility in polycrystalline Fe-Al alloys (0-40 at.% Al) in the as-cast or annealed condition. The left y-axis displays yield stress in MPa (solid triangles connected by solid lines), while the right y-axis shows ductility in percent (solid circles connected by dashed lines), both plotted against aluminum content on the x-axis. Yield stress increases monotonically with Al content, reaching a pronounced maximum near 25 at.% Al (~640 MPa), then drops sharply between 25-28% Al to ~350 MPa, followed by a slight recovery and plateau toward 40% Al. Ductility exhibits the inverse trend: it starts high at low Al contents (~36% at ~15% Al), decreases rapidly with increasing Al, and reaches a minimum near 28% Al (~3%), with a small but notable local peak at approximately 28% Al (~6%) before continuing to decline toward 40% Al. The data sources include Refs. [2,5,8] and the present study. The figure establishes the mechanical property baseline that the paper interprets in terms of solution hardening, short-range order hardening, and the transition from single dislocations to superdislocations as deformation mechanisms across the composition range.",
+  "confidence": 0.9
+}

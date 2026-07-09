@@ -1,0 +1,11 @@
+{
+  "stage": "knowledge",
+  "updated_at": "2026-07-09T20:16:44.502424",
+  "paper_id": "10.1016_j.matlet.2024.136522",
+  "chunk_count": 1,
+  "claim_count": 20,
+  "warning_count": 8,
+  "knowledge_markdown": "/Users/mac/Desktop/SteelDig/datasets/82/extracted/10.1016_j.matlet.2024.136522/final/text_knowledge.md",
+  "claims": "/Users/mac/Desktop/SteelDig/datasets/82/extracted/10.1016_j.matlet.2024.136522/final/text_claims.jsonl",
+  "mock_model": false
+}

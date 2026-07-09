@@ -1,0 +1,12 @@
+{
+  "paper_id": "full",
+  "source_md_path": "/Users/mac/Desktop/SteelDig/datasets/82/extracted/10.1016_j.matlet.2024.136522/source/mineru/full.md",
+  "source_json_path": "/Users/mac/Desktop/SteelDig/datasets/82/extracted/10.1016_j.matlet.2024.136522/source/mineru/023c0b92-bbfc-4536-b052-cd990572e11f_content_list.json",
+  "used_content_list": true,
+  "removed_categories": {
+    "ref_text": 18
+  },
+  "removed_blocks": 18,
+  "reference_count": 18,
+  "image_group_count": 3
+}

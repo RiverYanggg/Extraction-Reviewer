@@ -1,0 +1,274 @@
+[
+  {
+    "chunk_id": "chunk_0001",
+    "section": "Front Matter",
+    "previous_context_summary": "",
+    "context_update": {
+      "summary": "This front matter chunk (Abstract and Introduction) of the paper 'Work hardening in Fe–Al alloys' introduces the study of work hardening in polycrystalline Fe–Al alloys with Al content up to 40 at.%. It states the key finding of a sharp maximum in work hardening rate near 26-30 at.% Al, and attributes this to a transition from single to superdislocation dipoles, predominance of straight screw dislocations, and sessile segment formation. It reviews literature data on yield stress, ductility, and work hardening rate as functions of Al content (Figs. 1-2). Two main mechanisms are cited for high work hardening in ordered states: dipole hardening and APB tube dragging. Dislocation types are linked to ordering state (DO3, B2, disordered). APB energies (Fig. 3) and elastic anisotropy (Fig. 4) are presented as influential factors. The chunk also clarifies that specimens are thermally-relaxed as-cast, coarse-grained, with no solute/precipitate effects, and that ordering state (slowly cooled) is considered. The study aims to interpret work hardening variation via dislocation structures.",
+      "material_systems": [
+        "Fe–Al alloys",
+        "Fe3Al",
+        "FeAl",
+        "disordered bcc Fe-Al"
+      ],
+      "sample_aliases": [],
+      "processing_route": [
+        "as-cast",
+        "annealed",
+        "slowly cooled"
+      ],
+      "key_variables": [
+        "Al content (at.%) 0 to 40",
+        "plastic strain 1-1.5%",
+        "room temperature",
+        "grain size (coarse)",
+        "order state (DO3, B2)"
+      ],
+      "microstructure": [
+        "dislocation dipoles (single vs superdislocation)",
+        "straight screw dislocations",
+        "sessile dislocation segments",
+        "partial dislocations with Burgers vector (1/2)<111>",
+        "APB faults (APBI, APBII)"
+      ],
+      "properties": [
+        "work hardening rate",
+        "yield stress",
+        "ductility",
+        "elastic stiffness constants (C11, C12, C44)",
+        "Zener anisotropy factor"
+      ],
+      "mechanisms": [
+        "dipole hardening",
+        "APB tube dragging",
+        "core/Peierls effects"
+      ],
+      "figures_or_tables": [
+        "Fig. 1",
+        "Fig. 2",
+        "Fig. 3",
+        "Fig. 4"
+      ],
+      "unresolved_terms": []
+    },
+    "rolling_context_summary": "Summary: This front matter chunk (Abstract and Introduction) of the paper 'Work hardening in Fe–Al alloys' introduces the study of work hardening in polycrystalline Fe–Al alloys with Al content up to 40 at.%. It states the key finding of a sharp maximum in work hardening rate near 26-30 at.% Al, and attributes this to a transition from single to superdislocation dipoles, predominance of straight screw dislocations, and sessile segment formation. It reviews literature data on yield stress, ductility, and work hardening rate as functions of Al content (Figs. 1-2). Two main mechanisms are cited for high work hardening in ordered states: dipole hardening and APB tube dragging. Dislocation types are linked to ordering state (DO3, B2, disordered). APB energies (Fig. 3) and elastic anisotropy (Fig. 4) are presented as influential factors. The chunk also clarifies that specimens are thermally-relaxed as-cast, coarse-grained, with no solute/precipitate effects, and that ordering state (slowly cooled) is considered. The study aims to interpret work hardening variation via dislocation structures.\nMaterial systems: Fe–Al alloys; Fe3Al; FeAl; disordered bcc Fe-Al\nProcessing route: as-cast; annealed; slowly cooled\nKey variables: Al content (at.%) 0 to 40; plastic strain 1-1.5%; room temperature; grain size (coarse); order state (DO3, B2)\nMicrostructure: dislocation dipoles (single vs superdislocation); straight screw dislocations; sessile dislocation segments; partial dislocations with Burgers vector (1/2)<111>; APB faults (APBI, APBII)\nProperties: work hardening rate; yield stress; ductility; elastic stiffness constants (C11, C12, C44); Zener anisotropy factor\nMechanisms: dipole hardening; APB tube dragging; core/Peierls effects\nFigures or tables: Fig. 1; Fig. 2; Fig. 3; Fig. 4"
+  },
+  {
+    "chunk_id": "chunk_0002",
+    "section": "1. Introduction",
+    "previous_context_summary": "Summary: This front matter chunk (Abstract and Introduction) of the paper 'Work hardening in Fe–Al alloys' introduces the study of work hardening in polycrystalline Fe–Al alloys with Al content up to 40 at.%. It states the key finding of a sharp maximum in work hardening rate near 26-30 at.% Al, and attributes this to a transition from single to superdislocation dipoles, predominance of straight screw dislocations, and sessile segment formation. It reviews literature data on yield stress, ductility, and work hardening rate as functions of Al content (Figs. 1-2). Two main mechanisms are cited for high work hardening in ordered states: dipole hardening and APB tube dragging. Dislocation types are linked to ordering state (DO3, B2, disordered). APB energies (Fig. 3) and elastic anisotropy (Fig. 4) are presented as influential factors. The chunk also clarifies that specimens are thermally-relaxed as-cast, coarse-grained, with no solute/precipitate effects, and that ordering state (slowly cooled) is considered. The study aims to interpret work hardening variation via dislocation structures.\nMaterial systems: Fe–Al alloys; Fe3Al; FeAl; disordered bcc Fe-Al\nProcessing route: as-cast; annealed; slowly cooled\nKey variables: Al content (at.%) 0 to 40; plastic strain 1-1.5%; room temperature; grain size (coarse); order state (DO3, B2)\nMicrostructure: dislocation dipoles (single vs superdislocation); straight screw dislocations; sessile dislocation segments; partial dislocations with Burgers vector (1/2)<111>; APB faults (APBI, APBII)\nProperties: work hardening rate; yield stress; ductility; elastic stiffness constants (C11, C12, C44); Zener anisotropy factor\nMechanisms: dipole hardening; APB tube dragging; core/Peierls effects\nFigures or tables: Fig. 1; Fig. 2; Fig. 3; Fig. 4",
+    "context_update": {
+      "summary": "This chunk covers the Experimental section and the beginning of Results (mechanical properties and dislocation structures). It details sample preparation: induction melting and drop casting into a 25 mm copper mould producing coarse grains (~0.25 mm). Binary alloys with 15, 20, 25, 28, 30, 35% Al were made, plus B-doped versions at 20 and 30% Al. Slow cooling gave B2 order in Al-rich alloys and DO3 order in 25-30% Al. Compression samples were spark-cut to 3 mm diameter or 5x5 mm square, polished, and tested at room temperature to 2-3% strain at 3e-4 s-1. Tests showed smooth plasticity with no yield points. TEM sample preparation used twin-jet electropolishing. Mechanical results confirm prior data with work hardening peak at 29% Al (range 26-29%). B addition had little effect. Dislocation structures vary with Al content: disordered alloys (15-20% Al) show single (1/2)<111> dislocations, curved with incipient cell structure and dipole formation. At 25% Al (DO3 order), loosely coupled superdislocations with APB faults appear. At 28% Al (peak hardening), superdislocations are straight near-screw, and reactions produce sessile <100> edge locks. At 30% and 35% Al, similar superdislocation structures with higher APB energy lead to closer partials and more dipole segments. APBII fringe contrast is observed in some alloys. Figures 5-19 document these structures.",
+      "material_systems": [
+        "Fe-Al alloys",
+        "Fe3Al",
+        "FeAl",
+        "disordered bcc Fe-Al"
+      ],
+      "sample_aliases": [
+        "Fe-15% Al",
+        "Fe-20% Al",
+        "Fe-25% Al",
+        "Fe-28% Al",
+        "Fe-30% Al",
+        "Fe-35% Al",
+        "Fe-20% Al + 0.1% B",
+        "Fe-30% Al + 0.1% B"
+      ],
+      "processing_route": [
+        "induction melting in alumina crucible under inert gas",
+        "drop casting into 25 mm diameter copper mould",
+        "slow cooling for ordering",
+        "spark machining to compression samples",
+        "polishing on 1500 grade abrasive paper",
+        "room temperature compression to 2-3% strain at 3e-4 s-1",
+        "twin-jet electropolishing for TEM (25% nitric acid in methanol at -30 degrees C and 20 V)"
+      ],
+      "key_variables": [
+        "Al content (15, 20, 25, 28, 30, 35 at.%)",
+        "B addition (0.1 at.%)",
+        "strain (2-3%)",
+        "strain rate (3e-4 s-1)",
+        "room temperature",
+        "grain size (~0.25 mm)",
+        "order state (B2, DO3, disordered)"
+      ],
+      "microstructure": [
+        "single dislocations with Burgers vector (1/2)<111> in disordered alloys",
+        "smoothly curved dislocations with screw preference (15-20% Al)",
+        "incipient cell structure (15% Al)",
+        "dipoles and small loops from trailing screw dislocations (20% Al)",
+        "loosely coupled superdislocations and APB faults (25-30% Al)",
+        "sessile <100> edge dislocations from reactions (28% Al peak)",
+        "straight near-screw superdislocations (28, 30, 35% Al)",
+        "edge dipole segments and loops (all alloys)",
+        "APBII fringes (30% Al, 35% Al)"
+      ],
+      "properties": [
+        "work hardening rate peak at 26-29% Al",
+        "slight flow stress increase with B addition",
+        "no yield points",
+        "smooth plasticity"
+      ],
+      "mechanisms": [
+        "single dislocation glide in disordered alloys",
+        "dipole hardening via trailing loops",
+        "superdislocation glide with APB fault trailing",
+        "dislocation reaction locks (sessile <100> edges) blocking motion"
+      ],
+      "figures_or_tables": [
+        "Fig. 5 (Fe-15% Al, loose cellular dislocations)",
+        "Fig. 6 (Fe-20% Al, curled dislocations, dipoles)",
+        "Fig. 7 (Fe-20% Al, straight screw dislocations, edge dipoles)",
+        "Fig. 8 (Fe-25% Al, APB faults in dark field and weak beam)",
+        "Fig. 9 (Fe-25% Al, dislocation pairs and dipoles)",
+        "Fig. 10 (Fe-28% Al, straight superdislocations)",
+        "Fig. 11 (Fe-28% Al, dipole and non-dipole pairs)",
+        "Fig. 12 (Fe-28% Al, reaction dislocations)",
+        "Fig. 13 (Fe-28% Al, superdislocation reactions, weak beam)",
+        "Fig. 14 (Fe-30% Al, dislocation structures and dipoles)",
+        "Fig. 15 (Fe-30% Al, straight screw segments)",
+        "Fig. 16 (Fe-30% Al, segments and APBII fringes)"
+      ],
+      "unresolved_terms": []
+    },
+    "rolling_context_summary": "Summary: This chunk covers the Experimental section and the beginning of Results (mechanical properties and dislocation structures). It details sample preparation: induction melting and drop casting into a 25 mm copper mould producing coarse grains (~0.25 mm). Binary alloys with 15, 20, 25, 28, 30, 35% Al were made, plus B-doped versions at 20 and 30% Al. Slow cooling gave B2 order in Al-rich alloys and DO3 order in 25-30% Al. Compression samples were spark-cut to 3 mm diameter or 5x5 mm square, polished, and tested at room temperature to 2-3% strain at 3e-4 s-1. Tests showed smooth plasticity with no yield points. TEM sample preparation used twin-jet electropolishing. Mechanical results confirm prior data with work hardening peak at 29% Al (range 26-29%). B addition had little effect. Dislocation structures vary with Al content: disordered alloys (15-20% Al) show single (1/2)<111> dislocations, curved with incipient cell structure and dipole formation. At 25% Al (DO3 order), loosely coupled superdislocations with APB faults appear. At 28% Al (peak hardening), superdislocations are straight near-screw, and reactions produce sessile <100> edge locks. At 30% and 35% Al, similar superdislocation structures with higher APB energy lead to closer partials and more dipole segments. APBII fringe contrast is observed in some alloys. Figures 5-19 document these structures.\nMaterial systems: Fe–Al alloys; Fe3Al; FeAl; disordered bcc Fe-Al; Fe-Al alloys\nSample aliases: Fe-15% Al; Fe-20% Al; Fe-25% Al; Fe-28% Al; Fe-30% Al; Fe-35% Al; Fe-20% Al + 0.1% B; Fe-30% Al + 0.1% B\nProcessing route: as-cast; annealed; slowly cooled; induction melting in alumina crucible under inert gas; drop casting into 25 mm diameter copper mould; slow cooling for ordering; spark machining to compression samples; polishing on 1500 grade abrasive paper\nKey variables: Al content (at.%) 0 to 40; plastic strain 1-1.5%; room temperature; grain size (coarse); order state (DO3, B2); Al content (15, 20, 25, 28, 30, 35 at.%); B addition (0.1 at.%); strain (2-3%)\nMicrostructure: dislocation dipoles (single vs superdislocation); straight screw dislocations; sessile dislocation segments; partial dislocations with Burgers vector (1/2)<111>; APB faults (APBI, APBII); single dislocations with Burgers vector (1/2)<111> in disordered alloys; smoothly curved dislocations with screw preference (15-20% Al); incipient cell structure (15% Al)\nProperties: work hardening rate; yield stress; ductility; elastic stiffness constants (C11, C12, C44); Zener anisotropy factor; work hardening rate peak at 26-29% Al; slight flow stress increase with B addition; no yield points\nMechanisms: dipole hardening; APB tube dragging; core/Peierls effects; single dislocation glide in disordered alloys; dipole hardening via trailing loops; superdislocation glide with APB fault trailing; dislocation reaction locks (sessile <100> edges) blocking motion\nFigures or tables: Fig. 1; Fig. 2; Fig. 3; Fig. 4; Fig. 5 (Fe-15% Al, loose cellular dislocations); Fig. 6 (Fe-20% Al, curled dislocations, dipoles); Fig. 7 (Fe-20% Al, straight screw dislocations, edge dipoles); Fig. 8 (Fe-25% Al, APB faults in dark field and weak beam)"
+  },
+  {
+    "chunk_id": "chunk_0003",
+    "section": "3.2. Studies of dislocation structures",
+    "previous_context_summary": "Summary: This chunk covers the Experimental section and the beginning of Results (mechanical properties and dislocation structures). It details sample preparation: induction melting and drop casting into a 25 mm copper mould producing coarse grains (~0.25 mm). Binary alloys with 15, 20, 25, 28, 30, 35% Al were made, plus B-doped versions at 20 and 30% Al. Slow cooling gave B2 order in Al-rich alloys and DO3 order in 25-30% Al. Compression samples were spark-cut to 3 mm diameter or 5x5 mm square, polished, and tested at room temperature to 2-3% strain at 3e-4 s-1. Tests showed smooth plasticity with no yield points. TEM sample preparation used twin-jet electropolishing. Mechanical results confirm prior data with work hardening peak at 29% Al (range 26-29%). B addition had little effect. Dislocation structures vary with Al content: disordered alloys (15-20% Al) show single (1/2)<111> dislocations, curved with incipient cell structure and dipole formation. At 25% Al (DO3 order), loosely coupled superdislocations with APB faults appear. At 28% Al (peak hardening), superdislocations are straight near-screw, and reactions produce sessile <100> edge locks. At 30% and 35% Al, similar superdislocation structures with higher APB energy lead to closer partials and more dipole segments. APBII fringe contrast is observed in some alloys. Figures 5-19 document these structures.\nMaterial systems: Fe–Al alloys; Fe3Al; FeAl; disordered bcc Fe-Al; Fe-Al alloys\nSample aliases: Fe-15% Al; Fe-20% Al; Fe-25% Al; Fe-28% Al; Fe-30% Al; Fe-35% Al; Fe-20% Al + 0.1% B; Fe-30% Al + 0.1% B\nProcessing route: as-cast; annealed; slowly cooled; induction melting in alumina crucible under inert gas; drop casting into 25 mm diameter copper mould; slow cooling for ordering; spark machining to compression samples; polishing on 1500 grade abrasive paper\nKey variables: Al content (at.%) 0 to 40; plastic strain 1-1.5%; room temperature; grain size (coarse); order state (DO3, B2); Al content (15, 20, 25, 28, 30, 35 at.%); B addition (0.1 at.%); strain (2-3%)\nMicrostructure: dislocation dipoles (single vs superdislocation); straight screw dislocations; sessile dislocation segments; partial dislocations with Burgers vector (1/2)<111>; APB faults (APBI, APBII); single dislocations with Burgers vector (1/2)<111> in disordered alloys; smoothly curved dislocations with screw preference (15-20% Al); incipient cell structure (15% Al)\nProperties: work hardening rate; yield stress; ductility; elastic stiffness constants (C11, C12, C44); Zener anisotropy factor; work hardening rate peak at 26-29% Al; slight flow stress increase with B addition; no yield points\nMechanisms: dipole hardening; APB tube dragging; core/Peierls effects; single dislocation glide in disordered alloys; dipole hardening via trailing loops; superdislocation glide with APB fault trailing; dislocation reaction locks (sessile <100> edges) blocking motion\nFigures or tables: Fig. 1; Fig. 2; Fig. 3; Fig. 4; Fig. 5 (Fe-15% Al, loose cellular dislocations); Fig. 6 (Fe-20% Al, curled dislocations, dipoles); Fig. 7 (Fe-20% Al, straight screw dislocations, edge dipoles); Fig. 8 (Fe-25% Al, APB faults in dark field and weak beam)",
+    "context_update": {
+      "summary": "This chunk covers final Results (dislocation structures in Fe-35% Al) and the entire Discussion section. For Fe-35% Al, superdislocations of B2 lattice with closely spaced partials, straight near-screw superdislocations, edge dipole segments, and weak remnant DO3 fringes are documented in Figs. 17-19. The Discussion analyzes work hardening origins: flow strength peaks at 25% Al (solution/short-range-order hardening), ductility drops with Al content (with a small peak near 28% Al), and work hardening peaks near 28% Al. High hardening in ordered alloys is linked to superdislocation dipoles; no APB tubes were observed. Four-partial superdislocations were not observed. Elastic anisotropy alone cannot explain the peak; Peierls forces are suggested to make dislocations strongly screw-oriented, enhancing dipole formation. Reaction of <111> dislocations to edge <100> dislocations produces strong barriers, especially in 28-30% Al range. The small ductility peak at ~28% Al is associated with work hardening peak and constant flow stress in 26-30% Al range. The Discussion also references anomalous hardening in L1₂ alloys (Kear-Wilsdorf locks) as analogous. No new sample aliases or processing routes are introduced beyond previous ones.",
+      "material_systems": [
+        "Fe-Al alloys",
+        "FeAl",
+        "DO3 ordered Fe3Al",
+        "B2 ordered FeAl"
+      ],
+      "sample_aliases": [
+        "Fe-35% Al",
+        "Fe-20% Al",
+        "Fe-25% Al",
+        "Fe-28% Al",
+        "Fe-30% Al",
+        "Fe-15% Al"
+      ],
+      "processing_route": [
+        "as-cast",
+        "annealed",
+        "slow cooling",
+        "induction melting",
+        "drop casting",
+        "spark machining",
+        "compression testing",
+        "twin-jet electropolishing"
+      ],
+      "key_variables": [
+        "Al content (at.%): 15, 20, 25, 28, 30, 35",
+        "room temperature",
+        "plastic strain 1-1.5%",
+        "order state: disordered, DO3, B2",
+        "strain rate 3e-4/s",
+        "B addition (~0.1 at.%)"
+      ],
+      "microstructure": [
+        "superdislocations (B2 lattice)",
+        "partial dislocations (1/2)<111>",
+        "straight near-screw superdislocations (Fe-35% Al)",
+        "edge dipole segments (Fe-35% Al)",
+        "weak remnant DO3 fringes (Fe-35% Al)",
+        "single dislocations in disordered alloys (15-20% Al)",
+        "loosely coupled superdislocations with APB faults (25% Al)",
+        "sessile <100> edge dislocations from dislocation reactions",
+        "curly mixed dislocations (15-20% Al)",
+        "incipient cell structure (15% Al)"
+      ],
+      "properties": [
+        "work hardening rate",
+        "flow stress (max at 25% Al)",
+        "ductility (drop with Al, small peak at 28% Al)",
+        "elastic anisotropy (Zener factor)"
+      ],
+      "mechanisms": [
+        "solution hardening",
+        "short range order hardening (single dislocations)",
+        "superdislocation dipole hardening",
+        "APB tube dragging (not observed)",
+        "dipole formation behind moving screw dislocations",
+        "Peierls forces stabilizing screw segments",
+        "dislocation reaction locks (<100> edge barriers)",
+        "cross slip locking (Kear-Wilsdorf analogy)"
+      ],
+      "figures_or_tables": [
+        "Fig. 1 (flow stress and ductility vs Al)",
+        "Fig. 2 (work hardening vs Al)",
+        "Fig. 4 (elastic anisotropy vs Al)",
+        "Fig. 17 (Fe-35% Al dislocation structure)",
+        "Fig. 18 (Fe-35% Al edge dipoles, +g/-g)",
+        "Fig. 19 (Fe-35% Al dislocations and fringes)"
+      ],
+      "unresolved_terms": [
+        "Considère criterion",
+        "Kear-Wilsdorf locks",
+        "Kotter et al. [23]",
+        "Yoo et al. [25]",
+        "Refs [6,9,10,26,27,28-31,32,33]"
+      ]
+    },
+    "rolling_context_summary": "Summary: APBII fringe contrast is observed in some alloys. Figures 5-19 document these structures. This chunk covers final Results (dislocation structures in Fe-35% Al) and the entire Discussion section. For Fe-35% Al, superdislocations of B2 lattice with closely spaced partials, straight near-screw superdislocations, edge dipole segments, and weak remnant DO3 fringes are documented in Figs. 17-19. The Discussion analyzes work hardening origins: flow strength peaks at 25% Al (solution/short-range-order hardening), ductility drops with Al content (with a small peak near 28% Al), and work hardening peaks near 28% Al. High hardening in ordered alloys is linked to superdislocation dipoles; no APB tubes were observed. Four-partial superdislocations were not observed. Elastic anisotropy alone cannot explain the peak; Peierls forces are suggested to make dislocations strongly screw-oriented, enhancing dipole formation. Reaction of <111> dislocations to edge <100> dislocations produces strong barriers, especially in 28-30% Al range. The small ductility peak at ~28% Al is associated with work hardening peak and constant flow stress in 26-30% Al range. The Discussion also references anomalous hardening in L1₂ alloys (Kear-Wilsdorf locks) as analogous. No new sample aliases or processing routes are introduced beyond previous ones.\nMaterial systems: Fe–Al alloys; Fe3Al; FeAl; disordered bcc Fe-Al; Fe-Al alloys; DO3 ordered Fe3Al; B2 ordered FeAl\nSample aliases: Fe-15% Al; Fe-20% Al; Fe-25% Al; Fe-28% Al; Fe-30% Al; Fe-35% Al; Fe-20% Al + 0.1% B; Fe-30% Al + 0.1% B\nProcessing route: as-cast; annealed; slowly cooled; induction melting in alumina crucible under inert gas; drop casting into 25 mm diameter copper mould; slow cooling for ordering; spark machining to compression samples; polishing on 1500 grade abrasive paper\nKey variables: Al content (at.%) 0 to 40; plastic strain 1-1.5%; room temperature; grain size (coarse); order state (DO3, B2); Al content (15, 20, 25, 28, 30, 35 at.%); B addition (0.1 at.%); strain (2-3%)\nMicrostructure: dislocation dipoles (single vs superdislocation); straight screw dislocations; sessile dislocation segments; partial dislocations with Burgers vector (1/2)<111>; APB faults (APBI, APBII); single dislocations with Burgers vector (1/2)<111> in disordered alloys; smoothly curved dislocations with screw preference (15-20% Al); incipient cell structure (15% Al)\nProperties: work hardening rate; yield stress; ductility; elastic stiffness constants (C11, C12, C44); Zener anisotropy factor; work hardening rate peak at 26-29% Al; slight flow stress increase with B addition; no yield points\nMechanisms: dipole hardening; APB tube dragging; core/Peierls effects; single dislocation glide in disordered alloys; dipole hardening via trailing loops; superdislocation glide with APB fault trailing; dislocation reaction locks (sessile <100> edges) blocking motion; solution hardening"
+  },
+  {
+    "chunk_id": "chunk_0004",
+    "section": "4. Discussion",
+    "previous_context_summary": "Summary: APBII fringe contrast is observed in some alloys. Figures 5-19 document these structures. This chunk covers final Results (dislocation structures in Fe-35% Al) and the entire Discussion section. For Fe-35% Al, superdislocations of B2 lattice with closely spaced partials, straight near-screw superdislocations, edge dipole segments, and weak remnant DO3 fringes are documented in Figs. 17-19. The Discussion analyzes work hardening origins: flow strength peaks at 25% Al (solution/short-range-order hardening), ductility drops with Al content (with a small peak near 28% Al), and work hardening peaks near 28% Al. High hardening in ordered alloys is linked to superdislocation dipoles; no APB tubes were observed. Four-partial superdislocations were not observed. Elastic anisotropy alone cannot explain the peak; Peierls forces are suggested to make dislocations strongly screw-oriented, enhancing dipole formation. Reaction of <111> dislocations to edge <100> dislocations produces strong barriers, especially in 28-30% Al range. The small ductility peak at ~28% Al is associated with work hardening peak and constant flow stress in 26-30% Al range. The Discussion also references anomalous hardening in L1₂ alloys (Kear-Wilsdorf locks) as analogous. No new sample aliases or processing routes are introduced beyond previous ones.\nMaterial systems: Fe–Al alloys; Fe3Al; FeAl; disordered bcc Fe-Al; Fe-Al alloys; DO3 ordered Fe3Al; B2 ordered FeAl\nSample aliases: Fe-15% Al; Fe-20% Al; Fe-25% Al; Fe-28% Al; Fe-30% Al; Fe-35% Al; Fe-20% Al + 0.1% B; Fe-30% Al + 0.1% B\nProcessing route: as-cast; annealed; slowly cooled; induction melting in alumina crucible under inert gas; drop casting into 25 mm diameter copper mould; slow cooling for ordering; spark machining to compression samples; polishing on 1500 grade abrasive paper\nKey variables: Al content (at.%) 0 to 40; plastic strain 1-1.5%; room temperature; grain size (coarse); order state (DO3, B2); Al content (15, 20, 25, 28, 30, 35 at.%); B addition (0.1 at.%); strain (2-3%)\nMicrostructure: dislocation dipoles (single vs superdislocation); straight screw dislocations; sessile dislocation segments; partial dislocations with Burgers vector (1/2)<111>; APB faults (APBI, APBII); single dislocations with Burgers vector (1/2)<111> in disordered alloys; smoothly curved dislocations with screw preference (15-20% Al); incipient cell structure (15% Al)\nProperties: work hardening rate; yield stress; ductility; elastic stiffness constants (C11, C12, C44); Zener anisotropy factor; work hardening rate peak at 26-29% Al; slight flow stress increase with B addition; no yield points\nMechanisms: dipole hardening; APB tube dragging; core/Peierls effects; single dislocation glide in disordered alloys; dipole hardening via trailing loops; superdislocation glide with APB fault trailing; dislocation reaction locks (sessile <100> edges) blocking motion; solution hardening",
+    "context_update": {
+      "summary": "This chunk covers the final part of the Discussion (ductility peak) and the entire Summary section. It reiterates the work hardening peak near Fe-28% Al, which coincides with a fall in flow stress above 25% Al and a small ductility maximum at 28% Al due to the Considere criterion and high work hardening rate. Dislocation structures transition from single bowed dislocations in disordered materials (15-20% Al) to paired superdislocations with straight screw segments in highly ordered materials (28-35% Al). DO3 ordered Fe-25% Al shows no superdislocations due to low APB energies; single dislocations trail shear APB. No coupled four-partial dislocations were observed. Dipoles are present in all compositions, with superdislocation dipoles in ordered materials. High work hardening is linked to stronger dipole locks from superdislocations and screw dislocation tendency due to Peierls forces (not elastic anisotropy) for 25-30% Al. Dislocation reactions producing sessile <100> edges are seen near 28-30% Al, contributing to hardening. The ductility peak at Fe-28% Al is explained by high work hardening rate. No new materials, processing routes, or sample aliases are introduced. References section follows.",
+      "material_systems": [
+        "Fe–Al alloys",
+        "DO3 ordered Fe3Al",
+        "B2 ordered FeAl",
+        "disordered bcc Fe-Al"
+      ],
+      "sample_aliases": [
+        "Fe-15% Al",
+        "Fe-20% Al",
+        "Fe-25% Al",
+        "Fe-28% Al",
+        "Fe-30% Al",
+        "Fe-35% Al"
+      ],
+      "processing_route": [],
+      "key_variables": [
+        "Al content (15-35 at.%)",
+        "room temperature",
+        "deformation",
+        "order state (disordered, DO3, B2)"
+      ],
+      "microstructure": [
+        "single bowed dislocations (15-20% Al)",
+        "paired superdislocations with straight screw segments (28-35% Al)",
+        "single dislocations trail shear APB (Fe-25% Al)",
+        "no four-partial dislocations",
+        "dipoles: single in disordered, superdislocation in ordered"
+      ],
+      "properties": [
+        "work hardening rate peak near Fe-28% Al",
+        "fall in flow stress above 25% Al",
+        "small ductility maximum at 28% Al",
+        "relatively constant flow stress 26-30% Al"
+      ],
+      "mechanisms": [
+        "superdislocation dipole locks",
+        "screw orientation from Peierls forces (25-30% Al)",
+        "dislocation reactions to sessile <100> edges (28-30% Al)",
+        "Considere criterion for ductility"
+      ],
+      "figures_or_tables": [
+        "Fig. 1"
+      ],
+      "unresolved_terms": []
+    },
+    "rolling_context_summary": "Summary: The Discussion also references anomalous hardening in L1₂ alloys (Kear-Wilsdorf locks) as analogous. No new sample aliases or processing routes are introduced beyond previous ones. This chunk covers the final part of the Discussion (ductility peak) and the entire Summary section. It reiterates the work hardening peak near Fe-28% Al, which coincides with a fall in flow stress above 25% Al and a small ductility maximum at 28% Al due to the Considere criterion and high work hardening rate. Dislocation structures transition from single bowed dislocations in disordered materials (15-20% Al) to paired superdislocations with straight screw segments in highly ordered materials (28-35% Al). DO3 ordered Fe-25% Al shows no superdislocations due to low APB energies; single dislocations trail shear APB. No coupled four-partial dislocations were observed. Dipoles are present in all compositions, with superdislocation dipoles in ordered materials. High work hardening is linked to stronger dipole locks from superdislocations and screw dislocation tendency due to Peierls forces (not elastic anisotropy) for 25-30% Al. Dislocation reactions producing sessile <100> edges are seen near 28-30% Al, contributing to hardening. The ductility peak at Fe-28% Al is explained by high work hardening rate. No new materials, processing routes, or sample aliases are introduced. References section follows.\nMaterial systems: Fe–Al alloys; Fe3Al; FeAl; disordered bcc Fe-Al; Fe-Al alloys; DO3 ordered Fe3Al; B2 ordered FeAl\nSample aliases: Fe-15% Al; Fe-20% Al; Fe-25% Al; Fe-28% Al; Fe-30% Al; Fe-35% Al; Fe-20% Al + 0.1% B; Fe-30% Al + 0.1% B\nProcessing route: as-cast; annealed; slowly cooled; induction melting in alumina crucible under inert gas; drop casting into 25 mm diameter copper mould; slow cooling for ordering; spark machining to compression samples; polishing on 1500 grade abrasive paper\nKey variables: Al content (at.%) 0 to 40; plastic strain 1-1.5%; room temperature; grain size (coarse); order state (DO3, B2); Al content (15, 20, 25, 28, 30, 35 at.%); B addition (0.1 at.%); strain (2-3%)\nMicrostructure: dislocation dipoles (single vs superdislocation); straight screw dislocations; sessile dislocation segments; partial dislocations with Burgers vector (1/2)<111>; APB faults (APBI, APBII); single dislocations with Burgers vector (1/2)<111> in disordered alloys; smoothly curved dislocations with screw preference (15-20% Al); incipient cell structure (15% Al)\nProperties: work hardening rate; yield stress; ductility; elastic stiffness constants (C11, C12, C44); Zener anisotropy factor; work hardening rate peak at 26-29% Al; slight flow stress increase with B addition; no yield points\nMechanisms: dipole hardening; APB tube dragging; core/Peierls effects; single dislocation glide in disordered alloys; dipole hardening via trailing loops; superdislocation glide with APB fault trailing; dislocation reaction locks (sessile <100> edges) blocking motion; solution hardening"
+  }
+]

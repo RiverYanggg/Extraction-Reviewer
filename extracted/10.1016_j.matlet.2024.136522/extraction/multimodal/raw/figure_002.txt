@@ -1,0 +1,7 @@
+```json
+{
+  "image_type": "microscopy_tem",
+  "description": "This figure presents a high-resolution transmission electron microscopy (HRTEM) image of aged 3Cu steel (Fe-28Mn-10Al-1C-3Cu austenitic low-density steel) with two corresponding selected area electron diffraction (SAED) patterns as insets. The main HRTEM image shows nanoscale precipitates within the austenitic matrix, with two regions marked: a yellow dashed box labeled 'γ + κ' (austenite plus κ-carbide) and a red dashed box labeled 'γ + Cu' (austenite plus Cu-rich phase). The upper-right SAED pattern (yellow border, Z=[011̄]) displays diffraction spots indexed as (011) for κ-carbide and (111) for the austenitic matrix, confirming the cube-on-cube orientation relationship between κ-carbide and γ-austenite. The lower-right SAED pattern (red border, Z=[011̄]) shows diffraction spots indexed as (111), (111̄), and (200) for the Cu-rich phase, with the caption stating this indicates BCC structure for the Cu-rich phase. Both SAED patterns confirm coherent relationships between the precipitates and austenitic matrix. The scale bar indicates 5 nm for the HRTEM image and 2 1/nm for the SAED patterns. This figure supports the core conclusion that κ-carbide and Cu-rich phase co-precipitate in the aged 3Cu steel with specific cube-on-cube orientation relationships: [110]γ//[110]κ//[110]Cu and (111)γ//(111)κ//(111)Cu, enabling low interfacial energies and good thermal stability.",
+  "confidence": "high"
+}
+```

@@ -1,0 +1,115 @@
+# Co-precipitation mechanism of Cu-rich phase and κ-carbide precipitates in Fe-28Mn-10Al-1C-3Cu austenitic low-density steel
+
+![](images/75f30ed5e2ffc046c9c81134573d582a3eec98cee9e4b3dacc2d14157d8e2523.jpg)
+
+Xiqiang Ren , Yanfei Qi <sup>\*</sup>, Yungang Li , Jingyi Zhou , Jiahao Gu
+
+College of Metallurgy and Energy, North China University of Science and Technology, Tangshan 063210, PR China
+
+## A R T I C L E I N F O
+
+Keywords: Austenitic low-density steel Particles Nanosize Microstructure Co-precipitation mechanism
+
+## A B S T R A C T
+
+The excellent comprehensive properties of Fe-28Mn-10Al-1C-3Cu austenitic low-density steel are related to its main precipitates of Cu-rich phase and κ-carbide particles. The co-precipitation mechanism of Cu-rich phase and κ-carbide particles in Fe-28Mn-10Al-1C-3Cu austenitic low-density steel are investigated. Adding Cu to Fe-28Mn 10Al-1C austenitic low-density steel can promote the precipitation of κ-carbide. The κ-carbide can also promote the precipitation of Cu-rich phase with FCC structure. The κ-carbide preferentially precipitate compared to Curich phase. The κ-carbide and Cu-rich phase have a cube-on-cube orientation relationship with the austenitic matrix: [11 0] //[11 0] //[110] and (11 1) //(11 1) //(11 1) .
+
+## 1. Introduction
+
+Fe-Mn-Al-C austenitic low-density steel is considered one of the important advanced high-strength steels in automotive structural re inforcements due to it’s the demands of safety, light-weighting, and eco friendliness. However, the yield strength of Fe-Mn-Al-C austenitic lowdensity steel is relatively low, only 360 \~ 540 MPa [1]. Therefore, it is necessary to further improved the yield strength to ensure that its structure undergoes micro-deformation or even no deformation during car collisions, thereby reducing the harm to drivers and passengers [2]. The κ-carbide precipitated in Fe-Mn-Al-C austenitic matrix steel can increase the yield strength [3–5]. But relying solely on κ-carbide to enhance its yield strength is not enough. Cu alloying can improve the yield strength of Fe-Mn-Al-C low-density steel [6], which is related to Cu-rich phase. The precipitation strengthening of nanoscale Cu-rich phase in steel can also improve its corrosion resistance, resist fatigue crack propagation, hydrogen embrittlement resistance, and Cu is inex pensive. The excellent comprehensive properties of Fe-Mn-Al-C-Cu low density steel are related to its main precipitates of Cu-rich phase and κ-carbide. Currently, although literature reports that the precipitation behavior of κ-carbide or Cu-rich phase in austenitic low-density steel [7–9], the co-precipitation behavior and mechanism of Cu-rich phase and κ-carbide are still unclear and have not been reported. Clarifying the co-precipitation behavior and mechanism is of great significance for improving the comprehensive properties of austenitic low-density steel. In this paper, the co-precipitation behavior and mechanism of Cu-rich phase and κ-carbide in Fe-28Mn-10Al-1C-3Cu austenitic low-density steel are investigated.
+
+## 2. Materials and methods
+
+The Fe-28Mn-10Al-1C-(0,3)Cu austenitic low-density steel (0Cu steel or 3Cu steel) with nominal composition are processed by solution treatment (at 1000℃ for 1 h) and aging treatment（at 550℃ for 3 h） sequentially. The microstructure is examined by high-resolution trans mission electron microscope (HR-TEM, JEOL JEM-2100F) with an en ergy dispersive spectrometer (EDS) detector. The TEM samples with a diameter of 3 mm are mechanically polished to about 100 μm thickness, and then are twin-jet electro-polished in 10 % perchloric acid alcohol.
+
+## 3. Results and discussion
+
+The Cu-rich phase in ferrite generally precipitates with BCC structure first and finally transforms into steady-state FCC structure [10]. How ever, the Cu-rich phase in austenitic precipitates directly in the FCC structure [11]. According to selected area electron diffraction (SAED) analysis, the Cu-rich phase has BCC structure (Fig. 1, inset). In addition, no additional diffraction spots are observed except for Cu-rich phase and κ-carbide, indicating that the κ-carbide and Cu-rich phase are coherent with the austenitic matrix.
+
+Fig. 2 shows the HR-TEM images of Cu-rich phase which has no obvious interface with austenitic matrix, indicating a coherent relationship between Cu-rich phase and austenitic matrix. The Cu-rich phase is mainly irregular oval and has a small amount of bars shapes, which the diameter of irregular oval Cu-rich phase is \~ 10 nm and the length of bars shapes Cu-rich phase is \~ 30 nm. The IFFT photos show that there are almost no dislocations and stacking faults in the Cu-rich phase, and Cu-rich phase crystal plane spacing (00 2) is 0.182 nm which is consistent with Cu in FCC structure [12]. The lattice parameter of FCC Cu-rich phase and κ-carbide are a = 0.3652 nm and a = 0.3775 nm. respectively. The lattice parameter of austenitic matrix under solution treatment is $\mathbf { a } = 0 . 3 6 8 9$ nm obtained by XRD. Due to the close lattice parameters of Cu-rich phase and κ-carbide with the austenitic matrix. Thus, it is difficult to distinguish the diffraction separation.
+
+![](images/4b1124ad71e38aa2457fe0f417c872e2bb904132c47f9a330ec155750be1d615.jpg)  
+Fig. 1. SAED patterns of Cu-rich phase and κ-carbide in-aged 3Cu steel.
+
+![](images/cbd4efb77a63c44bd5c2d4313bcf8f955f098f1a3709ae77dbd7b7604dfb027b.jpg)  
+Fig. 2. TEM images of aged 3Cu steel (a), EDS mapping (b), HRTEM image of Cu-rich phase with irregular oval (c) and HRTEM image of Cu-rich phase with bars shapes(d).
+
+According to the lattice misfit formula (1), it can be calculated that the lattice misfit between κ-carbide and Cu-rich phase is 3.4 %, the lattice misfit between κ-carbide and austenitic matrix is 2.3 %, and the lattice misfit between Cu-rich phase and austenitic matrix is 1.0 %. Due to the lattice misfit between the three phases being less than 5 %, the three phases are in a coherent relationship. The lattice misfit between
+
+Cu-rich phase and austenitic matrix is lower than that between Cu-rich phase and κ-carbide. Therefore, Cu-rich phase has a lower nucleation energy barrier in austenitic matrix. Cu-rich phase precipitated in austenitic matrix instead of κ-carbide, and the precipitation of κ-carbide can promote the precipitation of Cu-rich phase.
+
+$$
+\delta = \frac {\left| a _ {0} - a _ {1} \right|}{a _ {0}}\tag{1}
+$$
+
+where δ is lattice misfit, $a _ { 0 }$ and $a _ { 1 }$ are lattice parameters of the $a _ { 0 }$ phase and $^ { a _ { 1 } , }$ respectively.
+
+The TEM-EDS mapping shows that Fe, Mn and Al atoms exhibited brighter contrast within the white dashed box zone, while Cu atoms exhibit darker contrast. However, Cu atoms exhibit brighter contrast within the magenta line area, while Fe, Mn, and Al content exhibit darker contrast (Fig. 2(b)). Intragranular κ-carbide are generally in the form of dots or bars, and Cu-rich phase are spherical or bars. Therefore, it is inferred that the brighter contrast within the white dashed box zone is κ-carbide, while the Cu atoms are excluded outside of the κ-carbide precipitates. The brighter contrast within the magenta line area is Cu rich phase, while the main matrix elements of Fe, Mn and Al atoms are excluded outside of the Cu-rich phase. The κ-carbide precipitated from austenitic matrix, and Cu atoms migrate to the austenitic matrix without κ-carbide, thereby increasing the Cu concentration near the κ-carbide. As the κ-carbide further precipitate, the Cu concentration around κ-carbide increases. As the Cu concentration reaches a certain degree, the Cu atoms gather together and form clusters rich in $\mathrm { C u } ,$ which then precipitate as Cu-rich phase.
+
+The precipitation of κ-carbide is related to the critical lattice parameter of austenitic matrix [13]. Due to the effect of $\operatorname { M n } , \operatorname { A l } ,$ and C content on the lattice parameters of austenite matrix in Fe-Mn-Al-C lowdensity steel, it can affect the precipitation of κ-carbide. Among them, Al and C can increase the lattice parameter of austenitic matrix, while Mn reduces the lattice parameter of austenitic matrix. The critical lattice parameter of the austenitic matrix is about $\mathbf { a } = 0 . 3 6 7 0 ~ \mathrm { n m }$ 1. which is lower than the critical lattice parameter, and the κ-carbide cannot pre cipitate in the austenitic matrix. According to XRD calculations, the lattice parameter of 0Cu steel and 3Cu steel under solid solution treat ment are $\mathbf { a } = 0 . 3 6 8 7$ nm and $\mathbf { a } = 0 . 3 6 8 9 \mathrm { n m }$ , respectively. Both of these calculation results are higher than the critical lattice parameter of austenitic matrix, when κ-carbide precipitates from it. Therefore, κ-carbide can precipitate from 0Cu steel and 3Cu steel. Moreover, add ing Cu element to 0Cu steel can increase the lattice parameter of the austenitic matrix, which is beneficial for the precipitation of κ-carbide. The lattice parameter of the austenitic matrix can serve as a simple empirical index in determining the precipitation of intragranular κ-carbide [14]. Below the lattice parameter of the austenitic matrix, intragranular κ-carbide cannot precipitates. Based on this critical lattice parameter, it can be inferred that a composition boundary formula for the precipitation of intragranular κ-carbides in Fe-Mn-Al-C steel is as follows [14,15]:
+
+$$
+0.208(wt.\% C) + 0.098(wt.\% Al) = 1 - 0.0054(wt.\% Mn)\tag{2}
+$$
+
+According to this formula, it can be calculated that the critical Al content for κ-carbide precipitation in 0Cu steel is 6.52 wt%. However, the Al content in 0Cu steel exceeds 6.52 wt%. Therefore, κ-carbide have sufficient precipitation ability in this steel. Furthermore, it can be inferred that the Mn and C content in 3Cu steel exceeded the critical Mn and C content required for the precipitation of intragranular κ-carbide.
+
+The formation of intragranular κ-carbide in the aged steel follows the nucleation and growth mechanism [16]. There is coherent (semicoherent) relationship between the κ-carbide and the austenitic matrix, and the κ-carbide with austenitic matrix have a low interfacial energy. In general, the interfacial energy of precipitates with incoherent interfaces is greater than $0 . 5 \ : \mathrm { J / m ^ { 2 } \ : [ 1 7 ] }$ , and the interfacial energy of precipitates with coherent interfaces is lower than $0 . 0 1 \sim 0 . 2 ~ \mathrm { J / m } ^ { 2 } ~ [ 1 7 ]$ . The interfacial energy of κ-carbide precipitates in Fe-Mn-Al-C steel is 0.025 $\mathrm { J } / \mathrm { m } ^ { 2 }$ [18] and κ-carbide have a cube-on-cube orientation relationship with the austenitic matrix: $[ 1 0 0 ] _ { \kappa } / / [ 1 0 0 ] _ { \gamma }$ and $( 1 0 0 ) _ { \kappa } / / ( 1 0 0 ) _ { \gamma } ~ [ 1 6 ]$ The interfacial energy of Cu in austenitic matrix is 0.086 $\mathrm { J } / \mathrm { m } ^ { 2 }$ , and Curich phase have a cube-on-cube orientation relationship with the austenitic matrix: $[ 1 1 0 ] _ { \mathsf { C u } } \| [ 1 1 0 ] _ { \gamma }$ and $( 1 1 1 ) _ { \mathrm { { C u } } } / / \ ( 1 1 1 ) _ { \gamma }$ [18]. The interfacial energy of κ-carbide with austenitic matrix and the interfacial energy of Cu-rich phases with austenitic matrix are both lower than 0.1 $\mathrm { J } / \mathrm { m } ^ { 2 } .$ Thereby, it can be inferred that κ-carbide and Cu-rich phases in aged-3Cu steel have a cube-on-cube orientation relationship with austenitic matrix: $[ 1 1 0 ] _ { \gamma } / / [ 1 1 0 ] _ { \kappa } / / [ 1 1 0 ] _ { \mathrm { C u } }$ and $( 1 1 1 ) _ { \gamma } / / ( 1 1 1 ) _ { \kappa } / /$ (1 1 1) (Fig. 1). The interfacial energy of κ-carbide with austenitic matrix is lower than Cu-rich phase with austenitic matrix. Therefore, in the early stage of aging treatment, κ-carbide precipitate earlier than Curich phases in the aged-3Cu steel. Moreover, due to the low lattice misfit between Cu-rich phase, κ-carbide and austenitic matrix, there is a good coherent relationship and thermal stability between Cu-rich phase, κ-carbide and austenitic matrix.
+
+## 4. Conclusion
+
+Adding Cu to Fe-28Mn-10Al-1C austenitic low-density steel can in crease the lattice parameter of austenitic matrix, which is beneficial for the precipitation of κ-carbide. In the early stage of aging treatment, κ-carbide preferentially precipitate, followed by Cu-rich phase, and the precipitation of κ-carbide can promote the precipitation of Cu-rich phase. The Cu-rich phase precipitates directly in FCC structure. The κ-carbide and Cu-rich phase have a cube-on-cube orientation relation ship with austenitic matrix: $[ 1 1 0 ] _ { \gamma } / / [ 1 1 0 ] _ { \kappa } / / [ 1 1 0 ] _ { \mathrm { C u } }$ and (111)<sub>γ</sub>// (1 11)<sub>κ</sub>//(1 11)<sub>Cu</sub>.
+
+## CRediT authorship contribution statement
+
+Xiqiang Ren: Writing – review & editing, Writing – original draft, Methodology, Investigation, Formal analysis, Data curation, Conceptu alization. Yanfei Qi: Writing – review & editing, Supervision, Funding acquisition. Yungang Li: Writing – review & editing, Supervision, Funding acquisition. Jingyi Zhou: Methodology, Investigation. Jiahao Gu: Methodology, Investigation.
+
+## Declaration of competing interest
+
+The authors declare that they have no known competing financial interests or personal relationships that could have appeared to influence the work reported in this paper.
+
+## Data availability
+
+Data will be made available on request.
+
+## Acknowledgements
+
+This work was supported by the National Natural Science Foundation of China (NO.51974129) and Natural Science Foundation of Hebei Province (NO. E2021209099).
+
+## References
+
+[1] J. Xing, L.F. Hou, H.Y. Du, B.S. Liu, Y.H. Wei, Metall. Mater. Trans. A 50 (2019) 2629-2639.
+
+[2] Z.Q. Xie, W.J. Hui, Y.J. Zhang, X.L. Zhao, J. Mater. Res. Technol. 18 (2022) 1307–1321.
+
+[3] K.M. Chang, C.G. Chao, T.F. Liu, Scr. Mater. 63 (2010) 162–165.
+
+[4] O.A. Zambrano, J. Mater. Sci. 53 (2018) 14003–14062.
+
+[5] Y.H. Zhou, T.H. Man, J. Wang, H.S. Zhao, H. Dong, Materials 17 (2024) 631
+
+[6] H. Song, J. Yoo, S.-H. Kim, S.S, Sohn. M. Koo, N.J. Kim, S. Lee, Acta Mater, 135 (2017) 215-225.
+
+[7] J.-H. Shin, G.-Y. Rim, S.-D. Kim, J.H. Jang, S.-J. Park, J. Lee, Mater. Charact. 164 (2020)110316.
+
+[8] L. Yang, Z.M. Li, X. Li, Y.H. Zhang, K. Han, C.J. Song, Q.J. Zhai, Steel Res. Int. 91 (2020) 1900665.
+
+[9] X.Q. Ren, Y.G. Li, Y.F. Qi, C.H. Wang, Metals 12 (2022) 695.
+
+[10] B.L. Chen, W. Wang, H. Xie, R.R. Ge, Z.Y. Zhang, Z.W. Li, X.Y. Zhou, B.X. Zhou, J. Microsc. 262 (1) (2016) 123–127.
+
+[11] S.L. Liu, X.Q. Rong, H. Guo, R.D.K. Misra, X.J. Jin, C.J. Shang, Mater. Sci. Eng. A 825 (2021) 141783.
+
+[12] G. Han, Z.J. Xie, Z.Y. Li, B. Lei, C.J. Shang, R.D.K. Misra, Mater. Des. 135 (2017) 92–101.
+
+[13] H. Huang, D. Gan, P.W. Kao, Scripta Metallurgica Et Mater. 30 (1994) 499–504.
+
+[14] S.P. Chen, R. Rana, A. Haldar, R.K. Rav, Prog, Mater, Sci, 89 (2017) 345–391.
+
+[15] J.L. Zhang, Y.S. Jiang, W.S. Zheng, Y.X. Liu, A. Addad, G. Ji, C.J. Song, Q.J. Zhai, Scripta Mater, 199 (2021) 113836
+
+[16] D.A. Porter, K.E. Easterling, Chapman & Hall, London, 1992.
+
+[18] J.W. Bai, P.P. Liu, Y.M. Zhu, X.M. Li, C.Y. Chi, H.Y. Yu, X.S. Xie, Q. Zhan, Mater. Sci. Eng. A 584 (2013) 57–62.
+
+[17] W.S. Zheng, KTH Royal Institute of Technology, 2018.

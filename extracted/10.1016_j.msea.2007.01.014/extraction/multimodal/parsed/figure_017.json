@@ -1,0 +1,11 @@
+{
+  "paper_id": "10.1016_j.msea.2007.01.014",
+  "figure_id": "figure_017",
+  "image_paths": [
+    "images/9d8573ab4cbffce712a11901947c7551917ba800673029a1f474f002a72fc244.jpg"
+  ],
+  "image_count": 1,
+  "image_type": "microscopy_tem",
+  "description": "This figure presents a pair of bright-field transmission electron microscopy (TEM) micrographs showing typical dislocation structures in deformed Fe–35% Al alloy. The left panel, with a scale bar of 0.25 μm, displays a dense network of dislocations dominated by straight, near-screw oriented superdislocations and numerous edge dipole segments distributed throughout the field of view. The right panel, at higher magnification with a scale bar of 0.1 μm, reveals finer details including edge dipole segments being dragged out of glissile screw dislocations when encountering obstacles, as indicated by the imaging vector arrow (1 1 0̄) and zone axis near [1 1 0]. The caption and citation context establish that these are B2 lattice superdislocations composed of two (1/2)<111> partial dislocations lying close together due to high APBI fault energy, with weak remnant fringes from residual DO3 order destruction during dislocation movement. The micrographs collectively demonstrate the characteristic dislocation multiplication and dipole formation mechanisms contributing to work hardening in this high-aluminum Fe–Al intermetallic alloy.",
+  "confidence": 0.9
+}

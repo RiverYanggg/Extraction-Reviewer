@@ -1,0 +1,4932 @@
+{
+  "paper_id": "10.1016_j.msea.2007.01.014",
+  "schema_version": "field-evidence-v2",
+  "stage": "extraction_postprocess",
+  "source_text_extraction_path": "/Users/mac/Desktop/SteelDig/datasets/82/extracted/10.1016_j.msea.2007.01.014/verify/text_extraction_fixed.json",
+  "field_count": 279,
+  "bucket_count": 9,
+  "llm_used": true,
+  "support_summary": {
+    "explicit_supported": 90,
+    "numeric_supported": 9,
+    "unsupported": 4,
+    "weak_supported": 176
+  },
+  "fields": [
+    {
+      "field_id": "F00001",
+      "section": "papers",
+      "path": "papers.10.1016_j.msea.2007.01.014.authors[0]",
+      "value": "D.G. Morris",
+      "support": {
+        "support_label": "explicit_supported",
+        "evidence_refs": [
+          "b0003"
+        ],
+        "confidence": 0.98,
+        "method": "code_exact_match",
+        "value_match": "exact",
+        "contradiction": false,
+        "reason": "Normalized field value appears in the evidence block."
+      }
+    },
+    {
+      "field_id": "F00002",
+      "section": "papers",
+      "path": "papers.10.1016_j.msea.2007.01.014.authors[1]",
+      "value": "M.A. Munoz-Morris",
+      "support": {
+        "support_label": "explicit_supported",
+        "evidence_refs": [
+          "b0003"
+        ],
+        "confidence": 0.98,
+        "method": "code_exact_match",
+        "value_match": "exact",
+        "contradiction": false,
+        "reason": "Normalized field value appears in the evidence block."
+      }
+    },
+    {
+      "field_id": "F00003",
+      "section": "papers",
+      "path": "papers.10.1016_j.msea.2007.01.014.authors[2]",
+      "value": "L.M. Requejo",
+      "support": {
+        "support_label": "explicit_supported",
+        "evidence_refs": [
+          "b0003"
+        ],
+        "confidence": 0.98,
+        "method": "code_exact_match",
+        "value_match": "exact",
+        "contradiction": false,
+        "reason": "Normalized field value appears in the evidence block."
+      }
+    },
+    {
+      "field_id": "F00004",
+      "section": "papers",
+      "path": "papers.10.1016_j.msea.2007.01.014.doi",
+      "value": "10.1016/j.msea.2007.01.014",
+      "support": {
+        "support_label": "unsupported",
+        "evidence_refs": [],
+        "confidence": 0.0,
+        "method": "code_from_llm_bucket_evidence",
+        "value_match": "",
+        "contradiction": false,
+        "reason": "No direct metadata source block was confirmed."
+      }
+    },
+    {
+      "field_id": "F00005",
+      "section": "papers",
+      "path": "papers.10.1016_j.msea.2007.01.014.journal",
+      "value": "Materials Science and Engineering A",
+      "support": {
+        "support_label": "unsupported",
+        "evidence_refs": [],
+        "confidence": 0.0,
+        "method": "code_from_llm_bucket_evidence",
+        "value_match": "",
+        "contradiction": false,
+        "reason": "No direct metadata source block was confirmed."
+      }
+    },
+    {
+      "field_id": "F00006",
+      "section": "papers",
+      "path": "papers.10.1016_j.msea.2007.01.014.keywords[0]",
+      "value": "Iron alloys",
+      "support": {
+        "support_label": "explicit_supported",
+        "evidence_refs": [
+          "b0008"
+        ],
+        "confidence": 0.98,
+        "method": "code_exact_match",
+        "value_match": "exact",
+        "contradiction": false,
+        "reason": "Normalized field value appears in the evidence block."
+      }
+    },
+    {
+      "field_id": "F00007",
+      "section": "papers",
+      "path": "papers.10.1016_j.msea.2007.01.014.keywords[1]",
+      "value": "Intermetallic phases—iron aluminides",
+      "support": {
+        "support_label": "explicit_supported",
+        "evidence_refs": [
+          "b0008"
+        ],
+        "confidence": 0.98,
+        "method": "code_exact_match",
+        "value_match": "exact",
+        "contradiction": false,
+        "reason": "Normalized field value appears in the evidence block."
+      }
+    },
+    {
+      "field_id": "F00008",
+      "section": "papers",
+      "path": "papers.10.1016_j.msea.2007.01.014.keywords[2]",
+      "value": "Mechanical properties",
+      "support": {
+        "support_label": "explicit_supported",
+        "evidence_refs": [
+          "b0008"
+        ],
+        "confidence": 0.98,
+        "method": "code_exact_match",
+        "value_match": "exact",
+        "contradiction": false,
+        "reason": "Normalized field value appears in the evidence block."
+      }
+    },
+    {
+      "field_id": "F00009",
+      "section": "papers",
+      "path": "papers.10.1016_j.msea.2007.01.014.keywords[3]",
+      "value": "Work hardening",
+      "support": {
+        "support_label": "explicit_supported",
+        "evidence_refs": [
+          "b0002"
+        ],
+        "confidence": 0.98,
+        "method": "code_exact_match",
+        "value_match": "exact",
+        "contradiction": false,
+        "reason": "Normalized field value appears in the evidence block."
+      }
+    },
+    {
+      "field_id": "F00010",
+      "section": "papers",
+      "path": "papers.10.1016_j.msea.2007.01.014.paper_id",
+      "value": "10.1016_j.msea.2007.01.014",
+      "support": {
+        "support_label": "weak_supported",
+        "evidence_refs": [
+          "b0007"
+        ],
+        "confidence": 0.35,
+        "method": "code_from_llm_bucket_evidence",
+        "value_match": "context",
+        "contradiction": false,
+        "reason": "Identifier is linked to evidence through the surrounding record context."
+      }
+    },
+    {
+      "field_id": "F00011",
+      "section": "papers",
+      "path": "papers.10.1016_j.msea.2007.01.014.paper_scope",
+      "value": "Examine work hardening variation in polycrystalline Fe–Al alloys (0–40 at.% Al) at room temperature, correlating with dislocation structures and elastic anisotropy.",
+      "support": {
+        "support_label": "unsupported",
+        "evidence_refs": [],
+        "confidence": 0.0,
+        "method": "code_from_llm_bucket_evidence",
+        "value_match": "",
+        "contradiction": false,
+        "reason": "No direct metadata source block was confirmed."
+      }
+    },
+    {
+      "field_id": "F00012",
+      "section": "papers",
+      "path": "papers.10.1016_j.msea.2007.01.014.publication_year",
+      "value": "2007",
+      "support": {
+        "support_label": "explicit_supported",
+        "evidence_refs": [
+          "b0005"
+        ],
+        "confidence": 0.98,
+        "method": "code_exact_match",
+        "value_match": "exact",
+        "contradiction": false,
+        "reason": "Normalized field value appears in the evidence block."
+      }
+    },
+    {
+      "field_id": "F00013",
+      "section": "papers",
+      "path": "papers.10.1016_j.msea.2007.01.014.research_type",
+      "value": "experimental",
+      "support": {
+        "support_label": "unsupported",
+        "evidence_refs": [],
+        "confidence": 0.0,
+        "method": "code_from_llm_bucket_evidence",
+        "value_match": "",
+        "contradiction": false,
+        "reason": "No direct metadata source block was confirmed."
+      }
+    },
+    {
+      "field_id": "F00014",
+      "section": "papers",
+      "path": "papers.10.1016_j.msea.2007.01.014.title",
+      "value": "Work hardening in Fe–Al alloys",
+      "support": {
+        "support_label": "explicit_supported",
+        "evidence_refs": [
+          "b0002"
+        ],
+        "confidence": 0.98,
+        "method": "code_exact_match",
+        "value_match": "exact",
+        "contradiction": false,
+        "reason": "Normalized field value appears in the evidence block."
+      }
+    },
+    {
+      "field_id": "F00015",
+      "section": "alloys",
+      "path": "alloys.alloy_fe15al.alloy_id",
+      "value": "alloy_fe15al",
+      "support": {
+        "support_label": "weak_supported",
+        "evidence_refs": [
+          "b0007"
+        ],
+        "confidence": 0.35,
+        "method": "code_from_llm_bucket_evidence",
+        "value_match": "context",
+        "contradiction": false,
+        "reason": "Identifier is linked to evidence through the surrounding record context."
+      }
+    },
+    {
+      "field_id": "F00016",
+      "section": "alloys",
+      "path": "alloys.alloy_fe15al.alloy_name",
+      "value": "Fe–15%Al",
+      "support": {
+        "support_label": "numeric_supported",
+        "evidence_refs": [
+          "b0023"
+        ],
+        "confidence": 0.94,
+        "method": "code_numeric_match",
+        "value_match": "numeric",
+        "contradiction": false,
+        "reason": "Field number appears in the evidence block."
+      }
+    },
+    {
+      "field_id": "F00017",
+      "section": "alloys",
+      "path": "alloys.alloy_fe15al.alloying_elements[al].atomic_percent",
+      "value": "15",
+      "support": {
+        "support_label": "explicit_supported",
+        "evidence_refs": [
+          "b0023"
+        ],
+        "confidence": 0.98,
+        "method": "code_exact_match",
+        "value_match": "exact",
+        "contradiction": false,
+        "reason": "Normalized field value appears in the evidence block."
+      }
+    },
+    {
+      "field_id": "F00018",
+      "section": "alloys",
+      "path": "alloys.alloy_fe15al.alloying_elements[al].element",
+      "value": "Al",
+      "support": {
+        "support_label": "explicit_supported",
+        "evidence_refs": [
+          "b0023"
+        ],
+        "confidence": 0.98,
+        "method": "code_exact_match",
+        "value_match": "exact",
+        "contradiction": false,
+        "reason": "Normalized field value appears in the evidence block."
+      }
+    },
+    {
+      "field_id": "F00019",
+      "section": "alloys",
+      "path": "alloys.alloy_fe15al.base_element",
+      "value": "Fe",
+      "support": {
+        "support_label": "explicit_supported",
+        "evidence_refs": [
+          "b0023"
+        ],
+        "confidence": 0.98,
+        "method": "code_exact_match",
+        "value_match": "exact",
+        "contradiction": false,
+        "reason": "Normalized field value appears in the evidence block."
+      }
+    },
+    {
+      "field_id": "F00020",
+      "section": "alloys",
+      "path": "alloys.alloy_fe15al.nominal_composition[al].atomic_percent",
+      "value": "15",
+      "support": {
+        "support_label": "explicit_supported",
+        "evidence_refs": [
+          "b0023"
+        ],
+        "confidence": 0.98,
+        "method": "code_exact_match",
+        "value_match": "exact",
+        "contradiction": false,
+        "reason": "Normalized field value appears in the evidence block."
+      }
+    },
+    {
+      "field_id": "F00021",
+      "section": "alloys",
+      "path": "alloys.alloy_fe15al.nominal_composition[al].element",
+      "value": "Al",
+      "support": {
+        "support_label": "explicit_supported",
+        "evidence_refs": [
+          "b0023"
+        ],
+        "confidence": 0.98,
+        "method": "code_exact_match",
+        "value_match": "exact",
+        "contradiction": false,
+        "reason": "Normalized field value appears in the evidence block."
+      }
+    },
+    {
+      "field_id": "F00022",
+      "section": "alloys",
+      "path": "alloys.alloy_fe15al.paper_id",
+      "value": "10.1016_j.msea.2007.01.014",
+      "support": {
+        "support_label": "weak_supported",
+        "evidence_refs": [
+          "b0007"
+        ],
+        "confidence": 0.35,
+        "method": "code_from_llm_bucket_evidence",
+        "value_match": "context",
+        "contradiction": false,
+        "reason": "Identifier is linked to evidence through the surrounding record context."
+      }
+    },
+    {
+      "field_id": "F00023",
+      "section": "alloys",
+      "path": "alloys.alloy_fe20al.alloy_id",
+      "value": "alloy_fe20al",
+      "support": {
+        "support_label": "weak_supported",
+        "evidence_refs": [
+          "b0007"
+        ],
+        "confidence": 0.35,
+        "method": "code_from_llm_bucket_evidence",
+        "value_match": "context",
+        "contradiction": false,
+        "reason": "Identifier is linked to evidence through the surrounding record context."
+      }
+    },
+    {
+      "field_id": "F00024",
+      "section": "alloys",
+      "path": "alloys.alloy_fe20al.alloy_name",
+      "value": "Fe–20%Al",
+      "support": {
+        "support_label": "numeric_supported",
+        "evidence_refs": [
+          "b0023"
+        ],
+        "confidence": 0.94,
+        "method": "code_numeric_match",
+        "value_match": "numeric",
+        "contradiction": false,
+        "reason": "Field number appears in the evidence block."
+      }
+    },
+    {
+      "field_id": "F00025",
+      "section": "alloys",
+      "path": "alloys.alloy_fe20al.alloying_elements[al].atomic_percent",
+      "value": "20",
+      "support": {
+        "support_label": "explicit_supported",
+        "evidence_refs": [
+          "b0023"
+        ],
+        "confidence": 0.98,
+        "method": "code_exact_match",
+        "value_match": "exact",
+        "contradiction": false,
+        "reason": "Normalized field value appears in the evidence block."
+      }
+    },
+    {
+      "field_id": "F00026",
+      "section": "alloys",
+      "path": "alloys.alloy_fe20al.alloying_elements[al].element",
+      "value": "Al",
+      "support": {
+        "support_label": "explicit_supported",
+        "evidence_refs": [
+          "b0023"
+        ],
+        "confidence": 0.98,
+        "method": "code_exact_match",
+        "value_match": "exact",
+        "contradiction": false,
+        "reason": "Normalized field value appears in the evidence block."
+      }
+    },
+    {
+      "field_id": "F00027",
+      "section": "alloys",
+      "path": "alloys.alloy_fe20al.base_element",
+      "value": "Fe",
+      "support": {
+        "support_label": "explicit_supported",
+        "evidence_refs": [
+          "b0023"
+        ],
+        "confidence": 0.98,
+        "method": "code_exact_match",
+        "value_match": "exact",
+        "contradiction": false,
+        "reason": "Normalized field value appears in the evidence block."
+      }
+    },
+    {
+      "field_id": "F00028",
+      "section": "alloys",
+      "path": "alloys.alloy_fe20al.nominal_composition[al].atomic_percent",
+      "value": "20",
+      "support": {
+        "support_label": "explicit_supported",
+        "evidence_refs": [
+          "b0023"
+        ],
+        "confidence": 0.98,
+        "method": "code_exact_match",
+        "value_match": "exact",
+        "contradiction": false,
+        "reason": "Normalized field value appears in the evidence block."
+      }
+    },
+    {
+      "field_id": "F00029",
+      "section": "alloys",
+      "path": "alloys.alloy_fe20al.nominal_composition[al].element",
+      "value": "Al",
+      "support": {
+        "support_label": "explicit_supported",
+        "evidence_refs": [
+          "b0023"
+        ],
+        "confidence": 0.98,
+        "method": "code_exact_match",
+        "value_match": "exact",
+        "contradiction": false,
+        "reason": "Normalized field value appears in the evidence block."
+      }
+    },
+    {
+      "field_id": "F00030",
+      "section": "alloys",
+      "path": "alloys.alloy_fe20al.paper_id",
+      "value": "10.1016_j.msea.2007.01.014",
+      "support": {
+        "support_label": "weak_supported",
+        "evidence_refs": [
+          "b0007"
+        ],
+        "confidence": 0.35,
+        "method": "code_from_llm_bucket_evidence",
+        "value_match": "context",
+        "contradiction": false,
+        "reason": "Identifier is linked to evidence through the surrounding record context."
+      }
+    },
+    {
+      "field_id": "F00031",
+      "section": "alloys",
+      "path": "alloys.alloy_fe20al_b.alloy_id",
+      "value": "alloy_fe20al_b",
+      "support": {
+        "support_label": "weak_supported",
+        "evidence_refs": [
+          "b0007"
+        ],
+        "confidence": 0.35,
+        "method": "code_from_llm_bucket_evidence",
+        "value_match": "context",
+        "contradiction": false,
+        "reason": "Identifier is linked to evidence through the surrounding record context."
+      }
+    },
+    {
+      "field_id": "F00032",
+      "section": "alloys",
+      "path": "alloys.alloy_fe20al_b.alloy_name",
+      "value": "Fe–20%Al–0.1%B",
+      "support": {
+        "support_label": "numeric_supported",
+        "evidence_refs": [
+          "b0023"
+        ],
+        "confidence": 0.94,
+        "method": "code_numeric_match",
+        "value_match": "numeric",
+        "contradiction": false,
+        "reason": "Field number appears in the evidence block."
+      }
+    },
+    {
+      "field_id": "F00033",
+      "section": "alloys",
+      "path": "alloys.alloy_fe20al_b.alloying_elements[al].atomic_percent",
+      "value": "20",
+      "support": {
+        "support_label": "explicit_supported",
+        "evidence_refs": [
+          "b0023"
+        ],
+        "confidence": 0.98,
+        "method": "code_exact_match",
+        "value_match": "exact",
+        "contradiction": false,
+        "reason": "Normalized field value appears in the evidence block."
+      }
+    },
+    {
+      "field_id": "F00034",
+      "section": "alloys",
+      "path": "alloys.alloy_fe20al_b.alloying_elements[al].element",
+      "value": "Al",
+      "support": {
+        "support_label": "explicit_supported",
+        "evidence_refs": [
+          "b0023"
+        ],
+        "confidence": 0.98,
+        "method": "code_exact_match",
+        "value_match": "exact",
+        "contradiction": false,
+        "reason": "Normalized field value appears in the evidence block."
+      }
+    },
+    {
+      "field_id": "F00035",
+      "section": "alloys",
+      "path": "alloys.alloy_fe20al_b.alloying_elements[b].atomic_percent",
+      "value": "0.1",
+      "support": {
+        "support_label": "explicit_supported",
+        "evidence_refs": [
+          "b0023"
+        ],
+        "confidence": 0.98,
+        "method": "code_exact_match",
+        "value_match": "exact",
+        "contradiction": false,
+        "reason": "Normalized field value appears in the evidence block."
+      }
+    },
+    {
+      "field_id": "F00036",
+      "section": "alloys",
+      "path": "alloys.alloy_fe20al_b.alloying_elements[b].element",
+      "value": "B",
+      "support": {
+        "support_label": "explicit_supported",
+        "evidence_refs": [
+          "b0023"
+        ],
+        "confidence": 0.98,
+        "method": "code_exact_match",
+        "value_match": "exact",
+        "contradiction": false,
+        "reason": "Normalized field value appears in the evidence block."
+      }
+    },
+    {
+      "field_id": "F00037",
+      "section": "alloys",
+      "path": "alloys.alloy_fe20al_b.base_element",
+      "value": "Fe",
+      "support": {
+        "support_label": "explicit_supported",
+        "evidence_refs": [
+          "b0023"
+        ],
+        "confidence": 0.98,
+        "method": "code_exact_match",
+        "value_match": "exact",
+        "contradiction": false,
+        "reason": "Normalized field value appears in the evidence block."
+      }
+    },
+    {
+      "field_id": "F00038",
+      "section": "alloys",
+      "path": "alloys.alloy_fe20al_b.nominal_composition[al].atomic_percent",
+      "value": "20",
+      "support": {
+        "support_label": "explicit_supported",
+        "evidence_refs": [
+          "b0023"
+        ],
+        "confidence": 0.98,
+        "method": "code_exact_match",
+        "value_match": "exact",
+        "contradiction": false,
+        "reason": "Normalized field value appears in the evidence block."
+      }
+    },
+    {
+      "field_id": "F00039",
+      "section": "alloys",
+      "path": "alloys.alloy_fe20al_b.nominal_composition[al].element",
+      "value": "Al",
+      "support": {
+        "support_label": "explicit_supported",
+        "evidence_refs": [
+          "b0023"
+        ],
+        "confidence": 0.98,
+        "method": "code_exact_match",
+        "value_match": "exact",
+        "contradiction": false,
+        "reason": "Normalized field value appears in the evidence block."
+      }
+    },
+    {
+      "field_id": "F00040",
+      "section": "alloys",
+      "path": "alloys.alloy_fe20al_b.nominal_composition[b].atomic_percent",
+      "value": "0.1",
+      "support": {
+        "support_label": "explicit_supported",
+        "evidence_refs": [
+          "b0023"
+        ],
+        "confidence": 0.98,
+        "method": "code_exact_match",
+        "value_match": "exact",
+        "contradiction": false,
+        "reason": "Normalized field value appears in the evidence block."
+      }
+    },
+    {
+      "field_id": "F00041",
+      "section": "alloys",
+      "path": "alloys.alloy_fe20al_b.nominal_composition[b].element",
+      "value": "B",
+      "support": {
+        "support_label": "explicit_supported",
+        "evidence_refs": [
+          "b0023"
+        ],
+        "confidence": 0.98,
+        "method": "code_exact_match",
+        "value_match": "exact",
+        "contradiction": false,
+        "reason": "Normalized field value appears in the evidence block."
+      }
+    },
+    {
+      "field_id": "F00042",
+      "section": "alloys",
+      "path": "alloys.alloy_fe20al_b.paper_id",
+      "value": "10.1016_j.msea.2007.01.014",
+      "support": {
+        "support_label": "weak_supported",
+        "evidence_refs": [
+          "b0007"
+        ],
+        "confidence": 0.35,
+        "method": "code_from_llm_bucket_evidence",
+        "value_match": "context",
+        "contradiction": false,
+        "reason": "Identifier is linked to evidence through the surrounding record context."
+      }
+    },
+    {
+      "field_id": "F00043",
+      "section": "alloys",
+      "path": "alloys.alloy_fe25al.alloy_id",
+      "value": "alloy_fe25al",
+      "support": {
+        "support_label": "weak_supported",
+        "evidence_refs": [
+          "b0007"
+        ],
+        "confidence": 0.35,
+        "method": "code_from_llm_bucket_evidence",
+        "value_match": "context",
+        "contradiction": false,
+        "reason": "Identifier is linked to evidence through the surrounding record context."
+      }
+    },
+    {
+      "field_id": "F00044",
+      "section": "alloys",
+      "path": "alloys.alloy_fe25al.alloy_name",
+      "value": "Fe–25%Al",
+      "support": {
+        "support_label": "numeric_supported",
+        "evidence_refs": [
+          "b0023"
+        ],
+        "confidence": 0.94,
+        "method": "code_numeric_match",
+        "value_match": "numeric",
+        "contradiction": false,
+        "reason": "Field number appears in the evidence block."
+      }
+    },
+    {
+      "field_id": "F00045",
+      "section": "alloys",
+      "path": "alloys.alloy_fe25al.alloying_elements[al].atomic_percent",
+      "value": "25",
+      "support": {
+        "support_label": "explicit_supported",
+        "evidence_refs": [
+          "b0023"
+        ],
+        "confidence": 0.98,
+        "method": "code_exact_match",
+        "value_match": "exact",
+        "contradiction": false,
+        "reason": "Normalized field value appears in the evidence block."
+      }
+    },
+    {
+      "field_id": "F00046",
+      "section": "alloys",
+      "path": "alloys.alloy_fe25al.alloying_elements[al].element",
+      "value": "Al",
+      "support": {
+        "support_label": "explicit_supported",
+        "evidence_refs": [
+          "b0023"
+        ],
+        "confidence": 0.98,
+        "method": "code_exact_match",
+        "value_match": "exact",
+        "contradiction": false,
+        "reason": "Normalized field value appears in the evidence block."
+      }
+    },
+    {
+      "field_id": "F00047",
+      "section": "alloys",
+      "path": "alloys.alloy_fe25al.alloys_notes",
+      "value": "Exhibits DO3 order.",
+      "support": {
+        "support_label": "weak_supported",
+        "evidence_refs": [
+          "b0007"
+        ],
+        "confidence": 0.35,
+        "method": "code_from_llm_bucket_evidence",
+        "value_match": "context",
+        "contradiction": false,
+        "reason": "Relevant context was recalled, but the exact field value was not confirmed."
+      }
+    },
+    {
+      "field_id": "F00048",
+      "section": "alloys",
+      "path": "alloys.alloy_fe25al.base_element",
+      "value": "Fe",
+      "support": {
+        "support_label": "explicit_supported",
+        "evidence_refs": [
+          "b0023"
+        ],
+        "confidence": 0.98,
+        "method": "code_exact_match",
+        "value_match": "exact",
+        "contradiction": false,
+        "reason": "Normalized field value appears in the evidence block."
+      }
+    },
+    {
+      "field_id": "F00049",
+      "section": "alloys",
+      "path": "alloys.alloy_fe25al.nominal_composition[al].atomic_percent",
+      "value": "25",
+      "support": {
+        "support_label": "explicit_supported",
+        "evidence_refs": [
+          "b0023"
+        ],
+        "confidence": 0.98,
+        "method": "code_exact_match",
+        "value_match": "exact",
+        "contradiction": false,
+        "reason": "Normalized field value appears in the evidence block."
+      }
+    },
+    {
+      "field_id": "F00050",
+      "section": "alloys",
+      "path": "alloys.alloy_fe25al.nominal_composition[al].element",
+      "value": "Al",
+      "support": {
+        "support_label": "explicit_supported",
+        "evidence_refs": [
+          "b0023"
+        ],
+        "confidence": 0.98,
+        "method": "code_exact_match",
+        "value_match": "exact",
+        "contradiction": false,
+        "reason": "Normalized field value appears in the evidence block."
+      }
+    },
+    {
+      "field_id": "F00051",
+      "section": "alloys",
+      "path": "alloys.alloy_fe25al.paper_id",
+      "value": "10.1016_j.msea.2007.01.014",
+      "support": {
+        "support_label": "weak_supported",
+        "evidence_refs": [
+          "b0007"
+        ],
+        "confidence": 0.35,
+        "method": "code_from_llm_bucket_evidence",
+        "value_match": "context",
+        "contradiction": false,
+        "reason": "Identifier is linked to evidence through the surrounding record context."
+      }
+    },
+    {
+      "field_id": "F00052",
+      "section": "alloys",
+      "path": "alloys.alloy_fe28al.alloy_id",
+      "value": "alloy_fe28al",
+      "support": {
+        "support_label": "weak_supported",
+        "evidence_refs": [
+          "b0007"
+        ],
+        "confidence": 0.35,
+        "method": "code_from_llm_bucket_evidence",
+        "value_match": "context",
+        "contradiction": false,
+        "reason": "Identifier is linked to evidence through the surrounding record context."
+      }
+    },
+    {
+      "field_id": "F00053",
+      "section": "alloys",
+      "path": "alloys.alloy_fe28al.alloy_name",
+      "value": "Fe–28%Al",
+      "support": {
+        "support_label": "numeric_supported",
+        "evidence_refs": [
+          "b0023"
+        ],
+        "confidence": 0.94,
+        "method": "code_numeric_match",
+        "value_match": "numeric",
+        "contradiction": false,
+        "reason": "Field number appears in the evidence block."
+      }
+    },
+    {
+      "field_id": "F00054",
+      "section": "alloys",
+      "path": "alloys.alloy_fe28al.alloying_elements[al].atomic_percent",
+      "value": "28",
+      "support": {
+        "support_label": "explicit_supported",
+        "evidence_refs": [
+          "b0023"
+        ],
+        "confidence": 0.98,
+        "method": "code_exact_match",
+        "value_match": "exact",
+        "contradiction": false,
+        "reason": "Normalized field value appears in the evidence block."
+      }
+    },
+    {
+      "field_id": "F00055",
+      "section": "alloys",
+      "path": "alloys.alloy_fe28al.alloying_elements[al].element",
+      "value": "Al",
+      "support": {
+        "support_label": "explicit_supported",
+        "evidence_refs": [
+          "b0023"
+        ],
+        "confidence": 0.98,
+        "method": "code_exact_match",
+        "value_match": "exact",
+        "contradiction": false,
+        "reason": "Normalized field value appears in the evidence block."
+      }
+    },
+    {
+      "field_id": "F00056",
+      "section": "alloys",
+      "path": "alloys.alloy_fe28al.alloys_notes",
+      "value": "Corresponds to peak work hardening.",
+      "support": {
+        "support_label": "weak_supported",
+        "evidence_refs": [
+          "b0007"
+        ],
+        "confidence": 0.35,
+        "method": "code_from_llm_bucket_evidence",
+        "value_match": "context",
+        "contradiction": false,
+        "reason": "Relevant context was recalled, but the exact field value was not confirmed."
+      }
+    },
+    {
+      "field_id": "F00057",
+      "section": "alloys",
+      "path": "alloys.alloy_fe28al.base_element",
+      "value": "Fe",
+      "support": {
+        "support_label": "explicit_supported",
+        "evidence_refs": [
+          "b0023"
+        ],
+        "confidence": 0.98,
+        "method": "code_exact_match",
+        "value_match": "exact",
+        "contradiction": false,
+        "reason": "Normalized field value appears in the evidence block."
+      }
+    },
+    {
+      "field_id": "F00058",
+      "section": "alloys",
+      "path": "alloys.alloy_fe28al.nominal_composition[al].atomic_percent",
+      "value": "28",
+      "support": {
+        "support_label": "explicit_supported",
+        "evidence_refs": [
+          "b0023"
+        ],
+        "confidence": 0.98,
+        "method": "code_exact_match",
+        "value_match": "exact",
+        "contradiction": false,
+        "reason": "Normalized field value appears in the evidence block."
+      }
+    },
+    {
+      "field_id": "F00059",
+      "section": "alloys",
+      "path": "alloys.alloy_fe28al.nominal_composition[al].element",
+      "value": "Al",
+      "support": {
+        "support_label": "explicit_supported",
+        "evidence_refs": [
+          "b0023"
+        ],
+        "confidence": 0.98,
+        "method": "code_exact_match",
+        "value_match": "exact",
+        "contradiction": false,
+        "reason": "Normalized field value appears in the evidence block."
+      }
+    },
+    {
+      "field_id": "F00060",
+      "section": "alloys",
+      "path": "alloys.alloy_fe28al.paper_id",
+      "value": "10.1016_j.msea.2007.01.014",
+      "support": {
+        "support_label": "weak_supported",
+        "evidence_refs": [
+          "b0007"
+        ],
+        "confidence": 0.35,
+        "method": "code_from_llm_bucket_evidence",
+        "value_match": "context",
+        "contradiction": false,
+        "reason": "Identifier is linked to evidence through the surrounding record context."
+      }
+    },
+    {
+      "field_id": "F00061",
+      "section": "alloys",
+      "path": "alloys.alloy_fe30al.alloy_id",
+      "value": "alloy_fe30al",
+      "support": {
+        "support_label": "weak_supported",
+        "evidence_refs": [
+          "b0007"
+        ],
+        "confidence": 0.35,
+        "method": "code_from_llm_bucket_evidence",
+        "value_match": "context",
+        "contradiction": false,
+        "reason": "Identifier is linked to evidence through the surrounding record context."
+      }
+    },
+    {
+      "field_id": "F00062",
+      "section": "alloys",
+      "path": "alloys.alloy_fe30al.alloy_name",
+      "value": "Fe–30%Al",
+      "support": {
+        "support_label": "numeric_supported",
+        "evidence_refs": [
+          "b0023"
+        ],
+        "confidence": 0.94,
+        "method": "code_numeric_match",
+        "value_match": "numeric",
+        "contradiction": false,
+        "reason": "Field number appears in the evidence block."
+      }
+    },
+    {
+      "field_id": "F00063",
+      "section": "alloys",
+      "path": "alloys.alloy_fe30al.alloying_elements[al].atomic_percent",
+      "value": "30",
+      "support": {
+        "support_label": "explicit_supported",
+        "evidence_refs": [
+          "b0023"
+        ],
+        "confidence": 0.98,
+        "method": "code_exact_match",
+        "value_match": "exact",
+        "contradiction": false,
+        "reason": "Normalized field value appears in the evidence block."
+      }
+    },
+    {
+      "field_id": "F00064",
+      "section": "alloys",
+      "path": "alloys.alloy_fe30al.alloying_elements[al].element",
+      "value": "Al",
+      "support": {
+        "support_label": "explicit_supported",
+        "evidence_refs": [
+          "b0023"
+        ],
+        "confidence": 0.98,
+        "method": "code_exact_match",
+        "value_match": "exact",
+        "contradiction": false,
+        "reason": "Normalized field value appears in the evidence block."
+      }
+    },
+    {
+      "field_id": "F00065",
+      "section": "alloys",
+      "path": "alloys.alloy_fe30al.base_element",
+      "value": "Fe",
+      "support": {
+        "support_label": "explicit_supported",
+        "evidence_refs": [
+          "b0023"
+        ],
+        "confidence": 0.98,
+        "method": "code_exact_match",
+        "value_match": "exact",
+        "contradiction": false,
+        "reason": "Normalized field value appears in the evidence block."
+      }
+    },
+    {
+      "field_id": "F00066",
+      "section": "alloys",
+      "path": "alloys.alloy_fe30al.nominal_composition[al].atomic_percent",
+      "value": "30",
+      "support": {
+        "support_label": "explicit_supported",
+        "evidence_refs": [
+          "b0023"
+        ],
+        "confidence": 0.98,
+        "method": "code_exact_match",
+        "value_match": "exact",
+        "contradiction": false,
+        "reason": "Normalized field value appears in the evidence block."
+      }
+    },
+    {
+      "field_id": "F00067",
+      "section": "alloys",
+      "path": "alloys.alloy_fe30al.nominal_composition[al].element",
+      "value": "Al",
+      "support": {
+        "support_label": "explicit_supported",
+        "evidence_refs": [
+          "b0023"
+        ],
+        "confidence": 0.98,
+        "method": "code_exact_match",
+        "value_match": "exact",
+        "contradiction": false,
+        "reason": "Normalized field value appears in the evidence block."
+      }
+    },
+    {
+      "field_id": "F00068",
+      "section": "alloys",
+      "path": "alloys.alloy_fe30al.paper_id",
+      "value": "10.1016_j.msea.2007.01.014",
+      "support": {
+        "support_label": "weak_supported",
+        "evidence_refs": [
+          "b0007"
+        ],
+        "confidence": 0.35,
+        "method": "code_from_llm_bucket_evidence",
+        "value_match": "context",
+        "contradiction": false,
+        "reason": "Identifier is linked to evidence through the surrounding record context."
+      }
+    },
+    {
+      "field_id": "F00069",
+      "section": "alloys",
+      "path": "alloys.alloy_fe30al_b.alloy_id",
+      "value": "alloy_fe30al_b",
+      "support": {
+        "support_label": "weak_supported",
+        "evidence_refs": [
+          "b0007"
+        ],
+        "confidence": 0.35,
+        "method": "code_from_llm_bucket_evidence",
+        "value_match": "context",
+        "contradiction": false,
+        "reason": "Identifier is linked to evidence through the surrounding record context."
+      }
+    },
+    {
+      "field_id": "F00070",
+      "section": "alloys",
+      "path": "alloys.alloy_fe30al_b.alloy_name",
+      "value": "Fe–30%Al–0.1%B",
+      "support": {
+        "support_label": "numeric_supported",
+        "evidence_refs": [
+          "b0023"
+        ],
+        "confidence": 0.94,
+        "method": "code_numeric_match",
+        "value_match": "numeric",
+        "contradiction": false,
+        "reason": "Field number appears in the evidence block."
+      }
+    },
+    {
+      "field_id": "F00071",
+      "section": "alloys",
+      "path": "alloys.alloy_fe30al_b.alloying_elements[al].atomic_percent",
+      "value": "30",
+      "support": {
+        "support_label": "explicit_supported",
+        "evidence_refs": [
+          "b0023"
+        ],
+        "confidence": 0.98,
+        "method": "code_exact_match",
+        "value_match": "exact",
+        "contradiction": false,
+        "reason": "Normalized field value appears in the evidence block."
+      }
+    },
+    {
+      "field_id": "F00072",
+      "section": "alloys",
+      "path": "alloys.alloy_fe30al_b.alloying_elements[al].element",
+      "value": "Al",
+      "support": {
+        "support_label": "explicit_supported",
+        "evidence_refs": [
+          "b0023"
+        ],
+        "confidence": 0.98,
+        "method": "code_exact_match",
+        "value_match": "exact",
+        "contradiction": false,
+        "reason": "Normalized field value appears in the evidence block."
+      }
+    },
+    {
+      "field_id": "F00073",
+      "section": "alloys",
+      "path": "alloys.alloy_fe30al_b.alloying_elements[b].atomic_percent",
+      "value": "0.1",
+      "support": {
+        "support_label": "explicit_supported",
+        "evidence_refs": [
+          "b0023"
+        ],
+        "confidence": 0.98,
+        "method": "code_exact_match",
+        "value_match": "exact",
+        "contradiction": false,
+        "reason": "Normalized field value appears in the evidence block."
+      }
+    },
+    {
+      "field_id": "F00074",
+      "section": "alloys",
+      "path": "alloys.alloy_fe30al_b.alloying_elements[b].element",
+      "value": "B",
+      "support": {
+        "support_label": "explicit_supported",
+        "evidence_refs": [
+          "b0023"
+        ],
+        "confidence": 0.98,
+        "method": "code_exact_match",
+        "value_match": "exact",
+        "contradiction": false,
+        "reason": "Normalized field value appears in the evidence block."
+      }
+    },
+    {
+      "field_id": "F00075",
+      "section": "alloys",
+      "path": "alloys.alloy_fe30al_b.base_element",
+      "value": "Fe",
+      "support": {
+        "support_label": "explicit_supported",
+        "evidence_refs": [
+          "b0023"
+        ],
+        "confidence": 0.98,
+        "method": "code_exact_match",
+        "value_match": "exact",
+        "contradiction": false,
+        "reason": "Normalized field value appears in the evidence block."
+      }
+    },
+    {
+      "field_id": "F00076",
+      "section": "alloys",
+      "path": "alloys.alloy_fe30al_b.nominal_composition[al].atomic_percent",
+      "value": "30",
+      "support": {
+        "support_label": "explicit_supported",
+        "evidence_refs": [
+          "b0023"
+        ],
+        "confidence": 0.98,
+        "method": "code_exact_match",
+        "value_match": "exact",
+        "contradiction": false,
+        "reason": "Normalized field value appears in the evidence block."
+      }
+    },
+    {
+      "field_id": "F00077",
+      "section": "alloys",
+      "path": "alloys.alloy_fe30al_b.nominal_composition[al].element",
+      "value": "Al",
+      "support": {
+        "support_label": "explicit_supported",
+        "evidence_refs": [
+          "b0023"
+        ],
+        "confidence": 0.98,
+        "method": "code_exact_match",
+        "value_match": "exact",
+        "contradiction": false,
+        "reason": "Normalized field value appears in the evidence block."
+      }
+    },
+    {
+      "field_id": "F00078",
+      "section": "alloys",
+      "path": "alloys.alloy_fe30al_b.nominal_composition[b].atomic_percent",
+      "value": "0.1",
+      "support": {
+        "support_label": "explicit_supported",
+        "evidence_refs": [
+          "b0023"
+        ],
+        "confidence": 0.98,
+        "method": "code_exact_match",
+        "value_match": "exact",
+        "contradiction": false,
+        "reason": "Normalized field value appears in the evidence block."
+      }
+    },
+    {
+      "field_id": "F00079",
+      "section": "alloys",
+      "path": "alloys.alloy_fe30al_b.nominal_composition[b].element",
+      "value": "B",
+      "support": {
+        "support_label": "explicit_supported",
+        "evidence_refs": [
+          "b0023"
+        ],
+        "confidence": 0.98,
+        "method": "code_exact_match",
+        "value_match": "exact",
+        "contradiction": false,
+        "reason": "Normalized field value appears in the evidence block."
+      }
+    },
+    {
+      "field_id": "F00080",
+      "section": "alloys",
+      "path": "alloys.alloy_fe30al_b.paper_id",
+      "value": "10.1016_j.msea.2007.01.014",
+      "support": {
+        "support_label": "weak_supported",
+        "evidence_refs": [
+          "b0007"
+        ],
+        "confidence": 0.35,
+        "method": "code_from_llm_bucket_evidence",
+        "value_match": "context",
+        "contradiction": false,
+        "reason": "Identifier is linked to evidence through the surrounding record context."
+      }
+    },
+    {
+      "field_id": "F00081",
+      "section": "alloys",
+      "path": "alloys.alloy_fe35al.alloy_id",
+      "value": "alloy_fe35al",
+      "support": {
+        "support_label": "weak_supported",
+        "evidence_refs": [
+          "b0007"
+        ],
+        "confidence": 0.35,
+        "method": "code_from_llm_bucket_evidence",
+        "value_match": "context",
+        "contradiction": false,
+        "reason": "Identifier is linked to evidence through the surrounding record context."
+      }
+    },
+    {
+      "field_id": "F00082",
+      "section": "alloys",
+      "path": "alloys.alloy_fe35al.alloy_name",
+      "value": "Fe–35%Al",
+      "support": {
+        "support_label": "numeric_supported",
+        "evidence_refs": [
+          "b0023"
+        ],
+        "confidence": 0.94,
+        "method": "code_numeric_match",
+        "value_match": "numeric",
+        "contradiction": false,
+        "reason": "Field number appears in the evidence block."
+      }
+    },
+    {
+      "field_id": "F00083",
+      "section": "alloys",
+      "path": "alloys.alloy_fe35al.alloying_elements[al].atomic_percent",
+      "value": "35",
+      "support": {
+        "support_label": "explicit_supported",
+        "evidence_refs": [
+          "b0023"
+        ],
+        "confidence": 0.98,
+        "method": "code_exact_match",
+        "value_match": "exact",
+        "contradiction": false,
+        "reason": "Normalized field value appears in the evidence block."
+      }
+    },
+    {
+      "field_id": "F00084",
+      "section": "alloys",
+      "path": "alloys.alloy_fe35al.alloying_elements[al].element",
+      "value": "Al",
+      "support": {
+        "support_label": "explicit_supported",
+        "evidence_refs": [
+          "b0023"
+        ],
+        "confidence": 0.98,
+        "method": "code_exact_match",
+        "value_match": "exact",
+        "contradiction": false,
+        "reason": "Normalized field value appears in the evidence block."
+      }
+    },
+    {
+      "field_id": "F00085",
+      "section": "alloys",
+      "path": "alloys.alloy_fe35al.base_element",
+      "value": "Fe",
+      "support": {
+        "support_label": "explicit_supported",
+        "evidence_refs": [
+          "b0023"
+        ],
+        "confidence": 0.98,
+        "method": "code_exact_match",
+        "value_match": "exact",
+        "contradiction": false,
+        "reason": "Normalized field value appears in the evidence block."
+      }
+    },
+    {
+      "field_id": "F00086",
+      "section": "alloys",
+      "path": "alloys.alloy_fe35al.nominal_composition[al].atomic_percent",
+      "value": "35",
+      "support": {
+        "support_label": "explicit_supported",
+        "evidence_refs": [
+          "b0023"
+        ],
+        "confidence": 0.98,
+        "method": "code_exact_match",
+        "value_match": "exact",
+        "contradiction": false,
+        "reason": "Normalized field value appears in the evidence block."
+      }
+    },
+    {
+      "field_id": "F00087",
+      "section": "alloys",
+      "path": "alloys.alloy_fe35al.nominal_composition[al].element",
+      "value": "Al",
+      "support": {
+        "support_label": "explicit_supported",
+        "evidence_refs": [
+          "b0023"
+        ],
+        "confidence": 0.98,
+        "method": "code_exact_match",
+        "value_match": "exact",
+        "contradiction": false,
+        "reason": "Normalized field value appears in the evidence block."
+      }
+    },
+    {
+      "field_id": "F00088",
+      "section": "alloys",
+      "path": "alloys.alloy_fe35al.paper_id",
+      "value": "10.1016_j.msea.2007.01.014",
+      "support": {
+        "support_label": "weak_supported",
+        "evidence_refs": [
+          "b0007"
+        ],
+        "confidence": 0.35,
+        "method": "code_from_llm_bucket_evidence",
+        "value_match": "context",
+        "contradiction": false,
+        "reason": "Identifier is linked to evidence through the surrounding record context."
+      }
+    },
+    {
+      "field_id": "F00089",
+      "section": "processes",
+      "path": "processes.proc_feal_01.description",
+      "value": "As-cast and thermally-relaxed condition: induction melting, drop cast into 25 mm diameter cylindrical copper mould, slow cooling after solidification to allow B2 or DO3 order. Coarse grain size (~0.25 mm). No grain size, solution or particle effects.",
+      "support": {
+        "support_label": "weak_supported",
+        "evidence_refs": [
+          "b0007"
+        ],
+        "confidence": 0.35,
+        "method": "code_from_llm_bucket_evidence",
+        "value_match": "context",
+        "contradiction": false,
+        "reason": "Relevant context was recalled, but the exact field value was not confirmed."
+      }
+    },
+    {
+      "field_id": "F00090",
+      "section": "processes",
+      "path": "processes.proc_feal_01.paper_id",
+      "value": "10.1016_j.msea.2007.01.014",
+      "support": {
+        "support_label": "weak_supported",
+        "evidence_refs": [
+          "b0007"
+        ],
+        "confidence": 0.35,
+        "method": "code_from_llm_bucket_evidence",
+        "value_match": "context",
+        "contradiction": false,
+        "reason": "Identifier is linked to evidence through the surrounding record context."
+      }
+    },
+    {
+      "field_id": "F00091",
+      "section": "processes",
+      "path": "processes.proc_feal_01.process_id",
+      "value": "proc_feal_01",
+      "support": {
+        "support_label": "weak_supported",
+        "evidence_refs": [
+          "b0007"
+        ],
+        "confidence": 0.35,
+        "method": "code_from_llm_bucket_evidence",
+        "value_match": "context",
+        "contradiction": false,
+        "reason": "Identifier is linked to evidence through the surrounding record context."
+      }
+    },
+    {
+      "field_id": "F00092",
+      "section": "processes",
+      "path": "processes.proc_feal_01.processes_notes",
+      "value": "All alloys studied in this as-cast/annealed state with coarse grains and no solute or precipitates.",
+      "support": {
+        "support_label": "weak_supported",
+        "evidence_refs": [
+          "b0007"
+        ],
+        "confidence": 0.35,
+        "method": "code_from_llm_bucket_evidence",
+        "value_match": "context",
+        "contradiction": false,
+        "reason": "Relevant context was recalled, but the exact field value was not confirmed."
+      }
+    },
+    {
+      "field_id": "F00093",
+      "section": "samples",
+      "path": "samples.sample_fe15al_01__idx_0.alloy_id",
+      "value": "alloy_fe15al",
+      "sample_id": "sample_fe15al_01",
+      "support": {
+        "support_label": "weak_supported",
+        "evidence_refs": [
+          "b0023"
+        ],
+        "confidence": 0.35,
+        "method": "code_from_llm_bucket_evidence",
+        "value_match": "context",
+        "contradiction": false,
+        "reason": "Identifier is linked to evidence through the surrounding record context."
+      }
+    },
+    {
+      "field_id": "F00094",
+      "section": "samples",
+      "path": "samples.sample_fe15al_01__idx_0.paper_id",
+      "value": "10.1016_j.msea.2007.01.014",
+      "sample_id": "sample_fe15al_01",
+      "support": {
+        "support_label": "weak_supported",
+        "evidence_refs": [
+          "b0023"
+        ],
+        "confidence": 0.35,
+        "method": "code_from_llm_bucket_evidence",
+        "value_match": "context",
+        "contradiction": false,
+        "reason": "Identifier is linked to evidence through the surrounding record context."
+      }
+    },
+    {
+      "field_id": "F00095",
+      "section": "samples",
+      "path": "samples.sample_fe15al_01__idx_0.process_id",
+      "value": "proc_feal_01",
+      "sample_id": "sample_fe15al_01",
+      "support": {
+        "support_label": "weak_supported",
+        "evidence_refs": [
+          "b0023"
+        ],
+        "confidence": 0.35,
+        "method": "code_from_llm_bucket_evidence",
+        "value_match": "context",
+        "contradiction": false,
+        "reason": "Identifier is linked to evidence through the surrounding record context."
+      }
+    },
+    {
+      "field_id": "F00096",
+      "section": "samples",
+      "path": "samples.sample_fe15al_01__idx_0.sample_id",
+      "value": "sample_fe15al_01",
+      "sample_id": "sample_fe15al_01",
+      "support": {
+        "support_label": "weak_supported",
+        "evidence_refs": [
+          "b0023"
+        ],
+        "confidence": 0.35,
+        "method": "code_from_llm_bucket_evidence",
+        "value_match": "context",
+        "contradiction": false,
+        "reason": "Identifier is linked to evidence through the surrounding record context."
+      }
+    },
+    {
+      "field_id": "F00097",
+      "section": "samples",
+      "path": "samples.sample_fe20al_01__idx_1.alloy_id",
+      "value": "alloy_fe20al",
+      "sample_id": "sample_fe20al_01",
+      "support": {
+        "support_label": "weak_supported",
+        "evidence_refs": [
+          "b0023"
+        ],
+        "confidence": 0.35,
+        "method": "code_from_llm_bucket_evidence",
+        "value_match": "context",
+        "contradiction": false,
+        "reason": "Identifier is linked to evidence through the surrounding record context."
+      }
+    },
+    {
+      "field_id": "F00098",
+      "section": "samples",
+      "path": "samples.sample_fe20al_01__idx_1.paper_id",
+      "value": "10.1016_j.msea.2007.01.014",
+      "sample_id": "sample_fe20al_01",
+      "support": {
+        "support_label": "weak_supported",
+        "evidence_refs": [
+          "b0023"
+        ],
+        "confidence": 0.35,
+        "method": "code_from_llm_bucket_evidence",
+        "value_match": "context",
+        "contradiction": false,
+        "reason": "Identifier is linked to evidence through the surrounding record context."
+      }
+    },
+    {
+      "field_id": "F00099",
+      "section": "samples",
+      "path": "samples.sample_fe20al_01__idx_1.process_id",
+      "value": "proc_feal_01",
+      "sample_id": "sample_fe20al_01",
+      "support": {
+        "support_label": "weak_supported",
+        "evidence_refs": [
+          "b0023"
+        ],
+        "confidence": 0.35,
+        "method": "code_from_llm_bucket_evidence",
+        "value_match": "context",
+        "contradiction": false,
+        "reason": "Identifier is linked to evidence through the surrounding record context."
+      }
+    },
+    {
+      "field_id": "F00100",
+      "section": "samples",
+      "path": "samples.sample_fe20al_01__idx_1.sample_id",
+      "value": "sample_fe20al_01",
+      "sample_id": "sample_fe20al_01",
+      "support": {
+        "support_label": "weak_supported",
+        "evidence_refs": [
+          "b0023"
+        ],
+        "confidence": 0.35,
+        "method": "code_from_llm_bucket_evidence",
+        "value_match": "context",
+        "contradiction": false,
+        "reason": "Identifier is linked to evidence through the surrounding record context."
+      }
+    },
+    {
+      "field_id": "F00101",
+      "section": "samples",
+      "path": "samples.sample_fe20al_b_01__idx_6.alloy_id",
+      "value": "alloy_fe20al_b",
+      "sample_id": "sample_fe20al_b_01",
+      "support": {
+        "support_label": "weak_supported",
+        "evidence_refs": [
+          "b0023"
+        ],
+        "confidence": 0.35,
+        "method": "code_from_llm_bucket_evidence",
+        "value_match": "context",
+        "contradiction": false,
+        "reason": "Identifier is linked to evidence through the surrounding record context."
+      }
+    },
+    {
+      "field_id": "F00102",
+      "section": "samples",
+      "path": "samples.sample_fe20al_b_01__idx_6.paper_id",
+      "value": "10.1016_j.msea.2007.01.014",
+      "sample_id": "sample_fe20al_b_01",
+      "support": {
+        "support_label": "weak_supported",
+        "evidence_refs": [
+          "b0023"
+        ],
+        "confidence": 0.35,
+        "method": "code_from_llm_bucket_evidence",
+        "value_match": "context",
+        "contradiction": false,
+        "reason": "Identifier is linked to evidence through the surrounding record context."
+      }
+    },
+    {
+      "field_id": "F00103",
+      "section": "samples",
+      "path": "samples.sample_fe20al_b_01__idx_6.process_id",
+      "value": "proc_feal_01",
+      "sample_id": "sample_fe20al_b_01",
+      "support": {
+        "support_label": "weak_supported",
+        "evidence_refs": [
+          "b0023"
+        ],
+        "confidence": 0.35,
+        "method": "code_from_llm_bucket_evidence",
+        "value_match": "context",
+        "contradiction": false,
+        "reason": "Identifier is linked to evidence through the surrounding record context."
+      }
+    },
+    {
+      "field_id": "F00104",
+      "section": "samples",
+      "path": "samples.sample_fe20al_b_01__idx_6.sample_id",
+      "value": "sample_fe20al_b_01",
+      "sample_id": "sample_fe20al_b_01",
+      "support": {
+        "support_label": "weak_supported",
+        "evidence_refs": [
+          "b0023"
+        ],
+        "confidence": 0.35,
+        "method": "code_from_llm_bucket_evidence",
+        "value_match": "context",
+        "contradiction": false,
+        "reason": "Identifier is linked to evidence through the surrounding record context."
+      }
+    },
+    {
+      "field_id": "F00105",
+      "section": "samples",
+      "path": "samples.sample_fe25al_01__idx_2.alloy_id",
+      "value": "alloy_fe25al",
+      "sample_id": "sample_fe25al_01",
+      "support": {
+        "support_label": "weak_supported",
+        "evidence_refs": [
+          "b0036"
+        ],
+        "confidence": 0.35,
+        "method": "code_from_llm_bucket_evidence",
+        "value_match": "context",
+        "contradiction": false,
+        "reason": "Identifier is linked to evidence through the surrounding record context."
+      }
+    },
+    {
+      "field_id": "F00106",
+      "section": "samples",
+      "path": "samples.sample_fe25al_01__idx_2.paper_id",
+      "value": "10.1016_j.msea.2007.01.014",
+      "sample_id": "sample_fe25al_01",
+      "support": {
+        "support_label": "weak_supported",
+        "evidence_refs": [
+          "b0036"
+        ],
+        "confidence": 0.35,
+        "method": "code_from_llm_bucket_evidence",
+        "value_match": "context",
+        "contradiction": false,
+        "reason": "Identifier is linked to evidence through the surrounding record context."
+      }
+    },
+    {
+      "field_id": "F00107",
+      "section": "samples",
+      "path": "samples.sample_fe25al_01__idx_2.process_id",
+      "value": "proc_feal_01",
+      "sample_id": "sample_fe25al_01",
+      "support": {
+        "support_label": "weak_supported",
+        "evidence_refs": [
+          "b0036"
+        ],
+        "confidence": 0.35,
+        "method": "code_from_llm_bucket_evidence",
+        "value_match": "context",
+        "contradiction": false,
+        "reason": "Identifier is linked to evidence through the surrounding record context."
+      }
+    },
+    {
+      "field_id": "F00108",
+      "section": "samples",
+      "path": "samples.sample_fe25al_01__idx_2.sample_id",
+      "value": "sample_fe25al_01",
+      "sample_id": "sample_fe25al_01",
+      "support": {
+        "support_label": "weak_supported",
+        "evidence_refs": [
+          "b0036"
+        ],
+        "confidence": 0.35,
+        "method": "code_from_llm_bucket_evidence",
+        "value_match": "context",
+        "contradiction": false,
+        "reason": "Identifier is linked to evidence through the surrounding record context."
+      }
+    },
+    {
+      "field_id": "F00109",
+      "section": "samples",
+      "path": "samples.sample_fe28al_01__idx_3.alloy_id",
+      "value": "alloy_fe28al",
+      "sample_id": "sample_fe28al_01",
+      "support": {
+        "support_label": "weak_supported",
+        "evidence_refs": [
+          "b0023"
+        ],
+        "confidence": 0.35,
+        "method": "code_from_llm_bucket_evidence",
+        "value_match": "context",
+        "contradiction": false,
+        "reason": "Identifier is linked to evidence through the surrounding record context."
+      }
+    },
+    {
+      "field_id": "F00110",
+      "section": "samples",
+      "path": "samples.sample_fe28al_01__idx_3.paper_id",
+      "value": "10.1016_j.msea.2007.01.014",
+      "sample_id": "sample_fe28al_01",
+      "support": {
+        "support_label": "weak_supported",
+        "evidence_refs": [
+          "b0023"
+        ],
+        "confidence": 0.35,
+        "method": "code_from_llm_bucket_evidence",
+        "value_match": "context",
+        "contradiction": false,
+        "reason": "Identifier is linked to evidence through the surrounding record context."
+      }
+    },
+    {
+      "field_id": "F00111",
+      "section": "samples",
+      "path": "samples.sample_fe28al_01__idx_3.process_id",
+      "value": "proc_feal_01",
+      "sample_id": "sample_fe28al_01",
+      "support": {
+        "support_label": "weak_supported",
+        "evidence_refs": [
+          "b0023"
+        ],
+        "confidence": 0.35,
+        "method": "code_from_llm_bucket_evidence",
+        "value_match": "context",
+        "contradiction": false,
+        "reason": "Identifier is linked to evidence through the surrounding record context."
+      }
+    },
+    {
+      "field_id": "F00112",
+      "section": "samples",
+      "path": "samples.sample_fe28al_01__idx_3.sample_id",
+      "value": "sample_fe28al_01",
+      "sample_id": "sample_fe28al_01",
+      "support": {
+        "support_label": "weak_supported",
+        "evidence_refs": [
+          "b0023"
+        ],
+        "confidence": 0.35,
+        "method": "code_from_llm_bucket_evidence",
+        "value_match": "context",
+        "contradiction": false,
+        "reason": "Identifier is linked to evidence through the surrounding record context."
+      }
+    },
+    {
+      "field_id": "F00113",
+      "section": "samples",
+      "path": "samples.sample_fe30al_01__idx_4.alloy_id",
+      "value": "alloy_fe30al",
+      "sample_id": "sample_fe30al_01",
+      "support": {
+        "support_label": "weak_supported",
+        "evidence_refs": [
+          "b0023"
+        ],
+        "confidence": 0.35,
+        "method": "code_from_llm_bucket_evidence",
+        "value_match": "context",
+        "contradiction": false,
+        "reason": "Identifier is linked to evidence through the surrounding record context."
+      }
+    },
+    {
+      "field_id": "F00114",
+      "section": "samples",
+      "path": "samples.sample_fe30al_01__idx_4.paper_id",
+      "value": "10.1016_j.msea.2007.01.014",
+      "sample_id": "sample_fe30al_01",
+      "support": {
+        "support_label": "weak_supported",
+        "evidence_refs": [
+          "b0023"
+        ],
+        "confidence": 0.35,
+        "method": "code_from_llm_bucket_evidence",
+        "value_match": "context",
+        "contradiction": false,
+        "reason": "Identifier is linked to evidence through the surrounding record context."
+      }
+    },
+    {
+      "field_id": "F00115",
+      "section": "samples",
+      "path": "samples.sample_fe30al_01__idx_4.process_id",
+      "value": "proc_feal_01",
+      "sample_id": "sample_fe30al_01",
+      "support": {
+        "support_label": "weak_supported",
+        "evidence_refs": [
+          "b0023"
+        ],
+        "confidence": 0.35,
+        "method": "code_from_llm_bucket_evidence",
+        "value_match": "context",
+        "contradiction": false,
+        "reason": "Identifier is linked to evidence through the surrounding record context."
+      }
+    },
+    {
+      "field_id": "F00116",
+      "section": "samples",
+      "path": "samples.sample_fe30al_01__idx_4.sample_id",
+      "value": "sample_fe30al_01",
+      "sample_id": "sample_fe30al_01",
+      "support": {
+        "support_label": "weak_supported",
+        "evidence_refs": [
+          "b0023"
+        ],
+        "confidence": 0.35,
+        "method": "code_from_llm_bucket_evidence",
+        "value_match": "context",
+        "contradiction": false,
+        "reason": "Identifier is linked to evidence through the surrounding record context."
+      }
+    },
+    {
+      "field_id": "F00117",
+      "section": "samples",
+      "path": "samples.sample_fe30al_b_01__idx_7.alloy_id",
+      "value": "alloy_fe30al_b",
+      "sample_id": "sample_fe30al_b_01",
+      "support": {
+        "support_label": "weak_supported",
+        "evidence_refs": [
+          "b0023"
+        ],
+        "confidence": 0.35,
+        "method": "code_from_llm_bucket_evidence",
+        "value_match": "context",
+        "contradiction": false,
+        "reason": "Identifier is linked to evidence through the surrounding record context."
+      }
+    },
+    {
+      "field_id": "F00118",
+      "section": "samples",
+      "path": "samples.sample_fe30al_b_01__idx_7.paper_id",
+      "value": "10.1016_j.msea.2007.01.014",
+      "sample_id": "sample_fe30al_b_01",
+      "support": {
+        "support_label": "weak_supported",
+        "evidence_refs": [
+          "b0023"
+        ],
+        "confidence": 0.35,
+        "method": "code_from_llm_bucket_evidence",
+        "value_match": "context",
+        "contradiction": false,
+        "reason": "Identifier is linked to evidence through the surrounding record context."
+      }
+    },
+    {
+      "field_id": "F00119",
+      "section": "samples",
+      "path": "samples.sample_fe30al_b_01__idx_7.process_id",
+      "value": "proc_feal_01",
+      "sample_id": "sample_fe30al_b_01",
+      "support": {
+        "support_label": "weak_supported",
+        "evidence_refs": [
+          "b0023"
+        ],
+        "confidence": 0.35,
+        "method": "code_from_llm_bucket_evidence",
+        "value_match": "context",
+        "contradiction": false,
+        "reason": "Identifier is linked to evidence through the surrounding record context."
+      }
+    },
+    {
+      "field_id": "F00120",
+      "section": "samples",
+      "path": "samples.sample_fe30al_b_01__idx_7.sample_id",
+      "value": "sample_fe30al_b_01",
+      "sample_id": "sample_fe30al_b_01",
+      "support": {
+        "support_label": "weak_supported",
+        "evidence_refs": [
+          "b0023"
+        ],
+        "confidence": 0.35,
+        "method": "code_from_llm_bucket_evidence",
+        "value_match": "context",
+        "contradiction": false,
+        "reason": "Identifier is linked to evidence through the surrounding record context."
+      }
+    },
+    {
+      "field_id": "F00121",
+      "section": "samples",
+      "path": "samples.sample_fe35al_01__idx_5.alloy_id",
+      "value": "alloy_fe35al",
+      "sample_id": "sample_fe35al_01",
+      "support": {
+        "support_label": "weak_supported",
+        "evidence_refs": [
+          "b0023"
+        ],
+        "confidence": 0.35,
+        "method": "code_from_llm_bucket_evidence",
+        "value_match": "context",
+        "contradiction": false,
+        "reason": "Identifier is linked to evidence through the surrounding record context."
+      }
+    },
+    {
+      "field_id": "F00122",
+      "section": "samples",
+      "path": "samples.sample_fe35al_01__idx_5.paper_id",
+      "value": "10.1016_j.msea.2007.01.014",
+      "sample_id": "sample_fe35al_01",
+      "support": {
+        "support_label": "weak_supported",
+        "evidence_refs": [
+          "b0023"
+        ],
+        "confidence": 0.35,
+        "method": "code_from_llm_bucket_evidence",
+        "value_match": "context",
+        "contradiction": false,
+        "reason": "Identifier is linked to evidence through the surrounding record context."
+      }
+    },
+    {
+      "field_id": "F00123",
+      "section": "samples",
+      "path": "samples.sample_fe35al_01__idx_5.process_id",
+      "value": "proc_feal_01",
+      "sample_id": "sample_fe35al_01",
+      "support": {
+        "support_label": "weak_supported",
+        "evidence_refs": [
+          "b0023"
+        ],
+        "confidence": 0.35,
+        "method": "code_from_llm_bucket_evidence",
+        "value_match": "context",
+        "contradiction": false,
+        "reason": "Identifier is linked to evidence through the surrounding record context."
+      }
+    },
+    {
+      "field_id": "F00124",
+      "section": "samples",
+      "path": "samples.sample_fe35al_01__idx_5.sample_id",
+      "value": "sample_fe35al_01",
+      "sample_id": "sample_fe35al_01",
+      "support": {
+        "support_label": "weak_supported",
+        "evidence_refs": [
+          "b0023"
+        ],
+        "confidence": 0.35,
+        "method": "code_from_llm_bucket_evidence",
+        "value_match": "context",
+        "contradiction": false,
+        "reason": "Identifier is linked to evidence through the surrounding record context."
+      }
+    },
+    {
+      "field_id": "F00125",
+      "section": "processing_steps",
+      "path": "processing_steps.sample_fe15al_01__sequence_1.method",
+      "value": "induction melting in alumina crucible under inert gas, drop casting into 25 mm diameter cylindrical copper mould",
+      "sample_id": "sample_fe15al_01",
+      "support": {
+        "support_label": "weak_supported",
+        "evidence_refs": [
+          "b0023"
+        ],
+        "confidence": 0.35,
+        "method": "code_from_llm_bucket_evidence",
+        "value_match": "context",
+        "contradiction": false,
+        "reason": "Relevant context was recalled, but the exact field value was not confirmed."
+      }
+    },
+    {
+      "field_id": "F00126",
+      "section": "processing_steps",
+      "path": "processing_steps.sample_fe15al_01__sequence_1.paper_id",
+      "value": "10.1016_j.msea.2007.01.014",
+      "sample_id": "sample_fe15al_01",
+      "support": {
+        "support_label": "weak_supported",
+        "evidence_refs": [
+          "b0023"
+        ],
+        "confidence": 0.35,
+        "method": "code_from_llm_bucket_evidence",
+        "value_match": "context",
+        "contradiction": false,
+        "reason": "Identifier is linked to evidence through the surrounding record context."
+      }
+    },
+    {
+      "field_id": "F00127",
+      "section": "processing_steps",
+      "path": "processing_steps.sample_fe15al_01__sequence_1.processing_steps_notes",
+      "value": "Slow cooling after solidification.",
+      "sample_id": "sample_fe15al_01",
+      "support": {
+        "support_label": "weak_supported",
+        "evidence_refs": [
+          "b0023"
+        ],
+        "confidence": 0.35,
+        "method": "code_from_llm_bucket_evidence",
+        "value_match": "context",
+        "contradiction": false,
+        "reason": "Relevant context was recalled, but the exact field value was not confirmed."
+      }
+    },
+    {
+      "field_id": "F00128",
+      "section": "processing_steps",
+      "path": "processing_steps.sample_fe15al_01__sequence_1.sample_id",
+      "value": "sample_fe15al_01",
+      "sample_id": "sample_fe15al_01",
+      "support": {
+        "support_label": "weak_supported",
+        "evidence_refs": [
+          "b0023"
+        ],
+        "confidence": 0.35,
+        "method": "code_from_llm_bucket_evidence",
+        "value_match": "context",
+        "contradiction": false,
+        "reason": "Identifier is linked to evidence through the surrounding record context."
+      }
+    },
+    {
+      "field_id": "F00129",
+      "section": "processing_steps",
+      "path": "processing_steps.sample_fe15al_01__sequence_1.sequence",
+      "value": "1",
+      "sample_id": "sample_fe15al_01",
+      "support": {
+        "support_label": "explicit_supported",
+        "evidence_refs": [
+          "b0025"
+        ],
+        "confidence": 0.98,
+        "method": "code_exact_match",
+        "value_match": "exact",
+        "contradiction": false,
+        "reason": "Normalized field value appears in the evidence block."
+      }
+    },
+    {
+      "field_id": "F00130",
+      "section": "processing_steps",
+      "path": "processing_steps.sample_fe15al_01__sequence_1.type",
+      "value": "casting",
+      "sample_id": "sample_fe15al_01",
+      "support": {
+        "support_label": "explicit_supported",
+        "evidence_refs": [
+          "b0023"
+        ],
+        "confidence": 0.98,
+        "method": "code_exact_match",
+        "value_match": "exact",
+        "contradiction": false,
+        "reason": "Normalized field value appears in the evidence block."
+      }
+    },
+    {
+      "field_id": "F00131",
+      "section": "processing_steps",
+      "path": "processing_steps.sample_fe15al_01__sequence_2.method",
+      "value": "compression testing at room temperature",
+      "sample_id": "sample_fe15al_01",
+      "support": {
+        "support_label": "weak_supported",
+        "evidence_refs": [
+          "b0023"
+        ],
+        "confidence": 0.35,
+        "method": "code_from_llm_bucket_evidence",
+        "value_match": "context",
+        "contradiction": false,
+        "reason": "Relevant context was recalled, but the exact field value was not confirmed."
+      }
+    },
+    {
+      "field_id": "F00132",
+      "section": "processing_steps",
+      "path": "processing_steps.sample_fe15al_01__sequence_2.paper_id",
+      "value": "10.1016_j.msea.2007.01.014",
+      "sample_id": "sample_fe15al_01",
+      "support": {
+        "support_label": "weak_supported",
+        "evidence_refs": [
+          "b0023"
+        ],
+        "confidence": 0.35,
+        "method": "code_from_llm_bucket_evidence",
+        "value_match": "context",
+        "contradiction": false,
+        "reason": "Identifier is linked to evidence through the surrounding record context."
+      }
+    },
+    {
+      "field_id": "F00133",
+      "section": "processing_steps",
+      "path": "processing_steps.sample_fe15al_01__sequence_2.processing_steps_notes",
+      "value": "Strained to 2-3% at nominal strain rate of 3e-4 s-1. Samples cut by spark machining (3 mm diameter or 5 mm square cross-section, height twice diameter/width). Polished on 1500 grade abrasive paper before test.",
+      "sample_id": "sample_fe15al_01",
+      "support": {
+        "support_label": "weak_supported",
+        "evidence_refs": [
+          "b0023"
+        ],
+        "confidence": 0.35,
+        "method": "code_from_llm_bucket_evidence",
+        "value_match": "context",
+        "contradiction": false,
+        "reason": "Relevant context was recalled, but the exact field value was not confirmed."
+      }
+    },
+    {
+      "field_id": "F00134",
+      "section": "processing_steps",
+      "path": "processing_steps.sample_fe15al_01__sequence_2.sample_id",
+      "value": "sample_fe15al_01",
+      "sample_id": "sample_fe15al_01",
+      "support": {
+        "support_label": "weak_supported",
+        "evidence_refs": [
+          "b0023"
+        ],
+        "confidence": 0.35,
+        "method": "code_from_llm_bucket_evidence",
+        "value_match": "context",
+        "contradiction": false,
+        "reason": "Identifier is linked to evidence through the surrounding record context."
+      }
+    },
+    {
+      "field_id": "F00135",
+      "section": "processing_steps",
+      "path": "processing_steps.sample_fe15al_01__sequence_2.sequence",
+      "value": "2",
+      "sample_id": "sample_fe15al_01",
+      "support": {
+        "support_label": "explicit_supported",
+        "evidence_refs": [
+          "b0025"
+        ],
+        "confidence": 0.98,
+        "method": "code_exact_match",
+        "value_match": "exact",
+        "contradiction": false,
+        "reason": "Normalized field value appears in the evidence block."
+      }
+    },
+    {
+      "field_id": "F00136",
+      "section": "processing_steps",
+      "path": "processing_steps.sample_fe15al_01__sequence_2.temperature",
+      "value": "room temperature",
+      "sample_id": "sample_fe15al_01",
+      "support": {
+        "support_label": "explicit_supported",
+        "evidence_refs": [
+          "b0025"
+        ],
+        "confidence": 0.98,
+        "method": "code_exact_match",
+        "value_match": "exact",
+        "contradiction": false,
+        "reason": "Normalized field value appears in the evidence block."
+      }
+    },
+    {
+      "field_id": "F00137",
+      "section": "processing_steps",
+      "path": "processing_steps.sample_fe15al_01__sequence_2.type",
+      "value": "mechanical_processing",
+      "sample_id": "sample_fe15al_01",
+      "support": {
+        "support_label": "weak_supported",
+        "evidence_refs": [
+          "b0023"
+        ],
+        "confidence": 0.35,
+        "method": "code_from_llm_bucket_evidence",
+        "value_match": "context",
+        "contradiction": false,
+        "reason": "Relevant context was recalled, but the exact field value was not confirmed."
+      }
+    },
+    {
+      "field_id": "F00138",
+      "section": "structures",
+      "path": "structures.sample_fe15al_01__structure_id_struct_fe15al_01.microstructure_list[2].defects[dislocation].type",
+      "value": "dislocation",
+      "sample_id": "sample_fe15al_01",
+      "support": {
+        "support_label": "explicit_supported",
+        "evidence_refs": [
+          "b0046"
+        ],
+        "confidence": 0.98,
+        "method": "code_exact_match",
+        "value_match": "exact",
+        "contradiction": false,
+        "reason": "Normalized field value appears in the evidence block."
+      }
+    },
+    {
+      "field_id": "F00139",
+      "section": "structures",
+      "path": "structures.sample_fe15al_01__structure_id_struct_fe15al_01.microstructure_list[2].grain_structure.average_grain_size.unit",
+      "value": "μm",
+      "sample_id": "sample_fe15al_01",
+      "support": {
+        "support_label": "explicit_supported",
+        "evidence_refs": [
+          "b0023"
+        ],
+        "confidence": 0.98,
+        "method": "code_exact_match",
+        "value_match": "exact",
+        "contradiction": false,
+        "reason": "Normalized field value appears in the evidence block."
+      }
+    },
+    {
+      "field_id": "F00140",
+      "section": "structures",
+      "path": "structures.sample_fe15al_01__structure_id_struct_fe15al_01.microstructure_list[2].grain_structure.average_grain_size.value",
+      "value": "250",
+      "sample_id": "sample_fe15al_01",
+      "support": {
+        "support_label": "weak_supported",
+        "evidence_refs": [
+          "b0023"
+        ],
+        "confidence": 0.35,
+        "method": "code_from_llm_bucket_evidence",
+        "value_match": "context",
+        "contradiction": false,
+        "reason": "Relevant context was recalled, but the exact field value was not confirmed."
+      }
+    },
+    {
+      "field_id": "F00141",
+      "section": "structures",
+      "path": "structures.sample_fe15al_01__structure_id_struct_fe15al_01.microstructure_list[2].related_sequence",
+      "value": "2",
+      "sample_id": "sample_fe15al_01",
+      "support": {
+        "support_label": "explicit_supported",
+        "evidence_refs": [
+          "b0025"
+        ],
+        "confidence": 0.98,
+        "method": "code_exact_match",
+        "value_match": "exact",
+        "contradiction": false,
+        "reason": "Normalized field value appears in the evidence block."
+      }
+    },
+    {
+      "field_id": "F00142",
+      "section": "structures",
+      "path": "structures.sample_fe15al_01__structure_id_struct_fe15al_01.microstructure_list[2].uuid",
+      "value": "uuid_fe15al_disloc",
+      "sample_id": "sample_fe15al_01",
+      "support": {
+        "support_label": "weak_supported",
+        "evidence_refs": [
+          "b0023"
+        ],
+        "confidence": 0.35,
+        "method": "code_from_llm_bucket_evidence",
+        "value_match": "context",
+        "contradiction": false,
+        "reason": "Identifier is linked to evidence through the surrounding record context."
+      }
+    },
+    {
+      "field_id": "F00143",
+      "section": "structures",
+      "path": "structures.sample_fe15al_01__structure_id_struct_fe15al_01.overall_structure",
+      "value": "Disordered bcc, single dislocations of Burgers vector (1/2)<111>.",
+      "sample_id": "sample_fe15al_01",
+      "support": {
+        "support_label": "weak_supported",
+        "evidence_refs": [
+          "b0023"
+        ],
+        "confidence": 0.35,
+        "method": "code_from_llm_bucket_evidence",
+        "value_match": "context",
+        "contradiction": false,
+        "reason": "Relevant context was recalled, but the exact field value was not confirmed."
+      }
+    },
+    {
+      "field_id": "F00144",
+      "section": "structures",
+      "path": "structures.sample_fe15al_01__structure_id_struct_fe15al_01.sample_id",
+      "value": "sample_fe15al_01",
+      "sample_id": "sample_fe15al_01",
+      "support": {
+        "support_label": "weak_supported",
+        "evidence_refs": [
+          "b0023"
+        ],
+        "confidence": 0.35,
+        "method": "code_from_llm_bucket_evidence",
+        "value_match": "context",
+        "contradiction": false,
+        "reason": "Identifier is linked to evidence through the surrounding record context."
+      }
+    },
+    {
+      "field_id": "F00145",
+      "section": "structures",
+      "path": "structures.sample_fe15al_01__structure_id_struct_fe15al_01.structure_id",
+      "value": "struct_fe15al_01",
+      "sample_id": "sample_fe15al_01",
+      "support": {
+        "support_label": "weak_supported",
+        "evidence_refs": [
+          "b0023"
+        ],
+        "confidence": 0.35,
+        "method": "code_from_llm_bucket_evidence",
+        "value_match": "context",
+        "contradiction": false,
+        "reason": "Identifier is linked to evidence through the surrounding record context."
+      }
+    },
+    {
+      "field_id": "F00146",
+      "section": "structures",
+      "path": "structures.sample_fe20al_01__structure_id_struct_fe20al_01.microstructure_list[2].defects[dislocation].type",
+      "value": "dislocation",
+      "sample_id": "sample_fe20al_01",
+      "support": {
+        "support_label": "explicit_supported",
+        "evidence_refs": [
+          "b0061"
+        ],
+        "confidence": 0.98,
+        "method": "code_exact_match",
+        "value_match": "exact",
+        "contradiction": false,
+        "reason": "Normalized field value appears in the evidence block."
+      }
+    },
+    {
+      "field_id": "F00147",
+      "section": "structures",
+      "path": "structures.sample_fe20al_01__structure_id_struct_fe20al_01.microstructure_list[2].grain_structure.average_grain_size.unit",
+      "value": "μm",
+      "sample_id": "sample_fe20al_01",
+      "support": {
+        "support_label": "explicit_supported",
+        "evidence_refs": [
+          "b0061"
+        ],
+        "confidence": 0.98,
+        "method": "code_exact_match",
+        "value_match": "exact",
+        "contradiction": false,
+        "reason": "Normalized field value appears in the evidence block."
+      }
+    },
+    {
+      "field_id": "F00148",
+      "section": "structures",
+      "path": "structures.sample_fe20al_01__structure_id_struct_fe20al_01.microstructure_list[2].grain_structure.average_grain_size.value",
+      "value": "250",
+      "sample_id": "sample_fe20al_01",
+      "support": {
+        "support_label": "weak_supported",
+        "evidence_refs": [
+          "b0023"
+        ],
+        "confidence": 0.35,
+        "method": "code_from_llm_bucket_evidence",
+        "value_match": "context",
+        "contradiction": false,
+        "reason": "Relevant context was recalled, but the exact field value was not confirmed."
+      }
+    },
+    {
+      "field_id": "F00149",
+      "section": "structures",
+      "path": "structures.sample_fe20al_01__structure_id_struct_fe20al_01.microstructure_list[2].related_sequence",
+      "value": "2",
+      "sample_id": "sample_fe20al_01",
+      "support": {
+        "support_label": "explicit_supported",
+        "evidence_refs": [
+          "b0060"
+        ],
+        "confidence": 0.98,
+        "method": "code_exact_match",
+        "value_match": "exact",
+        "contradiction": false,
+        "reason": "Normalized field value appears in the evidence block."
+      }
+    },
+    {
+      "field_id": "F00150",
+      "section": "structures",
+      "path": "structures.sample_fe20al_01__structure_id_struct_fe20al_01.microstructure_list[2].uuid",
+      "value": "uuid_fe20al_disloc",
+      "sample_id": "sample_fe20al_01",
+      "support": {
+        "support_label": "weak_supported",
+        "evidence_refs": [
+          "b0023"
+        ],
+        "confidence": 0.35,
+        "method": "code_from_llm_bucket_evidence",
+        "value_match": "context",
+        "contradiction": false,
+        "reason": "Identifier is linked to evidence through the surrounding record context."
+      }
+    },
+    {
+      "field_id": "F00151",
+      "section": "structures",
+      "path": "structures.sample_fe20al_01__structure_id_struct_fe20al_01.overall_structure",
+      "value": "Disordered/short range ordered; single (1/2)<111> dislocations, smoothly curved, some preference for screw orientations, many edge dipole segments and loops.",
+      "sample_id": "sample_fe20al_01",
+      "support": {
+        "support_label": "weak_supported",
+        "evidence_refs": [
+          "b0023"
+        ],
+        "confidence": 0.35,
+        "method": "code_from_llm_bucket_evidence",
+        "value_match": "context",
+        "contradiction": false,
+        "reason": "Relevant context was recalled, but the exact field value was not confirmed."
+      }
+    },
+    {
+      "field_id": "F00152",
+      "section": "structures",
+      "path": "structures.sample_fe20al_01__structure_id_struct_fe20al_01.sample_id",
+      "value": "sample_fe20al_01",
+      "sample_id": "sample_fe20al_01",
+      "support": {
+        "support_label": "weak_supported",
+        "evidence_refs": [
+          "b0023"
+        ],
+        "confidence": 0.35,
+        "method": "code_from_llm_bucket_evidence",
+        "value_match": "context",
+        "contradiction": false,
+        "reason": "Identifier is linked to evidence through the surrounding record context."
+      }
+    },
+    {
+      "field_id": "F00153",
+      "section": "structures",
+      "path": "structures.sample_fe20al_01__structure_id_struct_fe20al_01.structure_id",
+      "value": "struct_fe20al_01",
+      "sample_id": "sample_fe20al_01",
+      "support": {
+        "support_label": "weak_supported",
+        "evidence_refs": [
+          "b0023"
+        ],
+        "confidence": 0.35,
+        "method": "code_from_llm_bucket_evidence",
+        "value_match": "context",
+        "contradiction": false,
+        "reason": "Identifier is linked to evidence through the surrounding record context."
+      }
+    },
+    {
+      "field_id": "F00154",
+      "section": "structures",
+      "path": "structures.sample_fe25al_01__structure_id_struct_fe25al_01.microstructure_list[2].defects[dislocation].type",
+      "value": "dislocation",
+      "sample_id": "sample_fe25al_01",
+      "support": {
+        "support_label": "explicit_supported",
+        "evidence_refs": [
+          "b0061"
+        ],
+        "confidence": 0.98,
+        "method": "code_exact_match",
+        "value_match": "exact",
+        "contradiction": false,
+        "reason": "Normalized field value appears in the evidence block."
+      }
+    },
+    {
+      "field_id": "F00155",
+      "section": "structures",
+      "path": "structures.sample_fe25al_01__structure_id_struct_fe25al_01.microstructure_list[2].grain_structure.average_grain_size.unit",
+      "value": "μm",
+      "sample_id": "sample_fe25al_01",
+      "support": {
+        "support_label": "explicit_supported",
+        "evidence_refs": [
+          "b0061"
+        ],
+        "confidence": 0.98,
+        "method": "code_exact_match",
+        "value_match": "exact",
+        "contradiction": false,
+        "reason": "Normalized field value appears in the evidence block."
+      }
+    },
+    {
+      "field_id": "F00156",
+      "section": "structures",
+      "path": "structures.sample_fe25al_01__structure_id_struct_fe25al_01.microstructure_list[2].grain_structure.average_grain_size.value",
+      "value": "250",
+      "sample_id": "sample_fe25al_01",
+      "support": {
+        "support_label": "weak_supported",
+        "evidence_refs": [
+          "b0036"
+        ],
+        "confidence": 0.35,
+        "method": "code_from_llm_bucket_evidence",
+        "value_match": "context",
+        "contradiction": false,
+        "reason": "Relevant context was recalled, but the exact field value was not confirmed."
+      }
+    },
+    {
+      "field_id": "F00157",
+      "section": "structures",
+      "path": "structures.sample_fe25al_01__structure_id_struct_fe25al_01.microstructure_list[2].phases_present[do3_ordered_phase].crystal_structure",
+      "value": "DO3",
+      "sample_id": "sample_fe25al_01",
+      "support": {
+        "support_label": "weak_supported",
+        "evidence_refs": [
+          "b0036"
+        ],
+        "confidence": 0.35,
+        "method": "code_from_llm_bucket_evidence",
+        "value_match": "context",
+        "contradiction": false,
+        "reason": "Relevant context was recalled, but the exact field value was not confirmed."
+      }
+    },
+    {
+      "field_id": "F00158",
+      "section": "structures",
+      "path": "structures.sample_fe25al_01__structure_id_struct_fe25al_01.microstructure_list[2].phases_present[do3_ordered_phase].phase_name",
+      "value": "DO3 ordered phase",
+      "sample_id": "sample_fe25al_01",
+      "support": {
+        "support_label": "weak_supported",
+        "evidence_refs": [
+          "b0036"
+        ],
+        "confidence": 0.35,
+        "method": "code_from_llm_bucket_evidence",
+        "value_match": "context",
+        "contradiction": false,
+        "reason": "Relevant context was recalled, but the exact field value was not confirmed."
+      }
+    },
+    {
+      "field_id": "F00159",
+      "section": "structures",
+      "path": "structures.sample_fe25al_01__structure_id_struct_fe25al_01.microstructure_list[2].related_sequence",
+      "value": "2",
+      "sample_id": "sample_fe25al_01",
+      "support": {
+        "support_label": "explicit_supported",
+        "evidence_refs": [
+          "b0060"
+        ],
+        "confidence": 0.98,
+        "method": "code_exact_match",
+        "value_match": "exact",
+        "contradiction": false,
+        "reason": "Normalized field value appears in the evidence block."
+      }
+    },
+    {
+      "field_id": "F00160",
+      "section": "structures",
+      "path": "structures.sample_fe25al_01__structure_id_struct_fe25al_01.microstructure_list[2].uuid",
+      "value": "uuid_fe25al_disloc",
+      "sample_id": "sample_fe25al_01",
+      "support": {
+        "support_label": "weak_supported",
+        "evidence_refs": [
+          "b0036"
+        ],
+        "confidence": 0.35,
+        "method": "code_from_llm_bucket_evidence",
+        "value_match": "context",
+        "contradiction": false,
+        "reason": "Identifier is linked to evidence through the surrounding record context."
+      }
+    },
+    {
+      "field_id": "F00161",
+      "section": "structures",
+      "path": "structures.sample_fe25al_01__structure_id_struct_fe25al_01.overall_structure",
+      "value": "DO3 ordered; dislocations are loosely coupled superdislocation partials (pairs of (1/2)<111> dislocations), straight near-screw orientations, edge dipole segments, shear APB faults (APBI) trailed.",
+      "sample_id": "sample_fe25al_01",
+      "support": {
+        "support_label": "weak_supported",
+        "evidence_refs": [
+          "b0036"
+        ],
+        "confidence": 0.35,
+        "method": "code_from_llm_bucket_evidence",
+        "value_match": "context",
+        "contradiction": false,
+        "reason": "Relevant context was recalled, but the exact field value was not confirmed."
+      }
+    },
+    {
+      "field_id": "F00162",
+      "section": "structures",
+      "path": "structures.sample_fe25al_01__structure_id_struct_fe25al_01.sample_id",
+      "value": "sample_fe25al_01",
+      "sample_id": "sample_fe25al_01",
+      "support": {
+        "support_label": "weak_supported",
+        "evidence_refs": [
+          "b0036"
+        ],
+        "confidence": 0.35,
+        "method": "code_from_llm_bucket_evidence",
+        "value_match": "context",
+        "contradiction": false,
+        "reason": "Identifier is linked to evidence through the surrounding record context."
+      }
+    },
+    {
+      "field_id": "F00163",
+      "section": "structures",
+      "path": "structures.sample_fe25al_01__structure_id_struct_fe25al_01.structure_id",
+      "value": "struct_fe25al_01",
+      "sample_id": "sample_fe25al_01",
+      "support": {
+        "support_label": "weak_supported",
+        "evidence_refs": [
+          "b0036"
+        ],
+        "confidence": 0.35,
+        "method": "code_from_llm_bucket_evidence",
+        "value_match": "context",
+        "contradiction": false,
+        "reason": "Identifier is linked to evidence through the surrounding record context."
+      }
+    },
+    {
+      "field_id": "F00164",
+      "section": "structures",
+      "path": "structures.sample_fe28al_01__structure_id_struct_fe28al_01.microstructure_list[2].defects[dislocation].type",
+      "value": "dislocation",
+      "sample_id": "sample_fe28al_01",
+      "support": {
+        "support_label": "explicit_supported",
+        "evidence_refs": [
+          "b0042"
+        ],
+        "confidence": 0.98,
+        "method": "code_exact_match",
+        "value_match": "exact",
+        "contradiction": false,
+        "reason": "Normalized field value appears in the evidence block."
+      }
+    },
+    {
+      "field_id": "F00165",
+      "section": "structures",
+      "path": "structures.sample_fe28al_01__structure_id_struct_fe28al_01.microstructure_list[2].grain_structure.average_grain_size.unit",
+      "value": "μm",
+      "sample_id": "sample_fe28al_01",
+      "support": {
+        "support_label": "explicit_supported",
+        "evidence_refs": [
+          "b0011"
+        ],
+        "confidence": 0.98,
+        "method": "code_exact_match",
+        "value_match": "exact",
+        "contradiction": false,
+        "reason": "Normalized field value appears in the evidence block."
+      }
+    },
+    {
+      "field_id": "F00166",
+      "section": "structures",
+      "path": "structures.sample_fe28al_01__structure_id_struct_fe28al_01.microstructure_list[2].grain_structure.average_grain_size.value",
+      "value": "250",
+      "sample_id": "sample_fe28al_01",
+      "support": {
+        "support_label": "weak_supported",
+        "evidence_refs": [
+          "b0023"
+        ],
+        "confidence": 0.35,
+        "method": "code_from_llm_bucket_evidence",
+        "value_match": "context",
+        "contradiction": false,
+        "reason": "Relevant context was recalled, but the exact field value was not confirmed."
+      }
+    },
+    {
+      "field_id": "F00167",
+      "section": "structures",
+      "path": "structures.sample_fe28al_01__structure_id_struct_fe28al_01.microstructure_list[2].phases_present[b2_ordered_phase].crystal_structure",
+      "value": "B2",
+      "sample_id": "sample_fe28al_01",
+      "support": {
+        "support_label": "explicit_supported",
+        "evidence_refs": [
+          "b0011"
+        ],
+        "confidence": 0.98,
+        "method": "code_exact_match",
+        "value_match": "exact",
+        "contradiction": false,
+        "reason": "Normalized field value appears in the evidence block."
+      }
+    },
+    {
+      "field_id": "F00168",
+      "section": "structures",
+      "path": "structures.sample_fe28al_01__structure_id_struct_fe28al_01.microstructure_list[2].phases_present[b2_ordered_phase].phase_name",
+      "value": "B2 ordered phase",
+      "sample_id": "sample_fe28al_01",
+      "support": {
+        "support_label": "weak_supported",
+        "evidence_refs": [
+          "b0023"
+        ],
+        "confidence": 0.35,
+        "method": "code_from_llm_bucket_evidence",
+        "value_match": "context",
+        "contradiction": false,
+        "reason": "Relevant context was recalled, but the exact field value was not confirmed."
+      }
+    },
+    {
+      "field_id": "F00169",
+      "section": "structures",
+      "path": "structures.sample_fe28al_01__structure_id_struct_fe28al_01.microstructure_list[2].related_sequence",
+      "value": "2",
+      "sample_id": "sample_fe28al_01",
+      "support": {
+        "support_label": "explicit_supported",
+        "evidence_refs": [
+          "b0011"
+        ],
+        "confidence": 0.98,
+        "method": "code_exact_match",
+        "value_match": "exact",
+        "contradiction": false,
+        "reason": "Normalized field value appears in the evidence block."
+      }
+    },
+    {
+      "field_id": "F00170",
+      "section": "structures",
+      "path": "structures.sample_fe28al_01__structure_id_struct_fe28al_01.microstructure_list[2].uuid",
+      "value": "uuid_fe28al_disloc",
+      "sample_id": "sample_fe28al_01",
+      "support": {
+        "support_label": "weak_supported",
+        "evidence_refs": [
+          "b0023"
+        ],
+        "confidence": 0.35,
+        "method": "code_from_llm_bucket_evidence",
+        "value_match": "context",
+        "contradiction": false,
+        "reason": "Identifier is linked to evidence through the surrounding record context."
+      }
+    },
+    {
+      "field_id": "F00171",
+      "section": "structures",
+      "path": "structures.sample_fe28al_01__structure_id_struct_fe28al_01.overall_structure",
+      "value": "B2 ordered (with some DO3 order); superdislocations composed of two (1/2)<111> partials (B2 superdislocation, imperfect for DO3), nearly all straight screw orientations, many superdislocation dipoles, reaction products (sessile <100> edge dislocations).",
+      "sample_id": "sample_fe28al_01",
+      "support": {
+        "support_label": "weak_supported",
+        "evidence_refs": [
+          "b0023"
+        ],
+        "confidence": 0.35,
+        "method": "code_from_llm_bucket_evidence",
+        "value_match": "context",
+        "contradiction": false,
+        "reason": "Relevant context was recalled, but the exact field value was not confirmed."
+      }
+    },
+    {
+      "field_id": "F00172",
+      "section": "structures",
+      "path": "structures.sample_fe28al_01__structure_id_struct_fe28al_01.sample_id",
+      "value": "sample_fe28al_01",
+      "sample_id": "sample_fe28al_01",
+      "support": {
+        "support_label": "weak_supported",
+        "evidence_refs": [
+          "b0023"
+        ],
+        "confidence": 0.35,
+        "method": "code_from_llm_bucket_evidence",
+        "value_match": "context",
+        "contradiction": false,
+        "reason": "Identifier is linked to evidence through the surrounding record context."
+      }
+    },
+    {
+      "field_id": "F00173",
+      "section": "structures",
+      "path": "structures.sample_fe28al_01__structure_id_struct_fe28al_01.structure_id",
+      "value": "struct_fe28al_01",
+      "sample_id": "sample_fe28al_01",
+      "support": {
+        "support_label": "weak_supported",
+        "evidence_refs": [
+          "b0023"
+        ],
+        "confidence": 0.35,
+        "method": "code_from_llm_bucket_evidence",
+        "value_match": "context",
+        "contradiction": false,
+        "reason": "Identifier is linked to evidence through the surrounding record context."
+      }
+    },
+    {
+      "field_id": "F00174",
+      "section": "structures",
+      "path": "structures.sample_fe30al_01__structure_id_struct_fe30al_01.microstructure_list[2].defects[dislocation].type",
+      "value": "dislocation",
+      "sample_id": "sample_fe30al_01",
+      "support": {
+        "support_label": "explicit_supported",
+        "evidence_refs": [
+          "b0042"
+        ],
+        "confidence": 0.98,
+        "method": "code_exact_match",
+        "value_match": "exact",
+        "contradiction": false,
+        "reason": "Normalized field value appears in the evidence block."
+      }
+    },
+    {
+      "field_id": "F00175",
+      "section": "structures",
+      "path": "structures.sample_fe30al_01__structure_id_struct_fe30al_01.microstructure_list[2].grain_structure.average_grain_size.unit",
+      "value": "μm",
+      "sample_id": "sample_fe30al_01",
+      "support": {
+        "support_label": "explicit_supported",
+        "evidence_refs": [
+          "b0050"
+        ],
+        "confidence": 0.98,
+        "method": "code_exact_match",
+        "value_match": "exact",
+        "contradiction": false,
+        "reason": "Normalized field value appears in the evidence block."
+      }
+    },
+    {
+      "field_id": "F00176",
+      "section": "structures",
+      "path": "structures.sample_fe30al_01__structure_id_struct_fe30al_01.microstructure_list[2].grain_structure.average_grain_size.value",
+      "value": "250",
+      "sample_id": "sample_fe30al_01",
+      "support": {
+        "support_label": "weak_supported",
+        "evidence_refs": [
+          "b0023"
+        ],
+        "confidence": 0.35,
+        "method": "code_from_llm_bucket_evidence",
+        "value_match": "context",
+        "contradiction": false,
+        "reason": "Relevant context was recalled, but the exact field value was not confirmed."
+      }
+    },
+    {
+      "field_id": "F00177",
+      "section": "structures",
+      "path": "structures.sample_fe30al_01__structure_id_struct_fe30al_01.microstructure_list[2].phases_present[b2_ordered_phase].crystal_structure",
+      "value": "B2",
+      "sample_id": "sample_fe30al_01",
+      "support": {
+        "support_label": "explicit_supported",
+        "evidence_refs": [
+          "b0050"
+        ],
+        "confidence": 0.98,
+        "method": "code_exact_match",
+        "value_match": "exact",
+        "contradiction": false,
+        "reason": "Normalized field value appears in the evidence block."
+      }
+    },
+    {
+      "field_id": "F00178",
+      "section": "structures",
+      "path": "structures.sample_fe30al_01__structure_id_struct_fe30al_01.microstructure_list[2].phases_present[b2_ordered_phase].phase_name",
+      "value": "B2 ordered phase",
+      "sample_id": "sample_fe30al_01",
+      "support": {
+        "support_label": "weak_supported",
+        "evidence_refs": [
+          "b0023"
+        ],
+        "confidence": 0.35,
+        "method": "code_from_llm_bucket_evidence",
+        "value_match": "context",
+        "contradiction": false,
+        "reason": "Relevant context was recalled, but the exact field value was not confirmed."
+      }
+    },
+    {
+      "field_id": "F00179",
+      "section": "structures",
+      "path": "structures.sample_fe30al_01__structure_id_struct_fe30al_01.microstructure_list[2].related_sequence",
+      "value": "2",
+      "sample_id": "sample_fe30al_01",
+      "support": {
+        "support_label": "explicit_supported",
+        "evidence_refs": [
+          "b0050"
+        ],
+        "confidence": 0.98,
+        "method": "code_exact_match",
+        "value_match": "exact",
+        "contradiction": false,
+        "reason": "Normalized field value appears in the evidence block."
+      }
+    },
+    {
+      "field_id": "F00180",
+      "section": "structures",
+      "path": "structures.sample_fe30al_01__structure_id_struct_fe30al_01.microstructure_list[2].uuid",
+      "value": "uuid_fe30al_disloc",
+      "sample_id": "sample_fe30al_01",
+      "support": {
+        "support_label": "weak_supported",
+        "evidence_refs": [
+          "b0023"
+        ],
+        "confidence": 0.35,
+        "method": "code_from_llm_bucket_evidence",
+        "value_match": "context",
+        "contradiction": false,
+        "reason": "Identifier is linked to evidence through the surrounding record context."
+      }
+    },
+    {
+      "field_id": "F00181",
+      "section": "structures",
+      "path": "structures.sample_fe30al_01__structure_id_struct_fe30al_01.overall_structure",
+      "value": "B2 ordered (weak DO3); superdislocations (two (1/2)<111> partials), straight near-screw dislocations, edge dipoles and loops, dislocation reactions to form stepped structures. APBII fringes observed.",
+      "sample_id": "sample_fe30al_01",
+      "support": {
+        "support_label": "weak_supported",
+        "evidence_refs": [
+          "b0023"
+        ],
+        "confidence": 0.35,
+        "method": "code_from_llm_bucket_evidence",
+        "value_match": "context",
+        "contradiction": false,
+        "reason": "Relevant context was recalled, but the exact field value was not confirmed."
+      }
+    },
+    {
+      "field_id": "F00182",
+      "section": "structures",
+      "path": "structures.sample_fe30al_01__structure_id_struct_fe30al_01.sample_id",
+      "value": "sample_fe30al_01",
+      "sample_id": "sample_fe30al_01",
+      "support": {
+        "support_label": "weak_supported",
+        "evidence_refs": [
+          "b0023"
+        ],
+        "confidence": 0.35,
+        "method": "code_from_llm_bucket_evidence",
+        "value_match": "context",
+        "contradiction": false,
+        "reason": "Identifier is linked to evidence through the surrounding record context."
+      }
+    },
+    {
+      "field_id": "F00183",
+      "section": "structures",
+      "path": "structures.sample_fe30al_01__structure_id_struct_fe30al_01.structure_id",
+      "value": "struct_fe30al_01",
+      "sample_id": "sample_fe30al_01",
+      "support": {
+        "support_label": "weak_supported",
+        "evidence_refs": [
+          "b0023"
+        ],
+        "confidence": 0.35,
+        "method": "code_from_llm_bucket_evidence",
+        "value_match": "context",
+        "contradiction": false,
+        "reason": "Identifier is linked to evidence through the surrounding record context."
+      }
+    },
+    {
+      "field_id": "F00184",
+      "section": "structures",
+      "path": "structures.sample_fe35al_01__structure_id_struct_fe35al_01.microstructure_list[2].defects[dislocation].type",
+      "value": "dislocation",
+      "sample_id": "sample_fe35al_01",
+      "support": {
+        "support_label": "explicit_supported",
+        "evidence_refs": [
+          "b0050"
+        ],
+        "confidence": 0.98,
+        "method": "code_exact_match",
+        "value_match": "exact",
+        "contradiction": false,
+        "reason": "Normalized field value appears in the evidence block."
+      }
+    },
+    {
+      "field_id": "F00185",
+      "section": "structures",
+      "path": "structures.sample_fe35al_01__structure_id_struct_fe35al_01.microstructure_list[2].grain_structure.average_grain_size.unit",
+      "value": "μm",
+      "sample_id": "sample_fe35al_01",
+      "support": {
+        "support_label": "explicit_supported",
+        "evidence_refs": [
+          "b0050"
+        ],
+        "confidence": 0.98,
+        "method": "code_exact_match",
+        "value_match": "exact",
+        "contradiction": false,
+        "reason": "Normalized field value appears in the evidence block."
+      }
+    },
+    {
+      "field_id": "F00186",
+      "section": "structures",
+      "path": "structures.sample_fe35al_01__structure_id_struct_fe35al_01.microstructure_list[2].grain_structure.average_grain_size.value",
+      "value": "250",
+      "sample_id": "sample_fe35al_01",
+      "support": {
+        "support_label": "weak_supported",
+        "evidence_refs": [
+          "b0023"
+        ],
+        "confidence": 0.35,
+        "method": "code_from_llm_bucket_evidence",
+        "value_match": "context",
+        "contradiction": false,
+        "reason": "Relevant context was recalled, but the exact field value was not confirmed."
+      }
+    },
+    {
+      "field_id": "F00187",
+      "section": "structures",
+      "path": "structures.sample_fe35al_01__structure_id_struct_fe35al_01.microstructure_list[2].phases_present[b2_ordered_phase].crystal_structure",
+      "value": "B2",
+      "sample_id": "sample_fe35al_01",
+      "support": {
+        "support_label": "explicit_supported",
+        "evidence_refs": [
+          "b0050"
+        ],
+        "confidence": 0.98,
+        "method": "code_exact_match",
+        "value_match": "exact",
+        "contradiction": false,
+        "reason": "Normalized field value appears in the evidence block."
+      }
+    },
+    {
+      "field_id": "F00188",
+      "section": "structures",
+      "path": "structures.sample_fe35al_01__structure_id_struct_fe35al_01.microstructure_list[2].phases_present[b2_ordered_phase].phase_name",
+      "value": "B2 ordered phase",
+      "sample_id": "sample_fe35al_01",
+      "support": {
+        "support_label": "weak_supported",
+        "evidence_refs": [
+          "b0023"
+        ],
+        "confidence": 0.35,
+        "method": "code_from_llm_bucket_evidence",
+        "value_match": "context",
+        "contradiction": false,
+        "reason": "Relevant context was recalled, but the exact field value was not confirmed."
+      }
+    },
+    {
+      "field_id": "F00189",
+      "section": "structures",
+      "path": "structures.sample_fe35al_01__structure_id_struct_fe35al_01.microstructure_list[2].related_sequence",
+      "value": "2",
+      "sample_id": "sample_fe35al_01",
+      "support": {
+        "support_label": "explicit_supported",
+        "evidence_refs": [
+          "b0050"
+        ],
+        "confidence": 0.98,
+        "method": "code_exact_match",
+        "value_match": "exact",
+        "contradiction": false,
+        "reason": "Normalized field value appears in the evidence block."
+      }
+    },
+    {
+      "field_id": "F00190",
+      "section": "structures",
+      "path": "structures.sample_fe35al_01__structure_id_struct_fe35al_01.microstructure_list[2].uuid",
+      "value": "uuid_fe35al_disloc",
+      "sample_id": "sample_fe35al_01",
+      "support": {
+        "support_label": "weak_supported",
+        "evidence_refs": [
+          "b0023"
+        ],
+        "confidence": 0.35,
+        "method": "code_from_llm_bucket_evidence",
+        "value_match": "context",
+        "contradiction": false,
+        "reason": "Identifier is linked to evidence through the surrounding record context."
+      }
+    },
+    {
+      "field_id": "F00191",
+      "section": "structures",
+      "path": "structures.sample_fe35al_01__structure_id_struct_fe35al_01.overall_structure",
+      "value": "B2 ordered; superdislocations (two (1/2)<111> partials close together due to high APBI energy), many straight near-screw superdislocations, many edge dipole segments and loops, residual APB fringes from weak DO3 order.",
+      "sample_id": "sample_fe35al_01",
+      "support": {
+        "support_label": "weak_supported",
+        "evidence_refs": [
+          "b0023"
+        ],
+        "confidence": 0.35,
+        "method": "code_from_llm_bucket_evidence",
+        "value_match": "context",
+        "contradiction": false,
+        "reason": "Relevant context was recalled, but the exact field value was not confirmed."
+      }
+    },
+    {
+      "field_id": "F00192",
+      "section": "structures",
+      "path": "structures.sample_fe35al_01__structure_id_struct_fe35al_01.sample_id",
+      "value": "sample_fe35al_01",
+      "sample_id": "sample_fe35al_01",
+      "support": {
+        "support_label": "weak_supported",
+        "evidence_refs": [
+          "b0023"
+        ],
+        "confidence": 0.35,
+        "method": "code_from_llm_bucket_evidence",
+        "value_match": "context",
+        "contradiction": false,
+        "reason": "Identifier is linked to evidence through the surrounding record context."
+      }
+    },
+    {
+      "field_id": "F00193",
+      "section": "structures",
+      "path": "structures.sample_fe35al_01__structure_id_struct_fe35al_01.structure_id",
+      "value": "struct_fe35al_01",
+      "sample_id": "sample_fe35al_01",
+      "support": {
+        "support_label": "weak_supported",
+        "evidence_refs": [
+          "b0023"
+        ],
+        "confidence": 0.35,
+        "method": "code_from_llm_bucket_evidence",
+        "value_match": "context",
+        "contradiction": false,
+        "reason": "Identifier is linked to evidence through the surrounding record context."
+      }
+    },
+    {
+      "field_id": "F00194",
+      "section": "interfaces",
+      "path": "interfaces.sample_fe28al_01__interface_set_id_intset_fe28al_01.defect_interaction[0].interaction_id",
+      "value": "interact_r_28al",
+      "sample_id": "sample_fe28al_01",
+      "support": {
+        "support_label": "weak_supported",
+        "evidence_refs": [
+          "b0023"
+        ],
+        "confidence": 0.35,
+        "method": "code_from_llm_bucket_evidence",
+        "value_match": "context",
+        "contradiction": false,
+        "reason": "Identifier is linked to evidence through the surrounding record context."
+      }
+    },
+    {
+      "field_id": "F00195",
+      "section": "interfaces",
+      "path": "interfaces.sample_fe28al_01__interface_set_id_intset_fe28al_01.defect_interaction[0].interaction_type",
+      "value": "dislocation reaction: [111] + [1-1-1] -> [100] edge dislocations on (001) plane",
+      "sample_id": "sample_fe28al_01",
+      "support": {
+        "support_label": "weak_supported",
+        "evidence_refs": [
+          "b0023"
+        ],
+        "confidence": 0.35,
+        "method": "code_from_llm_bucket_evidence",
+        "value_match": "context",
+        "contradiction": false,
+        "reason": "Relevant context was recalled, but the exact field value was not confirmed."
+      }
+    },
+    {
+      "field_id": "F00196",
+      "section": "interfaces",
+      "path": "interfaces.sample_fe28al_01__interface_set_id_intset_fe28al_01.defect_interaction[0].microstructure_uuid",
+      "value": "uuid_fe28al_disloc",
+      "sample_id": "sample_fe28al_01",
+      "support": {
+        "support_label": "weak_supported",
+        "evidence_refs": [
+          "b0023"
+        ],
+        "confidence": 0.35,
+        "method": "code_from_llm_bucket_evidence",
+        "value_match": "context",
+        "contradiction": false,
+        "reason": "Identifier is linked to evidence through the surrounding record context."
+      }
+    },
+    {
+      "field_id": "F00197",
+      "section": "interfaces",
+      "path": "interfaces.sample_fe28al_01__interface_set_id_intset_fe28al_01.defect_interaction[0].quality_description",
+      "value": "Sessile configuration, strong barrier to further glide of <111> superdislocations.",
+      "sample_id": "sample_fe28al_01",
+      "support": {
+        "support_label": "weak_supported",
+        "evidence_refs": [
+          "b0023"
+        ],
+        "confidence": 0.35,
+        "method": "code_from_llm_bucket_evidence",
+        "value_match": "context",
+        "contradiction": false,
+        "reason": "Relevant context was recalled, but the exact field value was not confirmed."
+      }
+    },
+    {
+      "field_id": "F00198",
+      "section": "interfaces",
+      "path": "interfaces.sample_fe28al_01__interface_set_id_intset_fe28al_01.interface_set_id",
+      "value": "intset_fe28al_01",
+      "sample_id": "sample_fe28al_01",
+      "support": {
+        "support_label": "weak_supported",
+        "evidence_refs": [
+          "b0023"
+        ],
+        "confidence": 0.35,
+        "method": "code_from_llm_bucket_evidence",
+        "value_match": "context",
+        "contradiction": false,
+        "reason": "Identifier is linked to evidence through the surrounding record context."
+      }
+    },
+    {
+      "field_id": "F00199",
+      "section": "interfaces",
+      "path": "interfaces.sample_fe28al_01__interface_set_id_intset_fe28al_01.phase_evolution",
+      "value": "Superdislocations of B2 lattice (two (1/2)<111> partials) are observed; they destroy DO3 order during movement, trailing APBII faults.",
+      "sample_id": "sample_fe28al_01",
+      "support": {
+        "support_label": "weak_supported",
+        "evidence_refs": [
+          "b0023"
+        ],
+        "confidence": 0.35,
+        "method": "code_from_llm_bucket_evidence",
+        "value_match": "context",
+        "contradiction": false,
+        "reason": "Relevant context was recalled, but the exact field value was not confirmed."
+      }
+    },
+    {
+      "field_id": "F00200",
+      "section": "interfaces",
+      "path": "interfaces.sample_fe28al_01__interface_set_id_intset_fe28al_01.phases[superdislocation_two_1_2_111_partials].interface_id",
+      "value": "int_apbii_28al",
+      "sample_id": "sample_fe28al_01",
+      "support": {
+        "support_label": "weak_supported",
+        "evidence_refs": [
+          "b0023"
+        ],
+        "confidence": 0.35,
+        "method": "code_from_llm_bucket_evidence",
+        "value_match": "context",
+        "contradiction": false,
+        "reason": "Identifier is linked to evidence through the surrounding record context."
+      }
+    },
+    {
+      "field_id": "F00201",
+      "section": "interfaces",
+      "path": "interfaces.sample_fe28al_01__interface_set_id_intset_fe28al_01.phases[superdislocation_two_1_2_111_partials].microstructure_uuid",
+      "value": "uuid_fe28al_disloc",
+      "sample_id": "sample_fe28al_01",
+      "support": {
+        "support_label": "weak_supported",
+        "evidence_refs": [
+          "b0023"
+        ],
+        "confidence": 0.35,
+        "method": "code_from_llm_bucket_evidence",
+        "value_match": "context",
+        "contradiction": false,
+        "reason": "Identifier is linked to evidence through the surrounding record context."
+      }
+    },
+    {
+      "field_id": "F00202",
+      "section": "interfaces",
+      "path": "interfaces.sample_fe28al_01__interface_set_id_intset_fe28al_01.phases[superdislocation_two_1_2_111_partials].phase_1_name",
+      "value": "superdislocation (two (1/2)<111> partials)",
+      "sample_id": "sample_fe28al_01",
+      "support": {
+        "support_label": "weak_supported",
+        "evidence_refs": [
+          "b0023"
+        ],
+        "confidence": 0.35,
+        "method": "code_from_llm_bucket_evidence",
+        "value_match": "context",
+        "contradiction": false,
+        "reason": "Relevant context was recalled, but the exact field value was not confirmed."
+      }
+    },
+    {
+      "field_id": "F00203",
+      "section": "interfaces",
+      "path": "interfaces.sample_fe28al_01__interface_set_id_intset_fe28al_01.phases[superdislocation_two_1_2_111_partials].phase_2_name",
+      "value": "APBII fault",
+      "sample_id": "sample_fe28al_01",
+      "support": {
+        "support_label": "explicit_supported",
+        "evidence_refs": [
+          "b0042"
+        ],
+        "confidence": 0.98,
+        "method": "code_exact_match",
+        "value_match": "exact",
+        "contradiction": false,
+        "reason": "Normalized field value appears in the evidence block."
+      }
+    },
+    {
+      "field_id": "F00204",
+      "section": "interfaces",
+      "path": "interfaces.sample_fe28al_01__interface_set_id_intset_fe28al_01.sample_id",
+      "value": "sample_fe28al_01",
+      "sample_id": "sample_fe28al_01",
+      "support": {
+        "support_label": "weak_supported",
+        "evidence_refs": [
+          "b0023"
+        ],
+        "confidence": 0.35,
+        "method": "code_from_llm_bucket_evidence",
+        "value_match": "context",
+        "contradiction": false,
+        "reason": "Identifier is linked to evidence through the surrounding record context."
+      }
+    },
+    {
+      "field_id": "F00205",
+      "section": "interfaces",
+      "path": "interfaces.sample_fe30al_01__interface_set_id_intset_fe30al_01.defect_interaction[0].interaction_id",
+      "value": "interact_r_30al",
+      "sample_id": "sample_fe30al_01",
+      "support": {
+        "support_label": "weak_supported",
+        "evidence_refs": [
+          "b0023"
+        ],
+        "confidence": 0.35,
+        "method": "code_from_llm_bucket_evidence",
+        "value_match": "context",
+        "contradiction": false,
+        "reason": "Identifier is linked to evidence through the surrounding record context."
+      }
+    },
+    {
+      "field_id": "F00206",
+      "section": "interfaces",
+      "path": "interfaces.sample_fe30al_01__interface_set_id_intset_fe30al_01.defect_interaction[0].interaction_type",
+      "value": "dislocation reactions between <111> superdislocations",
+      "sample_id": "sample_fe30al_01",
+      "support": {
+        "support_label": "weak_supported",
+        "evidence_refs": [
+          "b0023"
+        ],
+        "confidence": 0.35,
+        "method": "code_from_llm_bucket_evidence",
+        "value_match": "context",
+        "contradiction": false,
+        "reason": "Relevant context was recalled, but the exact field value was not confirmed."
+      }
+    },
+    {
+      "field_id": "F00207",
+      "section": "interfaces",
+      "path": "interfaces.sample_fe30al_01__interface_set_id_intset_fe30al_01.defect_interaction[0].microstructure_uuid",
+      "value": "uuid_fe30al_disloc",
+      "sample_id": "sample_fe30al_01",
+      "support": {
+        "support_label": "weak_supported",
+        "evidence_refs": [
+          "b0023"
+        ],
+        "confidence": 0.35,
+        "method": "code_from_llm_bucket_evidence",
+        "value_match": "context",
+        "contradiction": false,
+        "reason": "Identifier is linked to evidence through the surrounding record context."
+      }
+    },
+    {
+      "field_id": "F00208",
+      "section": "interfaces",
+      "path": "interfaces.sample_fe30al_01__interface_set_id_intset_fe30al_01.defect_interaction[0].quality_description",
+      "value": "Produces stepped structures; reaction products are locks.",
+      "sample_id": "sample_fe30al_01",
+      "support": {
+        "support_label": "weak_supported",
+        "evidence_refs": [
+          "b0023"
+        ],
+        "confidence": 0.35,
+        "method": "code_from_llm_bucket_evidence",
+        "value_match": "context",
+        "contradiction": false,
+        "reason": "Relevant context was recalled, but the exact field value was not confirmed."
+      }
+    },
+    {
+      "field_id": "F00209",
+      "section": "interfaces",
+      "path": "interfaces.sample_fe30al_01__interface_set_id_intset_fe30al_01.interface_set_id",
+      "value": "intset_fe30al_01",
+      "sample_id": "sample_fe30al_01",
+      "support": {
+        "support_label": "weak_supported",
+        "evidence_refs": [
+          "b0023"
+        ],
+        "confidence": 0.35,
+        "method": "code_from_llm_bucket_evidence",
+        "value_match": "context",
+        "contradiction": false,
+        "reason": "Identifier is linked to evidence through the surrounding record context."
+      }
+    },
+    {
+      "field_id": "F00210",
+      "section": "interfaces",
+      "path": "interfaces.sample_fe30al_01__interface_set_id_intset_fe30al_01.phase_evolution",
+      "value": "Superdislocations with pairs of (1/2)<111> partials; APBII fringes observed, indicating DO3 order destruction during glide.",
+      "sample_id": "sample_fe30al_01",
+      "support": {
+        "support_label": "weak_supported",
+        "evidence_refs": [
+          "b0023"
+        ],
+        "confidence": 0.35,
+        "method": "code_from_llm_bucket_evidence",
+        "value_match": "context",
+        "contradiction": false,
+        "reason": "Relevant context was recalled, but the exact field value was not confirmed."
+      }
+    },
+    {
+      "field_id": "F00211",
+      "section": "interfaces",
+      "path": "interfaces.sample_fe30al_01__interface_set_id_intset_fe30al_01.phases[superdislocation_two_1_2_111_partials].interface_id",
+      "value": "int_apbii_30al",
+      "sample_id": "sample_fe30al_01",
+      "support": {
+        "support_label": "weak_supported",
+        "evidence_refs": [
+          "b0023"
+        ],
+        "confidence": 0.35,
+        "method": "code_from_llm_bucket_evidence",
+        "value_match": "context",
+        "contradiction": false,
+        "reason": "Identifier is linked to evidence through the surrounding record context."
+      }
+    },
+    {
+      "field_id": "F00212",
+      "section": "interfaces",
+      "path": "interfaces.sample_fe30al_01__interface_set_id_intset_fe30al_01.phases[superdislocation_two_1_2_111_partials].microstructure_uuid",
+      "value": "uuid_fe30al_disloc",
+      "sample_id": "sample_fe30al_01",
+      "support": {
+        "support_label": "weak_supported",
+        "evidence_refs": [
+          "b0023"
+        ],
+        "confidence": 0.35,
+        "method": "code_from_llm_bucket_evidence",
+        "value_match": "context",
+        "contradiction": false,
+        "reason": "Identifier is linked to evidence through the surrounding record context."
+      }
+    },
+    {
+      "field_id": "F00213",
+      "section": "interfaces",
+      "path": "interfaces.sample_fe30al_01__interface_set_id_intset_fe30al_01.phases[superdislocation_two_1_2_111_partials].phase_1_name",
+      "value": "superdislocation (two (1/2)<111> partials)",
+      "sample_id": "sample_fe30al_01",
+      "support": {
+        "support_label": "weak_supported",
+        "evidence_refs": [
+          "b0023"
+        ],
+        "confidence": 0.35,
+        "method": "code_from_llm_bucket_evidence",
+        "value_match": "context",
+        "contradiction": false,
+        "reason": "Relevant context was recalled, but the exact field value was not confirmed."
+      }
+    },
+    {
+      "field_id": "F00214",
+      "section": "interfaces",
+      "path": "interfaces.sample_fe30al_01__interface_set_id_intset_fe30al_01.phases[superdislocation_two_1_2_111_partials].phase_2_name",
+      "value": "APBII fault",
+      "sample_id": "sample_fe30al_01",
+      "support": {
+        "support_label": "explicit_supported",
+        "evidence_refs": [
+          "b0042"
+        ],
+        "confidence": 0.98,
+        "method": "code_exact_match",
+        "value_match": "exact",
+        "contradiction": false,
+        "reason": "Normalized field value appears in the evidence block."
+      }
+    },
+    {
+      "field_id": "F00215",
+      "section": "interfaces",
+      "path": "interfaces.sample_fe30al_01__interface_set_id_intset_fe30al_01.sample_id",
+      "value": "sample_fe30al_01",
+      "sample_id": "sample_fe30al_01",
+      "support": {
+        "support_label": "weak_supported",
+        "evidence_refs": [
+          "b0023"
+        ],
+        "confidence": 0.35,
+        "method": "code_from_llm_bucket_evidence",
+        "value_match": "context",
+        "contradiction": false,
+        "reason": "Identifier is linked to evidence through the surrounding record context."
+      }
+    },
+    {
+      "field_id": "F00216",
+      "section": "interfaces",
+      "path": "interfaces.sample_fe35al_01__interface_set_id_intset_fe35al_01.interface_set_id",
+      "value": "intset_fe35al_01",
+      "sample_id": "sample_fe35al_01",
+      "support": {
+        "support_label": "weak_supported",
+        "evidence_refs": [
+          "b0023"
+        ],
+        "confidence": 0.35,
+        "method": "code_from_llm_bucket_evidence",
+        "value_match": "context",
+        "contradiction": false,
+        "reason": "Identifier is linked to evidence through the surrounding record context."
+      }
+    },
+    {
+      "field_id": "F00217",
+      "section": "interfaces",
+      "path": "interfaces.sample_fe35al_01__interface_set_id_intset_fe35al_01.phase_evolution",
+      "value": "Close partial separation due to high APBI energy; weak DO3 order causes remnant APB fringes.",
+      "sample_id": "sample_fe35al_01",
+      "support": {
+        "support_label": "weak_supported",
+        "evidence_refs": [
+          "b0023"
+        ],
+        "confidence": 0.35,
+        "method": "code_from_llm_bucket_evidence",
+        "value_match": "context",
+        "contradiction": false,
+        "reason": "Relevant context was recalled, but the exact field value was not confirmed."
+      }
+    },
+    {
+      "field_id": "F00218",
+      "section": "interfaces",
+      "path": "interfaces.sample_fe35al_01__interface_set_id_intset_fe35al_01.phases[superdislocation_two_1_2_111_partials].interface_id",
+      "value": "int_apbii_35al",
+      "sample_id": "sample_fe35al_01",
+      "support": {
+        "support_label": "weak_supported",
+        "evidence_refs": [
+          "b0023"
+        ],
+        "confidence": 0.35,
+        "method": "code_from_llm_bucket_evidence",
+        "value_match": "context",
+        "contradiction": false,
+        "reason": "Identifier is linked to evidence through the surrounding record context."
+      }
+    },
+    {
+      "field_id": "F00219",
+      "section": "interfaces",
+      "path": "interfaces.sample_fe35al_01__interface_set_id_intset_fe35al_01.phases[superdislocation_two_1_2_111_partials].microstructure_uuid",
+      "value": "uuid_fe35al_disloc",
+      "sample_id": "sample_fe35al_01",
+      "support": {
+        "support_label": "weak_supported",
+        "evidence_refs": [
+          "b0023"
+        ],
+        "confidence": 0.35,
+        "method": "code_from_llm_bucket_evidence",
+        "value_match": "context",
+        "contradiction": false,
+        "reason": "Identifier is linked to evidence through the surrounding record context."
+      }
+    },
+    {
+      "field_id": "F00220",
+      "section": "interfaces",
+      "path": "interfaces.sample_fe35al_01__interface_set_id_intset_fe35al_01.phases[superdislocation_two_1_2_111_partials].phase_1_name",
+      "value": "superdislocation (two (1/2)<111> partials)",
+      "sample_id": "sample_fe35al_01",
+      "support": {
+        "support_label": "weak_supported",
+        "evidence_refs": [
+          "b0023"
+        ],
+        "confidence": 0.35,
+        "method": "code_from_llm_bucket_evidence",
+        "value_match": "context",
+        "contradiction": false,
+        "reason": "Relevant context was recalled, but the exact field value was not confirmed."
+      }
+    },
+    {
+      "field_id": "F00221",
+      "section": "interfaces",
+      "path": "interfaces.sample_fe35al_01__interface_set_id_intset_fe35al_01.phases[superdislocation_two_1_2_111_partials].phase_2_name",
+      "value": "APBII fault",
+      "sample_id": "sample_fe35al_01",
+      "support": {
+        "support_label": "explicit_supported",
+        "evidence_refs": [
+          "b0042"
+        ],
+        "confidence": 0.98,
+        "method": "code_exact_match",
+        "value_match": "exact",
+        "contradiction": false,
+        "reason": "Normalized field value appears in the evidence block."
+      }
+    },
+    {
+      "field_id": "F00222",
+      "section": "interfaces",
+      "path": "interfaces.sample_fe35al_01__interface_set_id_intset_fe35al_01.sample_id",
+      "value": "sample_fe35al_01",
+      "sample_id": "sample_fe35al_01",
+      "support": {
+        "support_label": "weak_supported",
+        "evidence_refs": [
+          "b0023"
+        ],
+        "confidence": 0.35,
+        "method": "code_from_llm_bucket_evidence",
+        "value_match": "context",
+        "contradiction": false,
+        "reason": "Identifier is linked to evidence through the surrounding record context."
+      }
+    },
+    {
+      "field_id": "F00223",
+      "section": "properties",
+      "path": "properties.sample_fe15al_01__property_set_id_prop_fe15al_01.mechanical.tensile_properties.elongation[compression].direction",
+      "value": "compression",
+      "sample_id": "sample_fe15al_01",
+      "support": {
+        "support_label": "explicit_supported",
+        "evidence_refs": [
+          "b0025"
+        ],
+        "confidence": 0.98,
+        "method": "code_exact_match",
+        "value_match": "exact",
+        "contradiction": false,
+        "reason": "Normalized field value appears in the evidence block."
+      }
+    },
+    {
+      "field_id": "F00224",
+      "section": "properties",
+      "path": "properties.sample_fe15al_01__property_set_id_prop_fe15al_01.mechanical.tensile_properties.strain_hardening_rate[compression].direction",
+      "value": "compression",
+      "sample_id": "sample_fe15al_01",
+      "support": {
+        "support_label": "explicit_supported",
+        "evidence_refs": [
+          "b0025"
+        ],
+        "confidence": 0.98,
+        "method": "code_exact_match",
+        "value_match": "exact",
+        "contradiction": false,
+        "reason": "Normalized field value appears in the evidence block."
+      }
+    },
+    {
+      "field_id": "F00225",
+      "section": "properties",
+      "path": "properties.sample_fe15al_01__property_set_id_prop_fe15al_01.mechanical.tensile_properties.stress_strain_curves",
+      "value": "Fig. 1 and Fig. 2 data; yield stress and work hardening rate values from literature and present study, but no individual numerical yield stress given in text for specific alloys.",
+      "sample_id": "sample_fe15al_01",
+      "support": {
+        "support_label": "weak_supported",
+        "evidence_refs": [
+          "b0023"
+        ],
+        "confidence": 0.35,
+        "method": "code_from_llm_bucket_evidence",
+        "value_match": "context",
+        "contradiction": false,
+        "reason": "Relevant context was recalled, but the exact field value was not confirmed."
+      }
+    },
+    {
+      "field_id": "F00226",
+      "section": "properties",
+      "path": "properties.sample_fe15al_01__property_set_id_prop_fe15al_01.mechanical.tensile_properties.yield_strength[compression].direction",
+      "value": "compression",
+      "sample_id": "sample_fe15al_01",
+      "support": {
+        "support_label": "explicit_supported",
+        "evidence_refs": [
+          "b0025"
+        ],
+        "confidence": 0.98,
+        "method": "code_exact_match",
+        "value_match": "exact",
+        "contradiction": false,
+        "reason": "Normalized field value appears in the evidence block."
+      }
+    },
+    {
+      "field_id": "F00227",
+      "section": "properties",
+      "path": "properties.sample_fe15al_01__property_set_id_prop_fe15al_01.property_set_id",
+      "value": "prop_fe15al_01",
+      "sample_id": "sample_fe15al_01",
+      "support": {
+        "support_label": "weak_supported",
+        "evidence_refs": [
+          "b0023"
+        ],
+        "confidence": 0.35,
+        "method": "code_from_llm_bucket_evidence",
+        "value_match": "context",
+        "contradiction": false,
+        "reason": "Identifier is linked to evidence through the surrounding record context."
+      }
+    },
+    {
+      "field_id": "F00228",
+      "section": "properties",
+      "path": "properties.sample_fe15al_01__property_set_id_prop_fe15al_01.sample_id",
+      "value": "sample_fe15al_01",
+      "sample_id": "sample_fe15al_01",
+      "support": {
+        "support_label": "weak_supported",
+        "evidence_refs": [
+          "b0023"
+        ],
+        "confidence": 0.35,
+        "method": "code_from_llm_bucket_evidence",
+        "value_match": "context",
+        "contradiction": false,
+        "reason": "Identifier is linked to evidence through the surrounding record context."
+      }
+    },
+    {
+      "field_id": "F00229",
+      "section": "performance",
+      "path": "performance.sample_fe28al_01__performance_id_perf_fe28al_01.comparative_performance.benchmark_alloy",
+      "value": "Fe–15%Al and Fe–20%Al",
+      "sample_id": "sample_fe28al_01",
+      "support": {
+        "support_label": "numeric_supported",
+        "evidence_refs": [
+          "b0068"
+        ],
+        "confidence": 0.94,
+        "method": "code_numeric_match",
+        "value_match": "numeric",
+        "contradiction": false,
+        "reason": "Field number appears in the evidence block."
+      }
+    },
+    {
+      "field_id": "F00230",
+      "section": "performance",
+      "path": "performance.sample_fe28al_01__performance_id_perf_fe28al_01.comparative_performance.benchmark_process_id",
+      "value": "proc_feal_01",
+      "sample_id": "sample_fe28al_01",
+      "support": {
+        "support_label": "weak_supported",
+        "evidence_refs": [
+          "b0023"
+        ],
+        "confidence": 0.35,
+        "method": "code_from_llm_bucket_evidence",
+        "value_match": "context",
+        "contradiction": false,
+        "reason": "Identifier is linked to evidence through the surrounding record context."
+      }
+    },
+    {
+      "field_id": "F00231",
+      "section": "performance",
+      "path": "performance.sample_fe28al_01__performance_id_perf_fe28al_01.comparative_performance.improvement_percentage",
+      "value": "Work hardening rate peak at 28-29% Al; sharp increase relative to disordered alloys (e.g., low for <20% Al, rises to peak at 28-29% Al).",
+      "sample_id": "sample_fe28al_01",
+      "support": {
+        "support_label": "weak_supported",
+        "evidence_refs": [
+          "b0023"
+        ],
+        "confidence": 0.35,
+        "method": "code_from_llm_bucket_evidence",
+        "value_match": "context",
+        "contradiction": false,
+        "reason": "Relevant context was recalled, but the exact field value was not confirmed."
+      }
+    },
+    {
+      "field_id": "F00232",
+      "section": "performance",
+      "path": "performance.sample_fe28al_01__performance_id_perf_fe28al_01.performance_id",
+      "value": "perf_fe28al_01",
+      "sample_id": "sample_fe28al_01",
+      "support": {
+        "support_label": "weak_supported",
+        "evidence_refs": [
+          "b0023"
+        ],
+        "confidence": 0.35,
+        "method": "code_from_llm_bucket_evidence",
+        "value_match": "context",
+        "contradiction": false,
+        "reason": "Identifier is linked to evidence through the surrounding record context."
+      }
+    },
+    {
+      "field_id": "F00233",
+      "section": "performance",
+      "path": "performance.sample_fe28al_01__performance_id_perf_fe28al_01.sample_id",
+      "value": "sample_fe28al_01",
+      "sample_id": "sample_fe28al_01",
+      "support": {
+        "support_label": "weak_supported",
+        "evidence_refs": [
+          "b0023"
+        ],
+        "confidence": 0.35,
+        "method": "code_from_llm_bucket_evidence",
+        "value_match": "context",
+        "contradiction": false,
+        "reason": "Identifier is linked to evidence through the surrounding record context."
+      }
+    },
+    {
+      "field_id": "F00234",
+      "section": "performance",
+      "path": "performance.sample_fe28al_01__performance_id_perf_fe28al_01.service_conditions.operating_temperature.max",
+      "value": "room temperature",
+      "sample_id": "sample_fe28al_01",
+      "support": {
+        "support_label": "explicit_supported",
+        "evidence_refs": [
+          "b0011"
+        ],
+        "confidence": 0.98,
+        "method": "code_exact_match",
+        "value_match": "exact",
+        "contradiction": false,
+        "reason": "Normalized field value appears in the evidence block."
+      }
+    },
+    {
+      "field_id": "F00235",
+      "section": "performance",
+      "path": "performance.sample_fe28al_01__performance_id_perf_fe28al_01.service_conditions.operating_temperature.min",
+      "value": "room temperature",
+      "sample_id": "sample_fe28al_01",
+      "support": {
+        "support_label": "explicit_supported",
+        "evidence_refs": [
+          "b0011"
+        ],
+        "confidence": 0.98,
+        "method": "code_exact_match",
+        "value_match": "exact",
+        "contradiction": false,
+        "reason": "Normalized field value appears in the evidence block."
+      }
+    },
+    {
+      "field_id": "F00236",
+      "section": "performance",
+      "path": "performance.sample_fe28al_01__performance_id_perf_fe28al_01.service_conditions.stress_state",
+      "value": "compression",
+      "sample_id": "sample_fe28al_01",
+      "support": {
+        "support_label": "weak_supported",
+        "evidence_refs": [
+          "b0023"
+        ],
+        "confidence": 0.35,
+        "method": "code_from_llm_bucket_evidence",
+        "value_match": "context",
+        "contradiction": false,
+        "reason": "Relevant context was recalled, but the exact field value was not confirmed."
+      }
+    },
+    {
+      "field_id": "F00237",
+      "section": "characterization_methods",
+      "path": "characterization_methods.sample_fe15al_01__characterization_id_char_tem_fe15al_01.characterization_id",
+      "value": "char_tem_fe15al_01",
+      "sample_id": "sample_fe15al_01",
+      "support": {
+        "support_label": "weak_supported",
+        "evidence_refs": [
+          "b0023"
+        ],
+        "confidence": 0.35,
+        "method": "code_from_llm_bucket_evidence",
+        "value_match": "context",
+        "contradiction": false,
+        "reason": "Identifier is linked to evidence through the surrounding record context."
+      }
+    },
+    {
+      "field_id": "F00238",
+      "section": "characterization_methods",
+      "path": "characterization_methods.sample_fe15al_01__characterization_id_char_tem_fe15al_01.key_findings",
+      "value": "Single dislocation dipoles, loose cellular distribution, smoothly curved dislocations, some straight screw dislocations.",
+      "sample_id": "sample_fe15al_01",
+      "support": {
+        "support_label": "weak_supported",
+        "evidence_refs": [
+          "b0023"
+        ],
+        "confidence": 0.35,
+        "method": "code_from_llm_bucket_evidence",
+        "value_match": "context",
+        "contradiction": false,
+        "reason": "Relevant context was recalled, but the exact field value was not confirmed."
+      }
+    },
+    {
+      "field_id": "F00239",
+      "section": "characterization_methods",
+      "path": "characterization_methods.sample_fe15al_01__characterization_id_char_tem_fe15al_01.microstructure_uuid",
+      "value": "uuid_fe15al_disloc",
+      "sample_id": "sample_fe15al_01",
+      "support": {
+        "support_label": "weak_supported",
+        "evidence_refs": [
+          "b0023"
+        ],
+        "confidence": 0.35,
+        "method": "code_from_llm_bucket_evidence",
+        "value_match": "context",
+        "contradiction": false,
+        "reason": "Identifier is linked to evidence through the surrounding record context."
+      }
+    },
+    {
+      "field_id": "F00240",
+      "section": "characterization_methods",
+      "path": "characterization_methods.sample_fe15al_01__characterization_id_char_tem_fe15al_01.purpose",
+      "value": "Examine dislocation structures after 2-3% deformation at room temperature.",
+      "sample_id": "sample_fe15al_01",
+      "support": {
+        "support_label": "weak_supported",
+        "evidence_refs": [
+          "b0023"
+        ],
+        "confidence": 0.35,
+        "method": "code_from_llm_bucket_evidence",
+        "value_match": "context",
+        "contradiction": false,
+        "reason": "Relevant context was recalled, but the exact field value was not confirmed."
+      }
+    },
+    {
+      "field_id": "F00241",
+      "section": "characterization_methods",
+      "path": "characterization_methods.sample_fe15al_01__characterization_id_char_tem_fe15al_01.sample_id",
+      "value": "sample_fe15al_01",
+      "sample_id": "sample_fe15al_01",
+      "support": {
+        "support_label": "weak_supported",
+        "evidence_refs": [
+          "b0023"
+        ],
+        "confidence": 0.35,
+        "method": "code_from_llm_bucket_evidence",
+        "value_match": "context",
+        "contradiction": false,
+        "reason": "Identifier is linked to evidence through the surrounding record context."
+      }
+    },
+    {
+      "field_id": "F00242",
+      "section": "characterization_methods",
+      "path": "characterization_methods.sample_fe15al_01__characterization_id_char_tem_fe15al_01.technique",
+      "value": "Transmission electron microscopy (TEM)",
+      "sample_id": "sample_fe15al_01",
+      "support": {
+        "support_label": "weak_supported",
+        "evidence_refs": [
+          "b0023"
+        ],
+        "confidence": 0.35,
+        "method": "code_from_llm_bucket_evidence",
+        "value_match": "context",
+        "contradiction": false,
+        "reason": "Relevant context was recalled, but the exact field value was not confirmed."
+      }
+    },
+    {
+      "field_id": "F00243",
+      "section": "characterization_methods",
+      "path": "characterization_methods.sample_fe20al_01__characterization_id_char_tem_fe20al_01.characterization_id",
+      "value": "char_tem_fe20al_01",
+      "sample_id": "sample_fe20al_01",
+      "support": {
+        "support_label": "weak_supported",
+        "evidence_refs": [
+          "b0023"
+        ],
+        "confidence": 0.35,
+        "method": "code_from_llm_bucket_evidence",
+        "value_match": "context",
+        "contradiction": false,
+        "reason": "Identifier is linked to evidence through the surrounding record context."
+      }
+    },
+    {
+      "field_id": "F00244",
+      "section": "characterization_methods",
+      "path": "characterization_methods.sample_fe20al_01__characterization_id_char_tem_fe20al_01.key_findings",
+      "value": "Curled single dislocations, dipoles and loops, some straight screw dislocations.",
+      "sample_id": "sample_fe20al_01",
+      "support": {
+        "support_label": "weak_supported",
+        "evidence_refs": [
+          "b0023"
+        ],
+        "confidence": 0.35,
+        "method": "code_from_llm_bucket_evidence",
+        "value_match": "context",
+        "contradiction": false,
+        "reason": "Relevant context was recalled, but the exact field value was not confirmed."
+      }
+    },
+    {
+      "field_id": "F00245",
+      "section": "characterization_methods",
+      "path": "characterization_methods.sample_fe20al_01__characterization_id_char_tem_fe20al_01.microstructure_uuid",
+      "value": "uuid_fe20al_disloc",
+      "sample_id": "sample_fe20al_01",
+      "support": {
+        "support_label": "weak_supported",
+        "evidence_refs": [
+          "b0023"
+        ],
+        "confidence": 0.35,
+        "method": "code_from_llm_bucket_evidence",
+        "value_match": "context",
+        "contradiction": false,
+        "reason": "Identifier is linked to evidence through the surrounding record context."
+      }
+    },
+    {
+      "field_id": "F00246",
+      "section": "characterization_methods",
+      "path": "characterization_methods.sample_fe20al_01__characterization_id_char_tem_fe20al_01.purpose",
+      "value": "Examine dislocation structures after 2-3% deformation at room temperature.",
+      "sample_id": "sample_fe20al_01",
+      "support": {
+        "support_label": "weak_supported",
+        "evidence_refs": [
+          "b0023"
+        ],
+        "confidence": 0.35,
+        "method": "code_from_llm_bucket_evidence",
+        "value_match": "context",
+        "contradiction": false,
+        "reason": "Relevant context was recalled, but the exact field value was not confirmed."
+      }
+    },
+    {
+      "field_id": "F00247",
+      "section": "characterization_methods",
+      "path": "characterization_methods.sample_fe20al_01__characterization_id_char_tem_fe20al_01.sample_id",
+      "value": "sample_fe20al_01",
+      "sample_id": "sample_fe20al_01",
+      "support": {
+        "support_label": "weak_supported",
+        "evidence_refs": [
+          "b0023"
+        ],
+        "confidence": 0.35,
+        "method": "code_from_llm_bucket_evidence",
+        "value_match": "context",
+        "contradiction": false,
+        "reason": "Identifier is linked to evidence through the surrounding record context."
+      }
+    },
+    {
+      "field_id": "F00248",
+      "section": "characterization_methods",
+      "path": "characterization_methods.sample_fe20al_01__characterization_id_char_tem_fe20al_01.technique",
+      "value": "Transmission electron microscopy (TEM)",
+      "sample_id": "sample_fe20al_01",
+      "support": {
+        "support_label": "weak_supported",
+        "evidence_refs": [
+          "b0023"
+        ],
+        "confidence": 0.35,
+        "method": "code_from_llm_bucket_evidence",
+        "value_match": "context",
+        "contradiction": false,
+        "reason": "Relevant context was recalled, but the exact field value was not confirmed."
+      }
+    },
+    {
+      "field_id": "F00249",
+      "section": "characterization_methods",
+      "path": "characterization_methods.sample_fe25al_01__characterization_id_char_tem_fe25al_01.characterization_id",
+      "value": "char_tem_fe25al_01",
+      "sample_id": "sample_fe25al_01",
+      "support": {
+        "support_label": "weak_supported",
+        "evidence_refs": [
+          "b0036"
+        ],
+        "confidence": 0.35,
+        "method": "code_from_llm_bucket_evidence",
+        "value_match": "context",
+        "contradiction": false,
+        "reason": "Identifier is linked to evidence through the surrounding record context."
+      }
+    },
+    {
+      "field_id": "F00250",
+      "section": "characterization_methods",
+      "path": "characterization_methods.sample_fe25al_01__characterization_id_char_tem_fe25al_01.key_findings",
+      "value": "Loosely coupled superdislocation partials, APBI faults, many near-screw dislocations, some dipole segments.",
+      "sample_id": "sample_fe25al_01",
+      "support": {
+        "support_label": "weak_supported",
+        "evidence_refs": [
+          "b0036"
+        ],
+        "confidence": 0.35,
+        "method": "code_from_llm_bucket_evidence",
+        "value_match": "context",
+        "contradiction": false,
+        "reason": "Relevant context was recalled, but the exact field value was not confirmed."
+      }
+    },
+    {
+      "field_id": "F00251",
+      "section": "characterization_methods",
+      "path": "characterization_methods.sample_fe25al_01__characterization_id_char_tem_fe25al_01.microstructure_uuid",
+      "value": "uuid_fe25al_disloc",
+      "sample_id": "sample_fe25al_01",
+      "support": {
+        "support_label": "weak_supported",
+        "evidence_refs": [
+          "b0036"
+        ],
+        "confidence": 0.35,
+        "method": "code_from_llm_bucket_evidence",
+        "value_match": "context",
+        "contradiction": false,
+        "reason": "Identifier is linked to evidence through the surrounding record context."
+      }
+    },
+    {
+      "field_id": "F00252",
+      "section": "characterization_methods",
+      "path": "characterization_methods.sample_fe25al_01__characterization_id_char_tem_fe25al_01.purpose",
+      "value": "Examine dislocation structures and APB faults after deformation.",
+      "sample_id": "sample_fe25al_01",
+      "support": {
+        "support_label": "weak_supported",
+        "evidence_refs": [
+          "b0036"
+        ],
+        "confidence": 0.35,
+        "method": "code_from_llm_bucket_evidence",
+        "value_match": "context",
+        "contradiction": false,
+        "reason": "Relevant context was recalled, but the exact field value was not confirmed."
+      }
+    },
+    {
+      "field_id": "F00253",
+      "section": "characterization_methods",
+      "path": "characterization_methods.sample_fe25al_01__characterization_id_char_tem_fe25al_01.sample_id",
+      "value": "sample_fe25al_01",
+      "sample_id": "sample_fe25al_01",
+      "support": {
+        "support_label": "weak_supported",
+        "evidence_refs": [
+          "b0036"
+        ],
+        "confidence": 0.35,
+        "method": "code_from_llm_bucket_evidence",
+        "value_match": "context",
+        "contradiction": false,
+        "reason": "Identifier is linked to evidence through the surrounding record context."
+      }
+    },
+    {
+      "field_id": "F00254",
+      "section": "characterization_methods",
+      "path": "characterization_methods.sample_fe25al_01__characterization_id_char_tem_fe25al_01.technique",
+      "value": "Transmission electron microscopy (TEM) including dark field and weak beam",
+      "sample_id": "sample_fe25al_01",
+      "support": {
+        "support_label": "weak_supported",
+        "evidence_refs": [
+          "b0036"
+        ],
+        "confidence": 0.35,
+        "method": "code_from_llm_bucket_evidence",
+        "value_match": "context",
+        "contradiction": false,
+        "reason": "Relevant context was recalled, but the exact field value was not confirmed."
+      }
+    },
+    {
+      "field_id": "F00255",
+      "section": "characterization_methods",
+      "path": "characterization_methods.sample_fe28al_01__characterization_id_char_tem_fe28al_01.characterization_id",
+      "value": "char_tem_fe28al_01",
+      "sample_id": "sample_fe28al_01",
+      "support": {
+        "support_label": "weak_supported",
+        "evidence_refs": [
+          "b0023"
+        ],
+        "confidence": 0.35,
+        "method": "code_from_llm_bucket_evidence",
+        "value_match": "context",
+        "contradiction": false,
+        "reason": "Identifier is linked to evidence through the surrounding record context."
+      }
+    },
+    {
+      "field_id": "F00256",
+      "section": "characterization_methods",
+      "path": "characterization_methods.sample_fe28al_01__characterization_id_char_tem_fe28al_01.key_findings",
+      "value": "Straight screw superdislocations (two (1/2)<111> partials), many superdipole and non-dipole pairs, reaction products (sessile <100> edge dislocations).",
+      "sample_id": "sample_fe28al_01",
+      "support": {
+        "support_label": "weak_supported",
+        "evidence_refs": [
+          "b0023"
+        ],
+        "confidence": 0.35,
+        "method": "code_from_llm_bucket_evidence",
+        "value_match": "context",
+        "contradiction": false,
+        "reason": "Relevant context was recalled, but the exact field value was not confirmed."
+      }
+    },
+    {
+      "field_id": "F00257",
+      "section": "characterization_methods",
+      "path": "characterization_methods.sample_fe28al_01__characterization_id_char_tem_fe28al_01.microstructure_uuid",
+      "value": "uuid_fe28al_disloc",
+      "sample_id": "sample_fe28al_01",
+      "support": {
+        "support_label": "weak_supported",
+        "evidence_refs": [
+          "b0023"
+        ],
+        "confidence": 0.35,
+        "method": "code_from_llm_bucket_evidence",
+        "value_match": "context",
+        "contradiction": false,
+        "reason": "Identifier is linked to evidence through the surrounding record context."
+      }
+    },
+    {
+      "field_id": "F00258",
+      "section": "characterization_methods",
+      "path": "characterization_methods.sample_fe28al_01__characterization_id_char_tem_fe28al_01.purpose",
+      "value": "Examine dislocation structures after deformation (peak work hardening composition).",
+      "sample_id": "sample_fe28al_01",
+      "support": {
+        "support_label": "weak_supported",
+        "evidence_refs": [
+          "b0023"
+        ],
+        "confidence": 0.35,
+        "method": "code_from_llm_bucket_evidence",
+        "value_match": "context",
+        "contradiction": false,
+        "reason": "Relevant context was recalled, but the exact field value was not confirmed."
+      }
+    },
+    {
+      "field_id": "F00259",
+      "section": "characterization_methods",
+      "path": "characterization_methods.sample_fe28al_01__characterization_id_char_tem_fe28al_01.sample_id",
+      "value": "sample_fe28al_01",
+      "sample_id": "sample_fe28al_01",
+      "support": {
+        "support_label": "weak_supported",
+        "evidence_refs": [
+          "b0023"
+        ],
+        "confidence": 0.35,
+        "method": "code_from_llm_bucket_evidence",
+        "value_match": "context",
+        "contradiction": false,
+        "reason": "Identifier is linked to evidence through the surrounding record context."
+      }
+    },
+    {
+      "field_id": "F00260",
+      "section": "characterization_methods",
+      "path": "characterization_methods.sample_fe28al_01__characterization_id_char_tem_fe28al_01.technique",
+      "value": "Transmission electron microscopy (TEM) in bright field and weak beam",
+      "sample_id": "sample_fe28al_01",
+      "support": {
+        "support_label": "weak_supported",
+        "evidence_refs": [
+          "b0023"
+        ],
+        "confidence": 0.35,
+        "method": "code_from_llm_bucket_evidence",
+        "value_match": "context",
+        "contradiction": false,
+        "reason": "Relevant context was recalled, but the exact field value was not confirmed."
+      }
+    },
+    {
+      "field_id": "F00261",
+      "section": "characterization_methods",
+      "path": "characterization_methods.sample_fe30al_01__characterization_id_char_tem_fe30al_01.characterization_id",
+      "value": "char_tem_fe30al_01",
+      "sample_id": "sample_fe30al_01",
+      "support": {
+        "support_label": "weak_supported",
+        "evidence_refs": [
+          "b0023"
+        ],
+        "confidence": 0.35,
+        "method": "code_from_llm_bucket_evidence",
+        "value_match": "context",
+        "contradiction": false,
+        "reason": "Identifier is linked to evidence through the surrounding record context."
+      }
+    },
+    {
+      "field_id": "F00262",
+      "section": "characterization_methods",
+      "path": "characterization_methods.sample_fe30al_01__characterization_id_char_tem_fe30al_01.key_findings",
+      "value": "Straight near-screw superdislocations, edge dipoles and loops, stepped structures from dislocation reactions, APBII fringes.",
+      "sample_id": "sample_fe30al_01",
+      "support": {
+        "support_label": "weak_supported",
+        "evidence_refs": [
+          "b0023"
+        ],
+        "confidence": 0.35,
+        "method": "code_from_llm_bucket_evidence",
+        "value_match": "context",
+        "contradiction": false,
+        "reason": "Relevant context was recalled, but the exact field value was not confirmed."
+      }
+    },
+    {
+      "field_id": "F00263",
+      "section": "characterization_methods",
+      "path": "characterization_methods.sample_fe30al_01__characterization_id_char_tem_fe30al_01.microstructure_uuid",
+      "value": "uuid_fe30al_disloc",
+      "sample_id": "sample_fe30al_01",
+      "support": {
+        "support_label": "weak_supported",
+        "evidence_refs": [
+          "b0023"
+        ],
+        "confidence": 0.35,
+        "method": "code_from_llm_bucket_evidence",
+        "value_match": "context",
+        "contradiction": false,
+        "reason": "Identifier is linked to evidence through the surrounding record context."
+      }
+    },
+    {
+      "field_id": "F00264",
+      "section": "characterization_methods",
+      "path": "characterization_methods.sample_fe30al_01__characterization_id_char_tem_fe30al_01.purpose",
+      "value": "Examine dislocation structures after deformation.",
+      "sample_id": "sample_fe30al_01",
+      "support": {
+        "support_label": "weak_supported",
+        "evidence_refs": [
+          "b0023"
+        ],
+        "confidence": 0.35,
+        "method": "code_from_llm_bucket_evidence",
+        "value_match": "context",
+        "contradiction": false,
+        "reason": "Relevant context was recalled, but the exact field value was not confirmed."
+      }
+    },
+    {
+      "field_id": "F00265",
+      "section": "characterization_methods",
+      "path": "characterization_methods.sample_fe30al_01__characterization_id_char_tem_fe30al_01.sample_id",
+      "value": "sample_fe30al_01",
+      "sample_id": "sample_fe30al_01",
+      "support": {
+        "support_label": "weak_supported",
+        "evidence_refs": [
+          "b0023"
+        ],
+        "confidence": 0.35,
+        "method": "code_from_llm_bucket_evidence",
+        "value_match": "context",
+        "contradiction": false,
+        "reason": "Identifier is linked to evidence through the surrounding record context."
+      }
+    },
+    {
+      "field_id": "F00266",
+      "section": "characterization_methods",
+      "path": "characterization_methods.sample_fe30al_01__characterization_id_char_tem_fe30al_01.technique",
+      "value": "Transmission electron microscopy (TEM)",
+      "sample_id": "sample_fe30al_01",
+      "support": {
+        "support_label": "weak_supported",
+        "evidence_refs": [
+          "b0023"
+        ],
+        "confidence": 0.35,
+        "method": "code_from_llm_bucket_evidence",
+        "value_match": "context",
+        "contradiction": false,
+        "reason": "Relevant context was recalled, but the exact field value was not confirmed."
+      }
+    },
+    {
+      "field_id": "F00267",
+      "section": "characterization_methods",
+      "path": "characterization_methods.sample_fe35al_01__characterization_id_char_tem_fe35al_01.characterization_id",
+      "value": "char_tem_fe35al_01",
+      "sample_id": "sample_fe35al_01",
+      "support": {
+        "support_label": "weak_supported",
+        "evidence_refs": [
+          "b0023"
+        ],
+        "confidence": 0.35,
+        "method": "code_from_llm_bucket_evidence",
+        "value_match": "context",
+        "contradiction": false,
+        "reason": "Identifier is linked to evidence through the surrounding record context."
+      }
+    },
+    {
+      "field_id": "F00268",
+      "section": "characterization_methods",
+      "path": "characterization_methods.sample_fe35al_01__characterization_id_char_tem_fe35al_01.key_findings",
+      "value": "Straight near-screw superdislocations with close partials, many edge dipole segments, remnant APB fringes.",
+      "sample_id": "sample_fe35al_01",
+      "support": {
+        "support_label": "weak_supported",
+        "evidence_refs": [
+          "b0023"
+        ],
+        "confidence": 0.35,
+        "method": "code_from_llm_bucket_evidence",
+        "value_match": "context",
+        "contradiction": false,
+        "reason": "Relevant context was recalled, but the exact field value was not confirmed."
+      }
+    },
+    {
+      "field_id": "F00269",
+      "section": "characterization_methods",
+      "path": "characterization_methods.sample_fe35al_01__characterization_id_char_tem_fe35al_01.microstructure_uuid",
+      "value": "uuid_fe35al_disloc",
+      "sample_id": "sample_fe35al_01",
+      "support": {
+        "support_label": "weak_supported",
+        "evidence_refs": [
+          "b0023"
+        ],
+        "confidence": 0.35,
+        "method": "code_from_llm_bucket_evidence",
+        "value_match": "context",
+        "contradiction": false,
+        "reason": "Identifier is linked to evidence through the surrounding record context."
+      }
+    },
+    {
+      "field_id": "F00270",
+      "section": "characterization_methods",
+      "path": "characterization_methods.sample_fe35al_01__characterization_id_char_tem_fe35al_01.purpose",
+      "value": "Examine dislocation structures after deformation.",
+      "sample_id": "sample_fe35al_01",
+      "support": {
+        "support_label": "weak_supported",
+        "evidence_refs": [
+          "b0023"
+        ],
+        "confidence": 0.35,
+        "method": "code_from_llm_bucket_evidence",
+        "value_match": "context",
+        "contradiction": false,
+        "reason": "Relevant context was recalled, but the exact field value was not confirmed."
+      }
+    },
+    {
+      "field_id": "F00271",
+      "section": "characterization_methods",
+      "path": "characterization_methods.sample_fe35al_01__characterization_id_char_tem_fe35al_01.sample_id",
+      "value": "sample_fe35al_01",
+      "sample_id": "sample_fe35al_01",
+      "support": {
+        "support_label": "weak_supported",
+        "evidence_refs": [
+          "b0023"
+        ],
+        "confidence": 0.35,
+        "method": "code_from_llm_bucket_evidence",
+        "value_match": "context",
+        "contradiction": false,
+        "reason": "Identifier is linked to evidence through the surrounding record context."
+      }
+    },
+    {
+      "field_id": "F00272",
+      "section": "characterization_methods",
+      "path": "characterization_methods.sample_fe35al_01__characterization_id_char_tem_fe35al_01.technique",
+      "value": "Transmission electron microscopy (TEM)",
+      "sample_id": "sample_fe35al_01",
+      "support": {
+        "support_label": "weak_supported",
+        "evidence_refs": [
+          "b0023"
+        ],
+        "confidence": 0.35,
+        "method": "code_from_llm_bucket_evidence",
+        "value_match": "context",
+        "contradiction": false,
+        "reason": "Relevant context was recalled, but the exact field value was not confirmed."
+      }
+    },
+    {
+      "field_id": "F00273",
+      "section": "unmapped_findings",
+      "path": "unmapped_findings.idx_0.value",
+      "value": "Fig. 1 data: yield stress increases with Al to a maximum at 25 at.% Al, then falls rapidly at 25-28% Al, then slight increase or little change to 40% Al; ductility drops with increasing Al, with slight maximum at 28% Al. (Text and figure caption).",
+      "support": {
+        "support_label": "weak_supported",
+        "evidence_refs": [
+          "b0007"
+        ],
+        "confidence": 0.35,
+        "method": "code_from_llm_bucket_evidence",
+        "value_match": "context",
+        "contradiction": false,
+        "reason": "Relevant context was recalled, but the exact field value was not confirmed."
+      }
+    },
+    {
+      "field_id": "F00274",
+      "section": "unmapped_findings",
+      "path": "unmapped_findings.idx_1.value",
+      "value": "Fig. 2 data: work hardening rate (secant over 1-1.5% strain) is low for <20% Al, sharp peak at 28-29% Al, moderate above 35% Al; addition of 0.1% B has little consistent effect. (Text and figure caption).",
+      "support": {
+        "support_label": "weak_supported",
+        "evidence_refs": [
+          "b0007"
+        ],
+        "confidence": 0.35,
+        "method": "code_from_llm_bucket_evidence",
+        "value_match": "context",
+        "contradiction": false,
+        "reason": "Relevant context was recalled, but the exact field value was not confirmed."
+      }
+    },
+    {
+      "field_id": "F00275",
+      "section": "unmapped_findings",
+      "path": "unmapped_findings.idx_2.value",
+      "value": "Fig. 3 data: APB energy variations with Al content; APBI and APBII energies from Refs. [19-21]. (Figure caption).",
+      "support": {
+        "support_label": "weak_supported",
+        "evidence_refs": [
+          "b0007"
+        ],
+        "confidence": 0.35,
+        "method": "code_from_llm_bucket_evidence",
+        "value_match": "context",
+        "contradiction": false,
+        "reason": "Relevant context was recalled, but the exact field value was not confirmed."
+      }
+    },
+    {
+      "field_id": "F00276",
+      "section": "unmapped_findings",
+      "path": "unmapped_findings.idx_3.value",
+      "value": "Fig. 4 data: elastic stiffness constants C11, C12, C44 and Zener anisotropy factor A = 2C44/(C11-C12) vary with Al content; high anisotropy near Fe3Al composition. (Figure caption).",
+      "support": {
+        "support_label": "weak_supported",
+        "evidence_refs": [
+          "b0007"
+        ],
+        "confidence": 0.35,
+        "method": "code_from_llm_bucket_evidence",
+        "value_match": "context",
+        "contradiction": false,
+        "reason": "Relevant context was recalled, but the exact field value was not confirmed."
+      }
+    },
+    {
+      "field_id": "F00277",
+      "section": "unmapped_findings",
+      "path": "unmapped_findings.idx_4.value",
+      "value": "The peak work hardening at 28% Al is associated with increased elastic anisotropy and strong Peierls forces favoring screw dislocation orientation; also, sessile <100> edge dislocations from reactions contribute to hardening.",
+      "support": {
+        "support_label": "weak_supported",
+        "evidence_refs": [
+          "b0007"
+        ],
+        "confidence": 0.35,
+        "method": "code_from_llm_bucket_evidence",
+        "value_match": "context",
+        "contradiction": false,
+        "reason": "Relevant context was recalled, but the exact field value was not confirmed."
+      }
+    },
+    {
+      "field_id": "F00278",
+      "section": "unmapped_findings",
+      "path": "unmapped_findings.idx_5.value",
+      "value": "No APB tubes were observed; hence the APB tube model for work hardening receives little support in this study.",
+      "support": {
+        "support_label": "weak_supported",
+        "evidence_refs": [
+          "b0007"
+        ],
+        "confidence": 0.35,
+        "method": "code_from_llm_bucket_evidence",
+        "value_match": "context",
+        "contradiction": false,
+        "reason": "Relevant context was recalled, but the exact field value was not confirmed."
+      }
+    },
+    {
+      "field_id": "F00279",
+      "section": "unmapped_findings",
+      "path": "unmapped_findings.idx_6.value",
+      "value": "Considere criterion: the small ductility peak at 28% Al is related to high work hardening rate over the composition range where flow stress is relatively constant.",
+      "support": {
+        "support_label": "weak_supported",
+        "evidence_refs": [
+          "b0007"
+        ],
+        "confidence": 0.35,
+        "method": "code_from_llm_bucket_evidence",
+        "value_match": "context",
+        "contradiction": false,
+        "reason": "Relevant context was recalled, but the exact field value was not confirmed."
+      }
+    }
+  ]
+}

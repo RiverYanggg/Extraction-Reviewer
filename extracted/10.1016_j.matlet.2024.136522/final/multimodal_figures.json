@@ -1,0 +1,35 @@
+[
+  {
+    "paper_id": "10.1016_j.matlet.2024.136522",
+    "figure_id": "figure_001",
+    "image_paths": [
+      "images/75f30ed5e2ffc046c9c81134573d582a3eec98cee9e4b3dacc2d14157d8e2523.jpg"
+    ],
+    "image_count": 1,
+    "image_type": "microscopy_tem",
+    "description": "This figure presents high-resolution transmission electron microscopy (HR-TEM) characterization of the co-precipitation microstructure in Fe-28Mn-10Al-1C-3Cu (3Cu) austenitic low-density steel after solution treatment at 1000℃ for 1 h followed by aging at 550℃ for 3 h. The image shows nanoscale precipitates within the austenitic matrix, specifically revealing κ-carbide and Cu-rich phase particles. Based on the paper's context, the HR-TEM image displays irregular oval-shaped Cu-rich phase particles with diameter approximately 10 nm and bar-shaped particles with length around 30 nm, coexisting with κ-carbide precipitates. The figure likely includes corresponding energy dispersive spectroscopy (EDS) mapping or selected area electron diffraction (SAED) patterns that demonstrate: (1) Cu enrichment and Fe/Mn/Al depletion in the Cu-rich phase regions, (2) cube-on-cube orientation relationships between the precipitates and austenitic matrix ([110]γ//[110]κ//[110]Cu and (111)γ//(111)κ//(111)Cu), and (3) coherent interfaces with measured lattice parameters of Cu-rich phase a=0.3652 nm and κ-carbide a=0.3775 nm. The low lattice misfits (κ-carbide/γ=2.3%, Cu-rich/γ=1.0%) support the co-precipitation mechanism where κ-carbide precipitation promotes subsequent Cu-rich phase formation due to lower nucleation energy barriers. The figure supports the core conclusion that Cu addition promotes κ-carbide precipitation and enables coherent co-precipitation of both phases with excellent thermal stability.",
+    "confidence": 0.6
+  },
+  {
+    "paper_id": "10.1016_j.matlet.2024.136522",
+    "figure_id": "figure_002",
+    "image_paths": [
+      "images/4b1124ad71e38aa2457fe0f417c872e2bb904132c47f9a330ec155750be1d615.jpg"
+    ],
+    "image_count": 1,
+    "image_type": "microscopy_tem",
+    "description": "This figure presents a high-resolution transmission electron microscopy (HRTEM) image of aged 3Cu steel (Fe-28Mn-10Al-1C-3Cu austenitic low-density steel) with two corresponding selected area electron diffraction (SAED) patterns as insets. The main HRTEM image shows nanoscale precipitates within the austenitic matrix, with two regions marked: a yellow dashed box labeled 'γ + κ' (austenite plus κ-carbide) and a red dashed box labeled 'γ + Cu' (austenite plus Cu-rich phase). The upper-right SAED pattern (yellow border, Z=[011̄]) displays diffraction spots indexed as (011) for κ-carbide and (111) for the austenitic matrix, confirming the cube-on-cube orientation relationship between κ-carbide and γ-austenite. The lower-right SAED pattern (red border, Z=[011̄]) shows diffraction spots indexed as (111), (111̄), and (200) for the Cu-rich phase, with the caption stating this indicates BCC structure for the Cu-rich phase. Both SAED patterns confirm coherent relationships between the precipitates and austenitic matrix. The scale bar indicates 5 nm for the HRTEM image and 2 1/nm for the SAED patterns. This figure supports the core conclusion that κ-carbide and Cu-rich phase co-precipitate in the aged 3Cu steel with specific cube-on-cube orientation relationships: [110]γ//[110]κ//[110]Cu and (111)γ//(111)κ//(111)Cu, enabling low interfacial energies and good thermal stability.",
+    "confidence": 0.9
+  },
+  {
+    "paper_id": "10.1016_j.matlet.2024.136522",
+    "figure_id": "figure_003",
+    "image_paths": [
+      "images/cbd4efb77a63c44bd5c2d4313bcf8f955f098f1a3709ae77dbd7b7604dfb027b.jpg"
+    ],
+    "image_count": 1,
+    "image_type": "microscopy_tem",
+    "description": "This figure presents TEM-based characterization of aged 3Cu steel (Fe-28Mn-10Al-1C-3Cu austenitic low-density steel) after solution treatment at 1000°C for 1 h followed by aging at 550°C for 3 h. Panel (a) shows a bright-field TEM image with numerous dark-contrast precipitates dispersed in the matrix, with a scale bar of 50 nm. Panel (b) displays EDS elemental mapping (Fe, Mn, Al, Cu) of the same region, where the caption states that Fe, Mn and Al atoms exhibit brighter contrast within the white dashed box zone while Cu shows darker contrast there, whereas Cu exhibits brighter contrast within the magenta line area with Fe, Mn, and Al showing darker contrast—indicating κ-carbide enrichment in Fe/Mn/Al and Cu-rich phase formation in the magenta region. Panel (c) provides an HRTEM image of an irregular oval-shaped Cu-rich phase with approximate diameter ~10 nm. Panel (d) shows an HRTEM image of a spherical Cu-rich phase with an inset FFT pattern indicating lattice spacing d=0.182 nm corresponding to FCC Cu (002) planes. The figure supports the core conclusion that κ-carbide precipitates first during aging, subsequently enriching Cu in the surrounding austenitic matrix, which then reaches sufficient concentration to nucleate Cu-rich phases that maintain coherent cube-on-cube orientation relationships with the matrix.",
+    "confidence": 0.9
+  }
+]

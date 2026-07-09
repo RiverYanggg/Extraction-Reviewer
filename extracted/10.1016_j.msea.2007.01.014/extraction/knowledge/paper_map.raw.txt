@@ -1,0 +1,19 @@
+{
+  "paper_id": "10.1016_j.msea.2007.01.014",
+  "title": "Work hardening in Fe\u2013Al alloys",
+  "abstract_summary": "Work hardening in polycrystalline Fe\u2013Al alloys with Al content up to 40 at.% shows a sharp maximum near 26\u201330% Al. The peak correlates with a transition from single to superdislocation dipoles, predominance of straight screw dislocations, and formation of sessile dislocation segments. Elastic anisotropy peaks in the same composition range but is believed to reflect core/Peierls effects rather than being the direct cause.",
+  "research_objective": "To understand the origin of the pronounced work hardening peak in Fe\u2013Al alloys as a function of Al content and associated ordering transitions.",
+  "material_systems": ["Fe\u2013Al alloys", "disordered bcc Fe\u2013Al", "DO3 ordered Fe3Al", "B2 ordered FeAl"],
+  "main_process_variables": ["Al content (at.%) from 0 to 40%", "plastic strain range 1\u20131.5%", "room temperature testing", "as-cast/annealed state (thermally relaxed, coarse grains, no solute/precipitate effects)", "slow cooling for ordering (moderate DO3 order)", "boron addition (~0.1% B) in some alloys"],
+  "sample_aliases": {},
+  "expected_information_axis": ["composition", "processing", "microstructure", "property", "mechanism", "figure_evidence"],
+  "key_sections": {
+    "1. Introduction": "Motivates the study by reviewing prior work on Fe\u2013Al mechanical behavior and work hardening, introduces key figures (yield stress, ductility, work hardening rate vs. Al content), and outlines the role of order (B2/DO3) and APB energies.",
+    "2. Experimental": "Describes materials, preparation, and characterization methods (presumably includes deformation tests and TEM).",
+    "3. Results": "Presents mechanical property variations (3.1) and dislocation structure observations (3.2) as a function of Al content.",
+    "3.1 Mechanical property variations": "Reports yield stress, ductility, and work hardening rate vs. Al content, highlighting the peak near 26\u201330% Al.",
+    "3.2 Studies of dislocation structures": "Documents dislocation types (single, superdislocations, dipoles, screw segments, sessile 100 dislocations) observed via TEM.",
+    "4. Discussion": "Analyzes the peak in work hardening in relation to elastic anisotropy, APB energies, dislocation reactions, and Peierls forces; proposes mechanisms including superdislocation dipole hardening and screw dislocation pinning, and explains the ductility peak via Considere criterion.",
+    "5. Summary": "Summarizes key findings: work hardening peak at Fe\u201328% Al, dislocation structure transitions, and attribution to Peierls forces and dislocation reactions rather than elastic anisotropy alone."
+  }
+}

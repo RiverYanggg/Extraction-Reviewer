@@ -1,0 +1,11 @@
+{
+  "paper_id": "10.1016_j.msea.2007.01.014",
+  "figure_id": "figure_016",
+  "image_paths": [
+    "images/384b633c8d076b0774a3c52a96be46c0028933bf8024178c42df6eb7e986d220.jpg"
+  ],
+  "image_count": 1,
+  "image_type": "microscopy_tem",
+  "description": "This bright-field TEM micrograph shows the dislocation structure in deformed Fe–30% Al alloy after room-temperature compression to 2–3% strain. The image reveals numerous dislocation segments with complex configurations against a background of weak fringes traversing the field of view. The zone axis is near [0 0 1] with imaging vector g = 1 1 0, as indicated by the arrow. The visible dislocations are superdislocations of the B2 lattice, each composed of two (1/2) 1 1 1 partial dislocations lying close together due to the higher APBI fault energy in this composition. The micrograph shows straight near-screw superdislocation segments, edge dipole segments, and stepped structures resulting from dislocation reactions. The background fringes are residual APBII (antiphase boundary type II) fringes, which arise because the movement of these superdislocations destroys the weak DO₃ order present in this alloy. The scale bar indicates 0.2 μm, confirming nanoscale resolution. This image is part of a series (Figs. 16–19) demonstrating that Fe–30% Al and Fe–35% Al exhibit rather similar dislocation structures, supporting the conclusion that work hardening in higher-Al Fe–Al alloys is governed by superdislocation glide, dislocation reactions forming sessile configurations, and order destruction during deformation.",
+  "confidence": 0.9
+}

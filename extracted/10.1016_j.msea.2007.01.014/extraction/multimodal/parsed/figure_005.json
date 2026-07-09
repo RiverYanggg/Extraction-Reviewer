@@ -1,0 +1,11 @@
+{
+  "paper_id": "10.1016_j.msea.2007.01.014",
+  "figure_id": "figure_005",
+  "image_paths": [
+    "images/07a0b3e92438cc1ec298157cf5f754f7ce146df3ce40d7d9e7e1302723e01da3.jpg"
+  ],
+  "image_count": 1,
+  "image_type": "microscopy_tem",
+  "description": "This is a transmission electron microscopy (TEM) image showing the dislocation structure in a deformed Fe-Al alloy. The micrograph reveals a complex network of dislocations with varying contrast, including numerous straight segments oriented near-screw directions as well as curved dislocations and dipole configurations. The scale bar indicates 0.25 μm, confirming the nanoscale resolution typical of TEM characterization. Based on the paper context examining work hardening in Fe-Al alloys (0-40 at.% Al), this image most likely corresponds to one of the higher-Al compositions (Fe-25%Al, Fe-28%Al, Fe-30%Al, or Fe-35%Al) where superdislocations composed of two (1/2)<111> partials are expected, rather than the single dislocations found in disordered Fe-15%Al and Fe-20%Al alloys. The visible straight screw-oriented dislocations and possible APB fault contrast are consistent with the ordered B2 or DO3 structures reported for these compositions. The arrow in the lower right may indicate a specific feature such as a superdislocation dipole or an APB fault trace. This micrograph supports the paper's core conclusion that peak work hardening at ~28% Al correlates with distinctive dislocation structures including straight screw superdislocations, sessile reaction products, and strong Peierls forces arising from increased elastic anisotropy.",
+  "confidence": 0.9
+}

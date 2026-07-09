@@ -1,0 +1,32 @@
+{
+"paper_id": "10.1016_j.matlet.2024.136522",
+"title": "Co-precipitation mechanism of Cu-rich phase and \u03ba-carbide precipitates in Fe-28Mn-10Al-1C-3Cu austenitic low-density steel",
+"abstract_summary": "This paper investigates the co-precipitation mechanism of Cu-rich phase and \u03ba-carbide in Fe-28Mn-10Al-1C-3Cu austenitic low-density steel. Adding Cu promotes \u03ba-carbide precipitation, and \u03ba-carbide in turn promotes FCC-structured Cu-rich phase precipitation. \u03ba-carbide precipitates preferentially, with both phases exhibiting a cube-on-cube orientation relationship with the austenitic matrix. Key characterization includes HR-TEM, SAED, and EDS to analyze microstructure and lattice misfit.",
+"research_objective": "To clarify the co-precipitation behavior and mechanism of Cu-rich phase and \u03ba-carbide in Fe-28Mn-10Al-1C-3Cu austenitic low-density steel.",
+"material_systems": [
+"Fe-28Mn-10Al-1C-3Cu austenitic low-density steel",
+"Fe-28Mn-10Al-1C austenitic low-density steel"
+],
+"main_process_variables": [
+"solution treatment at 1000\u00b0C for 1 h",
+"aging treatment at 550\u00b0C for 3 h"
+],
+"sample_aliases": {
+"0Cu steel": "Fe-28Mn-10Al-1C austenitic low-density steel (without Cu)",
+"3Cu steel": "Fe-28Mn-10Al-1C-3Cu austenitic low-density steel (with 3 wt% Cu)"
+},
+"expected_information_axis": [
+"composition",
+"processing",
+"microstructure",
+"property",
+"mechanism",
+"figure_evidence"
+],
+"key_sections": {
+"Introduction": "Introduces the background and importance of Fe-Mn-Al-C low-density steel, the role of \u03ba-carbide and Cu-rich phase in strengthening, and states the research objective to investigate co-precipitation behavior.",
+"Materials and methods": "Describes material compositions (0Cu and 3Cu steels), solution and aging treatments, and TEM/EDS characterization methods.",
+"Results and discussion": "Presents and discusses SAED, HR-TEM, and EDS results; calculates lattice parameters and misfits; proposes co-precipitation mechanism involving Cu rejection and preferential \u03ba-carbide nucleation; provides critical lattice parameter and composition boundary formula.",
+"Conclusion": "Summarizes main findings: Cu addition enhances \u03ba-carbide precipitation; \u03ba-carbide precipitates first, followed by Cu-rich phase; both phases have cube-on-cube orientation with matrix."
+}
+}

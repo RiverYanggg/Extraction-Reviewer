@@ -1,0 +1,47 @@
+{
+  "paper_id": "10.1016_j.msea.2007.01.014",
+  "source_file": "/Users/mac/Desktop/SteelDig/datasets/82/extracted/10.1016_j.msea.2007.01.014/preprocess/cleaned_input.md",
+  "chunk_count": 4,
+  "chunks": [
+    {
+      "chunk_id": "chunk_0001",
+      "section": "Front Matter",
+      "section_index": 0,
+      "paragraph_start": 1,
+      "paragraph_end": 21,
+      "char_start": 0,
+      "char_end": 8983,
+      "token_estimate": 2245
+    },
+    {
+      "chunk_id": "chunk_0002",
+      "section": "1. Introduction",
+      "section_index": 3,
+      "paragraph_start": 21,
+      "paragraph_end": 48,
+      "char_start": 8903,
+      "char_end": 24192,
+      "token_estimate": 3822
+    },
+    {
+      "chunk_id": "chunk_0003",
+      "section": "3.2. Studies of dislocation structures",
+      "section_index": 7,
+      "paragraph_start": 48,
+      "paragraph_end": 62,
+      "char_start": 23129,
+      "char_end": 34690,
+      "token_estimate": 2890
+    },
+    {
+      "chunk_id": "chunk_0004",
+      "section": "4. Discussion",
+      "section_index": 8,
+      "paragraph_start": 62,
+      "paragraph_end": 69,
+      "char_start": 34040,
+      "char_end": 36816,
+      "token_estimate": 693
+    }
+  ]
+}

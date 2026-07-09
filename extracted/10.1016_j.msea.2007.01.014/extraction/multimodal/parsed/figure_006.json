@@ -1,0 +1,12 @@
+{
+  "paper_id": "10.1016_j.msea.2007.01.014",
+  "figure_id": "figure_006",
+  "image_paths": [
+    "images/286cd44aeec0a2800cfa3fa5e256a6fe5338d9ffc76d645b2d208a75051cf4eb.jpg",
+    "images/96ab8deb71ea915ab8b64ee7df42132c47288ec9700156763792ed1c1a2f5ffc.jpg"
+  ],
+  "image_count": 2,
+  "image_type": "microscopy_tem",
+  "description": "This figure presents a pair of weak-beam transmission electron microscopy (TEM) images showing curled single dislocations in deformed Fe–20% Al alloy strained to 2–3% at room temperature. The two micrographs were recorded using opposite sign imaging vectors (g and -g, with the arrow indicating the imaging vector parallel to 011) with zone axis [0 1 1] aligned with the stress axis. The left image shows the dislocation configuration under one imaging condition, while the right image (with scale bar 0.2 μm) labels multiple dipole segments and loops as 'd'. The relative displacement of dislocation images between the two photographs confirms the dipole arrangement of many dislocation segments and loops, as the contrast reversal under opposite g-vectors is characteristic of dipoles. The dislocations exhibit Burgers vector (1/2)<111> and are generally smoothly curved with some preference for screw orientations. This paired imaging technique provides direct evidence that the observed dislocation segments are dipoles rather than single dislocations, supporting the interpretation that disordered or short-range-ordered Fe–Al alloys deform by single dislocation glide with extensive dipole and loop formation trailing from screw dislocations. The figure demonstrates that dipole configurations are prevalent in the Fe–20% Al composition, which exhibits low work hardening compared to higher-Al ordered alloys.",
+  "confidence": 0.9
+}

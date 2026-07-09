@@ -1,0 +1,3345 @@
+{
+  "paper_id": "10.1016_j.matlet.2024.136522",
+  "schema_version": "field-evidence-v2",
+  "stage": "extraction_postprocess",
+  "source_text_extraction_path": "/Users/mac/Desktop/SteelDig/datasets/82/extracted/10.1016_j.matlet.2024.136522/verify/text_extraction_fixed.json",
+  "field_count": 189,
+  "bucket_count": 3,
+  "llm_used": true,
+  "support_summary": {
+    "explicit_supported": 81,
+    "numeric_supported": 1,
+    "unsupported": 5,
+    "weak_supported": 102
+  },
+  "fields": [
+    {
+      "field_id": "F00001",
+      "section": "papers",
+      "path": "papers.10.1016_j.matlet.2024.136522.authors[0]",
+      "value": "Xiqiang Ren",
+      "support": {
+        "support_label": "explicit_supported",
+        "evidence_refs": [
+          "b0003"
+        ],
+        "confidence": 0.98,
+        "method": "code_exact_match",
+        "value_match": "exact",
+        "contradiction": false,
+        "reason": "Normalized field value appears in the evidence block."
+      }
+    },
+    {
+      "field_id": "F00002",
+      "section": "papers",
+      "path": "papers.10.1016_j.matlet.2024.136522.authors[1]",
+      "value": "Yanfei Qi",
+      "support": {
+        "support_label": "explicit_supported",
+        "evidence_refs": [
+          "b0003"
+        ],
+        "confidence": 0.98,
+        "method": "code_exact_match",
+        "value_match": "exact",
+        "contradiction": false,
+        "reason": "Normalized field value appears in the evidence block."
+      }
+    },
+    {
+      "field_id": "F00003",
+      "section": "papers",
+      "path": "papers.10.1016_j.matlet.2024.136522.authors[2]",
+      "value": "Yungang Li",
+      "support": {
+        "support_label": "explicit_supported",
+        "evidence_refs": [
+          "b0003"
+        ],
+        "confidence": 0.98,
+        "method": "code_exact_match",
+        "value_match": "exact",
+        "contradiction": false,
+        "reason": "Normalized field value appears in the evidence block."
+      }
+    },
+    {
+      "field_id": "F00004",
+      "section": "papers",
+      "path": "papers.10.1016_j.matlet.2024.136522.authors[3]",
+      "value": "Jingyi Zhou",
+      "support": {
+        "support_label": "explicit_supported",
+        "evidence_refs": [
+          "b0003"
+        ],
+        "confidence": 0.98,
+        "method": "code_exact_match",
+        "value_match": "exact",
+        "contradiction": false,
+        "reason": "Normalized field value appears in the evidence block."
+      }
+    },
+    {
+      "field_id": "F00005",
+      "section": "papers",
+      "path": "papers.10.1016_j.matlet.2024.136522.authors[4]",
+      "value": "Jiahao Gu",
+      "support": {
+        "support_label": "explicit_supported",
+        "evidence_refs": [
+          "b0003"
+        ],
+        "confidence": 0.98,
+        "method": "code_exact_match",
+        "value_match": "exact",
+        "contradiction": false,
+        "reason": "Normalized field value appears in the evidence block."
+      }
+    },
+    {
+      "field_id": "F00006",
+      "section": "papers",
+      "path": "papers.10.1016_j.matlet.2024.136522.doi",
+      "value": "10.1016/j.matlet.2024.136522",
+      "support": {
+        "support_label": "unsupported",
+        "evidence_refs": [],
+        "confidence": 0.0,
+        "method": "code_from_llm_bucket_evidence",
+        "value_match": "",
+        "contradiction": false,
+        "reason": "No direct metadata source block was confirmed."
+      }
+    },
+    {
+      "field_id": "F00007",
+      "section": "papers",
+      "path": "papers.10.1016_j.matlet.2024.136522.journal",
+      "value": "Materials Letters",
+      "support": {
+        "support_label": "unsupported",
+        "evidence_refs": [],
+        "confidence": 0.0,
+        "method": "code_from_llm_bucket_evidence",
+        "value_match": "",
+        "contradiction": false,
+        "reason": "No direct metadata source block was confirmed."
+      }
+    },
+    {
+      "field_id": "F00008",
+      "section": "papers",
+      "path": "papers.10.1016_j.matlet.2024.136522.keywords[0]",
+      "value": "Austenitic low-density steel",
+      "support": {
+        "support_label": "explicit_supported",
+        "evidence_refs": [
+          "b0001"
+        ],
+        "confidence": 0.98,
+        "method": "code_exact_match",
+        "value_match": "exact",
+        "contradiction": false,
+        "reason": "Normalized field value appears in the evidence block."
+      }
+    },
+    {
+      "field_id": "F00009",
+      "section": "papers",
+      "path": "papers.10.1016_j.matlet.2024.136522.keywords[1]",
+      "value": "Particles",
+      "support": {
+        "support_label": "explicit_supported",
+        "evidence_refs": [
+          "b0006"
+        ],
+        "confidence": 0.98,
+        "method": "code_exact_match",
+        "value_match": "exact",
+        "contradiction": false,
+        "reason": "Normalized field value appears in the evidence block."
+      }
+    },
+    {
+      "field_id": "F00010",
+      "section": "papers",
+      "path": "papers.10.1016_j.matlet.2024.136522.keywords[2]",
+      "value": "Nanosize",
+      "support": {
+        "support_label": "explicit_supported",
+        "evidence_refs": [
+          "b0006"
+        ],
+        "confidence": 0.98,
+        "method": "code_exact_match",
+        "value_match": "exact",
+        "contradiction": false,
+        "reason": "Normalized field value appears in the evidence block."
+      }
+    },
+    {
+      "field_id": "F00011",
+      "section": "papers",
+      "path": "papers.10.1016_j.matlet.2024.136522.keywords[3]",
+      "value": "Microstructure",
+      "support": {
+        "support_label": "explicit_supported",
+        "evidence_refs": [
+          "b0006"
+        ],
+        "confidence": 0.98,
+        "method": "code_exact_match",
+        "value_match": "exact",
+        "contradiction": false,
+        "reason": "Normalized field value appears in the evidence block."
+      }
+    },
+    {
+      "field_id": "F00012",
+      "section": "papers",
+      "path": "papers.10.1016_j.matlet.2024.136522.keywords[4]",
+      "value": "Co-precipitation mechanism",
+      "support": {
+        "support_label": "explicit_supported",
+        "evidence_refs": [
+          "b0001"
+        ],
+        "confidence": 0.98,
+        "method": "code_exact_match",
+        "value_match": "exact",
+        "contradiction": false,
+        "reason": "Normalized field value appears in the evidence block."
+      }
+    },
+    {
+      "field_id": "F00013",
+      "section": "papers",
+      "path": "papers.10.1016_j.matlet.2024.136522.paper_id",
+      "value": "10.1016_j.matlet.2024.136522",
+      "support": {
+        "support_label": "weak_supported",
+        "evidence_refs": [
+          "b0001"
+        ],
+        "confidence": 0.35,
+        "method": "code_from_llm_bucket_evidence",
+        "value_match": "context",
+        "contradiction": false,
+        "reason": "Identifier is linked to evidence through the surrounding record context."
+      }
+    },
+    {
+      "field_id": "F00014",
+      "section": "papers",
+      "path": "papers.10.1016_j.matlet.2024.136522.paper_scope",
+      "value": "Investigation of co-precipitation mechanism of Cu-rich phase and κ-carbide in Fe-28Mn-10Al-1C-3Cu austenitic low-density steel",
+      "support": {
+        "support_label": "unsupported",
+        "evidence_refs": [],
+        "confidence": 0.0,
+        "method": "code_from_llm_bucket_evidence",
+        "value_match": "",
+        "contradiction": false,
+        "reason": "No direct metadata source block was confirmed."
+      }
+    },
+    {
+      "field_id": "F00015",
+      "section": "papers",
+      "path": "papers.10.1016_j.matlet.2024.136522.publication_year",
+      "value": "2024",
+      "support": {
+        "support_label": "unsupported",
+        "evidence_refs": [],
+        "confidence": 0.0,
+        "method": "code_from_llm_bucket_evidence",
+        "value_match": "",
+        "contradiction": false,
+        "reason": "No direct metadata source block was confirmed."
+      }
+    },
+    {
+      "field_id": "F00016",
+      "section": "papers",
+      "path": "papers.10.1016_j.matlet.2024.136522.research_type",
+      "value": "experimental",
+      "support": {
+        "support_label": "unsupported",
+        "evidence_refs": [],
+        "confidence": 0.0,
+        "method": "code_from_llm_bucket_evidence",
+        "value_match": "",
+        "contradiction": false,
+        "reason": "No direct metadata source block was confirmed."
+      }
+    },
+    {
+      "field_id": "F00017",
+      "section": "papers",
+      "path": "papers.10.1016_j.matlet.2024.136522.title",
+      "value": "Co-precipitation mechanism of Cu-rich phase and κ-carbide precipitates in Fe-28Mn-10Al-1C-3Cu austenitic low-density steel",
+      "support": {
+        "support_label": "explicit_supported",
+        "evidence_refs": [
+          "b0001"
+        ],
+        "confidence": 0.98,
+        "method": "code_exact_match",
+        "value_match": "exact",
+        "contradiction": false,
+        "reason": "Normalized field value appears in the evidence block."
+      }
+    },
+    {
+      "field_id": "F00018",
+      "section": "alloys",
+      "path": "alloys.alloy_fe28mn10al1c.aliases[0]",
+      "value": "Fe-28Mn-10Al-1C",
+      "support": {
+        "support_label": "explicit_supported",
+        "evidence_refs": [
+          "b0012"
+        ],
+        "confidence": 0.98,
+        "method": "code_exact_match",
+        "value_match": "exact",
+        "contradiction": false,
+        "reason": "Normalized field value appears in the evidence block."
+      }
+    },
+    {
+      "field_id": "F00019",
+      "section": "alloys",
+      "path": "alloys.alloy_fe28mn10al1c.alloy_id",
+      "value": "alloy_fe28mn10al1c",
+      "support": {
+        "support_label": "weak_supported",
+        "evidence_refs": [
+          "b0001"
+        ],
+        "confidence": 0.35,
+        "method": "code_from_llm_bucket_evidence",
+        "value_match": "context",
+        "contradiction": false,
+        "reason": "Identifier is linked to evidence through the surrounding record context."
+      }
+    },
+    {
+      "field_id": "F00020",
+      "section": "alloys",
+      "path": "alloys.alloy_fe28mn10al1c.alloy_name",
+      "value": "0Cu steel",
+      "support": {
+        "support_label": "explicit_supported",
+        "evidence_refs": [
+          "b0012"
+        ],
+        "confidence": 0.98,
+        "method": "code_exact_match",
+        "value_match": "exact",
+        "contradiction": false,
+        "reason": "Normalized field value appears in the evidence block."
+      }
+    },
+    {
+      "field_id": "F00021",
+      "section": "alloys",
+      "path": "alloys.alloy_fe28mn10al1c.alloying_elements[0]",
+      "value": "Mn",
+      "support": {
+        "support_label": "explicit_supported",
+        "evidence_refs": [
+          "b0012"
+        ],
+        "confidence": 0.98,
+        "method": "code_exact_match",
+        "value_match": "exact",
+        "contradiction": false,
+        "reason": "Normalized field value appears in the evidence block."
+      }
+    },
+    {
+      "field_id": "F00022",
+      "section": "alloys",
+      "path": "alloys.alloy_fe28mn10al1c.alloying_elements[1]",
+      "value": "Al",
+      "support": {
+        "support_label": "explicit_supported",
+        "evidence_refs": [
+          "b0012"
+        ],
+        "confidence": 0.98,
+        "method": "code_exact_match",
+        "value_match": "exact",
+        "contradiction": false,
+        "reason": "Normalized field value appears in the evidence block."
+      }
+    },
+    {
+      "field_id": "F00023",
+      "section": "alloys",
+      "path": "alloys.alloy_fe28mn10al1c.alloying_elements[2]",
+      "value": "C",
+      "support": {
+        "support_label": "explicit_supported",
+        "evidence_refs": [
+          "b0012"
+        ],
+        "confidence": 0.98,
+        "method": "code_exact_match",
+        "value_match": "exact",
+        "contradiction": false,
+        "reason": "Normalized field value appears in the evidence block."
+      }
+    },
+    {
+      "field_id": "F00024",
+      "section": "alloys",
+      "path": "alloys.alloy_fe28mn10al1c.alloys_notes",
+      "value": "Austenitic low-density steel without Cu addition.",
+      "support": {
+        "support_label": "weak_supported",
+        "evidence_refs": [
+          "b0001"
+        ],
+        "confidence": 0.35,
+        "method": "code_from_llm_bucket_evidence",
+        "value_match": "context",
+        "contradiction": false,
+        "reason": "Relevant context was recalled, but the exact field value was not confirmed."
+      }
+    },
+    {
+      "field_id": "F00025",
+      "section": "alloys",
+      "path": "alloys.alloy_fe28mn10al1c.base_element",
+      "value": "Fe",
+      "support": {
+        "support_label": "explicit_supported",
+        "evidence_refs": [
+          "b0012"
+        ],
+        "confidence": 0.98,
+        "method": "code_exact_match",
+        "value_match": "exact",
+        "contradiction": false,
+        "reason": "Normalized field value appears in the evidence block."
+      }
+    },
+    {
+      "field_id": "F00026",
+      "section": "alloys",
+      "path": "alloys.alloy_fe28mn10al1c.nominal_composition[al].element",
+      "value": "Al",
+      "support": {
+        "support_label": "explicit_supported",
+        "evidence_refs": [
+          "b0012"
+        ],
+        "confidence": 0.98,
+        "method": "code_exact_match",
+        "value_match": "exact",
+        "contradiction": false,
+        "reason": "Normalized field value appears in the evidence block."
+      }
+    },
+    {
+      "field_id": "F00027",
+      "section": "alloys",
+      "path": "alloys.alloy_fe28mn10al1c.nominal_composition[al].weight_percent",
+      "value": "10",
+      "support": {
+        "support_label": "explicit_supported",
+        "evidence_refs": [
+          "b0012"
+        ],
+        "confidence": 0.98,
+        "method": "code_exact_match",
+        "value_match": "exact",
+        "contradiction": false,
+        "reason": "Normalized field value appears in the evidence block."
+      }
+    },
+    {
+      "field_id": "F00028",
+      "section": "alloys",
+      "path": "alloys.alloy_fe28mn10al1c.nominal_composition[c].element",
+      "value": "C",
+      "support": {
+        "support_label": "explicit_supported",
+        "evidence_refs": [
+          "b0012"
+        ],
+        "confidence": 0.98,
+        "method": "code_exact_match",
+        "value_match": "exact",
+        "contradiction": false,
+        "reason": "Normalized field value appears in the evidence block."
+      }
+    },
+    {
+      "field_id": "F00029",
+      "section": "alloys",
+      "path": "alloys.alloy_fe28mn10al1c.nominal_composition[c].weight_percent",
+      "value": "1",
+      "support": {
+        "support_label": "explicit_supported",
+        "evidence_refs": [
+          "b0012"
+        ],
+        "confidence": 0.98,
+        "method": "code_exact_match",
+        "value_match": "exact",
+        "contradiction": false,
+        "reason": "Normalized field value appears in the evidence block."
+      }
+    },
+    {
+      "field_id": "F00030",
+      "section": "alloys",
+      "path": "alloys.alloy_fe28mn10al1c.nominal_composition[mn].element",
+      "value": "Mn",
+      "support": {
+        "support_label": "explicit_supported",
+        "evidence_refs": [
+          "b0012"
+        ],
+        "confidence": 0.98,
+        "method": "code_exact_match",
+        "value_match": "exact",
+        "contradiction": false,
+        "reason": "Normalized field value appears in the evidence block."
+      }
+    },
+    {
+      "field_id": "F00031",
+      "section": "alloys",
+      "path": "alloys.alloy_fe28mn10al1c.nominal_composition[mn].weight_percent",
+      "value": "28",
+      "support": {
+        "support_label": "explicit_supported",
+        "evidence_refs": [
+          "b0012"
+        ],
+        "confidence": 0.98,
+        "method": "code_exact_match",
+        "value_match": "exact",
+        "contradiction": false,
+        "reason": "Normalized field value appears in the evidence block."
+      }
+    },
+    {
+      "field_id": "F00032",
+      "section": "alloys",
+      "path": "alloys.alloy_fe28mn10al1c.paper_id",
+      "value": "10.1016_j.matlet.2024.136522",
+      "support": {
+        "support_label": "weak_supported",
+        "evidence_refs": [
+          "b0001"
+        ],
+        "confidence": 0.35,
+        "method": "code_from_llm_bucket_evidence",
+        "value_match": "context",
+        "contradiction": false,
+        "reason": "Identifier is linked to evidence through the surrounding record context."
+      }
+    },
+    {
+      "field_id": "F00033",
+      "section": "alloys",
+      "path": "alloys.alloy_fe28mn10al1c3cu.aliases[0]",
+      "value": "Fe-28Mn-10Al-1C-3Cu",
+      "support": {
+        "support_label": "explicit_supported",
+        "evidence_refs": [
+          "b0008"
+        ],
+        "confidence": 0.98,
+        "method": "code_exact_match",
+        "value_match": "exact",
+        "contradiction": false,
+        "reason": "Normalized field value appears in the evidence block."
+      }
+    },
+    {
+      "field_id": "F00034",
+      "section": "alloys",
+      "path": "alloys.alloy_fe28mn10al1c3cu.alloy_id",
+      "value": "alloy_fe28mn10al1c3cu",
+      "support": {
+        "support_label": "weak_supported",
+        "evidence_refs": [
+          "b0001"
+        ],
+        "confidence": 0.35,
+        "method": "code_from_llm_bucket_evidence",
+        "value_match": "context",
+        "contradiction": false,
+        "reason": "Identifier is linked to evidence through the surrounding record context."
+      }
+    },
+    {
+      "field_id": "F00035",
+      "section": "alloys",
+      "path": "alloys.alloy_fe28mn10al1c3cu.alloy_name",
+      "value": "3Cu steel",
+      "support": {
+        "support_label": "explicit_supported",
+        "evidence_refs": [
+          "b0012"
+        ],
+        "confidence": 0.98,
+        "method": "code_exact_match",
+        "value_match": "exact",
+        "contradiction": false,
+        "reason": "Normalized field value appears in the evidence block."
+      }
+    },
+    {
+      "field_id": "F00036",
+      "section": "alloys",
+      "path": "alloys.alloy_fe28mn10al1c3cu.alloying_elements[0]",
+      "value": "Mn",
+      "support": {
+        "support_label": "explicit_supported",
+        "evidence_refs": [
+          "b0012"
+        ],
+        "confidence": 0.98,
+        "method": "code_exact_match",
+        "value_match": "exact",
+        "contradiction": false,
+        "reason": "Normalized field value appears in the evidence block."
+      }
+    },
+    {
+      "field_id": "F00037",
+      "section": "alloys",
+      "path": "alloys.alloy_fe28mn10al1c3cu.alloying_elements[1]",
+      "value": "Al",
+      "support": {
+        "support_label": "explicit_supported",
+        "evidence_refs": [
+          "b0012"
+        ],
+        "confidence": 0.98,
+        "method": "code_exact_match",
+        "value_match": "exact",
+        "contradiction": false,
+        "reason": "Normalized field value appears in the evidence block."
+      }
+    },
+    {
+      "field_id": "F00038",
+      "section": "alloys",
+      "path": "alloys.alloy_fe28mn10al1c3cu.alloying_elements[2]",
+      "value": "C",
+      "support": {
+        "support_label": "explicit_supported",
+        "evidence_refs": [
+          "b0012"
+        ],
+        "confidence": 0.98,
+        "method": "code_exact_match",
+        "value_match": "exact",
+        "contradiction": false,
+        "reason": "Normalized field value appears in the evidence block."
+      }
+    },
+    {
+      "field_id": "F00039",
+      "section": "alloys",
+      "path": "alloys.alloy_fe28mn10al1c3cu.alloying_elements[3]",
+      "value": "Cu",
+      "support": {
+        "support_label": "explicit_supported",
+        "evidence_refs": [
+          "b0012"
+        ],
+        "confidence": 0.98,
+        "method": "code_exact_match",
+        "value_match": "exact",
+        "contradiction": false,
+        "reason": "Normalized field value appears in the evidence block."
+      }
+    },
+    {
+      "field_id": "F00040",
+      "section": "alloys",
+      "path": "alloys.alloy_fe28mn10al1c3cu.alloys_notes",
+      "value": "Austenitic low-density steel with 3 wt% Cu addition.",
+      "support": {
+        "support_label": "weak_supported",
+        "evidence_refs": [
+          "b0001"
+        ],
+        "confidence": 0.35,
+        "method": "code_from_llm_bucket_evidence",
+        "value_match": "context",
+        "contradiction": false,
+        "reason": "Relevant context was recalled, but the exact field value was not confirmed."
+      }
+    },
+    {
+      "field_id": "F00041",
+      "section": "alloys",
+      "path": "alloys.alloy_fe28mn10al1c3cu.base_element",
+      "value": "Fe",
+      "support": {
+        "support_label": "explicit_supported",
+        "evidence_refs": [
+          "b0012"
+        ],
+        "confidence": 0.98,
+        "method": "code_exact_match",
+        "value_match": "exact",
+        "contradiction": false,
+        "reason": "Normalized field value appears in the evidence block."
+      }
+    },
+    {
+      "field_id": "F00042",
+      "section": "alloys",
+      "path": "alloys.alloy_fe28mn10al1c3cu.nominal_composition[al].element",
+      "value": "Al",
+      "support": {
+        "support_label": "explicit_supported",
+        "evidence_refs": [
+          "b0012"
+        ],
+        "confidence": 0.98,
+        "method": "code_exact_match",
+        "value_match": "exact",
+        "contradiction": false,
+        "reason": "Normalized field value appears in the evidence block."
+      }
+    },
+    {
+      "field_id": "F00043",
+      "section": "alloys",
+      "path": "alloys.alloy_fe28mn10al1c3cu.nominal_composition[al].weight_percent",
+      "value": "10",
+      "support": {
+        "support_label": "explicit_supported",
+        "evidence_refs": [
+          "b0012"
+        ],
+        "confidence": 0.98,
+        "method": "code_exact_match",
+        "value_match": "exact",
+        "contradiction": false,
+        "reason": "Normalized field value appears in the evidence block."
+      }
+    },
+    {
+      "field_id": "F00044",
+      "section": "alloys",
+      "path": "alloys.alloy_fe28mn10al1c3cu.nominal_composition[c].element",
+      "value": "C",
+      "support": {
+        "support_label": "explicit_supported",
+        "evidence_refs": [
+          "b0012"
+        ],
+        "confidence": 0.98,
+        "method": "code_exact_match",
+        "value_match": "exact",
+        "contradiction": false,
+        "reason": "Normalized field value appears in the evidence block."
+      }
+    },
+    {
+      "field_id": "F00045",
+      "section": "alloys",
+      "path": "alloys.alloy_fe28mn10al1c3cu.nominal_composition[c].weight_percent",
+      "value": "1",
+      "support": {
+        "support_label": "explicit_supported",
+        "evidence_refs": [
+          "b0012"
+        ],
+        "confidence": 0.98,
+        "method": "code_exact_match",
+        "value_match": "exact",
+        "contradiction": false,
+        "reason": "Normalized field value appears in the evidence block."
+      }
+    },
+    {
+      "field_id": "F00046",
+      "section": "alloys",
+      "path": "alloys.alloy_fe28mn10al1c3cu.nominal_composition[cu].element",
+      "value": "Cu",
+      "support": {
+        "support_label": "explicit_supported",
+        "evidence_refs": [
+          "b0012"
+        ],
+        "confidence": 0.98,
+        "method": "code_exact_match",
+        "value_match": "exact",
+        "contradiction": false,
+        "reason": "Normalized field value appears in the evidence block."
+      }
+    },
+    {
+      "field_id": "F00047",
+      "section": "alloys",
+      "path": "alloys.alloy_fe28mn10al1c3cu.nominal_composition[cu].weight_percent",
+      "value": "3",
+      "support": {
+        "support_label": "explicit_supported",
+        "evidence_refs": [
+          "b0012"
+        ],
+        "confidence": 0.98,
+        "method": "code_exact_match",
+        "value_match": "exact",
+        "contradiction": false,
+        "reason": "Normalized field value appears in the evidence block."
+      }
+    },
+    {
+      "field_id": "F00048",
+      "section": "alloys",
+      "path": "alloys.alloy_fe28mn10al1c3cu.nominal_composition[mn].element",
+      "value": "Mn",
+      "support": {
+        "support_label": "explicit_supported",
+        "evidence_refs": [
+          "b0012"
+        ],
+        "confidence": 0.98,
+        "method": "code_exact_match",
+        "value_match": "exact",
+        "contradiction": false,
+        "reason": "Normalized field value appears in the evidence block."
+      }
+    },
+    {
+      "field_id": "F00049",
+      "section": "alloys",
+      "path": "alloys.alloy_fe28mn10al1c3cu.nominal_composition[mn].weight_percent",
+      "value": "28",
+      "support": {
+        "support_label": "explicit_supported",
+        "evidence_refs": [
+          "b0012"
+        ],
+        "confidence": 0.98,
+        "method": "code_exact_match",
+        "value_match": "exact",
+        "contradiction": false,
+        "reason": "Normalized field value appears in the evidence block."
+      }
+    },
+    {
+      "field_id": "F00050",
+      "section": "alloys",
+      "path": "alloys.alloy_fe28mn10al1c3cu.paper_id",
+      "value": "10.1016_j.matlet.2024.136522",
+      "support": {
+        "support_label": "weak_supported",
+        "evidence_refs": [
+          "b0001"
+        ],
+        "confidence": 0.35,
+        "method": "code_from_llm_bucket_evidence",
+        "value_match": "context",
+        "contradiction": false,
+        "reason": "Identifier is linked to evidence through the surrounding record context."
+      }
+    },
+    {
+      "field_id": "F00051",
+      "section": "processes",
+      "path": "processes.proc_solution_aging.description",
+      "value": "Solution treatment at 1000℃ for 1 h followed by aging treatment at 550℃ for 3 h.",
+      "support": {
+        "support_label": "weak_supported",
+        "evidence_refs": [
+          "b0001"
+        ],
+        "confidence": 0.35,
+        "method": "code_from_llm_bucket_evidence",
+        "value_match": "context",
+        "contradiction": false,
+        "reason": "Relevant context was recalled, but the exact field value was not confirmed."
+      }
+    },
+    {
+      "field_id": "F00052",
+      "section": "processes",
+      "path": "processes.proc_solution_aging.paper_id",
+      "value": "10.1016_j.matlet.2024.136522",
+      "support": {
+        "support_label": "weak_supported",
+        "evidence_refs": [
+          "b0001"
+        ],
+        "confidence": 0.35,
+        "method": "code_from_llm_bucket_evidence",
+        "value_match": "context",
+        "contradiction": false,
+        "reason": "Identifier is linked to evidence through the surrounding record context."
+      }
+    },
+    {
+      "field_id": "F00053",
+      "section": "processes",
+      "path": "processes.proc_solution_aging.process_id",
+      "value": "proc_solution_aging",
+      "support": {
+        "support_label": "weak_supported",
+        "evidence_refs": [
+          "b0001"
+        ],
+        "confidence": 0.35,
+        "method": "code_from_llm_bucket_evidence",
+        "value_match": "context",
+        "contradiction": false,
+        "reason": "Identifier is linked to evidence through the surrounding record context."
+      }
+    },
+    {
+      "field_id": "F00054",
+      "section": "processes",
+      "path": "processes.proc_solution_aging.processes_notes",
+      "value": "Applied to both 0Cu and 3Cu steels.",
+      "support": {
+        "support_label": "weak_supported",
+        "evidence_refs": [
+          "b0001"
+        ],
+        "confidence": 0.35,
+        "method": "code_from_llm_bucket_evidence",
+        "value_match": "context",
+        "contradiction": false,
+        "reason": "Relevant context was recalled, but the exact field value was not confirmed."
+      }
+    },
+    {
+      "field_id": "F00055",
+      "section": "samples",
+      "path": "samples.sample_0cu_sol_aged__idx_0.alloy_id",
+      "value": "alloy_fe28mn10al1c",
+      "sample_id": "sample_0cu_sol_aged",
+      "support": {
+        "support_label": "weak_supported",
+        "evidence_refs": [
+          "b0012"
+        ],
+        "confidence": 0.35,
+        "method": "code_from_llm_bucket_evidence",
+        "value_match": "context",
+        "contradiction": false,
+        "reason": "Identifier is linked to evidence through the surrounding record context."
+      }
+    },
+    {
+      "field_id": "F00056",
+      "section": "samples",
+      "path": "samples.sample_0cu_sol_aged__idx_0.paper_id",
+      "value": "10.1016_j.matlet.2024.136522",
+      "sample_id": "sample_0cu_sol_aged",
+      "support": {
+        "support_label": "weak_supported",
+        "evidence_refs": [
+          "b0012"
+        ],
+        "confidence": 0.35,
+        "method": "code_from_llm_bucket_evidence",
+        "value_match": "context",
+        "contradiction": false,
+        "reason": "Identifier is linked to evidence through the surrounding record context."
+      }
+    },
+    {
+      "field_id": "F00057",
+      "section": "samples",
+      "path": "samples.sample_0cu_sol_aged__idx_0.process_id",
+      "value": "proc_solution_aging",
+      "sample_id": "sample_0cu_sol_aged",
+      "support": {
+        "support_label": "weak_supported",
+        "evidence_refs": [
+          "b0012"
+        ],
+        "confidence": 0.35,
+        "method": "code_from_llm_bucket_evidence",
+        "value_match": "context",
+        "contradiction": false,
+        "reason": "Identifier is linked to evidence through the surrounding record context."
+      }
+    },
+    {
+      "field_id": "F00058",
+      "section": "samples",
+      "path": "samples.sample_0cu_sol_aged__idx_0.sample_id",
+      "value": "sample_0cu_sol_aged",
+      "sample_id": "sample_0cu_sol_aged",
+      "support": {
+        "support_label": "weak_supported",
+        "evidence_refs": [
+          "b0012"
+        ],
+        "confidence": 0.35,
+        "method": "code_from_llm_bucket_evidence",
+        "value_match": "context",
+        "contradiction": false,
+        "reason": "Identifier is linked to evidence through the surrounding record context."
+      }
+    },
+    {
+      "field_id": "F00059",
+      "section": "samples",
+      "path": "samples.sample_3cu_sol_aged__idx_1.alloy_id",
+      "value": "alloy_fe28mn10al1c3cu",
+      "sample_id": "sample_3cu_sol_aged",
+      "support": {
+        "support_label": "weak_supported",
+        "evidence_refs": [
+          "b0012"
+        ],
+        "confidence": 0.35,
+        "method": "code_from_llm_bucket_evidence",
+        "value_match": "context",
+        "contradiction": false,
+        "reason": "Identifier is linked to evidence through the surrounding record context."
+      }
+    },
+    {
+      "field_id": "F00060",
+      "section": "samples",
+      "path": "samples.sample_3cu_sol_aged__idx_1.paper_id",
+      "value": "10.1016_j.matlet.2024.136522",
+      "sample_id": "sample_3cu_sol_aged",
+      "support": {
+        "support_label": "weak_supported",
+        "evidence_refs": [
+          "b0012"
+        ],
+        "confidence": 0.35,
+        "method": "code_from_llm_bucket_evidence",
+        "value_match": "context",
+        "contradiction": false,
+        "reason": "Identifier is linked to evidence through the surrounding record context."
+      }
+    },
+    {
+      "field_id": "F00061",
+      "section": "samples",
+      "path": "samples.sample_3cu_sol_aged__idx_1.process_id",
+      "value": "proc_solution_aging",
+      "sample_id": "sample_3cu_sol_aged",
+      "support": {
+        "support_label": "weak_supported",
+        "evidence_refs": [
+          "b0012"
+        ],
+        "confidence": 0.35,
+        "method": "code_from_llm_bucket_evidence",
+        "value_match": "context",
+        "contradiction": false,
+        "reason": "Identifier is linked to evidence through the surrounding record context."
+      }
+    },
+    {
+      "field_id": "F00062",
+      "section": "samples",
+      "path": "samples.sample_3cu_sol_aged__idx_1.sample_id",
+      "value": "sample_3cu_sol_aged",
+      "sample_id": "sample_3cu_sol_aged",
+      "support": {
+        "support_label": "weak_supported",
+        "evidence_refs": [
+          "b0012"
+        ],
+        "confidence": 0.35,
+        "method": "code_from_llm_bucket_evidence",
+        "value_match": "context",
+        "contradiction": false,
+        "reason": "Identifier is linked to evidence through the surrounding record context."
+      }
+    },
+    {
+      "field_id": "F00063",
+      "section": "processing_steps",
+      "path": "processing_steps.sample_0cu_sol_aged__sequence_1.duration",
+      "value": "1 h",
+      "sample_id": "sample_0cu_sol_aged",
+      "support": {
+        "support_label": "explicit_supported",
+        "evidence_refs": [
+          "b0012"
+        ],
+        "confidence": 0.98,
+        "method": "code_exact_match",
+        "value_match": "exact",
+        "contradiction": false,
+        "reason": "Normalized field value appears in the evidence block."
+      }
+    },
+    {
+      "field_id": "F00064",
+      "section": "processing_steps",
+      "path": "processing_steps.sample_0cu_sol_aged__sequence_1.method",
+      "value": "solution treatment",
+      "sample_id": "sample_0cu_sol_aged",
+      "support": {
+        "support_label": "explicit_supported",
+        "evidence_refs": [
+          "b0012"
+        ],
+        "confidence": 0.98,
+        "method": "code_exact_match",
+        "value_match": "exact",
+        "contradiction": false,
+        "reason": "Normalized field value appears in the evidence block."
+      }
+    },
+    {
+      "field_id": "F00065",
+      "section": "processing_steps",
+      "path": "processing_steps.sample_0cu_sol_aged__sequence_1.paper_id",
+      "value": "10.1016_j.matlet.2024.136522",
+      "sample_id": "sample_0cu_sol_aged",
+      "support": {
+        "support_label": "weak_supported",
+        "evidence_refs": [
+          "b0012"
+        ],
+        "confidence": 0.35,
+        "method": "code_from_llm_bucket_evidence",
+        "value_match": "context",
+        "contradiction": false,
+        "reason": "Identifier is linked to evidence through the surrounding record context."
+      }
+    },
+    {
+      "field_id": "F00066",
+      "section": "processing_steps",
+      "path": "processing_steps.sample_0cu_sol_aged__sequence_1.sample_id",
+      "value": "sample_0cu_sol_aged",
+      "sample_id": "sample_0cu_sol_aged",
+      "support": {
+        "support_label": "weak_supported",
+        "evidence_refs": [
+          "b0012"
+        ],
+        "confidence": 0.35,
+        "method": "code_from_llm_bucket_evidence",
+        "value_match": "context",
+        "contradiction": false,
+        "reason": "Identifier is linked to evidence through the surrounding record context."
+      }
+    },
+    {
+      "field_id": "F00067",
+      "section": "processing_steps",
+      "path": "processing_steps.sample_0cu_sol_aged__sequence_1.sequence",
+      "value": "1",
+      "sample_id": "sample_0cu_sol_aged",
+      "support": {
+        "support_label": "explicit_supported",
+        "evidence_refs": [
+          "b0012"
+        ],
+        "confidence": 0.98,
+        "method": "code_exact_match",
+        "value_match": "exact",
+        "contradiction": false,
+        "reason": "Normalized field value appears in the evidence block."
+      }
+    },
+    {
+      "field_id": "F00068",
+      "section": "processing_steps",
+      "path": "processing_steps.sample_0cu_sol_aged__sequence_1.temperature",
+      "value": "1000",
+      "sample_id": "sample_0cu_sol_aged",
+      "support": {
+        "support_label": "explicit_supported",
+        "evidence_refs": [
+          "b0012"
+        ],
+        "confidence": 0.98,
+        "method": "code_exact_match",
+        "value_match": "exact",
+        "contradiction": false,
+        "reason": "Normalized field value appears in the evidence block."
+      }
+    },
+    {
+      "field_id": "F00069",
+      "section": "processing_steps",
+      "path": "processing_steps.sample_0cu_sol_aged__sequence_1.type",
+      "value": "heat_treatment",
+      "sample_id": "sample_0cu_sol_aged",
+      "support": {
+        "support_label": "weak_supported",
+        "evidence_refs": [
+          "b0012"
+        ],
+        "confidence": 0.35,
+        "method": "code_from_llm_bucket_evidence",
+        "value_match": "context",
+        "contradiction": false,
+        "reason": "Relevant context was recalled, but the exact field value was not confirmed."
+      }
+    },
+    {
+      "field_id": "F00070",
+      "section": "processing_steps",
+      "path": "processing_steps.sample_0cu_sol_aged__sequence_1.unit",
+      "value": "°C",
+      "sample_id": "sample_0cu_sol_aged",
+      "support": {
+        "support_label": "explicit_supported",
+        "evidence_refs": [
+          "b0012"
+        ],
+        "confidence": 0.98,
+        "method": "code_exact_match",
+        "value_match": "exact",
+        "contradiction": false,
+        "reason": "Normalized field value appears in the evidence block."
+      }
+    },
+    {
+      "field_id": "F00071",
+      "section": "processing_steps",
+      "path": "processing_steps.sample_0cu_sol_aged__sequence_2.duration",
+      "value": "3 h",
+      "sample_id": "sample_0cu_sol_aged",
+      "support": {
+        "support_label": "explicit_supported",
+        "evidence_refs": [
+          "b0012"
+        ],
+        "confidence": 0.98,
+        "method": "code_exact_match",
+        "value_match": "exact",
+        "contradiction": false,
+        "reason": "Normalized field value appears in the evidence block."
+      }
+    },
+    {
+      "field_id": "F00072",
+      "section": "processing_steps",
+      "path": "processing_steps.sample_0cu_sol_aged__sequence_2.method",
+      "value": "aging",
+      "sample_id": "sample_0cu_sol_aged",
+      "support": {
+        "support_label": "explicit_supported",
+        "evidence_refs": [
+          "b0012"
+        ],
+        "confidence": 0.98,
+        "method": "code_exact_match",
+        "value_match": "exact",
+        "contradiction": false,
+        "reason": "Normalized field value appears in the evidence block."
+      }
+    },
+    {
+      "field_id": "F00073",
+      "section": "processing_steps",
+      "path": "processing_steps.sample_0cu_sol_aged__sequence_2.paper_id",
+      "value": "10.1016_j.matlet.2024.136522",
+      "sample_id": "sample_0cu_sol_aged",
+      "support": {
+        "support_label": "weak_supported",
+        "evidence_refs": [
+          "b0012"
+        ],
+        "confidence": 0.35,
+        "method": "code_from_llm_bucket_evidence",
+        "value_match": "context",
+        "contradiction": false,
+        "reason": "Identifier is linked to evidence through the surrounding record context."
+      }
+    },
+    {
+      "field_id": "F00074",
+      "section": "processing_steps",
+      "path": "processing_steps.sample_0cu_sol_aged__sequence_2.sample_id",
+      "value": "sample_0cu_sol_aged",
+      "sample_id": "sample_0cu_sol_aged",
+      "support": {
+        "support_label": "weak_supported",
+        "evidence_refs": [
+          "b0012"
+        ],
+        "confidence": 0.35,
+        "method": "code_from_llm_bucket_evidence",
+        "value_match": "context",
+        "contradiction": false,
+        "reason": "Identifier is linked to evidence through the surrounding record context."
+      }
+    },
+    {
+      "field_id": "F00075",
+      "section": "processing_steps",
+      "path": "processing_steps.sample_0cu_sol_aged__sequence_2.sequence",
+      "value": "2",
+      "sample_id": "sample_0cu_sol_aged",
+      "support": {
+        "support_label": "explicit_supported",
+        "evidence_refs": [
+          "b0011"
+        ],
+        "confidence": 0.98,
+        "method": "code_exact_match",
+        "value_match": "exact",
+        "contradiction": false,
+        "reason": "Normalized field value appears in the evidence block."
+      }
+    },
+    {
+      "field_id": "F00076",
+      "section": "processing_steps",
+      "path": "processing_steps.sample_0cu_sol_aged__sequence_2.temperature",
+      "value": "550",
+      "sample_id": "sample_0cu_sol_aged",
+      "support": {
+        "support_label": "explicit_supported",
+        "evidence_refs": [
+          "b0012"
+        ],
+        "confidence": 0.98,
+        "method": "code_exact_match",
+        "value_match": "exact",
+        "contradiction": false,
+        "reason": "Normalized field value appears in the evidence block."
+      }
+    },
+    {
+      "field_id": "F00077",
+      "section": "processing_steps",
+      "path": "processing_steps.sample_0cu_sol_aged__sequence_2.type",
+      "value": "heat_treatment",
+      "sample_id": "sample_0cu_sol_aged",
+      "support": {
+        "support_label": "weak_supported",
+        "evidence_refs": [
+          "b0012"
+        ],
+        "confidence": 0.35,
+        "method": "code_from_llm_bucket_evidence",
+        "value_match": "context",
+        "contradiction": false,
+        "reason": "Relevant context was recalled, but the exact field value was not confirmed."
+      }
+    },
+    {
+      "field_id": "F00078",
+      "section": "processing_steps",
+      "path": "processing_steps.sample_0cu_sol_aged__sequence_2.unit",
+      "value": "°C",
+      "sample_id": "sample_0cu_sol_aged",
+      "support": {
+        "support_label": "explicit_supported",
+        "evidence_refs": [
+          "b0012"
+        ],
+        "confidence": 0.98,
+        "method": "code_exact_match",
+        "value_match": "exact",
+        "contradiction": false,
+        "reason": "Normalized field value appears in the evidence block."
+      }
+    },
+    {
+      "field_id": "F00079",
+      "section": "processing_steps",
+      "path": "processing_steps.sample_3cu_sol_aged__sequence_1.duration",
+      "value": "1 h",
+      "sample_id": "sample_3cu_sol_aged",
+      "support": {
+        "support_label": "explicit_supported",
+        "evidence_refs": [
+          "b0012"
+        ],
+        "confidence": 0.98,
+        "method": "code_exact_match",
+        "value_match": "exact",
+        "contradiction": false,
+        "reason": "Normalized field value appears in the evidence block."
+      }
+    },
+    {
+      "field_id": "F00080",
+      "section": "processing_steps",
+      "path": "processing_steps.sample_3cu_sol_aged__sequence_1.method",
+      "value": "solution treatment",
+      "sample_id": "sample_3cu_sol_aged",
+      "support": {
+        "support_label": "explicit_supported",
+        "evidence_refs": [
+          "b0015"
+        ],
+        "confidence": 0.98,
+        "method": "code_exact_match",
+        "value_match": "exact",
+        "contradiction": false,
+        "reason": "Normalized field value appears in the evidence block."
+      }
+    },
+    {
+      "field_id": "F00081",
+      "section": "processing_steps",
+      "path": "processing_steps.sample_3cu_sol_aged__sequence_1.paper_id",
+      "value": "10.1016_j.matlet.2024.136522",
+      "sample_id": "sample_3cu_sol_aged",
+      "support": {
+        "support_label": "weak_supported",
+        "evidence_refs": [
+          "b0012"
+        ],
+        "confidence": 0.35,
+        "method": "code_from_llm_bucket_evidence",
+        "value_match": "context",
+        "contradiction": false,
+        "reason": "Identifier is linked to evidence through the surrounding record context."
+      }
+    },
+    {
+      "field_id": "F00082",
+      "section": "processing_steps",
+      "path": "processing_steps.sample_3cu_sol_aged__sequence_1.sample_id",
+      "value": "sample_3cu_sol_aged",
+      "sample_id": "sample_3cu_sol_aged",
+      "support": {
+        "support_label": "weak_supported",
+        "evidence_refs": [
+          "b0012"
+        ],
+        "confidence": 0.35,
+        "method": "code_from_llm_bucket_evidence",
+        "value_match": "context",
+        "contradiction": false,
+        "reason": "Identifier is linked to evidence through the surrounding record context."
+      }
+    },
+    {
+      "field_id": "F00083",
+      "section": "processing_steps",
+      "path": "processing_steps.sample_3cu_sol_aged__sequence_1.sequence",
+      "value": "1",
+      "sample_id": "sample_3cu_sol_aged",
+      "support": {
+        "support_label": "explicit_supported",
+        "evidence_refs": [
+          "b0008"
+        ],
+        "confidence": 0.98,
+        "method": "code_exact_match",
+        "value_match": "exact",
+        "contradiction": false,
+        "reason": "Normalized field value appears in the evidence block."
+      }
+    },
+    {
+      "field_id": "F00084",
+      "section": "processing_steps",
+      "path": "processing_steps.sample_3cu_sol_aged__sequence_1.temperature",
+      "value": "1000",
+      "sample_id": "sample_3cu_sol_aged",
+      "support": {
+        "support_label": "explicit_supported",
+        "evidence_refs": [
+          "b0012"
+        ],
+        "confidence": 0.98,
+        "method": "code_exact_match",
+        "value_match": "exact",
+        "contradiction": false,
+        "reason": "Normalized field value appears in the evidence block."
+      }
+    },
+    {
+      "field_id": "F00085",
+      "section": "processing_steps",
+      "path": "processing_steps.sample_3cu_sol_aged__sequence_1.type",
+      "value": "heat_treatment",
+      "sample_id": "sample_3cu_sol_aged",
+      "support": {
+        "support_label": "weak_supported",
+        "evidence_refs": [
+          "b0012"
+        ],
+        "confidence": 0.35,
+        "method": "code_from_llm_bucket_evidence",
+        "value_match": "context",
+        "contradiction": false,
+        "reason": "Relevant context was recalled, but the exact field value was not confirmed."
+      }
+    },
+    {
+      "field_id": "F00086",
+      "section": "processing_steps",
+      "path": "processing_steps.sample_3cu_sol_aged__sequence_1.unit",
+      "value": "°C",
+      "sample_id": "sample_3cu_sol_aged",
+      "support": {
+        "support_label": "explicit_supported",
+        "evidence_refs": [
+          "b0008"
+        ],
+        "confidence": 0.98,
+        "method": "code_exact_match",
+        "value_match": "exact",
+        "contradiction": false,
+        "reason": "Normalized field value appears in the evidence block."
+      }
+    },
+    {
+      "field_id": "F00087",
+      "section": "processing_steps",
+      "path": "processing_steps.sample_3cu_sol_aged__sequence_2.duration",
+      "value": "3 h",
+      "sample_id": "sample_3cu_sol_aged",
+      "support": {
+        "support_label": "explicit_supported",
+        "evidence_refs": [
+          "b0012"
+        ],
+        "confidence": 0.98,
+        "method": "code_exact_match",
+        "value_match": "exact",
+        "contradiction": false,
+        "reason": "Normalized field value appears in the evidence block."
+      }
+    },
+    {
+      "field_id": "F00088",
+      "section": "processing_steps",
+      "path": "processing_steps.sample_3cu_sol_aged__sequence_2.method",
+      "value": "aging",
+      "sample_id": "sample_3cu_sol_aged",
+      "support": {
+        "support_label": "explicit_supported",
+        "evidence_refs": [
+          "b0029"
+        ],
+        "confidence": 0.98,
+        "method": "code_exact_match",
+        "value_match": "exact",
+        "contradiction": false,
+        "reason": "Normalized field value appears in the evidence block."
+      }
+    },
+    {
+      "field_id": "F00089",
+      "section": "processing_steps",
+      "path": "processing_steps.sample_3cu_sol_aged__sequence_2.paper_id",
+      "value": "10.1016_j.matlet.2024.136522",
+      "sample_id": "sample_3cu_sol_aged",
+      "support": {
+        "support_label": "weak_supported",
+        "evidence_refs": [
+          "b0012"
+        ],
+        "confidence": 0.35,
+        "method": "code_from_llm_bucket_evidence",
+        "value_match": "context",
+        "contradiction": false,
+        "reason": "Identifier is linked to evidence through the surrounding record context."
+      }
+    },
+    {
+      "field_id": "F00090",
+      "section": "processing_steps",
+      "path": "processing_steps.sample_3cu_sol_aged__sequence_2.sample_id",
+      "value": "sample_3cu_sol_aged",
+      "sample_id": "sample_3cu_sol_aged",
+      "support": {
+        "support_label": "weak_supported",
+        "evidence_refs": [
+          "b0012"
+        ],
+        "confidence": 0.35,
+        "method": "code_from_llm_bucket_evidence",
+        "value_match": "context",
+        "contradiction": false,
+        "reason": "Identifier is linked to evidence through the surrounding record context."
+      }
+    },
+    {
+      "field_id": "F00091",
+      "section": "processing_steps",
+      "path": "processing_steps.sample_3cu_sol_aged__sequence_2.sequence",
+      "value": "2",
+      "sample_id": "sample_3cu_sol_aged",
+      "support": {
+        "support_label": "explicit_supported",
+        "evidence_refs": [
+          "b0015"
+        ],
+        "confidence": 0.98,
+        "method": "code_exact_match",
+        "value_match": "exact",
+        "contradiction": false,
+        "reason": "Normalized field value appears in the evidence block."
+      }
+    },
+    {
+      "field_id": "F00092",
+      "section": "processing_steps",
+      "path": "processing_steps.sample_3cu_sol_aged__sequence_2.temperature",
+      "value": "550",
+      "sample_id": "sample_3cu_sol_aged",
+      "support": {
+        "support_label": "explicit_supported",
+        "evidence_refs": [
+          "b0012"
+        ],
+        "confidence": 0.98,
+        "method": "code_exact_match",
+        "value_match": "exact",
+        "contradiction": false,
+        "reason": "Normalized field value appears in the evidence block."
+      }
+    },
+    {
+      "field_id": "F00093",
+      "section": "processing_steps",
+      "path": "processing_steps.sample_3cu_sol_aged__sequence_2.type",
+      "value": "heat_treatment",
+      "sample_id": "sample_3cu_sol_aged",
+      "support": {
+        "support_label": "weak_supported",
+        "evidence_refs": [
+          "b0012"
+        ],
+        "confidence": 0.35,
+        "method": "code_from_llm_bucket_evidence",
+        "value_match": "context",
+        "contradiction": false,
+        "reason": "Relevant context was recalled, but the exact field value was not confirmed."
+      }
+    },
+    {
+      "field_id": "F00094",
+      "section": "processing_steps",
+      "path": "processing_steps.sample_3cu_sol_aged__sequence_2.unit",
+      "value": "°C",
+      "sample_id": "sample_3cu_sol_aged",
+      "support": {
+        "support_label": "explicit_supported",
+        "evidence_refs": [
+          "b0008"
+        ],
+        "confidence": 0.98,
+        "method": "code_exact_match",
+        "value_match": "exact",
+        "contradiction": false,
+        "reason": "Normalized field value appears in the evidence block."
+      }
+    },
+    {
+      "field_id": "F00095",
+      "section": "structures",
+      "path": "structures.sample_0cu_sol_aged__structure_id_struct_0cu_aged.microstructure_list[1].phases_present[austenitic_matrix].crystal_structure",
+      "value": "FCC",
+      "sample_id": "sample_0cu_sol_aged",
+      "support": {
+        "support_label": "explicit_supported",
+        "evidence_refs": [
+          "b0029"
+        ],
+        "confidence": 0.98,
+        "method": "code_exact_match",
+        "value_match": "exact",
+        "contradiction": false,
+        "reason": "Normalized field value appears in the evidence block."
+      }
+    },
+    {
+      "field_id": "F00096",
+      "section": "structures",
+      "path": "structures.sample_0cu_sol_aged__structure_id_struct_0cu_aged.microstructure_list[1].phases_present[austenitic_matrix].phase_name",
+      "value": "austenitic matrix (γ)",
+      "sample_id": "sample_0cu_sol_aged",
+      "support": {
+        "support_label": "weak_supported",
+        "evidence_refs": [
+          "b0029"
+        ],
+        "confidence": 0.35,
+        "method": "code_from_llm_bucket_evidence",
+        "value_match": "context",
+        "contradiction": false,
+        "reason": "Relevant context was recalled, but the exact field value was not confirmed. | llm_hint: Contains 'κ-carbide' as a phase. | Contains 'austenitic matrix' as a phase."
+      }
+    },
+    {
+      "field_id": "F00097",
+      "section": "structures",
+      "path": "structures.sample_0cu_sol_aged__structure_id_struct_0cu_aged.microstructure_list[1].related_sequence",
+      "value": "1",
+      "sample_id": "sample_0cu_sol_aged",
+      "support": {
+        "support_label": "explicit_supported",
+        "evidence_refs": [
+          "b0012"
+        ],
+        "confidence": 0.98,
+        "method": "code_exact_match",
+        "value_match": "exact",
+        "contradiction": false,
+        "reason": "Normalized field value appears in the evidence block."
+      }
+    },
+    {
+      "field_id": "F00098",
+      "section": "structures",
+      "path": "structures.sample_0cu_sol_aged__structure_id_struct_0cu_aged.microstructure_list[1].uuid",
+      "value": "uuid_0cu_austenite",
+      "sample_id": "sample_0cu_sol_aged",
+      "support": {
+        "support_label": "weak_supported",
+        "evidence_refs": [
+          "b0012"
+        ],
+        "confidence": 0.35,
+        "method": "code_from_llm_bucket_evidence",
+        "value_match": "context",
+        "contradiction": false,
+        "reason": "Identifier is linked to evidence through the surrounding record context."
+      }
+    },
+    {
+      "field_id": "F00099",
+      "section": "structures",
+      "path": "structures.sample_0cu_sol_aged__structure_id_struct_0cu_aged.microstructure_list[2].phases_present[carbide].phase_name",
+      "value": "κ-carbide",
+      "sample_id": "sample_0cu_sol_aged",
+      "support": {
+        "support_label": "explicit_supported",
+        "evidence_refs": [
+          "b0029"
+        ],
+        "confidence": 0.98,
+        "method": "code_exact_match",
+        "value_match": "exact",
+        "contradiction": false,
+        "reason": "Normalized field value appears in the evidence block."
+      }
+    },
+    {
+      "field_id": "F00100",
+      "section": "structures",
+      "path": "structures.sample_0cu_sol_aged__structure_id_struct_0cu_aged.microstructure_list[2].precipitates[carbide].coherency",
+      "value": "coherent with austenitic matrix",
+      "sample_id": "sample_0cu_sol_aged",
+      "support": {
+        "support_label": "weak_supported",
+        "evidence_refs": [
+          "b0029"
+        ],
+        "confidence": 0.35,
+        "method": "code_from_llm_bucket_evidence",
+        "value_match": "context",
+        "contradiction": false,
+        "reason": "Relevant context was recalled, but the exact field value was not confirmed. | llm_hint: States 'cube-on-cube orientation relationship' implying coherency."
+      }
+    },
+    {
+      "field_id": "F00101",
+      "section": "structures",
+      "path": "structures.sample_0cu_sol_aged__structure_id_struct_0cu_aged.microstructure_list[2].precipitates[carbide].precipitate_id",
+      "value": "precip_0cu_kappa",
+      "sample_id": "sample_0cu_sol_aged",
+      "support": {
+        "support_label": "weak_supported",
+        "evidence_refs": [
+          "b0012"
+        ],
+        "confidence": 0.35,
+        "method": "code_from_llm_bucket_evidence",
+        "value_match": "context",
+        "contradiction": false,
+        "reason": "Identifier is linked to evidence through the surrounding record context."
+      }
+    },
+    {
+      "field_id": "F00102",
+      "section": "structures",
+      "path": "structures.sample_0cu_sol_aged__structure_id_struct_0cu_aged.microstructure_list[2].precipitates[carbide].type",
+      "value": "κ-carbide",
+      "sample_id": "sample_0cu_sol_aged",
+      "support": {
+        "support_label": "explicit_supported",
+        "evidence_refs": [
+          "b0029"
+        ],
+        "confidence": 0.98,
+        "method": "code_exact_match",
+        "value_match": "exact",
+        "contradiction": false,
+        "reason": "Normalized field value appears in the evidence block."
+      }
+    },
+    {
+      "field_id": "F00103",
+      "section": "structures",
+      "path": "structures.sample_0cu_sol_aged__structure_id_struct_0cu_aged.microstructure_list[2].related_sequence",
+      "value": "2",
+      "sample_id": "sample_0cu_sol_aged",
+      "support": {
+        "support_label": "explicit_supported",
+        "evidence_refs": [
+          "b0011"
+        ],
+        "confidence": 0.98,
+        "method": "code_exact_match",
+        "value_match": "exact",
+        "contradiction": false,
+        "reason": "Normalized field value appears in the evidence block."
+      }
+    },
+    {
+      "field_id": "F00104",
+      "section": "structures",
+      "path": "structures.sample_0cu_sol_aged__structure_id_struct_0cu_aged.microstructure_list[2].uuid",
+      "value": "uuid_0cu_kappa",
+      "sample_id": "sample_0cu_sol_aged",
+      "support": {
+        "support_label": "weak_supported",
+        "evidence_refs": [
+          "b0012"
+        ],
+        "confidence": 0.35,
+        "method": "code_from_llm_bucket_evidence",
+        "value_match": "context",
+        "contradiction": false,
+        "reason": "Identifier is linked to evidence through the surrounding record context."
+      }
+    },
+    {
+      "field_id": "F00105",
+      "section": "structures",
+      "path": "structures.sample_0cu_sol_aged__structure_id_struct_0cu_aged.number_of_phases",
+      "value": "2",
+      "sample_id": "sample_0cu_sol_aged",
+      "support": {
+        "support_label": "explicit_supported",
+        "evidence_refs": [
+          "b0011"
+        ],
+        "confidence": 0.98,
+        "method": "code_exact_match",
+        "value_match": "exact",
+        "contradiction": false,
+        "reason": "Normalized field value appears in the evidence block."
+      }
+    },
+    {
+      "field_id": "F00106",
+      "section": "structures",
+      "path": "structures.sample_0cu_sol_aged__structure_id_struct_0cu_aged.overall_structure",
+      "value": "Austenitic matrix with intragranular κ-carbide precipitates.",
+      "sample_id": "sample_0cu_sol_aged",
+      "support": {
+        "support_label": "weak_supported",
+        "evidence_refs": [
+          "b0029"
+        ],
+        "confidence": 0.35,
+        "method": "code_from_llm_bucket_evidence",
+        "value_match": "context",
+        "contradiction": false,
+        "reason": "Relevant context was recalled, but the exact field value was not confirmed. | llm_hint: Describes the austenitic matrix with κ-carbide precipitates for aged steel."
+      }
+    },
+    {
+      "field_id": "F00107",
+      "section": "structures",
+      "path": "structures.sample_0cu_sol_aged__structure_id_struct_0cu_aged.sample_id",
+      "value": "sample_0cu_sol_aged",
+      "sample_id": "sample_0cu_sol_aged",
+      "support": {
+        "support_label": "weak_supported",
+        "evidence_refs": [
+          "b0012"
+        ],
+        "confidence": 0.35,
+        "method": "code_from_llm_bucket_evidence",
+        "value_match": "context",
+        "contradiction": false,
+        "reason": "Identifier is linked to evidence through the surrounding record context."
+      }
+    },
+    {
+      "field_id": "F00108",
+      "section": "structures",
+      "path": "structures.sample_0cu_sol_aged__structure_id_struct_0cu_aged.structure_id",
+      "value": "struct_0cu_aged",
+      "sample_id": "sample_0cu_sol_aged",
+      "support": {
+        "support_label": "weak_supported",
+        "evidence_refs": [
+          "b0012"
+        ],
+        "confidence": 0.35,
+        "method": "code_from_llm_bucket_evidence",
+        "value_match": "context",
+        "contradiction": false,
+        "reason": "Identifier is linked to evidence through the surrounding record context."
+      }
+    },
+    {
+      "field_id": "F00109",
+      "section": "structures",
+      "path": "structures.sample_3cu_sol_aged__structure_id_struct_3cu_aged.microstructure_list[1].phases_present[austenitic_matrix].crystal_structure",
+      "value": "FCC",
+      "sample_id": "sample_3cu_sol_aged",
+      "support": {
+        "support_label": "explicit_supported",
+        "evidence_refs": [
+          "b0008"
+        ],
+        "confidence": 0.98,
+        "method": "code_exact_match",
+        "value_match": "exact",
+        "contradiction": false,
+        "reason": "Normalized field value appears in the evidence block."
+      }
+    },
+    {
+      "field_id": "F00110",
+      "section": "structures",
+      "path": "structures.sample_3cu_sol_aged__structure_id_struct_3cu_aged.microstructure_list[1].phases_present[austenitic_matrix].phase_name",
+      "value": "austenitic matrix (γ)",
+      "sample_id": "sample_3cu_sol_aged",
+      "support": {
+        "support_label": "weak_supported",
+        "evidence_refs": [
+          "b0012"
+        ],
+        "confidence": 0.35,
+        "method": "code_from_llm_bucket_evidence",
+        "value_match": "context",
+        "contradiction": false,
+        "reason": "Relevant context was recalled, but the exact field value was not confirmed."
+      }
+    },
+    {
+      "field_id": "F00111",
+      "section": "structures",
+      "path": "structures.sample_3cu_sol_aged__structure_id_struct_3cu_aged.microstructure_list[1].related_sequence",
+      "value": "1",
+      "sample_id": "sample_3cu_sol_aged",
+      "support": {
+        "support_label": "explicit_supported",
+        "evidence_refs": [
+          "b0008"
+        ],
+        "confidence": 0.98,
+        "method": "code_exact_match",
+        "value_match": "exact",
+        "contradiction": false,
+        "reason": "Normalized field value appears in the evidence block."
+      }
+    },
+    {
+      "field_id": "F00112",
+      "section": "structures",
+      "path": "structures.sample_3cu_sol_aged__structure_id_struct_3cu_aged.microstructure_list[1].uuid",
+      "value": "uuid_3cu_austenite",
+      "sample_id": "sample_3cu_sol_aged",
+      "support": {
+        "support_label": "weak_supported",
+        "evidence_refs": [
+          "b0012"
+        ],
+        "confidence": 0.35,
+        "method": "code_from_llm_bucket_evidence",
+        "value_match": "context",
+        "contradiction": false,
+        "reason": "Identifier is linked to evidence through the surrounding record context."
+      }
+    },
+    {
+      "field_id": "F00113",
+      "section": "structures",
+      "path": "structures.sample_3cu_sol_aged__structure_id_struct_3cu_aged.microstructure_list[2].defects[0].dislocation_density",
+      "value": "almost no dislocations and stacking faults",
+      "sample_id": "sample_3cu_sol_aged",
+      "support": {
+        "support_label": "explicit_supported",
+        "evidence_refs": [
+          "b0015"
+        ],
+        "confidence": 0.98,
+        "method": "code_exact_match",
+        "value_match": "exact",
+        "contradiction": false,
+        "reason": "Normalized field value appears in the evidence block."
+      }
+    },
+    {
+      "field_id": "F00114",
+      "section": "structures",
+      "path": "structures.sample_3cu_sol_aged__structure_id_struct_3cu_aged.microstructure_list[2].phases_present[carbide].morphology",
+      "value": "dots or bars",
+      "sample_id": "sample_3cu_sol_aged",
+      "support": {
+        "support_label": "explicit_supported",
+        "evidence_refs": [
+          "b0022"
+        ],
+        "confidence": 0.98,
+        "method": "code_exact_match",
+        "value_match": "exact",
+        "contradiction": false,
+        "reason": "Normalized field value appears in the evidence block."
+      }
+    },
+    {
+      "field_id": "F00115",
+      "section": "structures",
+      "path": "structures.sample_3cu_sol_aged__structure_id_struct_3cu_aged.microstructure_list[2].phases_present[carbide].phase_name",
+      "value": "κ-carbide",
+      "sample_id": "sample_3cu_sol_aged",
+      "support": {
+        "support_label": "explicit_supported",
+        "evidence_refs": [
+          "b0008"
+        ],
+        "confidence": 0.98,
+        "method": "code_exact_match",
+        "value_match": "exact",
+        "contradiction": false,
+        "reason": "Normalized field value appears in the evidence block."
+      }
+    },
+    {
+      "field_id": "F00116",
+      "section": "structures",
+      "path": "structures.sample_3cu_sol_aged__structure_id_struct_3cu_aged.microstructure_list[2].phases_present[carbide].texture",
+      "value": "cube-on-cube orientation with austenitic matrix: [100]κ//[100]γ and (100)κ//(100)γ",
+      "sample_id": "sample_3cu_sol_aged",
+      "support": {
+        "support_label": "weak_supported",
+        "evidence_refs": [
+          "b0012"
+        ],
+        "confidence": 0.35,
+        "method": "code_from_llm_bucket_evidence",
+        "value_match": "context",
+        "contradiction": false,
+        "reason": "Relevant context was recalled, but the exact field value was not confirmed."
+      }
+    },
+    {
+      "field_id": "F00117",
+      "section": "structures",
+      "path": "structures.sample_3cu_sol_aged__structure_id_struct_3cu_aged.microstructure_list[2].phases_present[cu_rich_phase].crystal_structure",
+      "value": "FCC (directly precipitates in FCC structure); also noted as BCC in SAED (see text)",
+      "sample_id": "sample_3cu_sol_aged",
+      "support": {
+        "support_label": "weak_supported",
+        "evidence_refs": [
+          "b0012"
+        ],
+        "confidence": 0.35,
+        "method": "code_from_llm_bucket_evidence",
+        "value_match": "context",
+        "contradiction": false,
+        "reason": "Relevant context was recalled, but the exact field value was not confirmed."
+      }
+    },
+    {
+      "field_id": "F00118",
+      "section": "structures",
+      "path": "structures.sample_3cu_sol_aged__structure_id_struct_3cu_aged.microstructure_list[2].phases_present[cu_rich_phase].morphology",
+      "value": "irregular oval (diameter ~10 nm) and bar shapes (length ~30 nm)",
+      "sample_id": "sample_3cu_sol_aged",
+      "support": {
+        "support_label": "weak_supported",
+        "evidence_refs": [
+          "b0012"
+        ],
+        "confidence": 0.35,
+        "method": "code_from_llm_bucket_evidence",
+        "value_match": "context",
+        "contradiction": false,
+        "reason": "Relevant context was recalled, but the exact field value was not confirmed."
+      }
+    },
+    {
+      "field_id": "F00119",
+      "section": "structures",
+      "path": "structures.sample_3cu_sol_aged__structure_id_struct_3cu_aged.microstructure_list[2].phases_present[cu_rich_phase].phase_name",
+      "value": "Cu-rich phase",
+      "sample_id": "sample_3cu_sol_aged",
+      "support": {
+        "support_label": "explicit_supported",
+        "evidence_refs": [
+          "b0008"
+        ],
+        "confidence": 0.98,
+        "method": "code_exact_match",
+        "value_match": "exact",
+        "contradiction": false,
+        "reason": "Normalized field value appears in the evidence block."
+      }
+    },
+    {
+      "field_id": "F00120",
+      "section": "structures",
+      "path": "structures.sample_3cu_sol_aged__structure_id_struct_3cu_aged.microstructure_list[2].phases_present[cu_rich_phase].texture",
+      "value": "cube-on-cube orientation with austenitic matrix: [110]Cu//[110]γ and (111)Cu//(111)γ",
+      "sample_id": "sample_3cu_sol_aged",
+      "support": {
+        "support_label": "weak_supported",
+        "evidence_refs": [
+          "b0012"
+        ],
+        "confidence": 0.35,
+        "method": "code_from_llm_bucket_evidence",
+        "value_match": "context",
+        "contradiction": false,
+        "reason": "Relevant context was recalled, but the exact field value was not confirmed."
+      }
+    },
+    {
+      "field_id": "F00121",
+      "section": "structures",
+      "path": "structures.sample_3cu_sol_aged__structure_id_struct_3cu_aged.microstructure_list[2].precipitates[carbide].coherency",
+      "value": "coherent with austenitic matrix",
+      "sample_id": "sample_3cu_sol_aged",
+      "support": {
+        "support_label": "weak_supported",
+        "evidence_refs": [
+          "b0012"
+        ],
+        "confidence": 0.35,
+        "method": "code_from_llm_bucket_evidence",
+        "value_match": "context",
+        "contradiction": false,
+        "reason": "Relevant context was recalled, but the exact field value was not confirmed."
+      }
+    },
+    {
+      "field_id": "F00122",
+      "section": "structures",
+      "path": "structures.sample_3cu_sol_aged__structure_id_struct_3cu_aged.microstructure_list[2].precipitates[carbide].precipitate_id",
+      "value": "precip_kappa",
+      "sample_id": "sample_3cu_sol_aged",
+      "support": {
+        "support_label": "weak_supported",
+        "evidence_refs": [
+          "b0012"
+        ],
+        "confidence": 0.35,
+        "method": "code_from_llm_bucket_evidence",
+        "value_match": "context",
+        "contradiction": false,
+        "reason": "Identifier is linked to evidence through the surrounding record context."
+      }
+    },
+    {
+      "field_id": "F00123",
+      "section": "structures",
+      "path": "structures.sample_3cu_sol_aged__structure_id_struct_3cu_aged.microstructure_list[2].precipitates[carbide].type",
+      "value": "κ-carbide",
+      "sample_id": "sample_3cu_sol_aged",
+      "support": {
+        "support_label": "explicit_supported",
+        "evidence_refs": [
+          "b0008"
+        ],
+        "confidence": 0.98,
+        "method": "code_exact_match",
+        "value_match": "exact",
+        "contradiction": false,
+        "reason": "Normalized field value appears in the evidence block."
+      }
+    },
+    {
+      "field_id": "F00124",
+      "section": "structures",
+      "path": "structures.sample_3cu_sol_aged__structure_id_struct_3cu_aged.microstructure_list[2].precipitates[cu_rich_phase].coherency",
+      "value": "coherent with austenitic matrix",
+      "sample_id": "sample_3cu_sol_aged",
+      "support": {
+        "support_label": "weak_supported",
+        "evidence_refs": [
+          "b0012"
+        ],
+        "confidence": 0.35,
+        "method": "code_from_llm_bucket_evidence",
+        "value_match": "context",
+        "contradiction": false,
+        "reason": "Relevant context was recalled, but the exact field value was not confirmed."
+      }
+    },
+    {
+      "field_id": "F00125",
+      "section": "structures",
+      "path": "structures.sample_3cu_sol_aged__structure_id_struct_3cu_aged.microstructure_list[2].precipitates[cu_rich_phase].precipitate_id",
+      "value": "precip_cu_rich",
+      "sample_id": "sample_3cu_sol_aged",
+      "support": {
+        "support_label": "weak_supported",
+        "evidence_refs": [
+          "b0012"
+        ],
+        "confidence": 0.35,
+        "method": "code_from_llm_bucket_evidence",
+        "value_match": "context",
+        "contradiction": false,
+        "reason": "Identifier is linked to evidence through the surrounding record context."
+      }
+    },
+    {
+      "field_id": "F00126",
+      "section": "structures",
+      "path": "structures.sample_3cu_sol_aged__structure_id_struct_3cu_aged.microstructure_list[2].precipitates[cu_rich_phase].type",
+      "value": "Cu-rich phase",
+      "sample_id": "sample_3cu_sol_aged",
+      "support": {
+        "support_label": "explicit_supported",
+        "evidence_refs": [
+          "b0008"
+        ],
+        "confidence": 0.98,
+        "method": "code_exact_match",
+        "value_match": "exact",
+        "contradiction": false,
+        "reason": "Normalized field value appears in the evidence block."
+      }
+    },
+    {
+      "field_id": "F00127",
+      "section": "structures",
+      "path": "structures.sample_3cu_sol_aged__structure_id_struct_3cu_aged.microstructure_list[2].related_sequence",
+      "value": "2",
+      "sample_id": "sample_3cu_sol_aged",
+      "support": {
+        "support_label": "explicit_supported",
+        "evidence_refs": [
+          "b0015"
+        ],
+        "confidence": 0.98,
+        "method": "code_exact_match",
+        "value_match": "exact",
+        "contradiction": false,
+        "reason": "Normalized field value appears in the evidence block."
+      }
+    },
+    {
+      "field_id": "F00128",
+      "section": "structures",
+      "path": "structures.sample_3cu_sol_aged__structure_id_struct_3cu_aged.microstructure_list[2].uuid",
+      "value": "uuid_3cu_cu_rich",
+      "sample_id": "sample_3cu_sol_aged",
+      "support": {
+        "support_label": "weak_supported",
+        "evidence_refs": [
+          "b0012"
+        ],
+        "confidence": 0.35,
+        "method": "code_from_llm_bucket_evidence",
+        "value_match": "context",
+        "contradiction": false,
+        "reason": "Identifier is linked to evidence through the surrounding record context."
+      }
+    },
+    {
+      "field_id": "F00129",
+      "section": "structures",
+      "path": "structures.sample_3cu_sol_aged__structure_id_struct_3cu_aged.number_of_phases",
+      "value": "3",
+      "sample_id": "sample_3cu_sol_aged",
+      "support": {
+        "support_label": "explicit_supported",
+        "evidence_refs": [
+          "b0008"
+        ],
+        "confidence": 0.98,
+        "method": "code_exact_match",
+        "value_match": "exact",
+        "contradiction": false,
+        "reason": "Normalized field value appears in the evidence block."
+      }
+    },
+    {
+      "field_id": "F00130",
+      "section": "structures",
+      "path": "structures.sample_3cu_sol_aged__structure_id_struct_3cu_aged.overall_structure",
+      "value": "Austenitic matrix with intragranular κ-carbide and Cu-rich phase precipitates.",
+      "sample_id": "sample_3cu_sol_aged",
+      "support": {
+        "support_label": "weak_supported",
+        "evidence_refs": [
+          "b0012"
+        ],
+        "confidence": 0.35,
+        "method": "code_from_llm_bucket_evidence",
+        "value_match": "context",
+        "contradiction": false,
+        "reason": "Relevant context was recalled, but the exact field value was not confirmed."
+      }
+    },
+    {
+      "field_id": "F00131",
+      "section": "structures",
+      "path": "structures.sample_3cu_sol_aged__structure_id_struct_3cu_aged.sample_id",
+      "value": "sample_3cu_sol_aged",
+      "sample_id": "sample_3cu_sol_aged",
+      "support": {
+        "support_label": "weak_supported",
+        "evidence_refs": [
+          "b0012"
+        ],
+        "confidence": 0.35,
+        "method": "code_from_llm_bucket_evidence",
+        "value_match": "context",
+        "contradiction": false,
+        "reason": "Identifier is linked to evidence through the surrounding record context."
+      }
+    },
+    {
+      "field_id": "F00132",
+      "section": "structures",
+      "path": "structures.sample_3cu_sol_aged__structure_id_struct_3cu_aged.structure_id",
+      "value": "struct_3cu_aged",
+      "sample_id": "sample_3cu_sol_aged",
+      "support": {
+        "support_label": "weak_supported",
+        "evidence_refs": [
+          "b0012"
+        ],
+        "confidence": 0.35,
+        "method": "code_from_llm_bucket_evidence",
+        "value_match": "context",
+        "contradiction": false,
+        "reason": "Identifier is linked to evidence through the surrounding record context."
+      }
+    },
+    {
+      "field_id": "F00133",
+      "section": "interfaces",
+      "path": "interfaces.sample_3cu_sol_aged__interface_set_id_iface_3cu_aged.defect_interaction[0].interaction_id",
+      "value": "int_kappa_cu_precip",
+      "sample_id": "sample_3cu_sol_aged",
+      "support": {
+        "support_label": "weak_supported",
+        "evidence_refs": [
+          "b0012"
+        ],
+        "confidence": 0.35,
+        "method": "code_from_llm_bucket_evidence",
+        "value_match": "context",
+        "contradiction": false,
+        "reason": "Identifier is linked to evidence through the surrounding record context."
+      }
+    },
+    {
+      "field_id": "F00134",
+      "section": "interfaces",
+      "path": "interfaces.sample_3cu_sol_aged__interface_set_id_iface_3cu_aged.defect_interaction[0].interaction_type",
+      "value": "precipitation promotion",
+      "sample_id": "sample_3cu_sol_aged",
+      "support": {
+        "support_label": "weak_supported",
+        "evidence_refs": [
+          "b0012"
+        ],
+        "confidence": 0.35,
+        "method": "code_from_llm_bucket_evidence",
+        "value_match": "context",
+        "contradiction": false,
+        "reason": "Relevant context was recalled, but the exact field value was not confirmed."
+      }
+    },
+    {
+      "field_id": "F00135",
+      "section": "interfaces",
+      "path": "interfaces.sample_3cu_sol_aged__interface_set_id_iface_3cu_aged.defect_interaction[0].quality_description",
+      "value": "Cu addition promotes κ-carbide precipitation; κ-carbide precipitation promotes Cu-rich phase precipitation; Cu-rich phase has lower nucleation energy barrier in austenitic matrix than κ-carbide.",
+      "sample_id": "sample_3cu_sol_aged",
+      "support": {
+        "support_label": "weak_supported",
+        "evidence_refs": [
+          "b0012"
+        ],
+        "confidence": 0.35,
+        "method": "code_from_llm_bucket_evidence",
+        "value_match": "context",
+        "contradiction": false,
+        "reason": "Relevant context was recalled, but the exact field value was not confirmed."
+      }
+    },
+    {
+      "field_id": "F00136",
+      "section": "interfaces",
+      "path": "interfaces.sample_3cu_sol_aged__interface_set_id_iface_3cu_aged.interface_set_id",
+      "value": "iface_3cu_aged",
+      "sample_id": "sample_3cu_sol_aged",
+      "support": {
+        "support_label": "weak_supported",
+        "evidence_refs": [
+          "b0012"
+        ],
+        "confidence": 0.35,
+        "method": "code_from_llm_bucket_evidence",
+        "value_match": "context",
+        "contradiction": false,
+        "reason": "Identifier is linked to evidence through the surrounding record context."
+      }
+    },
+    {
+      "field_id": "F00137",
+      "section": "interfaces",
+      "path": "interfaces.sample_3cu_sol_aged__interface_set_id_iface_3cu_aged.phase_evolution",
+      "value": "κ-carbide precipitate earlier than Cu-rich phase during aging at 550℃; Cu-rich phase with FCC structure precipitates directly; lattice misfits: κ-carbide/γ 2.3%, Cu-rich/γ 1.0%, κ-carbide/Cu-rich 3.4%.",
+      "sample_id": "sample_3cu_sol_aged",
+      "support": {
+        "support_label": "weak_supported",
+        "evidence_refs": [
+          "b0012"
+        ],
+        "confidence": 0.35,
+        "method": "code_from_llm_bucket_evidence",
+        "value_match": "context",
+        "contradiction": false,
+        "reason": "Relevant context was recalled, but the exact field value was not confirmed."
+      }
+    },
+    {
+      "field_id": "F00138",
+      "section": "interfaces",
+      "path": "interfaces.sample_3cu_sol_aged__interface_set_id_iface_3cu_aged.phases[carbide].coherence",
+      "value": "coherent (cube-on-cube orientation: [110]κ//[110]Cu, (111)κ//(111)Cu)",
+      "sample_id": "sample_3cu_sol_aged",
+      "support": {
+        "support_label": "weak_supported",
+        "evidence_refs": [
+          "b0012"
+        ],
+        "confidence": 0.35,
+        "method": "code_from_llm_bucket_evidence",
+        "value_match": "context",
+        "contradiction": false,
+        "reason": "Relevant context was recalled, but the exact field value was not confirmed."
+      }
+    },
+    {
+      "field_id": "F00139",
+      "section": "interfaces",
+      "path": "interfaces.sample_3cu_sol_aged__interface_set_id_iface_3cu_aged.phases[carbide].interface_id",
+      "value": "iface_kappa_cu",
+      "sample_id": "sample_3cu_sol_aged",
+      "support": {
+        "support_label": "weak_supported",
+        "evidence_refs": [
+          "b0012"
+        ],
+        "confidence": 0.35,
+        "method": "code_from_llm_bucket_evidence",
+        "value_match": "context",
+        "contradiction": false,
+        "reason": "Identifier is linked to evidence through the surrounding record context."
+      }
+    },
+    {
+      "field_id": "F00140",
+      "section": "interfaces",
+      "path": "interfaces.sample_3cu_sol_aged__interface_set_id_iface_3cu_aged.phases[carbide].microstructure_uuid",
+      "value": "uuid_3cu_kappa",
+      "sample_id": "sample_3cu_sol_aged",
+      "support": {
+        "support_label": "weak_supported",
+        "evidence_refs": [
+          "b0012"
+        ],
+        "confidence": 0.35,
+        "method": "code_from_llm_bucket_evidence",
+        "value_match": "context",
+        "contradiction": false,
+        "reason": "Identifier is linked to evidence through the surrounding record context."
+      }
+    },
+    {
+      "field_id": "F00141",
+      "section": "interfaces",
+      "path": "interfaces.sample_3cu_sol_aged__interface_set_id_iface_3cu_aged.phases[carbide].phase_1_name",
+      "value": "κ-carbide",
+      "sample_id": "sample_3cu_sol_aged",
+      "support": {
+        "support_label": "explicit_supported",
+        "evidence_refs": [
+          "b0008"
+        ],
+        "confidence": 0.98,
+        "method": "code_exact_match",
+        "value_match": "exact",
+        "contradiction": false,
+        "reason": "Normalized field value appears in the evidence block."
+      }
+    },
+    {
+      "field_id": "F00142",
+      "section": "interfaces",
+      "path": "interfaces.sample_3cu_sol_aged__interface_set_id_iface_3cu_aged.phases[carbide].phase_2_name",
+      "value": "Cu-rich phase",
+      "sample_id": "sample_3cu_sol_aged",
+      "support": {
+        "support_label": "explicit_supported",
+        "evidence_refs": [
+          "b0008"
+        ],
+        "confidence": 0.98,
+        "method": "code_exact_match",
+        "value_match": "exact",
+        "contradiction": false,
+        "reason": "Normalized field value appears in the evidence block."
+      }
+    },
+    {
+      "field_id": "F00143",
+      "section": "interfaces",
+      "path": "interfaces.sample_3cu_sol_aged__interface_set_id_iface_3cu_aged.phases[cu_rich_phase].coherence",
+      "value": "coherent; cube-on-cube orientation: [110]γ//[110]Cu, (111)γ//(111)Cu",
+      "sample_id": "sample_3cu_sol_aged",
+      "support": {
+        "support_label": "weak_supported",
+        "evidence_refs": [
+          "b0012"
+        ],
+        "confidence": 0.35,
+        "method": "code_from_llm_bucket_evidence",
+        "value_match": "context",
+        "contradiction": false,
+        "reason": "Relevant context was recalled, but the exact field value was not confirmed."
+      }
+    },
+    {
+      "field_id": "F00144",
+      "section": "interfaces",
+      "path": "interfaces.sample_3cu_sol_aged__interface_set_id_iface_3cu_aged.phases[cu_rich_phase].interface_id",
+      "value": "iface_cu_gamma",
+      "sample_id": "sample_3cu_sol_aged",
+      "support": {
+        "support_label": "weak_supported",
+        "evidence_refs": [
+          "b0012"
+        ],
+        "confidence": 0.35,
+        "method": "code_from_llm_bucket_evidence",
+        "value_match": "context",
+        "contradiction": false,
+        "reason": "Identifier is linked to evidence through the surrounding record context."
+      }
+    },
+    {
+      "field_id": "F00145",
+      "section": "interfaces",
+      "path": "interfaces.sample_3cu_sol_aged__interface_set_id_iface_3cu_aged.phases[cu_rich_phase].microstructure_uuid",
+      "value": "uuid_3cu_cu_rich",
+      "sample_id": "sample_3cu_sol_aged",
+      "support": {
+        "support_label": "weak_supported",
+        "evidence_refs": [
+          "b0012"
+        ],
+        "confidence": 0.35,
+        "method": "code_from_llm_bucket_evidence",
+        "value_match": "context",
+        "contradiction": false,
+        "reason": "Identifier is linked to evidence through the surrounding record context."
+      }
+    },
+    {
+      "field_id": "F00146",
+      "section": "interfaces",
+      "path": "interfaces.sample_3cu_sol_aged__interface_set_id_iface_3cu_aged.phases[cu_rich_phase].phase_1_name",
+      "value": "Cu-rich phase",
+      "sample_id": "sample_3cu_sol_aged",
+      "support": {
+        "support_label": "explicit_supported",
+        "evidence_refs": [
+          "b0008"
+        ],
+        "confidence": 0.98,
+        "method": "code_exact_match",
+        "value_match": "exact",
+        "contradiction": false,
+        "reason": "Normalized field value appears in the evidence block."
+      }
+    },
+    {
+      "field_id": "F00147",
+      "section": "interfaces",
+      "path": "interfaces.sample_3cu_sol_aged__interface_set_id_iface_3cu_aged.phases[cu_rich_phase].phase_2_name",
+      "value": "austenitic matrix",
+      "sample_id": "sample_3cu_sol_aged",
+      "support": {
+        "support_label": "explicit_supported",
+        "evidence_refs": [
+          "b0008"
+        ],
+        "confidence": 0.98,
+        "method": "code_exact_match",
+        "value_match": "exact",
+        "contradiction": false,
+        "reason": "Normalized field value appears in the evidence block."
+      }
+    },
+    {
+      "field_id": "F00148",
+      "section": "interfaces",
+      "path": "interfaces.sample_3cu_sol_aged__interface_set_id_iface_3cu_aged.sample_id",
+      "value": "sample_3cu_sol_aged",
+      "sample_id": "sample_3cu_sol_aged",
+      "support": {
+        "support_label": "weak_supported",
+        "evidence_refs": [
+          "b0012"
+        ],
+        "confidence": 0.35,
+        "method": "code_from_llm_bucket_evidence",
+        "value_match": "context",
+        "contradiction": false,
+        "reason": "Identifier is linked to evidence through the surrounding record context."
+      }
+    },
+    {
+      "field_id": "F00149",
+      "section": "properties",
+      "path": "properties.sample_0cu_sol_aged__property_set_id_props_0cu_aged.property_set_id",
+      "value": "props_0cu_aged",
+      "sample_id": "sample_0cu_sol_aged",
+      "support": {
+        "support_label": "weak_supported",
+        "evidence_refs": [
+          "b0012"
+        ],
+        "confidence": 0.35,
+        "method": "code_from_llm_bucket_evidence",
+        "value_match": "context",
+        "contradiction": false,
+        "reason": "Identifier is linked to evidence through the surrounding record context."
+      }
+    },
+    {
+      "field_id": "F00150",
+      "section": "properties",
+      "path": "properties.sample_0cu_sol_aged__property_set_id_props_0cu_aged.sample_id",
+      "value": "sample_0cu_sol_aged",
+      "sample_id": "sample_0cu_sol_aged",
+      "support": {
+        "support_label": "weak_supported",
+        "evidence_refs": [
+          "b0012"
+        ],
+        "confidence": 0.35,
+        "method": "code_from_llm_bucket_evidence",
+        "value_match": "context",
+        "contradiction": false,
+        "reason": "Identifier is linked to evidence through the surrounding record context."
+      }
+    },
+    {
+      "field_id": "F00151",
+      "section": "properties",
+      "path": "properties.sample_3cu_sol_aged__property_set_id_props_3cu_aged.property_set_id",
+      "value": "props_3cu_aged",
+      "sample_id": "sample_3cu_sol_aged",
+      "support": {
+        "support_label": "weak_supported",
+        "evidence_refs": [
+          "b0012"
+        ],
+        "confidence": 0.35,
+        "method": "code_from_llm_bucket_evidence",
+        "value_match": "context",
+        "contradiction": false,
+        "reason": "Identifier is linked to evidence through the surrounding record context."
+      }
+    },
+    {
+      "field_id": "F00152",
+      "section": "properties",
+      "path": "properties.sample_3cu_sol_aged__property_set_id_props_3cu_aged.sample_id",
+      "value": "sample_3cu_sol_aged",
+      "sample_id": "sample_3cu_sol_aged",
+      "support": {
+        "support_label": "weak_supported",
+        "evidence_refs": [
+          "b0012"
+        ],
+        "confidence": 0.35,
+        "method": "code_from_llm_bucket_evidence",
+        "value_match": "context",
+        "contradiction": false,
+        "reason": "Identifier is linked to evidence through the surrounding record context."
+      }
+    },
+    {
+      "field_id": "F00153",
+      "section": "performance",
+      "path": "performance.sample_3cu_sol_aged__performance_id_perf_3cu_aged.comparative_performance.benchmark_alloy",
+      "value": "Fe-28Mn-10Al-1C",
+      "sample_id": "sample_3cu_sol_aged",
+      "support": {
+        "support_label": "explicit_supported",
+        "evidence_refs": [
+          "b0008"
+        ],
+        "confidence": 0.98,
+        "method": "code_exact_match",
+        "value_match": "exact",
+        "contradiction": false,
+        "reason": "Normalized field value appears in the evidence block."
+      }
+    },
+    {
+      "field_id": "F00154",
+      "section": "performance",
+      "path": "performance.sample_3cu_sol_aged__performance_id_perf_3cu_aged.comparative_performance.benchmark_process_id",
+      "value": "proc_solution_aging",
+      "sample_id": "sample_3cu_sol_aged",
+      "support": {
+        "support_label": "weak_supported",
+        "evidence_refs": [
+          "b0012"
+        ],
+        "confidence": 0.35,
+        "method": "code_from_llm_bucket_evidence",
+        "value_match": "context",
+        "contradiction": false,
+        "reason": "Identifier is linked to evidence through the surrounding record context."
+      }
+    },
+    {
+      "field_id": "F00155",
+      "section": "performance",
+      "path": "performance.sample_3cu_sol_aged__performance_id_perf_3cu_aged.comparative_performance.benchmark_sample_id",
+      "value": "sample_0cu_sol_aged",
+      "sample_id": "sample_3cu_sol_aged",
+      "support": {
+        "support_label": "weak_supported",
+        "evidence_refs": [
+          "b0012"
+        ],
+        "confidence": 0.35,
+        "method": "code_from_llm_bucket_evidence",
+        "value_match": "context",
+        "contradiction": false,
+        "reason": "Identifier is linked to evidence through the surrounding record context."
+      }
+    },
+    {
+      "field_id": "F00156",
+      "section": "performance",
+      "path": "performance.sample_3cu_sol_aged__performance_id_perf_3cu_aged.performance_id",
+      "value": "perf_3cu_aged",
+      "sample_id": "sample_3cu_sol_aged",
+      "support": {
+        "support_label": "weak_supported",
+        "evidence_refs": [
+          "b0012"
+        ],
+        "confidence": 0.35,
+        "method": "code_from_llm_bucket_evidence",
+        "value_match": "context",
+        "contradiction": false,
+        "reason": "Identifier is linked to evidence through the surrounding record context."
+      }
+    },
+    {
+      "field_id": "F00157",
+      "section": "performance",
+      "path": "performance.sample_3cu_sol_aged__performance_id_perf_3cu_aged.sample_id",
+      "value": "sample_3cu_sol_aged",
+      "sample_id": "sample_3cu_sol_aged",
+      "support": {
+        "support_label": "weak_supported",
+        "evidence_refs": [
+          "b0012"
+        ],
+        "confidence": 0.35,
+        "method": "code_from_llm_bucket_evidence",
+        "value_match": "context",
+        "contradiction": false,
+        "reason": "Identifier is linked to evidence through the surrounding record context."
+      }
+    },
+    {
+      "field_id": "F00158",
+      "section": "characterization_methods",
+      "path": "characterization_methods.idx_2.characterization_id",
+      "value": "char_all_xrd",
+      "support": {
+        "support_label": "weak_supported",
+        "evidence_refs": [
+          "b0001"
+        ],
+        "confidence": 0.35,
+        "method": "code_from_llm_bucket_evidence",
+        "value_match": "context",
+        "contradiction": false,
+        "reason": "Identifier is linked to evidence through the surrounding record context."
+      }
+    },
+    {
+      "field_id": "F00159",
+      "section": "characterization_methods",
+      "path": "characterization_methods.idx_2.key_findings",
+      "value": "Lattice parameter of 0Cu steel: a=0.3687 nm; 3Cu steel: a=0.3689 nm (solution treated).",
+      "support": {
+        "support_label": "weak_supported",
+        "evidence_refs": [
+          "b0001"
+        ],
+        "confidence": 0.35,
+        "method": "code_from_llm_bucket_evidence",
+        "value_match": "context",
+        "contradiction": false,
+        "reason": "Relevant context was recalled, but the exact field value was not confirmed."
+      }
+    },
+    {
+      "field_id": "F00160",
+      "section": "characterization_methods",
+      "path": "characterization_methods.idx_2.purpose",
+      "value": "Determine lattice parameters of austenitic matrix",
+      "support": {
+        "support_label": "weak_supported",
+        "evidence_refs": [
+          "b0001"
+        ],
+        "confidence": 0.35,
+        "method": "code_from_llm_bucket_evidence",
+        "value_match": "context",
+        "contradiction": false,
+        "reason": "Relevant context was recalled, but the exact field value was not confirmed."
+      }
+    },
+    {
+      "field_id": "F00161",
+      "section": "characterization_methods",
+      "path": "characterization_methods.idx_2.technique",
+      "value": "X-ray diffraction (XRD)",
+      "support": {
+        "support_label": "weak_supported",
+        "evidence_refs": [
+          "b0001"
+        ],
+        "confidence": 0.35,
+        "method": "code_from_llm_bucket_evidence",
+        "value_match": "context",
+        "contradiction": false,
+        "reason": "Relevant context was recalled, but the exact field value was not confirmed."
+      }
+    },
+    {
+      "field_id": "F00162",
+      "section": "characterization_methods",
+      "path": "characterization_methods.sample_3cu_sol_aged__characterization_id_char_3cu_hr_tem.characterization_id",
+      "value": "char_3cu_hr_tem",
+      "sample_id": "sample_3cu_sol_aged",
+      "support": {
+        "support_label": "weak_supported",
+        "evidence_refs": [
+          "b0012"
+        ],
+        "confidence": 0.35,
+        "method": "code_from_llm_bucket_evidence",
+        "value_match": "context",
+        "contradiction": false,
+        "reason": "Identifier is linked to evidence through the surrounding record context."
+      }
+    },
+    {
+      "field_id": "F00163",
+      "section": "characterization_methods",
+      "path": "characterization_methods.sample_3cu_sol_aged__characterization_id_char_3cu_hr_tem.key_findings",
+      "value": "Observation of κ-carbide and Cu-rich phase; EDS mapping showing Cu enrichment and Fe/Mn/Al depletion; lattice parameters measured: Cu-rich phase a=0.3652 nm, κ-carbide a=0.3775 nm.",
+      "sample_id": "sample_3cu_sol_aged",
+      "support": {
+        "support_label": "weak_supported",
+        "evidence_refs": [
+          "b0012"
+        ],
+        "confidence": 0.35,
+        "method": "code_from_llm_bucket_evidence",
+        "value_match": "context",
+        "contradiction": false,
+        "reason": "Relevant context was recalled, but the exact field value was not confirmed."
+      }
+    },
+    {
+      "field_id": "F00164",
+      "section": "characterization_methods",
+      "path": "characterization_methods.sample_3cu_sol_aged__characterization_id_char_3cu_hr_tem.purpose",
+      "value": "Examine microstructure, identify phases and composition distribution",
+      "sample_id": "sample_3cu_sol_aged",
+      "support": {
+        "support_label": "weak_supported",
+        "evidence_refs": [
+          "b0012"
+        ],
+        "confidence": 0.35,
+        "method": "code_from_llm_bucket_evidence",
+        "value_match": "context",
+        "contradiction": false,
+        "reason": "Relevant context was recalled, but the exact field value was not confirmed."
+      }
+    },
+    {
+      "field_id": "F00165",
+      "section": "characterization_methods",
+      "path": "characterization_methods.sample_3cu_sol_aged__characterization_id_char_3cu_hr_tem.sample_id",
+      "value": "sample_3cu_sol_aged",
+      "sample_id": "sample_3cu_sol_aged",
+      "support": {
+        "support_label": "weak_supported",
+        "evidence_refs": [
+          "b0012"
+        ],
+        "confidence": 0.35,
+        "method": "code_from_llm_bucket_evidence",
+        "value_match": "context",
+        "contradiction": false,
+        "reason": "Identifier is linked to evidence through the surrounding record context."
+      }
+    },
+    {
+      "field_id": "F00166",
+      "section": "characterization_methods",
+      "path": "characterization_methods.sample_3cu_sol_aged__characterization_id_char_3cu_hr_tem.technique",
+      "value": "High-resolution transmission electron microscope (HR-TEM) with energy dispersive spectrometer (EDS)",
+      "sample_id": "sample_3cu_sol_aged",
+      "support": {
+        "support_label": "weak_supported",
+        "evidence_refs": [
+          "b0012"
+        ],
+        "confidence": 0.35,
+        "method": "code_from_llm_bucket_evidence",
+        "value_match": "context",
+        "contradiction": false,
+        "reason": "Relevant context was recalled, but the exact field value was not confirmed."
+      }
+    },
+    {
+      "field_id": "F00167",
+      "section": "characterization_methods",
+      "path": "characterization_methods.sample_3cu_sol_aged__characterization_id_char_3cu_saed.characterization_id",
+      "value": "char_3cu_saed",
+      "sample_id": "sample_3cu_sol_aged",
+      "support": {
+        "support_label": "weak_supported",
+        "evidence_refs": [
+          "b0012"
+        ],
+        "confidence": 0.35,
+        "method": "code_from_llm_bucket_evidence",
+        "value_match": "context",
+        "contradiction": false,
+        "reason": "Identifier is linked to evidence through the surrounding record context."
+      }
+    },
+    {
+      "field_id": "F00168",
+      "section": "characterization_methods",
+      "path": "characterization_methods.sample_3cu_sol_aged__characterization_id_char_3cu_saed.key_findings",
+      "value": "Cu-rich phase has BCC structure (SAED pattern); κ-carbide and Cu-rich phase coherent with austenitic matrix; cube-on-cube orientation: [110]γ//[110]κ//[110]Cu, (111)γ//(111)κ//(111)Cu.",
+      "sample_id": "sample_3cu_sol_aged",
+      "support": {
+        "support_label": "weak_supported",
+        "evidence_refs": [
+          "b0012"
+        ],
+        "confidence": 0.35,
+        "method": "code_from_llm_bucket_evidence",
+        "value_match": "context",
+        "contradiction": false,
+        "reason": "Relevant context was recalled, but the exact field value was not confirmed."
+      }
+    },
+    {
+      "field_id": "F00169",
+      "section": "characterization_methods",
+      "path": "characterization_methods.sample_3cu_sol_aged__characterization_id_char_3cu_saed.purpose",
+      "value": "Analyze crystal structure and orientation relationship",
+      "sample_id": "sample_3cu_sol_aged",
+      "support": {
+        "support_label": "weak_supported",
+        "evidence_refs": [
+          "b0012"
+        ],
+        "confidence": 0.35,
+        "method": "code_from_llm_bucket_evidence",
+        "value_match": "context",
+        "contradiction": false,
+        "reason": "Relevant context was recalled, but the exact field value was not confirmed."
+      }
+    },
+    {
+      "field_id": "F00170",
+      "section": "characterization_methods",
+      "path": "characterization_methods.sample_3cu_sol_aged__characterization_id_char_3cu_saed.sample_id",
+      "value": "sample_3cu_sol_aged",
+      "sample_id": "sample_3cu_sol_aged",
+      "support": {
+        "support_label": "weak_supported",
+        "evidence_refs": [
+          "b0012"
+        ],
+        "confidence": 0.35,
+        "method": "code_from_llm_bucket_evidence",
+        "value_match": "context",
+        "contradiction": false,
+        "reason": "Identifier is linked to evidence through the surrounding record context."
+      }
+    },
+    {
+      "field_id": "F00171",
+      "section": "characterization_methods",
+      "path": "characterization_methods.sample_3cu_sol_aged__characterization_id_char_3cu_saed.technique",
+      "value": "Selected area electron diffraction (SAED)",
+      "sample_id": "sample_3cu_sol_aged",
+      "support": {
+        "support_label": "explicit_supported",
+        "evidence_refs": [
+          "b0014"
+        ],
+        "confidence": 0.98,
+        "method": "code_exact_match",
+        "value_match": "exact",
+        "contradiction": false,
+        "reason": "Normalized field value appears in the evidence block."
+      }
+    },
+    {
+      "field_id": "F00172",
+      "section": "computational_details",
+      "path": "computational_details.sample_3cu_sol_aged__computation_id_comp_lattice_misfit.analytical_model[0].equation_role",
+      "value": "Calculate lattice misfit between phases",
+      "sample_id": "sample_3cu_sol_aged",
+      "support": {
+        "support_label": "weak_supported",
+        "evidence_refs": [
+          "b0012"
+        ],
+        "confidence": 0.35,
+        "method": "code_from_llm_bucket_evidence",
+        "value_match": "context",
+        "contradiction": false,
+        "reason": "Relevant context was recalled, but the exact field value was not confirmed."
+      }
+    },
+    {
+      "field_id": "F00173",
+      "section": "computational_details",
+      "path": "computational_details.sample_3cu_sol_aged__computation_id_comp_lattice_misfit.analytical_model[0].model_name",
+      "value": "Lattice misfit formula",
+      "sample_id": "sample_3cu_sol_aged",
+      "support": {
+        "support_label": "explicit_supported",
+        "evidence_refs": [
+          "b0018"
+        ],
+        "confidence": 0.98,
+        "method": "code_exact_match",
+        "value_match": "exact",
+        "contradiction": false,
+        "reason": "Normalized field value appears in the evidence block."
+      }
+    },
+    {
+      "field_id": "F00174",
+      "section": "computational_details",
+      "path": "computational_details.sample_3cu_sol_aged__computation_id_comp_lattice_misfit.analytical_model[0].model_note",
+      "value": "Formula (1) in text.",
+      "sample_id": "sample_3cu_sol_aged",
+      "support": {
+        "support_label": "numeric_supported",
+        "evidence_refs": [
+          "b0008"
+        ],
+        "confidence": 0.94,
+        "method": "code_numeric_match",
+        "value_match": "numeric",
+        "contradiction": false,
+        "reason": "Field number appears in the evidence block."
+      }
+    },
+    {
+      "field_id": "F00175",
+      "section": "computational_details",
+      "path": "computational_details.sample_3cu_sol_aged__computation_id_comp_lattice_misfit.analytical_model[0].parameters",
+      "value": "a0 and a1: lattice parameters of two phases",
+      "sample_id": "sample_3cu_sol_aged",
+      "support": {
+        "support_label": "weak_supported",
+        "evidence_refs": [
+          "b0012"
+        ],
+        "confidence": 0.35,
+        "method": "code_from_llm_bucket_evidence",
+        "value_match": "context",
+        "contradiction": false,
+        "reason": "Relevant context was recalled, but the exact field value was not confirmed."
+      }
+    },
+    {
+      "field_id": "F00176",
+      "section": "computational_details",
+      "path": "computational_details.sample_3cu_sol_aged__computation_id_comp_lattice_misfit.analytical_model[1].equation_role",
+      "value": "Predict precipitation condition for κ-carbide based on composition",
+      "sample_id": "sample_3cu_sol_aged",
+      "support": {
+        "support_label": "weak_supported",
+        "evidence_refs": [
+          "b0012"
+        ],
+        "confidence": 0.35,
+        "method": "code_from_llm_bucket_evidence",
+        "value_match": "context",
+        "contradiction": false,
+        "reason": "Relevant context was recalled, but the exact field value was not confirmed."
+      }
+    },
+    {
+      "field_id": "F00177",
+      "section": "computational_details",
+      "path": "computational_details.sample_3cu_sol_aged__computation_id_comp_lattice_misfit.analytical_model[1].model_name",
+      "value": "Composition boundary formula for intragranular κ-carbide precipitation",
+      "sample_id": "sample_3cu_sol_aged",
+      "support": {
+        "support_label": "weak_supported",
+        "evidence_refs": [
+          "b0012"
+        ],
+        "confidence": 0.35,
+        "method": "code_from_llm_bucket_evidence",
+        "value_match": "context",
+        "contradiction": false,
+        "reason": "Relevant context was recalled, but the exact field value was not confirmed."
+      }
+    },
+    {
+      "field_id": "F00178",
+      "section": "computational_details",
+      "path": "computational_details.sample_3cu_sol_aged__computation_id_comp_lattice_misfit.analytical_model[1].model_note",
+      "value": "Formula (2) in text; critical Al content for 0Cu steel calculated as 6.52 wt%.",
+      "sample_id": "sample_3cu_sol_aged",
+      "support": {
+        "support_label": "weak_supported",
+        "evidence_refs": [
+          "b0012"
+        ],
+        "confidence": 0.35,
+        "method": "code_from_llm_bucket_evidence",
+        "value_match": "context",
+        "contradiction": false,
+        "reason": "Relevant context was recalled, but the exact field value was not confirmed."
+      }
+    },
+    {
+      "field_id": "F00179",
+      "section": "computational_details",
+      "path": "computational_details.sample_3cu_sol_aged__computation_id_comp_lattice_misfit.analytical_model[1].parameters",
+      "value": "0.208(wt.% C) + 0.098(wt.% Al) = 1 - 0.0054(wt.% Mn)",
+      "sample_id": "sample_3cu_sol_aged",
+      "support": {
+        "support_label": "weak_supported",
+        "evidence_refs": [
+          "b0012"
+        ],
+        "confidence": 0.35,
+        "method": "code_from_llm_bucket_evidence",
+        "value_match": "context",
+        "contradiction": false,
+        "reason": "Relevant context was recalled, but the exact field value was not confirmed."
+      }
+    },
+    {
+      "field_id": "F00180",
+      "section": "computational_details",
+      "path": "computational_details.sample_3cu_sol_aged__computation_id_comp_lattice_misfit.computation_id",
+      "value": "comp_lattice_misfit",
+      "sample_id": "sample_3cu_sol_aged",
+      "support": {
+        "support_label": "weak_supported",
+        "evidence_refs": [
+          "b0012"
+        ],
+        "confidence": 0.35,
+        "method": "code_from_llm_bucket_evidence",
+        "value_match": "context",
+        "contradiction": false,
+        "reason": "Identifier is linked to evidence through the surrounding record context."
+      }
+    },
+    {
+      "field_id": "F00181",
+      "section": "computational_details",
+      "path": "computational_details.sample_3cu_sol_aged__computation_id_comp_lattice_misfit.sample_id",
+      "value": "sample_3cu_sol_aged",
+      "sample_id": "sample_3cu_sol_aged",
+      "support": {
+        "support_label": "weak_supported",
+        "evidence_refs": [
+          "b0012"
+        ],
+        "confidence": 0.35,
+        "method": "code_from_llm_bucket_evidence",
+        "value_match": "context",
+        "contradiction": false,
+        "reason": "Identifier is linked to evidence through the surrounding record context."
+      }
+    },
+    {
+      "field_id": "F00182",
+      "section": "computational_details",
+      "path": "computational_details.sample_3cu_sol_aged__computation_id_comp_lattice_misfit.simulation_method",
+      "value": "Lattice misfit calculation using formula δ = |a0 - a1| / a0",
+      "sample_id": "sample_3cu_sol_aged",
+      "support": {
+        "support_label": "weak_supported",
+        "evidence_refs": [
+          "b0012"
+        ],
+        "confidence": 0.35,
+        "method": "code_from_llm_bucket_evidence",
+        "value_match": "context",
+        "contradiction": false,
+        "reason": "Relevant context was recalled, but the exact field value was not confirmed."
+      }
+    },
+    {
+      "field_id": "F00183",
+      "section": "computational_details",
+      "path": "computational_details.sample_3cu_sol_aged__computation_id_comp_lattice_misfit.validation_against_experiment",
+      "value": "Calculated misfits: κ-carbide/γ=2.3%, Cu-rich/γ=1.0%, κ-carbide/Cu-rich=3.4%.",
+      "sample_id": "sample_3cu_sol_aged",
+      "support": {
+        "support_label": "weak_supported",
+        "evidence_refs": [
+          "b0012"
+        ],
+        "confidence": 0.35,
+        "method": "code_from_llm_bucket_evidence",
+        "value_match": "context",
+        "contradiction": false,
+        "reason": "Relevant context was recalled, but the exact field value was not confirmed."
+      }
+    },
+    {
+      "field_id": "F00184",
+      "section": "unmapped_findings",
+      "path": "unmapped_findings.idx_0.value",
+      "value": "The Cu-rich phase in ferrite generally precipitates with BCC structure first then transforms to FCC; but in austenite, it precipitates directly in FCC structure.",
+      "support": {
+        "support_label": "weak_supported",
+        "evidence_refs": [
+          "b0001"
+        ],
+        "confidence": 0.35,
+        "method": "code_from_llm_bucket_evidence",
+        "value_match": "context",
+        "contradiction": false,
+        "reason": "Relevant context was recalled, but the exact field value was not confirmed."
+      }
+    },
+    {
+      "field_id": "F00185",
+      "section": "unmapped_findings",
+      "path": "unmapped_findings.idx_1.value",
+      "value": "Interfacial energy: κ-carbide with austenitic matrix = 0.025 J/m^2; Cu in austenitic matrix = 0.086 J/m^2.",
+      "support": {
+        "support_label": "weak_supported",
+        "evidence_refs": [
+          "b0001"
+        ],
+        "confidence": 0.35,
+        "method": "code_from_llm_bucket_evidence",
+        "value_match": "context",
+        "contradiction": false,
+        "reason": "Relevant context was recalled, but the exact field value was not confirmed."
+      }
+    },
+    {
+      "field_id": "F00186",
+      "section": "unmapped_findings",
+      "path": "unmapped_findings.idx_2.value",
+      "value": "κ-carbide precipitation follows nucleation and growth mechanism; critical lattice parameter of austenitic matrix for intragranular κ-carbide is about a=0.3670 nm.",
+      "support": {
+        "support_label": "weak_supported",
+        "evidence_refs": [
+          "b0001"
+        ],
+        "confidence": 0.35,
+        "method": "code_from_llm_bucket_evidence",
+        "value_match": "context",
+        "contradiction": false,
+        "reason": "Relevant context was recalled, but the exact field value was not confirmed."
+      }
+    },
+    {
+      "field_id": "F00187",
+      "section": "unmapped_findings",
+      "path": "unmapped_findings.idx_3.value",
+      "value": "Cu addition increases lattice parameter of austenitic matrix, beneficial for κ-carbide precipitation.",
+      "support": {
+        "support_label": "weak_supported",
+        "evidence_refs": [
+          "b0001"
+        ],
+        "confidence": 0.35,
+        "method": "code_from_llm_bucket_evidence",
+        "value_match": "context",
+        "contradiction": false,
+        "reason": "Relevant context was recalled, but the exact field value was not confirmed."
+      }
+    },
+    {
+      "field_id": "F00188",
+      "section": "unmapped_findings",
+      "path": "unmapped_findings.idx_4.value",
+      "value": "Cu-rich phase crystal plane spacing (002) = 0.182 nm, consistent with FCC Cu.",
+      "support": {
+        "support_label": "weak_supported",
+        "evidence_refs": [
+          "b0001"
+        ],
+        "confidence": 0.35,
+        "method": "code_from_llm_bucket_evidence",
+        "value_match": "context",
+        "contradiction": false,
+        "reason": "Relevant context was recalled, but the exact field value was not confirmed."
+      }
+    },
+    {
+      "field_id": "F00189",
+      "section": "unmapped_findings",
+      "path": "unmapped_findings.idx_5.value",
+      "value": "The κ-carbide and Cu-rich phase have good thermal stability due to low lattice misfit.",
+      "support": {
+        "support_label": "weak_supported",
+        "evidence_refs": [
+          "b0001"
+        ],
+        "confidence": 0.35,
+        "method": "code_from_llm_bucket_evidence",
+        "value_match": "context",
+        "contradiction": false,
+        "reason": "Relevant context was recalled, but the exact field value was not confirmed."
+      }
+    }
+  ]
+}

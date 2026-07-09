@@ -1,0 +1,11 @@
+{
+  "stage": "extract_text",
+  "updated_at": "2026-07-09T20:15:17.980209",
+  "paper_id": "10.1016_j.matlet.2024.136522",
+  "paper_md_path": "/Users/mac/Desktop/SteelDig/datasets/82/extracted/10.1016_j.matlet.2024.136522/source/mineru/full.md",
+  "cleaned_md_path": "/Users/mac/Desktop/SteelDig/datasets/82/extracted/10.1016_j.matlet.2024.136522/preprocess/cleaned_input.md",
+  "raw_output_path": "/Users/mac/Desktop/SteelDig/datasets/82/extracted/10.1016_j.matlet.2024.136522/extraction/text/text_extraction.raw.txt",
+  "raw_output_length": 28937,
+  "model": "deepseek-v4-flash",
+  "base_url": "https://api.deepseek.com"
+}

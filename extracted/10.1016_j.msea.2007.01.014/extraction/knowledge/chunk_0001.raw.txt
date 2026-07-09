@@ -1,0 +1,126 @@
+{
+"claims": [
+{
+"claim_type": "finding",
+"subject": "work hardening rate in Fe-Al alloys",
+"claim": "Work hardening rate in polycrystalline Fe-Al alloys shows a sharp maximum for alloys containing 26-30% Al.",
+"values": ["26-30 at.% Al", "1-1.5% plastic strain", "room temperature"],
+"evidence_text": "A sharp maximum in work hardening is seen for alloys containing 26–30% Al.",
+"figures": [],
+"tables": [],
+"confidence": "high"
+},
+{
+"claim_type": "finding",
+"subject": "work hardening rate variation with Al content",
+"claim": "Work hardening rate is low for disordered Fe-Al with less than 20% Al, rises to a sharp peak at 28-29% Al, and falls to a moderate value above about 35% Al.",
+"values": ["less than 20 at.% Al", "28-29 at.% Al", "above about 35 at.% Al"],
+"evidence_text": "The work hardening rate is seen to be low for disordered Fe–Al with less than 20% Al, rises to a sharp peak at 28–29% Al, and falls to a moderate value above about 35% Al.",
+"figures": ["Fig. 2"],
+"tables": [],
+"confidence": "high"
+},
+{
+"claim_type": "property",
+"subject": "yield stress in Fe-Al alloys",
+"claim": "Yield stress in polycrystalline Fe-Al alloys shows a steadily increasing trend with Al content up to 25% Al, a rapid fall at 25-28% Al, and little change or a slight increase over the 30-40% Al range.",
+"values": ["0-25 at.% Al", "25-28 at.% Al", "30-40 at.% Al"],
+"evidence_text": "The data on yield stress (taken from Refs. [2,5,8], and present study) show a steadily increasing yield stress with Al content up to 25% Al, a rapid fall at 25–28% Al, and little change or a slight increase over the 30–40% Al range.",
+"figures": ["Fig. 1"],
+"tables": [],
+"confidence": "high"
+},
+{
+"claim_type": "property",
+"subject": "ductility in Fe-Al alloys",
+"claim": "Ductility in polycrystalline Fe-Al alloys shows an essentially inverse relationship to yield stress, with a rapid fall to 25% Al, a slight maximum at 28% Al, and a steady slow fall thereafter.",
+"values": ["0-25 at.% Al", "28 at.% Al"],
+"evidence_text": "Ductility (data taken from Ref. [2]) shows an essentially inverse relationship to the yield stress, with a rapid fall in ductility to 25% Al, a slight maximum at 28% Al, and a steady, slow fall thereafter.",
+"figures": ["Fig. 1"],
+"tables": [],
+"confidence": "high"
+},
+{
+"claim_type": "mechanism",
+"subject": "dislocation structure changes near work hardening peak",
+"claim": "The most important change in dislocation structures near the work hardening peak is the formation of superdislocation dipoles instead of single dislocation dipoles, predominance of straight screw dislocations, and formation of sessile dislocation segments by reactions of mobile dislocations.",
+"values": [],
+"evidence_text": "Examination of dislocation structures with increasing Al content over the region of the maximum shows that the most important change, apart from the formation of superdislocation dipoles instead of single dislocation dipoles, is the predominance of straight screw dislocations and the formation of sessile dislocation segments by reactions of mobile dislocations.",
+"figures": [],
+"tables": [],
+"confidence": "high"
+},
+{
+"claim_type": "finding",
+"subject": "superdislocation dipole strengthening for high work hardening",
+"claim": "The high work hardening rate of the ordered state has been interpreted using a dipole hardening mechanism, whereby the strengthening effect of the superdislocation dipole is greater than that of the single dislocation dipole.",
+"values": [],
+"evidence_text": "The high work hardening rate of the ordered state has been interpreted [6,9,10] using a dipole hardening mechanism [14,15], whereby the strengthening effect of the superdislocation dipole is greater than that of the single dislocation dipole.",
+"figures": [],
+"tables": [],
+"confidence": "medium"
+},
+{
+"claim_type": "finding",
+"subject": "alternative APB tube theory for high work hardening",
+"claim": "An alternative theory based on tubes of anti-phase boundaries (APB) being dragged behind jogs formed on superdislocations has also been suggested for the high work hardening rate of the ordered state.",
+"values": [],
+"evidence_text": "An alternative theory based on tubes of anti-phase boundaries (APB) being dragged behind jogs formed on superdislocations [16–18] has also been suggested.",
+"figures": [],
+"tables": [],
+"confidence": "medium"
+},
+{
+"claim_type": "finding",
+"subject": "dislocation type changes with strain in given alloy",
+"claim": "Changes of work hardening rate with increasing strain of a given alloy have been interpreted based on the dipole forming model as due to changes in the type of dislocation present: four (1/2)<111> partials in DO3 order, two (1/2)<111> partials in B2 order, and single (1/2)<111> dislocations in disordered material.",
+"values": ["(1/2)<111> Burgers vector"],
+"evidence_text": "based on the dipole forming model, as due to changes in the type of dislocation present—four partial dislocations each of Burgers vector (1/2)<111> constituting the perfect superdislocation when DO3 order is present; two partial dislocations also of Burgers vector (1/2)<111> constituting the perfect superdislocation when B2 order is present; single (1/2)<111> dislocations present in disordered or short range ordered material.",
+"figures": [],
+"tables": [],
+"confidence": "high"
+},
+{
+"claim_type": "comparison",
+"subject": "peak in work hardening rate vs elastic anisotropy",
+"claim": "The peak in work hardening rate coincides with increased elastic anisotropy, but this is believed to reflect the importance of core/Peierls effects rather than to be a direct cause of high work hardening.",
+"values": [],
+"evidence_text": "The peak in work hardening rate coincides with increased elastic anisotropy, but this is believed to reflect the importance of core/Peierls effects rather than to be a direct cause of high work hardening.",
+"figures": [],
+"tables": [],
+"confidence": "high"
+},
+{
+"claim_type": "characterization",
+"subject": "APB energies in ordered Fe-Al alloys",
+"claim": "APB energies in B2 and DO3 ordered Fe-Al alloys vary with Al content, with high APB energies keeping partial dislocations close together.",
+"values": [],
+"evidence_text": "Data on APB energies are given in Fig. 3, taken from studies of Ray–Crawford–Cockayne [19–21]. High APB energies will tend to keep partial dislocations close together.",
+"figures": ["Fig. 3"],
+"tables": [],
+"confidence": "high"
+},
+{
+"claim_type": "characterization",
+"subject": "elastic anisotropy in Fe3Al alloys",
+"claim": "Fe3Al alloys have an extremely high degree of elastic anisotropy, reflected in the Zener anisotropy factor A = 2C44/(C11-C12), due to an increase in C44 and a fall in (C11-C12)/2.",
+"values": [],
+"evidence_text": "Fe3Al alloys are seen to have an extremely high degree of elastic anisotropy, as reflected in the Zener anisotropy factor, A = 2C44/(C11-C12) ... due to both an increase in the value of the C44 parameter and a fall in (C11-C12)/2.",
+"figures": ["Fig. 4"],
+"tables": [],
+"confidence": "high"
+}
+],
+"context_update": {
+"summary": "This front matter chunk (Abstract and Introduction) of the paper 'Work hardening in Fe–Al alloys' introduces the study of work hardening in polycrystalline Fe–Al alloys with Al content up to 40 at.%. It states the key finding of a sharp maximum in work hardening rate near 26-30 at.% Al, and attributes this to a transition from single to superdislocation dipoles, predominance of straight screw dislocations, and sessile segment formation. It reviews literature data on yield stress, ductility, and work hardening rate as functions of Al content (Figs. 1-2). Two main mechanisms are cited for high work hardening in ordered states: dipole hardening and APB tube dragging. Dislocation types are linked to ordering state (DO3, B2, disordered). APB energies (Fig. 3) and elastic anisotropy (Fig. 4) are presented as influential factors. The chunk also clarifies that specimens are thermally-relaxed as-cast, coarse-grained, with no solute/precipitate effects, and that ordering state (slowly cooled) is considered. The study aims to interpret work hardening variation via dislocation structures.",
+"material_systems": ["Fe–Al alloys", "Fe3Al", "FeAl", "disordered bcc Fe-Al"],
+"sample_aliases": [],
+"processing_route": ["as-cast", "annealed", "slowly cooled"],
+"key_variables": ["Al content (at.%) 0 to 40", "plastic strain 1-1.5%", "room temperature", "grain size (coarse)", "order state (DO3, B2)"],
+"microstructure": ["dislocation dipoles (single vs superdislocation)", "straight screw dislocations", "sessile dislocation segments", "partial dislocations with Burgers vector (1/2)<111>", "APB faults (APBI, APBII)"],
+"properties": ["work hardening rate", "yield stress", "ductility", "elastic stiffness constants (C11, C12, C44)", "Zener anisotropy factor"],
+"mechanisms": ["dipole hardening", "APB tube dragging", "core/Peierls effects"],
+"figures_or_tables": ["Fig. 1", "Fig. 2", "Fig. 3", "Fig. 4"],
+"unresolved_terms": []
+}
+}

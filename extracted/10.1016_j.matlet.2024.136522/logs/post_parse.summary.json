@@ -1,0 +1,12 @@
+{
+  "stage": "post_parse",
+  "updated_at": "2026-07-09T20:16:00.885468",
+  "paper_id": "10.1016_j.matlet.2024.136522",
+  "text_parse_success": 1,
+  "text_parse_fail": 0,
+  "multimodal_parse_success": 3,
+  "multimodal_parse_fail": 0,
+  "fallback_agent_used": 0,
+  "final_text_extraction_path": "/Users/mac/Desktop/SteelDig/datasets/82/extracted/10.1016_j.matlet.2024.136522/final/text_extraction.json",
+  "final_multimodal_figures_path": "/Users/mac/Desktop/SteelDig/datasets/82/extracted/10.1016_j.matlet.2024.136522/final/multimodal_figures.json"
+}

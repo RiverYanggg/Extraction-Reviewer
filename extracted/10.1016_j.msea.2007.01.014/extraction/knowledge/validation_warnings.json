@@ -1,0 +1,170 @@
+[
+  {
+    "chunk_id": "chunk_0001",
+    "claim": "Changes of work hardening rate with increasing strain of a given alloy have been interpreted based on the dipole forming model as due to changes in the type of dislocation present: four (1/2)<111> partials in DO3 order, two (1/2)<111> partials in B2 order, and single (1/2)<111> dislocations in disordered material.",
+    "validation_status": "evidence_not_found",
+    "evidence_text": "based on the dipole forming model, as due to changes in the type of dislocation present—four partial dislocations each of Burgers vector (1/2)<111> constituting the perfect superdislocation when DO3 order is present; two partial dislocations also of Burgers vector (1/2)<111> constituting the perfect superdislocation when B2 order is present; single (1/2)<111> dislocations present in disordered or short range ordered material."
+  },
+  {
+    "chunk_id": "chunk_0001",
+    "claim": "APB energies in B2 and DO3 ordered Fe-Al alloys vary with Al content, with high APB energies keeping partial dislocations close together.",
+    "validation_status": "evidence_not_found",
+    "evidence_text": "Data on APB energies are given in Fig. 3, taken from studies of Ray–Crawford–Cockayne [19–21]. High APB energies will tend to keep partial dislocations close together."
+  },
+  {
+    "chunk_id": "chunk_0001",
+    "claim": "Fe3Al alloys have an extremely high degree of elastic anisotropy, reflected in the Zener anisotropy factor A = 2C44/(C11-C12), due to an increase in C44 and a fall in (C11-C12)/2.",
+    "validation_status": "evidence_not_found",
+    "evidence_text": "Fe3Al alloys are seen to have an extremely high degree of elastic anisotropy, as reflected in the Zener anisotropy factor, A = 2C44/(C11-C12) ... due to both an increase in the value of the C44 parameter and a fall in (C11-C12)/2."
+  },
+  {
+    "chunk_id": "chunk_0002",
+    "claim": "Cooling after solidification was sufficiently slow to allow a high degree of B2 order for Al-rich alloys and a good degree of DO3 order for 25-30% Al alloys, as indicated by strong superlattice spots and coarse DO3 domains in TEM.",
+    "validation_status": "evidence_not_found",
+    "evidence_text": "Cooling after solidification was sufficiently slow to allow a high degree of B2 order for alloys rich in Al, and a good degree of DO3 order for alloys containing 25–30% Al, as indicated by strong superlattice spots and coarse DO3 domains observed during subsequent transmission electron microscopy."
+  },
+  {
+    "chunk_id": "chunk_0002",
+    "claim": "Compression samples were cut from ingots by spark machining as 3 mm diameter or 5 mm x 5 mm square cross-section samples with height twice the diameter or width, polished on fine abrasive paper, and tested at room temperature to 2-3% strain at a strain rate of 3e-4 s-1.",
+    "validation_status": "evidence_not_found",
+    "evidence_text": "Compression samples for mechanical testing were cut from the ingots by spark machining, either as 3 mm diameter or as 5 mm 5 mm square cross-section samples, of height twice the diameter or width. Flat surfaces were polished on fine (1500 grade) abrasive paper before testing, at room temperature, to a strain of 2–3% at a nominal strain rate of 3e-4 s-1."
+  },
+  {
+    "chunk_id": "chunk_0002",
+    "claim": "Compression tests showed a smooth onset of plasticity with no discrete yield points and slightly curved stress-strain behavior with no linear regions.",
+    "validation_status": "evidence_not_found",
+    "evidence_text": "Compression tests showed a smooth onset of plasticity, with no discrete yield points observed, and the stress–strain behaviour was always slightly curved, with no sign of the linear stress–strain regions sometimes observed."
+  },
+  {
+    "chunk_id": "chunk_0002",
+    "claim": "Thin foils for TEM were prepared from deformed samples using twin-jet electropolishing with 25% nitric acid in methanol at about 20 V and -30 degrees C.",
+    "validation_status": "evidence_not_found",
+    "evidence_text": "thin foils prepared for transmission electron microscopy (TEM) using a twin-jet electropolishing unit with a 25% nitric acid in methanol mixture at about 20 V and -30 degrees C."
+  },
+  {
+    "chunk_id": "chunk_0002",
+    "claim": "Samples were examined using a JEOL 2010 microscope with dislocations imaged in Bright Field and Weak Beam modes, and planar faults in dark field modes.",
+    "validation_status": "evidence_not_found",
+    "evidence_text": "Samples were examined using a JEOL 2010 microscope with dislocations imaged in Bright Field and Weak Beam modes, and planar (shear or thermal) faults observed in various dark field modes."
+  },
+  {
+    "chunk_id": "chunk_0002",
+    "claim": "Data on yield stress and work hardening rate from present tests are consistent with prior literature and show a work hardening peak maximum at 29% Al over the 1-1.5% strain range, with the maximum anywhere in 26-29% Al.",
+    "validation_status": "evidence_not_found",
+    "evidence_text": "Data on yield stress and work hardening rate obtained in the present tests are included with the prior literature data in Figs. 1 and 2, and seem to be consistent with these prior data. the work hardening peak maximum at 29% Al, for work hardening measured over the 1–1.5% strain range, was similar to the peak observed using other strain ranges, but the maximum was found anywhere in the 26–29% Al range."
+  },
+  {
+    "chunk_id": "chunk_0002",
+    "claim": "Disordered Fe-Al materials (15 and 20% Al) deform by movement of single dislocations of Burgers vector (1/2)<111>, which are smoothly curved with some preference for screw orientations and show weak clustering as incipient cell structures.",
+    "validation_status": "evidence_not_found",
+    "evidence_text": "Disordered materials, or those containing some level of short range order, are deformed by the movement of single dislocations of Burgers vector (1/2) 1 1 1, as illustrated in Figs. 5–7, showing dislocations in materials containing 15 and 20% Al. The single dislocations were generally smoothly curved, Fig. 6, showing some preference for orientations as screw dislocations, Fig. 7, and in thicker regions of the foils it was seen that there was some tendency for a weak clustering of dislocations as an incipient cell structure, Fig. 5."
+  },
+  {
+    "chunk_id": "chunk_0002",
+    "claim": "In Fe-25% Al with DO3 order, dislocations remained straight in near-screw orientations with edge dipole segments and loosely coupled screw dipole configurations; APB energies for APBI and APBII faults were insufficiently high to retain closely coupled superdislocations.",
+    "validation_status": "evidence_not_found",
+    "evidence_text": "With the appearance of long range order in the Fe–25% Al alloy showing DO3 order, dislocations remained more straight as well as in near-screw orientations and again showed edge dipole segments as well as loosely coupled screw dipole configurations, Figs. 8 and 9. The APB energies for both APBI and APBII faults were insufficiently high to retain dislocations together as closely coupled superdislocations, as seen in Fig. 8."
+  },
+  {
+    "chunk_id": "chunk_0002",
+    "claim": "In Fe-28% Al at the work hardening peak, dislocations are invariably superdislocations composed of two (1/2)<111> partials (perfect for B2, imperfect for DO3), trailing APBII faults but not APBI faults.",
+    "validation_status": "evidence_not_found",
+    "evidence_text": "dislocations are now invariably superdislocations composed of two (1/2) 1 1 1 partials—that is they constitute a perfect superdislocation for the B2 lattice, but an imperfect superdislocation for the DO3 lattice, and hence trail APBII faults as they glide. These superdislocations do not trail any APBI faults."
+  },
+  {
+    "chunk_id": "chunk_0002",
+    "claim": "In Fe-28% Al, dislocations are generally straight and mostly in near-screw orientations along {110} glide planes; many are arranged in dipole configurations or are non-dipole pairs with identical Burgers vectors.",
+    "validation_status": "evidence_not_found",
+    "evidence_text": "dislocations are generally straight, and are mostly in near-screw orientations. Fig. 10 shows large numbers of rather straight superdislocations of several different Burgers vector often oriented in near-screw directions along their {1 1 0} glide planes. many [dislocations] are arranged in dipole configurations, marked as d in Fig. 11, while other pairs have identical Burgers vectors, marked as p in Fig. 11."
+  },
+  {
+    "chunk_id": "chunk_0002",
+    "claim": "In Fe-28% Al, reaction of two superdislocations with different <111> Burgers vectors in different {110} glide planes produces a pair of edge dislocations with <100> Burgers vector in sessile configuration on a cube plane, acting as locks.",
+    "validation_status": "evidence_not_found",
+    "evidence_text": "a reaction of two superdislocations with different 1 1 1 Burgers vectors and lying in different {1 1 0} glide planes producing a pair of edge dislocations with 1 0 0 Burgers vector sitting in a sessile configuration on a cube plane. such configurations constitute locks that prevent further room temperature superdislocation motion."
+  },
+  {
+    "chunk_id": "chunk_0002",
+    "claim": "In Fe-35% Al, dislocations are superdislocations of the B2 lattice with two (1/2)<111> partials lying close together due to higher APBI fault energy; many straight near-screw superdislocations and edge dipole segments are present.",
+    "validation_status": "evidence_not_found",
+    "evidence_text": "The dislocations present are superdislocations of the B2 lattice, constituted by two partials of Burgers vector (1/2) 1 1 1 each, with these partials lying close to each other due to the higher APBI fault energy. Fig. 17 shows many straight, near-screw superdislocations and edge dipole segments."
+  },
+  {
+    "chunk_id": "chunk_0002",
+    "claim": "In Fe-35% Al, the presence of some DO3 order means superdislocations with partial pairs destroy DO3 order by movement, indicated by weak remnant fringes.",
+    "validation_status": "evidence_not_found",
+    "evidence_text": "the presence of some degree of DO3 order means that these superdislocations (with a pair of partial dislocations) again destroy some of the DO3 order by their movement, which is indicated by the weak remnant fringes seen in Fig. 19."
+  },
+  {
+    "chunk_id": "chunk_0002",
+    "claim": "Fig. 6 shows curled single dislocations in Fe-20% Al with zone axis [011] and imaging vector 011, showing dipole arrangement via opposite sign imaging vectors.",
+    "validation_status": "evidence_not_found",
+    "evidence_text": "Fig. 6. Curled single dislocations in Fe–20% Al. Zone axis (stress axis) is [0 1 1] and imaging vector (arrowed) parallel to 011. Opposite sign imaging vectors were used for the two photographs, and relative displacement of images indicates the dipole arrangement of many dislocation segments and loops."
+  },
+  {
+    "chunk_id": "chunk_0002",
+    "claim": "Fig. 8 shows APB faults and dislocations in deformed Fe-25% Al with zone axis near [001] and imaging g vector 100, showing APBI faults from (1/2)111 dislocation movement.",
+    "validation_status": "evidence_not_found",
+    "evidence_text": "Fig. 8. Dark field (left) and weak beam (right) micrographs showing APB faults and dislocations in deformed Fe–25% Al. For both images the zone axis is near [0 0 1] and imaging g vector is parallel to 1 0 0. It also shows APBI faults (marked s) produced by movement of (1/2) 1 1 1 dislocations (B2 convention)."
+  },
+  {
+    "chunk_id": "chunk_0002",
+    "claim": "Fig. 11 shows dipole pairs (d) and non-dipole dislocation pairs (p) in deformed Fe-28% Al imaged with +/- 200 g vectors.",
+    "validation_status": "evidence_not_found",
+    "evidence_text": "Fig. 11. Pair of bright field micrographs in +g and g imaging conditions showing dipole pairs (marked d) and non-dipole dislocation pairs (marked p) in deformed Fe–28% Al. Zone axis is near [0 0 1] and imaging g vector (arrowed) are +/- 2 0 0."
+  },
+  {
+    "chunk_id": "chunk_0002",
+    "claim": "Fig. 18 shows a large number of dipole segments in deformed Fe-35% Al imaged under +/- g conditions.",
+    "validation_status": "evidence_not_found",
+    "evidence_text": "The large number of dipole segments formed are clearly seen in the pair of images shown in Fig. 18 imaged under +/- g conditions."
+  },
+  {
+    "chunk_id": "chunk_0003",
+    "claim": "In Fe-35% Al, presence of some degree of DO3 order causes superdislocations to destroy DO3 order during movement, indicated by weak remnant fringes in Fig. 19.",
+    "validation_status": "evidence_not_found",
+    "evidence_text": "As for the alloys with 28–30% Al, the presence of some degree of DO3 order means that these superdislocations (with a pair of partial dislocations) again destroy some of the DO3 order by their movement, which is indicated by the weak remnant fringes seen in Fig. 19."
+  },
+  {
+    "chunk_id": "chunk_0003",
+    "claim": "Formation of superdislocation dipoles instead of single dislocation dipoles is expected to produce greater hardening for ordered alloys, but no APB tubes were observed to support that model.",
+    "validation_status": "evidence_not_found",
+    "evidence_text": "The formation of superdislocation dipoles instead of single dislocation dipoles is expected to produce greater hardening for the ordered alloys, as is the formation of APB tubes behind jogs on the superdislocations. The present study has seen large numbers of dipoles after deformation, both on single dislocations (at 15–20% Al) and on superdislocations (at 28–35% Al). This can be seen as a reason for the high work hardening rate of the ordered state. No APB tubes have been observed, so there is little support here for this model of work hardening."
+  },
+  {
+    "chunk_id": "chunk_0003",
+    "claim": "A peak in work hardening at about 28 at.% Al could possibly be explained by four-partial superdislocations in DO3 order range, but such dislocations were never observed and for 25 at.% Al alloy APBI energy is too low for such dissociation.",
+    "validation_status": "evidence_not_found",
+    "evidence_text": "A peak could possibly be explained if superdislocations composed of four-partial dislocations existed over a certain range of Al content, especially near 25–28% Al, where DO3 order exists and the corresponding APBI and APBII energies are high. However, such four-partial superdislocations have never been observed here, and indeed for the 25% Al alloy the APBI energy is so low that dislocations appear completely dissociated as single dislocations, trailing the corresponding APB fault."
+  },
+  {
+    "chunk_id": "chunk_0003",
+    "claim": "High elastic anisotropy (peak at 25-30 at.% Al) is not sufficient alone to explain the work hardening peak, as the relative energy increase from screw to edge dislocation is only 5-10% less for less anisotropic alloys (30-34 at.% Al).",
+    "validation_status": "evidence_not_found",
+    "evidence_text": "From Kotter et al. [23] and Yoo et al. [25], the relative energy increase for Fe–25% Al on changing a screw dislocation into an edge is of the order of 1.8–2.7 times, but is only about 5–10% less for the less anisotropic alloys with 30–34% Al. This small difference in energy change as a screw dislocation becomes an edge hardly seems sufficient to change significantly the fraction of screw dislocations present, and thus cause such a large peak in the work hardening rate."
+  },
+  {
+    "chunk_id": "chunk_0003",
+    "claim": "Peierls forces, reflecting changes in interatomic forces, are suggested to be stronger for compositions near 28 at.% Al, ensuring dislocations are strongly oriented along screw directions and increasing dipole pinning.",
+    "validation_status": "evidence_not_found",
+    "evidence_text": "Accordingly the high elastic anisotropy (much greater at 25–30% Al) is reflected in higher Peierls forces for these same compositions, especially near 28% Al. Indeed, studies of slip plane selection by screw dislocations as in-plane and out-of-plane applied stresses change confirm the importance of core structure and Peierls effects for alloys near the Fe Al composition (compared with Fe) [33]. These Peierls forces ensure that dislocations here are most strongly oriented along screw directions and the tendency to form dipole pinning points is the strongest."
+  },
+  {
+    "chunk_id": "chunk_0003",
+    "claim": "Reaction of <111> dislocations to produce straight edge <100> dislocations provides additional pinning obstacles in ordered alloys near 28-30 at.% Al; these <100> dislocations have extremely high Peierls forces at room temperature and are strong barriers to glide of <111> superdislocations.",
+    "validation_status": "evidence_not_found",
+    "evidence_text": "An additional pinning obstacle observed for all ordered alloys, but especially for those near 28–30% Al, is that produced by reaction of <111> dislocations to produce straight edge <100> dislocations. Peierls forces are known to be extremely high on such dislocations at room temperature [33] and hence such dislocations are strong barriers to further glide of <111> superdislocations."
+  },
+  {
+    "chunk_id": "chunk_0004",
+    "claim": "DO3 ordered Fe–25% Al has sufficiently low APB energies that superdislocations do not form and single dislocations trail shear APB in this material.",
+    "validation_status": "evidence_not_found",
+    "evidence_text": "DO3 ordered Fe–25% Al has sufficiently low APB energies that superdislocations do not form and single dislocations trail shear APB in this material."
+  },
+  {
+    "chunk_id": "chunk_0004",
+    "claim": "For no material was there evidence of the operation of coupled four-partial dislocations which constitute the perfect superdislocation for the DO3 ordered state.",
+    "validation_status": "evidence_not_found",
+    "evidence_text": "For no material was there evidence of the operation of coupled four-partial dislocations which constitute the perfect superdislocation for the DO3 ordered state."
+  }
+]

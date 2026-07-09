@@ -1,0 +1,13 @@
+{
+  "paper_id": "10.1016_j.msea.2007.01.014",
+  "schema_version": "field-evidence-v2",
+  "field_count": 279,
+  "bucket_count": 9,
+  "llm_used": true,
+  "support_summary": {
+    "explicit_supported": 90,
+    "numeric_supported": 9,
+    "unsupported": 4,
+    "weak_supported": 176
+  }
+}

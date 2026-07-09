@@ -1,0 +1,11 @@
+{
+  "paper_id": "10.1016_j.msea.2007.01.014",
+  "figure_id": "figure_011",
+  "image_paths": [
+    "images/98294f693a598484af01b64bca9eadb8bc285730a490808035d9680a3c8f01f6.jpg"
+  ],
+  "image_count": 1,
+  "image_type": "microscopy_tem",
+  "description": "This figure presents a pair of bright-field transmission electron micrographs of deformed Fe–28% Al alloy, captured under +g and −g imaging conditions with the zone axis near [0 0 1] and the imaging g vector indicated by arrows as ±<200>. The scale bar is 0.2 μm. The left and right micrographs together demonstrate the contrast reversal behavior used to identify dislocation dipoles versus non-dipole pairs. Dislocation dipoles are marked 'd' throughout both images, while non-dipole dislocation pairs with identical Burgers vectors are marked 'p' in the right image. The dipole configurations are confirmed by the change in relative dislocation position when the sign of the imaging vector is reversed. The micrographs reveal numerous straight superdislocations oriented in near-screw directions along their {110} glide planes, with many arranged in dipole configurations. These superdislocations in Fe–28% Al are composed of two (1/2)<111> partials constituting a perfect superdislocation for the B2 lattice but imperfect for the DO3 lattice, trailing APBII faults during glide. The figure supports the core conclusion that the peak work hardening observed at ~28% Al correlates with abundant superdislocation dipole formation and dislocation reactions producing sessile locks that impede further dislocation motion.",
+  "confidence": 0.9
+}

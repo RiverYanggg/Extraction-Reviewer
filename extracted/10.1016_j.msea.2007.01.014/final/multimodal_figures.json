@@ -1,0 +1,212 @@
+[
+  {
+    "paper_id": "10.1016_j.msea.2007.01.014",
+    "figure_id": "figure_001",
+    "image_paths": [
+      "images/69fe8ef65f3a94bc59892578bda9a8e289a48273440d1eb7f65b1662a854e1e5.jpg"
+    ],
+    "image_count": 1,
+    "image_type": "property_mechanical",
+    "description": "This figure presents a dual-axis line plot showing the composition dependence of yield stress and ductility in polycrystalline Fe-Al alloys (0-40 at.% Al) in the as-cast or annealed condition. The left y-axis displays yield stress in MPa (solid triangles connected by solid lines), while the right y-axis shows ductility in percent (solid circles connected by dashed lines), both plotted against aluminum content on the x-axis. Yield stress increases monotonically with Al content, reaching a pronounced maximum near 25 at.% Al (~640 MPa), then drops sharply between 25-28% Al to ~350 MPa, followed by a slight recovery and plateau toward 40% Al. Ductility exhibits the inverse trend: it starts high at low Al contents (~36% at ~15% Al), decreases rapidly with increasing Al, and reaches a minimum near 28% Al (~3%), with a small but notable local peak at approximately 28% Al (~6%) before continuing to decline toward 40% Al. The data sources include Refs. [2,5,8] and the present study. The figure establishes the mechanical property baseline that the paper interprets in terms of solution hardening, short-range order hardening, and the transition from single dislocations to superdislocations as deformation mechanisms across the composition range.",
+    "confidence": 0.9
+  },
+  {
+    "paper_id": "10.1016_j.msea.2007.01.014",
+    "figure_id": "figure_002",
+    "image_paths": [
+      "images/21c63282afc6e0ef65fac57c66e63873cf15eeff45b7ea2e9f387857deecfc01.jpg"
+    ],
+    "image_count": 1,
+    "image_type": "property_mechanical",
+    "description": "This figure presents the variation of work hardening rate (WHR) measured between 1% and 1.5% plastic strain as a function of aluminum content (0–40 at.%) for polycrystalline binary Fe–Al alloys. The main solid curve with circular markers shows data for binary Fe–Al alloys from literature sources [6,8] and the present study, revealing a characteristic trend: the work hardening rate remains low (~1 GPa) for disordered alloys with less than ~18% Al, then rises sharply to a pronounced peak of ~16 GPa at approximately 28–29% Al, before declining to moderate values (~6 GPa) above 35% Al. Two square markers connected by a dashed line represent Fe–Al–B alloys containing about 0.1% B (at ~20% and ~30% Al), showing only a slight increase in work hardening rate relative to the boron-free counterparts. The x-axis is labeled \"Aluminium content (%)\" and the y-axis is \"Work Hardening Rate (GPa)\". This figure supports the core conclusion that ordered Fe–Al alloys exhibit significantly higher work hardening rates than disordered ones, with an exceptional peak near 28% Al attributed to superdislocation dipole hardening mechanisms in the B2/DO3 ordered state, while boron addition has minimal effect on work hardening behavior.",
+    "confidence": 0.9
+  },
+  {
+    "paper_id": "10.1016_j.msea.2007.01.014",
+    "figure_id": "figure_003",
+    "image_paths": [
+      "images/ac34a5620adad9708c7f6ca1a99a3100f572c58dd1639d17f581c3e9e69e0c20.jpg"
+    ],
+    "image_count": 1,
+    "image_type": "chart_plot",
+    "description": "This figure presents a plot of antiphase boundary (APB) energies in Fe-Al alloys as a function of aluminum content (at.% Al), with fault energy in mJ/m² on the y-axis (0-120) and aluminum content from 20% to 45% on the x-axis. The data, taken from Refs. [19-21], distinguishes three distinct fault types: APBI in B2 order (solid circles with solid line), APBI in DO₃ order (squares with dash-dot line), and APBII in DO₃ order (triangles with dashed line). The APBI in B2 order shows a strong linear increase with aluminum content, rising from approximately 15 mJ/m² at 27% Al to about 110 mJ/m² at 36% Al. In contrast, the APBI in DO₃ order remains relatively constant around 75-80 mJ/m² between 26-30% Al, while the APBII in DO₃ order decreases from approximately 80 mJ/m² at 26% Al to about 35 mJ/m² at 30% Al. The figure caption states this variation of APB energies is critical for interpreting dislocation structures, as high APB energies tend to keep partial dislocations closely coupled as superdislocations, whereas the relatively low APB energies in DO₃-ordered Fe-25% Al alloys result in loosely coupled dislocations that largely glide as individual (1/2)[111] dislocations. The composition range near 25-30% Al is particularly significant as it corresponds to the transition between B2 and DO₃ ordering and to the peak work hardening behavior observed in these alloys.",
+    "confidence": 0.9
+  },
+  {
+    "paper_id": "10.1016_j.msea.2007.01.014",
+    "figure_id": "figure_004",
+    "image_paths": [
+      "images/1f3c0fcfda35e5f57894034a35175dbcc551c49910c2ac87fd5116ae7149c5f5.jpg"
+    ],
+    "image_count": 1,
+    "image_type": "chart_plot",
+    "description": "This figure presents a dual-axis line plot showing the composition dependence of elastic parameters for Fe-Al alloys with aluminium content ranging from 0 to 40 at.%. The left y-axis displays stiffness constants in GPa, while the right y-axis shows the anisotropy factor A (dimensionless). Three distinct curves are plotted: C44 (solid circles, ●) increases gradually from ~118 GPa to a peak near 130 GPa around 28-30% Al before slightly decreasing; (C11-C12)/2 (solid squares, ■) decreases from ~48 GPa to a minimum of ~20 GPa near 25% Al then modestly recovers; and the Zener anisotropy factor A (open triangles, △, calculated as A = 2C44/(C11-C12)) exhibits a sharp maximum reaching ~6.7 near the Fe3Al composition (~25-28% Al), coinciding with the onset of long-range DO3/B2 order. The caption states data is taken from Refs. [22,23]. The figure supports the core conclusion that Fe3Al alloys possess extremely high elastic anisotropy arising from simultaneous C44 increase and (C11-C12)/2 decrease, which correlates with the composition range where dislocation configurations change from single dislocations to superdislocations and where peak work hardening occurs.",
+    "confidence": 0.9
+  },
+  {
+    "paper_id": "10.1016_j.msea.2007.01.014",
+    "figure_id": "figure_005",
+    "image_paths": [
+      "images/07a0b3e92438cc1ec298157cf5f754f7ce146df3ce40d7d9e7e1302723e01da3.jpg"
+    ],
+    "image_count": 1,
+    "image_type": "microscopy_tem",
+    "description": "This is a transmission electron microscopy (TEM) image showing the dislocation structure in a deformed Fe-Al alloy. The micrograph reveals a complex network of dislocations with varying contrast, including numerous straight segments oriented near-screw directions as well as curved dislocations and dipole configurations. The scale bar indicates 0.25 μm, confirming the nanoscale resolution typical of TEM characterization. Based on the paper context examining work hardening in Fe-Al alloys (0-40 at.% Al), this image most likely corresponds to one of the higher-Al compositions (Fe-25%Al, Fe-28%Al, Fe-30%Al, or Fe-35%Al) where superdislocations composed of two (1/2)<111> partials are expected, rather than the single dislocations found in disordered Fe-15%Al and Fe-20%Al alloys. The visible straight screw-oriented dislocations and possible APB fault contrast are consistent with the ordered B2 or DO3 structures reported for these compositions. The arrow in the lower right may indicate a specific feature such as a superdislocation dipole or an APB fault trace. This micrograph supports the paper's core conclusion that peak work hardening at ~28% Al correlates with distinctive dislocation structures including straight screw superdislocations, sessile reaction products, and strong Peierls forces arising from increased elastic anisotropy.",
+    "confidence": 0.9
+  },
+  {
+    "paper_id": "10.1016_j.msea.2007.01.014",
+    "figure_id": "figure_006",
+    "image_paths": [
+      "images/286cd44aeec0a2800cfa3fa5e256a6fe5338d9ffc76d645b2d208a75051cf4eb.jpg",
+      "images/96ab8deb71ea915ab8b64ee7df42132c47288ec9700156763792ed1c1a2f5ffc.jpg"
+    ],
+    "image_count": 2,
+    "image_type": "microscopy_tem",
+    "description": "This figure presents a pair of weak-beam transmission electron microscopy (TEM) images showing curled single dislocations in deformed Fe–20% Al alloy strained to 2–3% at room temperature. The two micrographs were recorded using opposite sign imaging vectors (g and -g, with the arrow indicating the imaging vector parallel to 011) with zone axis [0 1 1] aligned with the stress axis. The left image shows the dislocation configuration under one imaging condition, while the right image (with scale bar 0.2 μm) labels multiple dipole segments and loops as 'd'. The relative displacement of dislocation images between the two photographs confirms the dipole arrangement of many dislocation segments and loops, as the contrast reversal under opposite g-vectors is characteristic of dipoles. The dislocations exhibit Burgers vector (1/2)<111> and are generally smoothly curved with some preference for screw orientations. This paired imaging technique provides direct evidence that the observed dislocation segments are dipoles rather than single dislocations, supporting the interpretation that disordered or short-range-ordered Fe–Al alloys deform by single dislocation glide with extensive dipole and loop formation trailing from screw dislocations. The figure demonstrates that dipole configurations are prevalent in the Fe–20% Al composition, which exhibits low work hardening compared to higher-Al ordered alloys.",
+    "confidence": 0.9
+  },
+  {
+    "paper_id": "10.1016_j.msea.2007.01.014",
+    "figure_id": "figure_007",
+    "image_paths": [
+      "images/3ed60e6dc42dd58d1ff8dd3904539e424d01d858369797d0272d18e20f8be6d0.jpg"
+    ],
+    "image_count": 1,
+    "image_type": "microscopy_tem",
+    "description": "This transmission electron microscopy (TEM) image shows the dislocation structure in a Fe–20% Al alloy after room-temperature compression to 2–3% strain. The micrograph reveals straight, screw-oriented dislocations that are sometimes loosely paired, together with edge dipole segments and numerous small dipole loops distributed throughout the field of view. The image was acquired with the zone axis near [0 0 1] and using the g = 1 1 0 imaging vector, as indicated by the arrow. The scale bar of 0.2 μm confirms the nanoscale resolution typical of weak-beam or bright-field TEM conditions. According to the caption and supporting text, this dislocation morphology is characteristic of disordered or short-range-ordered Fe–Al alloys with lower Al content (<25% Al), where deformation occurs by single dislocations with Burgers vector (1/2)⟨111⟩ rather than by coupled superdislocation partials seen in higher-Al ordered alloys. The presence of edge dipoles and loops trailing from gliding screw dislocations provides direct evidence for the operation of cross-slip and jog-drag mechanisms during plastic deformation. This figure supports the broader conclusion that work hardening behavior in Fe–Al alloys transitions systematically with Al content, from single-dislocation glide in disordered alloys to superdislocation-mediated deformation in ordered B2/DO3 structures, with the observed dipole and loop configurations contributing to the accumulation of internal stress and strain hardening.",
+    "confidence": 0.9
+  },
+  {
+    "paper_id": "10.1016_j.msea.2007.01.014",
+    "figure_id": "figure_008",
+    "image_paths": [
+      "images/d2efd49ba2f64e4ca919b33e0f15071a43be093a78feff0c0fe031c3d111608b.jpg"
+    ],
+    "image_count": 1,
+    "image_type": "microscopy_tem",
+    "description": "This figure presents paired transmission electron microscopy (TEM) images of deformed Fe–25% Al alloy showing antiphase boundary (APB) faults and dislocation structures. The left panel is a dark field micrograph obtained with the 1 0 0 beam at the Bragg condition, while the right panel is a weak beam micrograph using the 2 0 0 beam with approximately the 4 0 0 beam excited. Both images were recorded with the zone axis near [0 0 1] and the imaging g vector parallel to 1 0 0, indicated by the white arrow in the right panel. The scale bar represents 0.2 μm. In the dark field image, thermal APBs from coarse B2 domains are marked 't', while shear-produced APBI faults are marked 's'. The weak beam image reveals fine dislocation contrast with residual APB contrast, also marking 's' faults. The images demonstrate that dislocations in this DO3-ordered alloy remain relatively straight in near-screw orientations, with loosely coupled screw dipole configurations. Various pairs of dislocations connected by APB faults are visible in both imaging modes, indicating that APB energies for both APBI and APBII faults are insufficiently high to maintain closely coupled superdislocations. The dislocations largely glide and behave as individual (1/2) 1 1 1 dislocations despite being loosely coupled by weak APB faults. The background speckling in the dark field image may originate from fine DO3 domains or partial disorder, consistent with the alloy composition being near the two-phase disorder + DO3 order coexistence region.",
+    "confidence": 0.9
+  },
+  {
+    "paper_id": "10.1016_j.msea.2007.01.014",
+    "figure_id": "figure_009",
+    "image_paths": [
+      "images/ab3456c09aae79c98248a37fea376b31e4f3523e99ab534f212ea4b5f622d366.jpg"
+    ],
+    "image_count": 1,
+    "image_type": "microscopy_tem",
+    "description": "This bright-field transmission electron micrograph (scale bar 0.2 μm) shows the dislocation substructure in deformed Fe–25% Al alloy exhibiting D03 long-range order. The image was acquired with the zone axis near [0 0 1] using a 1 1 0 imaging vector (indicated by arrow). Two distinct dislocation configurations are labeled: loose superdislocation partials (marked 'p') and dislocation dipoles (marked 'd'). The micrograph reveals numerous near-screw oriented dislocations that remain relatively straight compared to disordered Fe–Al alloys, with many loose pairs of dislocations visible throughout the field. The 'p' labels identify pairs that constitute loose superdislocation partials—two (1/2)⟨111⟩ dislocations coupled by weak APBI faults—while 'd' labels indicate loose dipole pairs. The caption and citation context clarify that the relatively low APB energies in this imperfectly ordered D03 material are insufficient to maintain closely coupled superdislocations, so these dislocations largely glide and behave as individual (1/2)⟨111⟩ dislocations despite their weak coupling. This micrograph directly supports the paper's core argument that work hardening behavior in Fe–Al alloys evolves with aluminum content and ordering state through changes in dislocation configurations, from single dislocations in disordered alloys to loosely coupled superdislocation partials and dipoles in D03-ordered Fe–25% Al.",
+    "confidence": 0.9
+  },
+  {
+    "paper_id": "10.1016_j.msea.2007.01.014",
+    "figure_id": "figure_010",
+    "image_paths": [
+      "images/5fce893607ed66f38911674c4df91cfc9949b672dd6a5a34ac30a7bcf8782321.jpg"
+    ],
+    "image_count": 1,
+    "image_type": "microscopy_tem",
+    "description": "This bright-field transmission electron micrograph (Fig. 10) shows the dislocation substructure in deformed Fe–28% Al alloy, which corresponds to the peak work hardening composition in the Fe–Al system. The image reveals numerous superdislocations that are generally straight and oriented in near-screw directions along their {1 1 0} glide planes. These superdislocations are composed of two (1/2)⟨1 1 1⟩ partials, constituting a perfect superdislocation for the B2 lattice but an imperfect superdislocation for the DO₃ lattice, thereby trailing APBII faults during glide. The zone axis is near [0 0 1] and the imaging vector (arrowed) is 2 0 0. The scale bar indicates 0.5 μm. The caption and citation text confirm that these superdislocations do not trail any APBI faults, as verified by imaging with suitable g vectors. The micrograph supports the core conclusion that the peak work hardening at ~28% Al is associated with straight screw-oriented superdislocations that undergo reactions forming sessile ⟨1 0 0⟩ edge dislocation locks, which impede further room temperature dislocation motion and contribute to the anomalous work hardening behavior.",
+    "confidence": 0.9
+  },
+  {
+    "paper_id": "10.1016_j.msea.2007.01.014",
+    "figure_id": "figure_011",
+    "image_paths": [
+      "images/98294f693a598484af01b64bca9eadb8bc285730a490808035d9680a3c8f01f6.jpg"
+    ],
+    "image_count": 1,
+    "image_type": "microscopy_tem",
+    "description": "This figure presents a pair of bright-field transmission electron micrographs of deformed Fe–28% Al alloy, captured under +g and −g imaging conditions with the zone axis near [0 0 1] and the imaging g vector indicated by arrows as ±<200>. The scale bar is 0.2 μm. The left and right micrographs together demonstrate the contrast reversal behavior used to identify dislocation dipoles versus non-dipole pairs. Dislocation dipoles are marked 'd' throughout both images, while non-dipole dislocation pairs with identical Burgers vectors are marked 'p' in the right image. The dipole configurations are confirmed by the change in relative dislocation position when the sign of the imaging vector is reversed. The micrographs reveal numerous straight superdislocations oriented in near-screw directions along their {110} glide planes, with many arranged in dipole configurations. These superdislocations in Fe–28% Al are composed of two (1/2)<111> partials constituting a perfect superdislocation for the B2 lattice but imperfect for the DO3 lattice, trailing APBII faults during glide. The figure supports the core conclusion that the peak work hardening observed at ~28% Al correlates with abundant superdislocation dipole formation and dislocation reactions producing sessile locks that impede further dislocation motion.",
+    "confidence": 0.9
+  },
+  {
+    "paper_id": "10.1016_j.msea.2007.01.014",
+    "figure_id": "figure_012",
+    "image_paths": [
+      "images/cc3bcb41403642b89b5bd91acdd568695a8a1dc47b9ce6c4f9a3569833458e71.jpg"
+    ],
+    "image_count": 1,
+    "image_type": "microscopy_tem",
+    "description": "This figure presents a pair of bright-field transmission electron microscopy (TEM) micrographs of deformed Fe–28% Al alloy, captured under +g and g imaging conditions with a zone axis near [0 0 1] and an imaging vector of type 1 1 0. The scale bar indicates 0.2 μm. The left micrograph shows the general dislocation structure, with an arrow pointing to a specific region of interest. The right micrograph, taken under the opposite g condition, reveals straight and parallel reaction dislocations explicitly marked with 'r' labels, which are identified as sessile <100> edge dislocations formed by the reaction of two <111> superdislocations. These reaction products act as strong barriers to further glide of <111> superdislocations. The images demonstrate that at this composition—corresponding to the peak work hardening behavior in Fe–Al alloys—the dislocation structure is dominated by straight screw-oriented superdislocations (composed of two (1/2)<111> partials) and their reaction products. The complementary +g/g imaging confirms the nature of these reaction dislocations and supports the mechanistic interpretation that the anomalous peak work hardening at ~28% Al arises from elastic anisotropy-enhanced Peierls forces and the formation of sessile dislocation locks, rather than from APB tube mechanisms.",
+    "confidence": 0.9
+  },
+  {
+    "paper_id": "10.1016_j.msea.2007.01.014",
+    "figure_id": "figure_013",
+    "image_paths": [
+      "images/c3948f7af3d49a68eeb938d3205aed1c231c6f3df0126f3a67fe806a7081d562.jpg"
+    ],
+    "image_count": 1,
+    "image_type": "microscopy_tem",
+    "description": "Weak-beam TEM micrograph of deformed Fe–28% Al alloy showing superdislocation reactions (marked 'r') after room-temperature compression to 2–3% strain. The main field reveals a dense network of nearly straight screw-oriented superdislocations with two insets providing magnified views of specific reaction dislocations. The imaging conditions are near g:3–4g with zone axis near [0 0 1] and g vector 2 0 0 (arrowed). The scale bar indicates 0.2 μm. The micrograph captures the peak work-hardening composition where superdislocations, composed of two (1/2)<111> partials that are perfect for B2 but imperfect for DO₃ order, glide and trail APBII faults. The reactions marked 'r' represent interactions between two <111> superdislocations with different Burgers vectors lying on different {1 1 0} glide planes, producing sessile <100> edge dislocation pairs on cube planes—specifically [1 1 1] + [1 1̄ 1] → [1 0 0] edge dislocations along [0 1 0] direction in (0 0 1) plane. These sessile configurations act as locks that impede further room-temperature superdislocation motion, directly supporting the mechanism for the pronounced work-hardening peak observed at ~28 at.% Al. The straight near-screw character of most dislocations and the prevalence of dipole configurations are consistent with strong Peierls forces in this compositionally anomalous elastic-anisotropy regime.",
+    "confidence": 0.9
+  },
+  {
+    "paper_id": "10.1016_j.msea.2007.01.014",
+    "figure_id": "figure_014",
+    "image_paths": [
+      "images/19f8d74cf5e0266d445624730a9f10cfaae96758ac6d33a2cde19f7f41673b41.jpg"
+    ],
+    "image_count": 1,
+    "image_type": "microscopy_tem",
+    "description": "This bright-field transmission electron micrograph shows the dislocation structure in deformed Fe–30% Al alloy, with the zone axis near [0 0 1] and the imaging vector indicated by an arrow as 1 1 0. The scale bar represents 0.2 μm. The image reveals numerous straight dislocation segments oriented predominantly in near-screw orientations, which appear as elongated linear features traversing the field of view. These straight dislocations exhibit stepped configurations resulting from dislocation reactions between superdislocations. The micrograph also contains edge dislocation dipoles and loops visible as shorter paired segments. According to the caption and citation context, deformation in this alloy occurs by movement of superdislocations composed of two (1/2)⟨111⟩ partial dislocations; however, the dislocation pairs visible here are reaction products rather than the glissile superdislocation partials themselves. The APBI fault energy is sufficiently high at this composition that the separation of partials constituting the superdislocation is small. This micrograph supports the core conclusion that increased aluminum content leads to straighter screw-oriented superdislocations with stepped structures from dislocation reactions, contributing to the work hardening behavior in Fe–Al alloys. The stepped morphology arises from reactions between dislocations moving on different {110} planes, creating sessile configurations that impede further glide.",
+    "confidence": 0.9
+  },
+  {
+    "paper_id": "10.1016_j.msea.2007.01.014",
+    "figure_id": "figure_015",
+    "image_paths": [
+      "images/c00af7ed7293ab00ec40499620b4366e5fa1a98979964941e63e943739e7daa5.jpg"
+    ],
+    "image_count": 1,
+    "image_type": "microscopy_tem",
+    "description": "This figure presents paired bright-field transmission electron micrographs showing typical dislocation structures in deformed Fe–30% Al alloy. The left micrograph (scale bar 0.25 μm) provides low-magnification overview of the dislocation network, revealing a dense, interconnected array of dislocation lines with varying contrast across multiple grains. The right micrograph (scale bar 0.1 μm) offers higher magnification detail where paired dislocations marked 'd' are clearly resolved—these are identified as dipole segments and loops. The imaging conditions are specified as zone axis near [111] with imaging vector 1 1 0̄ (indicated by arrows in both panels). The paired dislocation contrasts visible at higher magnification correspond to short or long dipole dislocation pairs, where the APBI fault energy is now sufficiently high in this composition that the separation of partials constituting the superdislocation is small. The micrographs demonstrate that deformation occurs by movement of superdislocations composed of two (1/2)<111> partial dislocations, with many straight near-screw dislocations and numerous edge dislocation dipoles and loops. These dislocation pairs result from dislocation reactions rather than representing glissile superdislocation partials directly. The figure supports the core conclusion that work hardening in Fe–Al alloys correlates with the evolution from single dislocations in low-Al compositions to complex superdislocation structures, dipole formation, and dislocation reactions in higher-Al ordered alloys.",
+    "confidence": 0.9
+  },
+  {
+    "paper_id": "10.1016_j.msea.2007.01.014",
+    "figure_id": "figure_016",
+    "image_paths": [
+      "images/384b633c8d076b0774a3c52a96be46c0028933bf8024178c42df6eb7e986d220.jpg"
+    ],
+    "image_count": 1,
+    "image_type": "microscopy_tem",
+    "description": "This bright-field TEM micrograph shows the dislocation structure in deformed Fe–30% Al alloy after room-temperature compression to 2–3% strain. The image reveals numerous dislocation segments with complex configurations against a background of weak fringes traversing the field of view. The zone axis is near [0 0 1] with imaging vector g = 1 1 0, as indicated by the arrow. The visible dislocations are superdislocations of the B2 lattice, each composed of two (1/2) 1 1 1 partial dislocations lying close together due to the higher APBI fault energy in this composition. The micrograph shows straight near-screw superdislocation segments, edge dipole segments, and stepped structures resulting from dislocation reactions. The background fringes are residual APBII (antiphase boundary type II) fringes, which arise because the movement of these superdislocations destroys the weak DO₃ order present in this alloy. The scale bar indicates 0.2 μm, confirming nanoscale resolution. This image is part of a series (Figs. 16–19) demonstrating that Fe–30% Al and Fe–35% Al exhibit rather similar dislocation structures, supporting the conclusion that work hardening in higher-Al Fe–Al alloys is governed by superdislocation glide, dislocation reactions forming sessile configurations, and order destruction during deformation.",
+    "confidence": 0.9
+  },
+  {
+    "paper_id": "10.1016_j.msea.2007.01.014",
+    "figure_id": "figure_017",
+    "image_paths": [
+      "images/9d8573ab4cbffce712a11901947c7551917ba800673029a1f474f002a72fc244.jpg"
+    ],
+    "image_count": 1,
+    "image_type": "microscopy_tem",
+    "description": "This figure presents a pair of bright-field transmission electron microscopy (TEM) micrographs showing typical dislocation structures in deformed Fe–35% Al alloy. The left panel, with a scale bar of 0.25 μm, displays a dense network of dislocations dominated by straight, near-screw oriented superdislocations and numerous edge dipole segments distributed throughout the field of view. The right panel, at higher magnification with a scale bar of 0.1 μm, reveals finer details including edge dipole segments being dragged out of glissile screw dislocations when encountering obstacles, as indicated by the imaging vector arrow (1 1 0̄) and zone axis near [1 1 0]. The caption and citation context establish that these are B2 lattice superdislocations composed of two (1/2)<111> partial dislocations lying close together due to high APBI fault energy, with weak remnant fringes from residual DO3 order destruction during dislocation movement. The micrographs collectively demonstrate the characteristic dislocation multiplication and dipole formation mechanisms contributing to work hardening in this high-aluminum Fe–Al intermetallic alloy.",
+    "confidence": 0.9
+  },
+  {
+    "paper_id": "10.1016_j.msea.2007.01.014",
+    "figure_id": "figure_018",
+    "image_paths": [
+      "images/4787fd67d20da820c8fbd753ec9d2bf5678e5cb1a209173123b54114ca1e365f.jpg"
+    ],
+    "image_count": 1,
+    "image_type": "microscopy_tem",
+    "description": "This transmission electron microscopy (TEM) image presents a pair of bright-field micrographs of deformed Fe–35% Al alloy, captured under +g and −g imaging conditions respectively (the two panels joined vertically). The micrographs reveal a high density of edge dipole segments, labeled with \"d\" markers throughout the field of view. The imaging vector of type 1 1 0̄ is indicated by arrows, with the zone axis near [1 1 3]. The scale bar represents 0.5 μm. According to the caption and citation context, these paired images demonstrate the large number of dipole segments formed during deformation of this B2-ordered alloy. The superdislocations consist of two partials with Burgers vector (1/2)<111> lying close together due to higher APBI fault energy. The weak remnant fringes visible in the micrographs indicate that these superdislocations destroy some degree of D03 order during their movement. This figure provides direct TEM evidence supporting the work hardening mechanism in Fe–Al alloys, specifically showing that dipole formation is prevalent even at this higher aluminum composition (35% Al), similar to structures observed in alloys with 28–30% Al. The +g/−g contrast reversal helps confirm the dipole nature of these dislocation segments.",
+    "confidence": 0.9
+  },
+  {
+    "paper_id": "10.1016_j.msea.2007.01.014",
+    "figure_id": "figure_019",
+    "image_paths": [
+      "images/3341d3e8dc5696483d5931adb3f871d028158b3a9c53d3bc4558ddec969f0339.jpg"
+    ],
+    "image_count": 1,
+    "image_type": "microscopy_tem",
+    "description": "This bright-field transmission electron micrograph (Fig. 19) shows the dislocation substructure in deformed Fe–35% Al alloy after room-temperature compression to 2–3% strain. The image reveals dislocation segments and faint background fringes across the field of view. The zone axis is near [1 1 3] with imaging vector g = 1 1 0̄ (indicated by arrow). The scale bar represents 0.25 μm. The micrograph captures B2-ordered superdislocations composed of two closely spaced (1/2)<111> partials due to high APBI fault energy, appearing as straight near-screw segments together with numerous edge dipole segments and loops. The weak remnant fringes visible in the background indicate partial destruction of residual DO₃ order during superdislocation glide, producing APBII-type fault contrast. This image is part of a systematic TEM study (Figs. 17–19) examining how dislocation configurations evolve with Al content in Fe–Al alloys. For Fe–35% Al, the closely coupled partials and abundant dipole debris contrast with the more widely separated partials and stronger APB fringes seen at lower Al contents (28–30% Al). The microstructure supports the interpretation that work hardening in this composition regime arises from superdislocation interactions, dipole accumulation, and order-destruction effects rather than from APB tube formation.",
+    "confidence": 0.9
+  }
+]

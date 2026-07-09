@@ -1,0 +1,213 @@
+{
+  "paper_focus": {
+    "title": "Co-precipitation mechanism of Cu-rich phase and κ-carbide precipitates in Fe-28Mn-10Al-1C-3Cu austenitic low-density steel",
+    "research_objective": "To clarify the co-precipitation behavior and mechanism of Cu-rich phase and κ-carbide in Fe-28Mn-10Al-1C-3Cu austenitic low-density steel.",
+    "material_systems": [
+      "Fe-28Mn-10Al-1C-3Cu austenitic low-density steel",
+      "Fe-28Mn-10Al-1C austenitic low-density steel"
+    ],
+    "main_process_variables": [
+      "solution treatment at 1000°C for 1 h",
+      "aging treatment at 550°C for 3 h"
+    ],
+    "expected_information_axis": [
+      "composition",
+      "processing",
+      "microstructure",
+      "property",
+      "mechanism",
+      "figure_evidence"
+    ]
+  },
+  "core_facts": {
+    "material_system": [
+      {
+        "id": "c_00001",
+        "section": "Co-precipitation mechanism of Cu-rich phase and κ-carbide precipitates in Fe-28Mn-10Al-1C-3Cu austenitic low-density steel",
+        "type": "composition",
+        "subject": "Fe-28Mn-10Al-1C-3Cu austenitic low-density steel",
+        "claim": "The nominal composition of the studied steel is Fe-28Mn-10Al-1C-3Cu.",
+        "support": "direct",
+        "evidence": "The Fe-28Mn-10Al-1C-(0,3)Cu austenitic low-density steel (0Cu steel or 3Cu steel) with nominal composition"
+      }
+    ],
+    "processing": [
+      {
+        "id": "c_00002",
+        "section": "Co-precipitation mechanism of Cu-rich phase and κ-carbide precipitates in Fe-28Mn-10Al-1C-3Cu austenitic low-density steel",
+        "type": "processing",
+        "subject": "Fe-28Mn-10Al-1C-(0,3)Cu steel",
+        "claim": "The steel was processed by solution treatment at 1000°C for 1 hour and aging treatment at 550°C for 3 hours.",
+        "support": "weak",
+        "evidence": "processed by solution treatment (at 1000℃ for 1 h) and aging treatment (at 550℃ for 3 h) sequentially"
+      }
+    ],
+    "structure": [
+      {
+        "id": "c_00006",
+        "section": "Co-precipitation mechanism of Cu-rich phase and κ-carbide precipitates in Fe-28Mn-10Al-1C-3Cu austenitic low-density steel",
+        "type": "microstructure",
+        "subject": "Cu-rich phase in aged 3Cu steel",
+        "claim": "The Cu-rich phase crystal plane spacing (002) is 0.182 nm, consistent with FCC Cu.",
+        "support": "direct",
+        "refs": [
+          "Fig. 2"
+        ],
+        "evidence": "Cu-rich phase crystal plane spacing (00 2) is 0.182 nm which is consistent with Cu in FCC structure"
+      },
+      {
+        "id": "c_00019",
+        "section": "Co-precipitation mechanism of Cu-rich phase and κ-carbide precipitates in Fe-28Mn-10Al-1C-3Cu austenitic low-density steel",
+        "type": "figure_evidence",
+        "subject": "orientation relationship in aged 3Cu steel",
+        "claim": "The κ-carbide and Cu-rich phase have a cube-on-cube orientation relationship with austenitic matrix: [110]γ//[110]κ//[110]Cu and (111)γ//(111)κ//(111)Cu, as shown in Fig. 1.",
+        "support": "direct",
+        "refs": [
+          "Fig. 1"
+        ],
+        "evidence": "κ-carbide and Cu-rich phase have a cube-on-cube orientation relationship with the austenitic matrix: [11 0] //[11 0] //[110] and (11 1) //(11 1) //(11 1)"
+      },
+      {
+        "id": "c_00004",
+        "section": "Co-precipitation mechanism of Cu-rich phase and κ-carbide precipitates in Fe-28Mn-10Al-1C-3Cu austenitic low-density steel",
+        "type": "microstructure",
+        "subject": "Cu-rich phase in aged 3Cu steel",
+        "claim": "The Cu-rich phase has a BCC structure according to SAED analysis.",
+        "support": "direct",
+        "refs": [
+          "Fig. 1"
+        ],
+        "evidence": "the Cu-rich phase has BCC structure (Fig. 1, inset)"
+      },
+      {
+        "id": "c_00003",
+        "section": "Co-precipitation mechanism of Cu-rich phase and κ-carbide precipitates in Fe-28Mn-10Al-1C-3Cu austenitic low-density steel",
+        "type": "microstructure",
+        "subject": "Cu-rich phase in aged 3Cu steel",
+        "claim": "The Cu-rich phase precipitates directly in FCC structure in the austenitic matrix.",
+        "support": "direct",
+        "evidence": "the Cu-rich phase in austenitic precipitates directly in the FCC structure"
+      },
+      {
+        "id": "c_00007",
+        "section": "Co-precipitation mechanism of Cu-rich phase and κ-carbide precipitates in Fe-28Mn-10Al-1C-3Cu austenitic low-density steel",
+        "type": "microstructure",
+        "subject": "κ-carbide and Cu-rich phase in aged 3Cu steel",
+        "claim": "The lattice parameter of FCC Cu-rich phase is a = 0.3652 nm and of κ-carbide is a = 0.3775 nm.",
+        "support": "direct",
+        "evidence": "The lattice parameter of FCC Cu-rich phase and κ-carbide are a = 0.3652 nm and a = 0.3775 nm"
+      },
+      {
+        "id": "c_00005",
+        "section": "Co-precipitation mechanism of Cu-rich phase and κ-carbide precipitates in Fe-28Mn-10Al-1C-3Cu austenitic low-density steel",
+        "type": "microstructure",
+        "subject": "Cu-rich phase in aged 3Cu steel",
+        "claim": "The Cu-rich phase is mainly irregular oval with a diameter of ~10 nm and a small amount of bar shapes with a length of ~30 nm.",
+        "support": "weak",
+        "refs": [
+          "Fig. 2"
+        ],
+        "evidence": "The Cu-rich phase is mainly irregular oval and has a small amount of bars shapes, which the diameter of irregular oval Cu-rich phase is ~ 10 nm and the length..."
+      },
+      {
+        "id": "c_00008",
+        "section": "Co-precipitation mechanism of Cu-rich phase and κ-carbide precipitates in Fe-28Mn-10Al-1C-3Cu austenitic low-density steel",
+        "type": "microstructure",
+        "subject": "austenitic matrix in solution-treated 3Cu steel",
+        "claim": "The lattice parameter of the austenitic matrix under solution treatment is a = 0.3689 nm obtained by XRD.",
+        "support": "weak",
+        "evidence": "The lattice parameter of austenitic matrix under solution treatment is a = 0.3689 nm obtained by XRD"
+      },
+      {
+        "id": "c_00020",
+        "section": "Co-precipitation mechanism of Cu-rich phase and κ-carbide precipitates in Fe-28Mn-10Al-1C-3Cu austenitic low-density steel",
+        "type": "comparison",
+        "subject": "interfacial energy of κ-carbide vs Cu-rich phase",
+        "claim": "The interfacial energy of κ-carbide with austenitic matrix (0.025 J/m^2) is lower than that of Cu-rich phase (0.086 J/m^2), explaining earlier precipitation of κ-carbide during aging.",
+        "support": "weak",
+        "evidence": "The interfacial energy of κ-carbide with austenitic matrix is lower than Cu-rich phase with austenitic matrix. Therefore, in the early stage of aging..."
+      }
+    ],
+    "mechanisms": [
+      {
+        "id": "c_00012",
+        "section": "Co-precipitation mechanism of Cu-rich phase and κ-carbide precipitates in Fe-28Mn-10Al-1C-3Cu austenitic low-density steel",
+        "type": "mechanism",
+        "subject": "κ-carbide and Cu-rich phase co-precipitation",
+        "claim": "κ-carbide precipitates first, and its precipitation promotes Cu-rich phase precipitation by increasing Cu concentration near κ-carbide.",
+        "support": "direct",
+        "refs": [
+          "Fig. 2(b)"
+        ],
+        "evidence": "κ-carbide precipitated from austenitic matrix, and Cu atoms migrate to the austenitic matrix without κ-carbide, thereby increasing the Cu concentration near..."
+      },
+      {
+        "id": "c_00009",
+        "section": "Co-precipitation mechanism of Cu-rich phase and κ-carbide precipitates in Fe-28Mn-10Al-1C-3Cu austenitic low-density steel",
+        "type": "mechanism",
+        "subject": "lattice misfit between phases in aged 3Cu steel",
+        "claim": "The lattice misfit between κ-carbide and Cu-rich phase is 3.4%, between κ-carbide and austenitic matrix is 2.3%, and between Cu-rich phase and austenitic matrix is 1.0%.",
+        "support": "direct",
+        "evidence": "the lattice misfit between κ-carbide and Cu-rich phase is 3.4 %, the lattice misfit between κ-carbide and austenitic matrix is 2.3 %, and the lattice misfit..."
+      },
+      {
+        "id": "c_00010",
+        "section": "Co-precipitation mechanism of Cu-rich phase and κ-carbide precipitates in Fe-28Mn-10Al-1C-3Cu austenitic low-density steel",
+        "type": "mechanism",
+        "subject": "Cu-rich phase and κ-carbide",
+        "claim": "Due to lattice misfit between the three phases being less than 5%, they are in a coherent relationship.",
+        "support": "direct",
+        "evidence": "Due to the lattice misfit between the three phases being less than 5 %, the three phases are in a coherent relationship"
+      },
+      {
+        "id": "c_00011",
+        "section": "Co-precipitation mechanism of Cu-rich phase and κ-carbide precipitates in Fe-28Mn-10Al-1C-3Cu austenitic low-density steel",
+        "type": "mechanism",
+        "subject": "Cu-rich phase precipitation",
+        "claim": "Cu-rich phase has a lower nucleation energy barrier in austenitic matrix because its lattice misfit with austenitic matrix is lower than that with κ-carbide.",
+        "support": "direct",
+        "evidence": "Cu-rich phase has a lower nucleation energy barrier in austenitic matrix. Cu-rich phase precipitated in austenitic matrix instead of κ-carbide"
+      },
+      {
+        "id": "c_00018",
+        "section": "Co-precipitation mechanism of Cu-rich phase and κ-carbide precipitates in Fe-28Mn-10Al-1C-3Cu austenitic low-density steel",
+        "type": "mechanism",
+        "subject": "interfacial energy for κ-carbide and Cu-rich phase",
+        "claim": "The interfacial energy of κ-carbide with austenitic matrix is 0.025 J/m^2 and of Cu-rich phase with austenitic matrix is 0.086 J/m^2, both below 0.1 J/m^2.",
+        "support": "weak",
+        "evidence": "The interfacial energy of κ-carbide precipitates in Fe-Mn-Al-C steel is 0.025 J/m^2 ... The interfacial energy of Cu in austenitic matrix is 0.086 J/m^2"
+      }
+    ],
+    "characterization": [
+      {
+        "id": "c_00013",
+        "section": "Co-precipitation mechanism of Cu-rich phase and κ-carbide precipitates in Fe-28Mn-10Al-1C-3Cu austenitic low-density steel",
+        "type": "characterization",
+        "subject": "aged 3Cu steel",
+        "claim": "TEM-EDS mapping shows that κ-carbide (white dashed box) excludes Cu atoms, while Cu-rich phase (magenta line area) excludes Fe, Mn, and Al atoms.",
+        "support": "direct",
+        "refs": [
+          "Fig. 2(b)"
+        ],
+        "evidence": "TEM-EDS mapping shows that Fe, Mn and Al atoms exhibited brighter contrast within the white dashed box zone, while Cu atoms exhibit darker contrast. However,..."
+      }
+    ]
+  },
+  "visual_evidence": [
+    {
+      "figure_id": "figure_001",
+      "image_type": "microscopy_tem",
+      "description": "This figure presents high-resolution transmission electron microscopy (HR-TEM) characterization of the co-precipitation microstructure in Fe-28Mn-10Al-1C-3Cu (3Cu) austenitic low-density steel after solution treatment..."
+    },
+    {
+      "figure_id": "figure_002",
+      "image_type": "microscopy_tem",
+      "description": "This figure presents a high-resolution transmission electron microscopy (HRTEM) image of aged 3Cu steel (Fe-28Mn-10Al-1C-3Cu austenitic low-density steel) with two corresponding selected area electron diffraction (SAED)..."
+    },
+    {
+      "figure_id": "figure_003",
+      "image_type": "microscopy_tem",
+      "description": "This figure presents TEM-based characterization of aged 3Cu steel (Fe-28Mn-10Al-1C-3Cu austenitic low-density steel) after solution treatment at 1000°C for 1 h followed by aging at 550°C for 3 h. Panel (a) shows a..."
+    }
+  ]
+}

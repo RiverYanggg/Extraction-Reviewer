@@ -1,0 +1,523 @@
+{
+  "paper_focus": {
+    "title": "Work hardening in Fe–Al alloys",
+    "research_objective": "To understand the origin of the pronounced work hardening peak in Fe–Al alloys as a function of Al content and associated ordering transitions.",
+    "material_systems": [
+      "Fe–Al alloys",
+      "disordered bcc Fe–Al",
+      "DO3 ordered Fe3Al",
+      "B2 ordered FeAl"
+    ],
+    "main_process_variables": [
+      "Al content (at.%) from 0 to 40%",
+      "plastic strain range 1–1.5%",
+      "room temperature testing",
+      "as-cast/annealed state (thermally relaxed, coarse grains, no solute/precipitate effects)",
+      "slow cooling for ordering (moderate DO3 order)",
+      "boron addition (~0.1% B) in some alloys"
+    ],
+    "expected_information_axis": [
+      "composition",
+      "processing",
+      "microstructure",
+      "property",
+      "mechanism",
+      "figure_evidence"
+    ]
+  },
+  "core_facts": {
+    "material_system": [
+      {
+        "id": "c_00020",
+        "section": "1. Introduction",
+        "type": "finding",
+        "subject": "B addition to Fe-Al alloys",
+        "claim": "Addition of B to Fe-Al alloys led to only a slight increase in flow stress relative to B-free samples with little consistent change in work hardening rate.",
+        "support": "direct",
+        "refs": [
+          "Fig. 2"
+        ],
+        "evidence": "Addition of B to the alloys led to only a slight increase in flow stress relative to the B-free samples, with little consistent change either in the work..."
+      },
+      {
+        "id": "c_00063",
+        "section": "3.2. Studies of dislocation structures",
+        "type": "finding",
+        "subject": "Fe-Al alloys",
+        "claim": "The small ductility peak near 28 at.% Al (Fig. 1) is associated with the peak in work hardening rate over the composition range 26-30 at.% Al where flow stress is relatively constant.",
+        "support": "direct",
+        "refs": [
+          "1"
+        ],
+        "evidence": "Around 28% Al, the small ductility maximum can be associated with the peak in work hardening rate over a composition range (26–30% Al) where the flow stress is..."
+      },
+      {
+        "id": "c_00064",
+        "section": "3.2. Studies of dislocation structures",
+        "type": "figure_evidence",
+        "subject": "Fe-35% Al alloy",
+        "claim": "Fig. 17 shows bright-field micrographs of deformed Fe-35% Al with edge dipole segments pulled out of glissile screw dislocations (zone axis near [110], imaging vector 110).",
+        "support": "direct",
+        "refs": [
+          "17"
+        ],
+        "evidence": "Fig. 17. Bright field micrographs illustrating typical dislocation structures produced by deforming Fe–35% Al. Many edge dipole segments are visible, some..."
+      },
+      {
+        "id": "c_00065",
+        "section": "3.2. Studies of dislocation structures",
+        "type": "figure_evidence",
+        "subject": "Fe-35% Al alloy",
+        "claim": "Fig. 18 shows +g and -g imaging of deformed Fe-35% Al revealing many edge dipole segments (zone axis near [113], imaging vector type 110).",
+        "support": "direct",
+        "refs": [
+          "18"
+        ],
+        "evidence": "Fig. 18. Pair of bright field micrographs in +g and g imaging conditions showing the presence of many edge dipole segments in deformed Fe–35% Al. Zone axis..."
+      },
+      {
+        "id": "c_00066",
+        "section": "3.2. Studies of dislocation structures",
+        "type": "figure_evidence",
+        "subject": "Fe-35% Al alloy",
+        "claim": "Fig. 19 shows bright-field micrograph of deformed Fe-35% Al with dislocation segments and background fringes (zone axis near [113], imaging vector 110).",
+        "support": "direct",
+        "refs": [
+          "19"
+        ],
+        "evidence": "Fig. 19. Bright field micrograph showing dislocation segments and background fringes in deformed Fe–35% Al. Zone axis is near [1 1 3] and imaging vector..."
+      },
+      {
+        "id": "c_00067",
+        "section": "4. Discussion",
+        "type": "finding",
+        "subject": "ductility peak in Fe-28% Al alloys",
+        "claim": "A small ductility peak is observed for alloys with composition near 28% Al, which can be associated with the peak in work hardening rate over a composition range of 26–30% Al where the flow stress is relatively constant.",
+        "support": "direct",
+        "refs": [
+          "Fig. 1"
+        ],
+        "evidence": "the small ductility maximum can be associated with the peak in work hardening rate over a composition range (26–30% Al) where the flow stress is relatively..."
+      },
+      {
+        "id": "c_00068",
+        "section": "4. Discussion",
+        "type": "finding",
+        "subject": "work hardening peak in Fe–Al alloys",
+        "claim": "Work hardening rate is higher in the ordered than in the disordered state and shows a strong peak near Fe–28% Al, coinciding with a fall in flow stress above 25% Al and a small ductility maximum at 28% Al.",
+        "support": "direct",
+        "evidence": "Work hardening rate is seen to be higher in the ordered than in the disordered state and to show a strong peak near Fe–28% Al. This composition coincides with..."
+      },
+      {
+        "id": "c_00001",
+        "section": "Front Matter",
+        "type": "finding",
+        "subject": "work hardening rate in Fe-Al alloys",
+        "claim": "Work hardening rate in polycrystalline Fe-Al alloys shows a sharp maximum for alloys containing 26-30% Al.",
+        "support": "direct",
+        "evidence": "A sharp maximum in work hardening is seen for alloys containing 26–30% Al."
+      }
+    ],
+    "processing": [
+      {
+        "id": "c_00012",
+        "section": "1. Introduction",
+        "type": "processing",
+        "subject": "Fe-Al alloys",
+        "claim": "Fe-Al alloys were prepared by induction melting in an alumina crucible under inert gas and drop cast into a 25 mm diameter cylindrical copper mould to produce a grain size of the order of 0.25 mm.",
+        "support": "direct",
+        "evidence": "A series of Fe–Al base alloys was prepared using standard induction melting in an alumina crucible under inert gas and drop casting into a 25 mm diameter..."
+      },
+      {
+        "id": "c_00013",
+        "section": "1. Introduction",
+        "type": "processing",
+        "subject": "Fe-Al alloys",
+        "claim": "Binary alloys with Al contents of 15, 20, 25, 28, 30 and 35% Al were prepared, as well as alloys with 20 and 30% Al containing 0.1% B.",
+        "support": "direct",
+        "evidence": "Binary alloys with Al contents of 15, 20, 25, 28, 30 and 35% Al were prepared, as well as some alloys with 20 and 30% Al containing an addition of 0.1% B..."
+      },
+      {
+        "id": "c_00014",
+        "section": "1. Introduction",
+        "type": "processing",
+        "subject": "Fe-Al alloys",
+        "claim": "Cooling after solidification was sufficiently slow to allow a high degree of B2 order for Al-rich alloys and a good degree of DO3 order for 25-30% Al alloys, as indicated by strong superlattice spots and coarse DO3 domains in TEM.",
+        "support": "weak",
+        "evidence": "Cooling after solidification was sufficiently slow to allow a high degree of B2 order for alloys rich in Al, and a good degree of DO3 order for alloys..."
+      },
+      {
+        "id": "c_00015",
+        "section": "1. Introduction",
+        "type": "processing",
+        "subject": "compression samples",
+        "claim": "Compression samples were cut from ingots by spark machining as 3 mm diameter or 5 mm x 5 mm square cross-section samples with height twice the diameter or width, polished on fine abrasive paper, and tested at room temperature to 2-3% strain at a strain rate of 3e-4 s-1.",
+        "support": "weak",
+        "evidence": "Compression samples for mechanical testing were cut from the ingots by spark machining, either as 3 mm diameter or as 5 mm 5 mm square cross-section samples,..."
+      }
+    ],
+    "structure": [
+      {
+        "id": "c_00022",
+        "section": "1. Introduction",
+        "type": "microstructure",
+        "subject": "disordered Fe-Al alloys (15 and 20% Al)",
+        "claim": "Many dislocation segments in clustered regions and bowed dislocations in Fe-20% Al are dipoles, confirmed by relative shift of images on changing imaging vector sign.",
+        "support": "direct",
+        "refs": [
+          "Fig. 5",
+          "Fig. 6"
+        ],
+        "evidence": "Many of the dislocation segments in the clustered regions, Fig. 5, were seen to be dipoles, as were many of the bowed dislocations in Fig. 6. The dipole nature..."
+      },
+      {
+        "id": "c_00023",
+        "section": "1. Introduction",
+        "type": "microstructure",
+        "subject": "Fe-20% Al",
+        "claim": "In Fe-20% Al, straight screw dislocations are seen together with narrow edge dipoles and many small dipole loops produced by trailing from gliding screw dislocations.",
+        "support": "direct",
+        "refs": [
+          "Fig. 7"
+        ],
+        "evidence": "Fig. 7 shows another region of thin foil in the Fe–20% Al material where some straight screw dislocations are seen, together with some narrow edge dipoles and..."
+      },
+      {
+        "id": "c_00025",
+        "section": "1. Introduction",
+        "type": "microstructure",
+        "subject": "Fe-25% Al",
+        "claim": "In Fe-25% Al, loosely coupled dislocation pairs are superdislocation partials (p) or loose dipole pairs (d), with segments remaining more straight and close to screw orientation compared to Fe-20% Al.",
+        "support": "direct",
+        "refs": [
+          "Fig. 6",
+          "Fig. 9"
+        ],
+        "evidence": "Fig. 9 shows a large number of near-screw dislocations in the deformed Fe–25% Al alloy, where many loose pairs of dislocations can be distinguished...."
+      },
+      {
+        "id": "c_00029",
+        "section": "1. Introduction",
+        "type": "microstructure",
+        "subject": "Fe-30% Al",
+        "claim": "In Fe-30% Al, deformation occurs by movement of superdislocations composed of two (1/2)<111> partials, with straight near-screw dislocations and edge dislocation dipoles and loops.",
+        "support": "direct",
+        "refs": [
+          "Fig. 14"
+        ],
+        "evidence": "Deformation occurs by the movement of the same superdislocations composed of 2 (1/2) 1 1 1 partial dislocations, with many straight near-screw dislocations..."
+      },
+      {
+        "id": "c_00030",
+        "section": "1. Introduction",
+        "type": "microstructure",
+        "subject": "Fe-30% Al",
+        "claim": "In Fe-30% Al, APBI fault energy is sufficiently high that the separation of partials is small, and parallel image pairs correspond to short or long dipole dislocation pairs.",
+        "support": "direct",
+        "refs": [
+          "Fig. 14"
+        ],
+        "evidence": "The APBI fault energy is now sufficiently high that the separation of the partials constituting the superdislocation is small, and the parallel image pairs..."
+      },
+      {
+        "id": "c_00031",
+        "section": "1. Introduction",
+        "type": "microstructure",
+        "subject": "Fe-30% Al",
+        "claim": "In Fe-30% Al, superdislocations are often straight in screw orientations with reactions leading to stepped structures; dislocation pairs are from reactions, not glissile superdislocation partials.",
+        "support": "direct",
+        "refs": [
+          "Fig. 15",
+          "Fig. 16"
+        ],
+        "evidence": "Superdislocations are often rather straight in screw orientations, with reactions between dislocations leading to stepped structures, see Fig. 15. Dislocation..."
+      },
+      {
+        "id": "c_00050",
+        "section": "3.2. Studies of dislocation structures",
+        "type": "microstructure",
+        "subject": "Fe-35% Al alloy",
+        "claim": "Fe-35% Al alloy deforms by superdislocations of the B2 lattice, each consisting of two partials of Burgers vector (1/2)<111>, with partials lying close to each other due to higher APBI fault energy.",
+        "support": "direct",
+        "refs": [
+          "17",
+          "18",
+          "19"
+        ],
+        "evidence": "The dislocations present are superdislocations of the B2 lattice, constituted by two partials of Burgers vector (1/2) 1 1 1 each, with these partials lying..."
+      },
+      {
+        "id": "c_00051",
+        "section": "3.2. Studies of dislocation structures",
+        "type": "microstructure",
+        "subject": "Fe-35% Al alloy",
+        "claim": "Deformed Fe-35% Al shows many straight near-screw superdislocations, edge dipole segments, and dipole segments pulled out of moving screw superdislocations when encountering obstacles.",
+        "support": "direct",
+        "refs": [
+          "17",
+          "18"
+        ],
+        "evidence": "Fig. 17 shows many straight, near-screw superdislocations and edge dipole segments, seen as widely spaced dislocations. Fig. 17 also shows (at right) several..."
+      },
+      {
+        "id": "c_00069",
+        "section": "4. Discussion",
+        "type": "microstructure",
+        "subject": "dislocation structures in disordered and ordered Fe–Al alloys",
+        "claim": "Dislocation structures after deformation at room temperature show a transition from single, bowed dislocations for disordered materials (15–20% Al) to paired superdislocations with a strong tendency to form straight screw segments for highly ordered materials (28–35% Al).",
+        "support": "direct"
+      },
+      {
+        "id": "c_00072",
+        "section": "4. Discussion",
+        "type": "microstructure",
+        "subject": "dipoles in Fe–Al alloys",
+        "claim": "Large numbers of dipoles were observed in deformed materials of all compositions, being single dislocation dipoles for disordered materials and superdislocation dipoles for ordered materials.",
+        "support": "direct"
+      },
+      {
+        "id": "c_00007",
+        "section": "Front Matter",
+        "type": "finding",
+        "subject": "alternative APB tube theory for high work hardening",
+        "claim": "An alternative theory based on tubes of anti-phase boundaries (APB) being dragged behind jogs formed on superdislocations has also been suggested for the high work hardening rate of the ordered state.",
+        "support": "direct",
+        "evidence": "An alternative theory based on tubes of anti-phase boundaries (APB) being dragged behind jogs formed on superdislocations [16–18] has also been suggested."
+      },
+      {
+        "id": "c_00021",
+        "section": "1. Introduction",
+        "type": "microstructure",
+        "subject": "disordered Fe-Al alloys (15 and 20% Al)",
+        "claim": "Disordered Fe-Al materials (15 and 20% Al) deform by movement of single dislocations of Burgers vector (1/2)<111>, which are smoothly curved with some preference for screw orientations and show weak clustering as incipient cell structures.",
+        "support": "weak",
+        "refs": [
+          "Fig. 5",
+          "Fig. 6",
+          "Fig. 7"
+        ],
+        "evidence": "Disordered materials, or those containing some level of short range order, are deformed by the movement of single dislocations of Burgers vector (1/2) 1 1 1,..."
+      }
+    ],
+    "properties": [
+      {
+        "id": "c_00053",
+        "section": "3.2. Studies of dislocation structures",
+        "type": "property",
+        "subject": "Fe-Al alloys",
+        "claim": "Flow strength increases with Al content to a maximum at 25 at.% Al, attributed to solution hardening and short range order hardening on single dislocations before superdislocations take over.",
+        "support": "direct",
+        "refs": [
+          "1"
+        ],
+        "evidence": "Flow strength increases with Al content to a maximum at 25%, which has been analysed previously as due to solution hardening and short range order hardening on..."
+      },
+      {
+        "id": "c_00054",
+        "section": "3.2. Studies of dislocation structures",
+        "type": "property",
+        "subject": "Fe-Al alloys",
+        "claim": "Ductility drops as Al content increases mostly due to material hardening, with a small ductility peak at about 28 at.% Al not discussed previously.",
+        "support": "direct",
+        "refs": [
+          "1"
+        ],
+        "evidence": "The ductility drop as Al content increases is mostly due to material hardening, although environmental embrittlement may also play a role. The small ductility..."
+      },
+      {
+        "id": "c_00055",
+        "section": "3.2. Studies of dislocation structures",
+        "type": "property",
+        "subject": "Fe-Al alloys",
+        "claim": "Work hardening is higher for ordered alloys, especially high for compositions near 28 at.% Al.",
+        "support": "direct",
+        "refs": [
+          "2"
+        ],
+        "evidence": "The main subject of the present work is the work hardening evolution, Fig. 2, which is seen to be higher for the ordered alloys, but especially high for..."
+      },
+      {
+        "id": "c_00003",
+        "section": "Front Matter",
+        "type": "property",
+        "subject": "yield stress in Fe-Al alloys",
+        "claim": "Yield stress in polycrystalline Fe-Al alloys shows a steadily increasing trend with Al content up to 25% Al, a rapid fall at 25-28% Al, and little change or a slight increase over the 30-40% Al range.",
+        "support": "direct",
+        "refs": [
+          "Fig. 1"
+        ],
+        "evidence": "The data on yield stress (taken from Refs. [2,5,8], and present study) show a steadily increasing yield stress with Al content up to 25% Al, a rapid fall at..."
+      },
+      {
+        "id": "c_00004",
+        "section": "Front Matter",
+        "type": "property",
+        "subject": "ductility in Fe-Al alloys",
+        "claim": "Ductility in polycrystalline Fe-Al alloys shows an essentially inverse relationship to yield stress, with a rapid fall to 25% Al, a slight maximum at 28% Al, and a steady slow fall thereafter.",
+        "support": "direct",
+        "refs": [
+          "Fig. 1"
+        ],
+        "evidence": "Ductility (data taken from Ref. [2]) shows an essentially inverse relationship to the yield stress, with a rapid fall in ductility to 25% Al, a slight maximum..."
+      },
+      {
+        "id": "c_00006",
+        "section": "Front Matter",
+        "type": "finding",
+        "subject": "superdislocation dipole strengthening for high work hardening",
+        "claim": "The high work hardening rate of the ordered state has been interpreted using a dipole hardening mechanism, whereby the strengthening effect of the superdislocation dipole is greater than that of the single dislocation dipole.",
+        "support": "direct",
+        "evidence": "The high work hardening rate of the ordered state has been interpreted [6,9,10] using a dipole hardening mechanism [14,15], whereby the strengthening effect of..."
+      },
+      {
+        "id": "c_00016",
+        "section": "1. Introduction",
+        "type": "property",
+        "subject": "compression tests",
+        "claim": "Compression tests showed a smooth onset of plasticity with no discrete yield points and slightly curved stress-strain behavior with no linear regions.",
+        "support": "weak",
+        "evidence": "Compression tests showed a smooth onset of plasticity, with no discrete yield points observed, and the stress–strain behaviour was always slightly curved, with..."
+      }
+    ],
+    "mechanisms": [
+      {
+        "id": "c_00033",
+        "section": "1. Introduction",
+        "type": "mechanism",
+        "subject": "Fe-35% Al",
+        "claim": "In Fe-35% Al, dipole segments are pulled out of moving screw superdislocations when encountering obstacles.",
+        "support": "direct",
+        "refs": [
+          "Fig. 17"
+        ],
+        "evidence": "Fig. 17 also shows (at right) several dipole segments being pulled out of the moving screw superdislocations where these encounter some obstacle."
+      },
+      {
+        "id": "c_00058",
+        "section": "3.2. Studies of dislocation structures",
+        "type": "mechanism",
+        "subject": "Fe-Al alloys",
+        "claim": "Dipole formation in disordered Fe-Al alloys is less prevalent because dislocations are curly and mixed edge/screw, while ordered alloys with a predominance of screw dislocations show greater probability of dipole formation.",
+        "support": "direct",
+        "evidence": "The disordered alloys with their curly dislocations of mixed edge and screw dislocations will show less prevalence to dipole formation. (There are thus two..."
+      },
+      {
+        "id": "c_00059",
+        "section": "3.2. Studies of dislocation structures",
+        "type": "mechanism",
+        "subject": "Fe-Al alloys",
+        "claim": "In ordered alloys, work hardening is higher because dipoles are super-dipoles formed on superdislocations, while in disordered alloys low hardening is due to free bowing of dislocations to all configurations (many edge and screw dislocations) and fewer dipoles.",
+        "support": "direct",
+        "evidence": "Taking as basic model to explain work hardening the formation of dipoles behind moving screw dislocations, it is clear that work hardening in the ordered..."
+      },
+      {
+        "id": "c_00073",
+        "section": "4. Discussion",
+        "type": "mechanism",
+        "subject": "factors for high work hardening in ordered Fe–Al alloys",
+        "claim": "High work hardening is associated with two factors: the presence of superdislocations which produce stronger dipole locks, and the increased tendency of dislocations to line in screw orientations.",
+        "support": "direct"
+      },
+      {
+        "id": "c_00074",
+        "section": "4. Discussion",
+        "type": "mechanism",
+        "subject": "origin of screw dislocation tendency",
+        "claim": "It is believed that the tendency for dislocations to lie in screw orientations is due to the strong Peierls forces found for compositions close to 25–30% Al, and not the elastic anisotropy itself.",
+        "support": "direct"
+      },
+      {
+        "id": "c_00076",
+        "section": "4. Discussion",
+        "type": "mechanism",
+        "subject": "ductility peak in Fe–28% Al",
+        "claim": "The small peak in ductility seen for alloys with composition Fe–28% Al can be explained by the high work hardening rate of this material.",
+        "support": "direct"
+      },
+      {
+        "id": "c_00005",
+        "section": "Front Matter",
+        "type": "mechanism",
+        "subject": "dislocation structure changes near work hardening peak",
+        "claim": "The most important change in dislocation structures near the work hardening peak is the formation of superdislocation dipoles instead of single dislocation dipoles, predominance of straight screw dislocations, and formation of sessile dislocation segments by reactions of mobile dislocations.",
+        "support": "direct",
+        "evidence": "Examination of dislocation structures with increasing Al content over the region of the maximum shows that the most important change, apart from the formation..."
+      },
+      {
+        "id": "c_00075",
+        "section": "4. Discussion",
+        "type": "mechanism",
+        "subject": "dislocation reactions in Fe–28–30% Al alloys",
+        "claim": "Dislocation reactions between different 1 1 1 dislocations leading to sessile 1 0 0 edge dislocations are seen for alloys close to the work hardening peak (28–30% Al) which may also contribute to the high work hardening of such alloys.",
+        "support": "direct"
+      },
+      {
+        "id": "c_00028",
+        "section": "1. Introduction",
+        "type": "mechanism",
+        "subject": "Fe-28% Al",
+        "claim": "In Fe-28% Al, reaction of two superdislocations with different <111> Burgers vectors in different {110} glide planes produces a pair of edge dislocations with <100> Burgers vector in sessile configuration on a cube plane, acting as locks.",
+        "support": "weak",
+        "refs": [
+          "Fig. 12",
+          "Fig. 13"
+        ],
+        "evidence": "a reaction of two superdislocations with different 1 1 1 Burgers vectors and lying in different {1 1 0} glide planes producing a pair of edge dislocations with..."
+      },
+      {
+        "id": "c_00060",
+        "section": "3.2. Studies of dislocation structures",
+        "type": "mechanism",
+        "subject": "Fe-Al alloys",
+        "claim": "High elastic anisotropy (peak at 25-30 at.% Al) is not sufficient alone to explain the work hardening peak, as the relative energy increase from screw to edge dislocation is only 5-10% less for less anisotropic alloys (30-34 at.% Al).",
+        "support": "weak",
+        "refs": [
+          "4"
+        ],
+        "evidence": "From Kotter et al. [23] and Yoo et al. [25], the relative energy increase for Fe–25% Al on changing a screw dislocation into an edge is of the order of 1.8–2.7..."
+      }
+    ]
+  },
+  "visual_evidence": [
+    {
+      "figure_id": "figure_001",
+      "image_type": "property_mechanical",
+      "description": "This figure presents a dual-axis line plot showing the composition dependence of yield stress and ductility in polycrystalline Fe-Al alloys (0-40 at.% Al) in the as-cast or annealed condition. The left y-axis displays..."
+    },
+    {
+      "figure_id": "figure_002",
+      "image_type": "property_mechanical",
+      "description": "This figure presents the variation of work hardening rate (WHR) measured between 1% and 1.5% plastic strain as a function of aluminum content (0–40 at.%) for polycrystalline binary Fe–Al alloys. The main solid curve..."
+    },
+    {
+      "figure_id": "figure_003",
+      "image_type": "chart_plot",
+      "description": "This figure presents a plot of antiphase boundary (APB) energies in Fe-Al alloys as a function of aluminum content (at.% Al), with fault energy in mJ/m² on the y-axis (0-120) and aluminum content from 20% to 45% on the..."
+    },
+    {
+      "figure_id": "figure_004",
+      "image_type": "chart_plot",
+      "description": "This figure presents a dual-axis line plot showing the composition dependence of elastic parameters for Fe-Al alloys with aluminium content ranging from 0 to 40 at.%. The left y-axis displays stiffness constants in GPa,..."
+    },
+    {
+      "figure_id": "figure_005",
+      "image_type": "microscopy_tem",
+      "description": "This is a transmission electron microscopy (TEM) image showing the dislocation structure in a deformed Fe-Al alloy. The micrograph reveals a complex network of dislocations with varying contrast, including numerous..."
+    },
+    {
+      "figure_id": "figure_006",
+      "image_type": "microscopy_tem",
+      "description": "This figure presents a pair of weak-beam transmission electron microscopy (TEM) images showing curled single dislocations in deformed Fe–20% Al alloy strained to 2–3% at room temperature. The two micrographs were..."
+    },
+    {
+      "figure_id": "figure_007",
+      "image_type": "microscopy_tem",
+      "description": "This transmission electron microscopy (TEM) image shows the dislocation structure in a Fe–20% Al alloy after room-temperature compression to 2–3% strain. The micrograph reveals straight, screw-oriented dislocations that..."
+    },
+    {
+      "figure_id": "figure_008",
+      "image_type": "microscopy_tem",
+      "description": "This figure presents paired transmission electron microscopy (TEM) images of deformed Fe–25% Al alloy showing antiphase boundary (APB) faults and dislocation structures. The left panel is a dark field micrograph..."
+    }
+  ]
+}

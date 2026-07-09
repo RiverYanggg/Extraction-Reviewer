@@ -1,0 +1,53 @@
+[
+  {
+    "chunk_id": "chunk_0001",
+    "section": "Co-precipitation mechanism of Cu-rich phase and κ-carbide precipitates in Fe-28Mn-10Al-1C-3Cu austenitic low-density steel",
+    "previous_context_summary": "",
+    "context_update": {
+      "summary": "This chunk is the main text of a paper investigating the co-precipitation mechanism of Cu-rich phase and κ-carbide in Fe-28Mn-10Al-1C-3Cu austenitic low-density steel, including a comparison to a Cu-free variant (0Cu steel). The material was solution-treated at 1000°C for 1 h and aged at 550°C for 3 h. Key results reported include: (i) Cu-rich phase exhibits both BCC (from SAED) and FCC structure; (ii) lattice parameters: FCC Cu-rich phase (a=0.3652 nm), κ-carbide (a=0.3775 nm), solution-treated austenitic matrix (a=0.3689 nm); (iii) lattice misfit between Cu-rich phase and matrix is 1.0%, between κ-carbide and matrix is 2.3%, between Cu-rich phase and κ-carbide is 3.4%; (iv) the interfacial energy of κ-carbide with matrix is 0.025 J/m^2 and of Cu-rich phase with matrix is 0.086 J/m^2; (v) Cu-rich phase is irregular oval (~10 nm) and bar-shaped (~30 nm); (vi) a critical lattice parameter of 0.3670 nm and a composition boundary formula for intragranular κ-carbide precipitation are presented; (vii) adding Cu increases the matrix lattice parameter and promotes κ-carbide precipitation; (viii) the co-precipitation mechanism: κ-carbide precipitates first, then Cu atoms segregate near κ-carbide, increasing local Cu concentration, leading to Cu-rich phase precipitation; (ix) a cube-on-cube orientation relationship [110]γ//[110]κ//[110]Cu and (111)γ//(111)κ//(111)Cu exists. Key figures: Fig. 1 (SAED), Fig. 2 (TEM, HRTEM, EDS mapping). The conclusion summarizes the mechanism and orientation relationship. No sample aliases beyond 0Cu steel and 3Cu steel are introduced.",
+      "material_systems": [
+        "Fe-28Mn-10Al-1C-3Cu austenitic low-density steel",
+        "Fe-28Mn-10Al-1C austenitic low-density steel"
+      ],
+      "sample_aliases": [
+        "0Cu steel",
+        "3Cu steel"
+      ],
+      "processing_route": [
+        "solution treatment at 1000°C for 1 h",
+        "aging treatment at 550°C for 3 h",
+        "twin-jet electro-polishing in 10% perchloric acid alcohol"
+      ],
+      "key_variables": [
+        "Cu content (0 vs 3 wt%)",
+        "aging temperature (550°C)",
+        "aging time (3 h)",
+        "lattice parameter of austenitic matrix",
+        "critical lattice parameter (0.3670 nm)",
+        "critical Al content (6.52 wt% for 0Cu steel)",
+        "composition boundary formula: 0.208(wt%C) + 0.098(wt%Al) = 1 - 0.0054(wt%Mn)"
+      ],
+      "microstructure": [
+        "Cu-rich phase (BCC and FCC, irregular oval ~10 nm, bar ~30 nm)",
+        "κ-carbide (dots or bars)",
+        "coherent interfaces between Cu-rich phase, κ-carbide and austenitic matrix",
+        "cube-on-cube orientation relationship: [110]γ//[110]κ//[110]Cu and (111)γ//(111)κ//(111)Cu",
+        "lattice misfit: Cu/matrix 1.0%, κ/matrix 2.3%, Cu/κ 3.4%",
+        "interfacial energy: κ/matrix 0.025 J/m^2, Cu/matrix 0.086 J/m^2"
+      ],
+      "properties": [],
+      "mechanisms": [
+        "κ-carbide precipitates earlier than Cu-rich phase due to lower interfacial energy",
+        "Cu atoms segregate near κ-carbide, increasing Cu concentration, leading to Cu-rich phase precipitation",
+        "Cu addition increases lattice parameter of austenitic matrix, promoting κ-carbide precipitation",
+        "Cu-rich phase has lower nucleation energy barrier in austenitic matrix than on κ-carbide"
+      ],
+      "figures_or_tables": [
+        "Fig. 1",
+        "Fig. 2"
+      ],
+      "unresolved_terms": []
+    },
+    "rolling_context_summary": "Summary: The material was solution-treated at 1000°C for 1 h and aged at 550°C for 3 h. Key results reported include: (i) Cu-rich phase exhibits both BCC (from SAED) and FCC structure; (ii) lattice parameters: FCC Cu-rich phase (a=0.3652 nm), κ-carbide (a=0.3775 nm), solution-treated austenitic matrix (a=0.3689 nm); (iii) lattice misfit between Cu-rich phase and matrix is 1.0%, between κ-carbide and matrix is 2.3%, between Cu-rich phase and κ-carbide is 3.4%; (iv) the interfacial energy of κ-carbide with matrix is 0.025 J/m^2 and of Cu-rich phase with matrix is 0.086 J/m^2; (v) Cu-rich phase is irregular oval (~10 nm) and bar-shaped (~30 nm); (vi) a critical lattice parameter of 0.3670 nm and a composition boundary formula for intragranular κ-carbide precipitation are presented; (vii) adding Cu increases the matrix lattice parameter and promotes κ-carbide precipitation; (viii) the co-precipitation mechanism: κ-carbide precipitates first, then Cu atoms segregate near κ-carbide, increasing local Cu concentration, leading to Cu-rich phase precipitation; (ix) a cube-on-cube orientation relationship [110]γ//[110]κ//[110]Cu and (111)γ//(111)κ//(111)Cu exists. Key figures: Fig. 1 (SAED), Fig. 2 (TEM, HRTEM, EDS mapping). The conclusion summarizes the mechanism and orientation relationship. No sample aliases beyond 0Cu steel and 3Cu steel are introduced.\nMaterial systems: Fe-28Mn-10Al-1C-3Cu austenitic low-density steel; Fe-28Mn-10Al-1C austenitic low-density steel\nSample aliases: 0Cu steel; 3Cu steel\nProcessing route: solution treatment at 1000°C for 1 h; aging treatment at 550°C for 3 h; twin-jet electro-polishing in 10% perchloric acid alcohol\nKey variables: Cu content (0 vs 3 wt%); aging temperature (550°C); aging time (3 h); lattice parameter of austenitic matrix; critical lattice parameter (0.3670 nm); critical Al content (6.52 wt% for 0Cu steel); composition boundary formula: 0.208(wt%C) + 0.098(wt%Al) = 1 - 0.0054(wt%Mn)\nMicrostructure: Cu-rich phase (BCC and FCC, irregular oval ~10 nm, bar ~30 nm); κ-carbide (dots or bars); coherent interfaces between Cu-rich phase, κ-carbide and austenitic matrix; cube-on-cube orientation relationship: [110]γ//[110]κ//[110]Cu and (111)γ//(111)κ//(111)Cu; lattice misfit: Cu/matrix 1.0%, κ/matrix 2.3%, Cu/κ 3.4%; interfacial energy: κ/matrix 0.025 J/m^2, Cu/matrix 0.086 J/m^2\nMechanisms: κ-carbide precipitates earlier than Cu-rich phase due to lower interfacial energy; Cu atoms segregate near κ-carbide, increasing Cu concentration, leading to Cu-rich phase precipitation; Cu addition increases lattice parameter of austenitic matrix, promoting κ-carbide precipitation; Cu-rich phase has lower nucleation energy barrier in austenitic matrix than on κ-carbide\nFigures or tables: Fig. 1; Fig. 2"
+  }
+]

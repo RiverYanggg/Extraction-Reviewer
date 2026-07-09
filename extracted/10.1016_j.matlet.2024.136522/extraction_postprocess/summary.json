@@ -1,0 +1,13 @@
+{
+  "paper_id": "10.1016_j.matlet.2024.136522",
+  "schema_version": "field-evidence-v2",
+  "field_count": 189,
+  "bucket_count": 3,
+  "llm_used": true,
+  "support_summary": {
+    "explicit_supported": 81,
+    "numeric_supported": 1,
+    "unsupported": 5,
+    "weak_supported": 102
+  }
+}

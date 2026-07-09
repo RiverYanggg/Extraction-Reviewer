@@ -1,0 +1,116 @@
+{
+  "claims": [
+    {
+      "claim_type": "finding",
+      "subject": "ductility peak in Fe-28% Al alloys",
+      "claim": "A small ductility peak is observed for alloys with composition near 28% Al, which can be associated with the peak in work hardening rate over a composition range of 26–30% Al where the flow stress is relatively constant.",
+      "values": ["28% Al", "26–30% Al"],
+      "evidence_text": "the small ductility maximum can be associated with the peak in work hardening rate over a composition range (26–30% Al) where the flow stress is relatively constant.",
+      "figures": ["Fig. 1"],
+      "tables": [],
+      "confidence": "high"
+    },
+    {
+      "claim_type": "finding",
+      "subject": "work hardening peak in Fe–Al alloys",
+      "claim": "Work hardening rate is higher in the ordered than in the disordered state and shows a strong peak near Fe–28% Al, coinciding with a fall in flow stress above 25% Al and a small ductility maximum at 28% Al.",
+      "values": ["Fe–28% Al", "25% Al", "28% Al"],
+      "evidence_text": "Work hardening rate is seen to be higher in the ordered than in the disordered state and to show a strong peak near Fe–28% Al. This composition coincides with a fall in flow stress above 25% Al and a small ductility maximum at 28% Al.",
+      "figures": [],
+      "tables": [],
+      "confidence": "high"
+    },
+    {
+      "claim_type": "microstructure",
+      "subject": "dislocation structures in disordered and ordered Fe–Al alloys",
+      "claim": "Dislocation structures after deformation at room temperature show a transition from single, bowed dislocations for disordered materials (15–20% Al) to paired superdislocations with a strong tendency to form straight screw segments for highly ordered materials (28–35% Al).",
+      "values": ["15–20% Al", "28–35% Al", "room temperature"],
+      "evidence_text": "Dislocation structures after deformation at room temperature show a transition from single, bowed dislocations for disordered materials (15–20% Al) to paired superdislocations with a strong tendency to form straight screw segments for highly ordered materials (28–35% Al).",
+      "figures": [],
+      "tables": [],
+      "confidence": "high"
+    },
+    {
+      "claim_type": "microstructure",
+      "subject": "DO3 ordered Fe–25% Al superdislocations",
+      "claim": "DO3 ordered Fe–25% Al has sufficiently low APB energies that superdislocations do not form and single dislocations trail shear APB in this material.",
+      "values": ["Fe–25% Al", "DO3 ordered", "APB energies"],
+      "evidence_text": "DO3 ordered Fe–25% Al has sufficiently low APB energies that superdislocations do not form and single dislocations trail shear APB in this material.",
+      "figures": [],
+      "tables": [],
+      "confidence": "high"
+    },
+    {
+      "claim_type": "finding",
+      "subject": "coupled four-partial dislocations in DO3 ordered Fe–Al",
+      "claim": "For no material was there evidence of the operation of coupled four-partial dislocations which constitute the perfect superdislocation for the DO3 ordered state.",
+      "values": ["DO3 ordered"],
+      "evidence_text": "For no material was there evidence of the operation of coupled four-partial dislocations which constitute the perfect superdislocation for the DO3 ordered state.",
+      "figures": [],
+      "tables": [],
+      "confidence": "high"
+    },
+    {
+      "claim_type": "microstructure",
+      "subject": "dipoles in Fe–Al alloys",
+      "claim": "Large numbers of dipoles were observed in deformed materials of all compositions, being single dislocation dipoles for disordered materials and superdislocation dipoles for ordered materials.",
+      "values": [],
+      "evidence_text": "Large numbers of dipoles were observed in deformed materials of all compositions, being single dislocation dipoles for disordered materials and superdislocation dipoles for ordered materials.",
+      "figures": [],
+      "tables": [],
+      "confidence": "high"
+    },
+    {
+      "claim_type": "mechanism",
+      "subject": "factors for high work hardening in ordered Fe–Al alloys",
+      "claim": "High work hardening is associated with two factors: the presence of superdislocations which produce stronger dipole locks, and the increased tendency of dislocations to line in screw orientations.",
+      "values": [],
+      "evidence_text": "High work hardening is associated with two factors: the presence of superdislocations which produce stronger dipole locks, and the increased tendency of dislocations to line in screw orientations.",
+      "figures": [],
+      "tables": [],
+      "confidence": "high"
+    },
+    {
+      "claim_type": "mechanism",
+      "subject": "origin of screw dislocation tendency",
+      "claim": "It is believed that the tendency for dislocations to lie in screw orientations is due to the strong Peierls forces found for compositions close to 25–30% Al, and not the elastic anisotropy itself.",
+      "values": ["25–30% Al"],
+      "evidence_text": "It is believed that the tendency for dislocations to lie in screw orientations is due to the strong Peierls forces found for compositions close to 25–30% Al, and not the elastic anisotropy itself.",
+      "figures": [],
+      "tables": [],
+      "confidence": "high"
+    },
+    {
+      "claim_type": "mechanism",
+      "subject": "dislocation reactions in Fe–28–30% Al alloys",
+      "claim": "Dislocation reactions between different 1 1 1 dislocations leading to sessile 1 0 0 edge dislocations are seen for alloys close to the work hardening peak (28–30% Al) which may also contribute to the high work hardening of such alloys.",
+      "values": ["28–30% Al"],
+      "evidence_text": "Dislocation reactions between different 1 1 1 dislocations leading to sessile 1 0 0 edge dislocations are seen for alloys close to the work hardening peak (28–30% Al) which may also contribute to the high work hardening of such alloys.",
+      "figures": [],
+      "tables": [],
+      "confidence": "medium"
+    },
+    {
+      "claim_type": "mechanism",
+      "subject": "ductility peak in Fe–28% Al",
+      "claim": "The small peak in ductility seen for alloys with composition Fe–28% Al can be explained by the high work hardening rate of this material.",
+      "values": ["Fe–28% Al"],
+      "evidence_text": "The small peak in ductility seen for alloys with composition Fe–28% Al can be explained by the high work hardening rate of this material.",
+      "figures": [],
+      "tables": [],
+      "confidence": "high"
+    }
+  ],
+  "context_update": {
+    "summary": "This chunk covers the final part of the Discussion (ductility peak) and the entire Summary section. It reiterates the work hardening peak near Fe-28% Al, which coincides with a fall in flow stress above 25% Al and a small ductility maximum at 28% Al due to the Considere criterion and high work hardening rate. Dislocation structures transition from single bowed dislocations in disordered materials (15-20% Al) to paired superdislocations with straight screw segments in highly ordered materials (28-35% Al). DO3 ordered Fe-25% Al shows no superdislocations due to low APB energies; single dislocations trail shear APB. No coupled four-partial dislocations were observed. Dipoles are present in all compositions, with superdislocation dipoles in ordered materials. High work hardening is linked to stronger dipole locks from superdislocations and screw dislocation tendency due to Peierls forces (not elastic anisotropy) for 25-30% Al. Dislocation reactions producing sessile <100> edges are seen near 28-30% Al, contributing to hardening. The ductility peak at Fe-28% Al is explained by high work hardening rate. No new materials, processing routes, or sample aliases are introduced. References section follows.",
+    "material_systems": ["Fe–Al alloys", "DO3 ordered Fe3Al", "B2 ordered FeAl", "disordered bcc Fe-Al"],
+    "sample_aliases": ["Fe-15% Al", "Fe-20% Al", "Fe-25% Al", "Fe-28% Al", "Fe-30% Al", "Fe-35% Al"],
+    "processing_route": [],
+    "key_variables": ["Al content (15-35 at.%)", "room temperature", "deformation", "order state (disordered, DO3, B2)"],
+    "microstructure": ["single bowed dislocations (15-20% Al)", "paired superdislocations with straight screw segments (28-35% Al)", "single dislocations trail shear APB (Fe-25% Al)", "no four-partial dislocations", "dipoles: single in disordered, superdislocation in ordered"],
+    "properties": ["work hardening rate peak near Fe-28% Al", "fall in flow stress above 25% Al", "small ductility maximum at 28% Al", "relatively constant flow stress 26-30% Al"],
+    "mechanisms": ["superdislocation dipole locks", "screw orientation from Peierls forces (25-30% Al)", "dislocation reactions to sessile <100> edges (28-30% Al)", "Considere criterion for ductility"],
+    "figures_or_tables": ["Fig. 1"],
+    "unresolved_terms": []
+  }
+}

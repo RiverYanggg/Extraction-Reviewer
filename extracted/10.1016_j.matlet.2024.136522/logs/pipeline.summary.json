@@ -1,0 +1,16 @@
+{
+  "stage": "pipeline",
+  "updated_at": "2026-07-09T20:17:10.013600",
+  "paper_id": "10.1016_j.matlet.2024.136522",
+  "paper_source": "/Users/mac/Desktop/SteelDig/datasets/82/mineru/10.1016_j.matlet.2024.136522",
+  "paper_dir": "/Users/mac/Desktop/SteelDig/datasets/82/extracted/10.1016_j.matlet.2024.136522",
+  "modules": [
+    "import",
+    "extract",
+    "knowledge",
+    "verify"
+  ],
+  "knowledge_mode": "fused",
+  "use_llm_verify": true,
+  "status": "ok"
+}

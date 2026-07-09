@@ -1,0 +1,17 @@
+{
+  "paper_id": "10.1016_j.matlet.2024.136522",
+  "source_file": "/Users/mac/Desktop/SteelDig/datasets/82/extracted/10.1016_j.matlet.2024.136522/preprocess/cleaned_input.md",
+  "chunk_count": 1,
+  "chunks": [
+    {
+      "chunk_id": "chunk_0001",
+      "section": "Co-precipitation mechanism of Cu-rich phase and κ-carbide precipitates in Fe-28Mn-10Al-1C-3Cu austenitic low-density steel",
+      "section_index": 1,
+      "paragraph_start": 1,
+      "paragraph_end": 37,
+      "char_start": 0,
+      "char_end": 13701,
+      "token_estimate": 3425
+    }
+  ]
+}

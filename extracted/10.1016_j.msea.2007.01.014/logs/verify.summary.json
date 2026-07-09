@@ -1,0 +1,13 @@
+{
+  "stage": "verify",
+  "updated_at": "2026-07-09T20:22:03.418517",
+  "paper_id": "10.1016_j.msea.2007.01.014",
+  "llm_used": true,
+  "sample_count": 8,
+  "accepted_patch_count": 0,
+  "rejected_patch_count": 0,
+  "before_error_count": 0,
+  "after_error_count": 0,
+  "fixed_path": "/Users/mac/Desktop/SteelDig/datasets/82/extracted/10.1016_j.msea.2007.01.014/verify/text_extraction_fixed.json",
+  "report_path": "/Users/mac/Desktop/SteelDig/datasets/82/extracted/10.1016_j.msea.2007.01.014/verify/verify_report.json"
+}

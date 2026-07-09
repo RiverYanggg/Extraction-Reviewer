@@ -1,0 +1,11 @@
+{
+  "paper_id": "10.1016_j.msea.2007.01.014",
+  "figure_id": "figure_003",
+  "image_paths": [
+    "images/ac34a5620adad9708c7f6ca1a99a3100f572c58dd1639d17f581c3e9e69e0c20.jpg"
+  ],
+  "image_count": 1,
+  "image_type": "chart_plot",
+  "description": "This figure presents a plot of antiphase boundary (APB) energies in Fe-Al alloys as a function of aluminum content (at.% Al), with fault energy in mJ/m² on the y-axis (0-120) and aluminum content from 20% to 45% on the x-axis. The data, taken from Refs. [19-21], distinguishes three distinct fault types: APBI in B2 order (solid circles with solid line), APBI in DO₃ order (squares with dash-dot line), and APBII in DO₃ order (triangles with dashed line). The APBI in B2 order shows a strong linear increase with aluminum content, rising from approximately 15 mJ/m² at 27% Al to about 110 mJ/m² at 36% Al. In contrast, the APBI in DO₃ order remains relatively constant around 75-80 mJ/m² between 26-30% Al, while the APBII in DO₃ order decreases from approximately 80 mJ/m² at 26% Al to about 35 mJ/m² at 30% Al. The figure caption states this variation of APB energies is critical for interpreting dislocation structures, as high APB energies tend to keep partial dislocations closely coupled as superdislocations, whereas the relatively low APB energies in DO₃-ordered Fe-25% Al alloys result in loosely coupled dislocations that largely glide as individual (1/2)[111] dislocations. The composition range near 25-30% Al is particularly significant as it corresponds to the transition between B2 and DO₃ ordering and to the peak work hardening behavior observed in these alloys.",
+  "confidence": 0.9
+}

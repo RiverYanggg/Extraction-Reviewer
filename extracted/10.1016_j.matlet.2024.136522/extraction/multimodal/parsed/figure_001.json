@@ -1,0 +1,11 @@
+{
+  "paper_id": "10.1016_j.matlet.2024.136522",
+  "figure_id": "figure_001",
+  "image_paths": [
+    "images/75f30ed5e2ffc046c9c81134573d582a3eec98cee9e4b3dacc2d14157d8e2523.jpg"
+  ],
+  "image_count": 1,
+  "image_type": "microscopy_tem",
+  "description": "This figure presents high-resolution transmission electron microscopy (HR-TEM) characterization of the co-precipitation microstructure in Fe-28Mn-10Al-1C-3Cu (3Cu) austenitic low-density steel after solution treatment at 1000℃ for 1 h followed by aging at 550℃ for 3 h. The image shows nanoscale precipitates within the austenitic matrix, specifically revealing κ-carbide and Cu-rich phase particles. Based on the paper's context, the HR-TEM image displays irregular oval-shaped Cu-rich phase particles with diameter approximately 10 nm and bar-shaped particles with length around 30 nm, coexisting with κ-carbide precipitates. The figure likely includes corresponding energy dispersive spectroscopy (EDS) mapping or selected area electron diffraction (SAED) patterns that demonstrate: (1) Cu enrichment and Fe/Mn/Al depletion in the Cu-rich phase regions, (2) cube-on-cube orientation relationships between the precipitates and austenitic matrix ([110]γ//[110]κ//[110]Cu and (111)γ//(111)κ//(111)Cu), and (3) coherent interfaces with measured lattice parameters of Cu-rich phase a=0.3652 nm and κ-carbide a=0.3775 nm. The low lattice misfits (κ-carbide/γ=2.3%, Cu-rich/γ=1.0%) support the co-precipitation mechanism where κ-carbide precipitation promotes subsequent Cu-rich phase formation due to lower nucleation energy barriers. The figure supports the core conclusion that Cu addition promotes κ-carbide precipitation and enables coherent co-precipitation of both phases with excellent thermal stability.",
+  "confidence": 0.6
+}

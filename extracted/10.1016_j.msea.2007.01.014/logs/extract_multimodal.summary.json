@@ -1,0 +1,15 @@
+{
+  "stage": "extract_multimodal",
+  "updated_at": "2026-07-09T20:19:09.050267",
+  "paper_id": "10.1016_j.msea.2007.01.014",
+  "skipped": false,
+  "groups_total": 19,
+  "groups_with_images": 19,
+  "images_total": 20,
+  "request_success": 19,
+  "request_fail": 0,
+  "images_success": 20,
+  "images_fail": 0,
+  "raw_output_dir": "/Users/mac/Desktop/SteelDig/datasets/82/extracted/10.1016_j.msea.2007.01.014/extraction/multimodal/raw",
+  "group_index_path": "/Users/mac/Desktop/SteelDig/datasets/82/extracted/10.1016_j.msea.2007.01.014/extraction/multimodal/image_groups.json"
+}

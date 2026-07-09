@@ -1,0 +1,11 @@
+{
+  "paper_id": "10.1016_j.msea.2007.01.014",
+  "figure_id": "figure_010",
+  "image_paths": [
+    "images/5fce893607ed66f38911674c4df91cfc9949b672dd6a5a34ac30a7bcf8782321.jpg"
+  ],
+  "image_count": 1,
+  "image_type": "microscopy_tem",
+  "description": "This bright-field transmission electron micrograph (Fig. 10) shows the dislocation substructure in deformed Fe–28% Al alloy, which corresponds to the peak work hardening composition in the Fe–Al system. The image reveals numerous superdislocations that are generally straight and oriented in near-screw directions along their {1 1 0} glide planes. These superdislocations are composed of two (1/2)⟨1 1 1⟩ partials, constituting a perfect superdislocation for the B2 lattice but an imperfect superdislocation for the DO₃ lattice, thereby trailing APBII faults during glide. The zone axis is near [0 0 1] and the imaging vector (arrowed) is 2 0 0. The scale bar indicates 0.5 μm. The caption and citation text confirm that these superdislocations do not trail any APBI faults, as verified by imaging with suitable g vectors. The micrograph supports the core conclusion that the peak work hardening at ~28% Al is associated with straight screw-oriented superdislocations that undergo reactions forming sessile ⟨1 0 0⟩ edge dislocation locks, which impede further room temperature dislocation motion and contribute to the anomalous work hardening behavior.",
+  "confidence": 0.9
+}

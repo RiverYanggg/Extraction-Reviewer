@@ -1,0 +1,50 @@
+[
+  {
+    "chunk_id": "chunk_0001",
+    "claim": "The steel was processed by solution treatment at 1000°C for 1 hour and aging treatment at 550°C for 3 hours.",
+    "validation_status": "evidence_not_found",
+    "evidence_text": "processed by solution treatment (at 1000℃ for 1 h) and aging treatment (at 550℃ for 3 h) sequentially"
+  },
+  {
+    "chunk_id": "chunk_0001",
+    "claim": "The Cu-rich phase is mainly irregular oval with a diameter of ~10 nm and a small amount of bar shapes with a length of ~30 nm.",
+    "validation_status": "evidence_not_found",
+    "evidence_text": "The Cu-rich phase is mainly irregular oval and has a small amount of bars shapes, which the diameter of irregular oval Cu-rich phase is ~ 10 nm and the length of bars shapes Cu-rich phase is ~ 30 nm"
+  },
+  {
+    "chunk_id": "chunk_0001",
+    "claim": "The lattice parameter of the austenitic matrix under solution treatment is a = 0.3689 nm obtained by XRD.",
+    "validation_status": "evidence_not_found",
+    "evidence_text": "The lattice parameter of austenitic matrix under solution treatment is a = 0.3689 nm obtained by XRD"
+  },
+  {
+    "chunk_id": "chunk_0001",
+    "claim": "The critical lattice parameter of austenitic matrix for κ-carbide precipitation is about a = 0.3670 nm; below this, κ-carbide cannot precipitate intragranularly.",
+    "validation_status": "evidence_not_found",
+    "evidence_text": "The critical lattice parameter of the austenitic matrix is about a = 0.3670 nm, which is lower than the critical lattice parameter, and the κ-carbide cannot precipitate in the austenitic matrix"
+  },
+  {
+    "chunk_id": "chunk_0001",
+    "claim": "Adding Cu to 0Cu steel increases the lattice parameter of the austenitic matrix from 0.3687 nm to 0.3689 nm, which is beneficial for κ-carbide precipitation.",
+    "validation_status": "evidence_not_found",
+    "evidence_text": "the lattice parameter of 0Cu steel and 3Cu steel under solid solution treatment are a = 0.3687 nm and a = 0.3689 nm, respectively. Moreover, adding Cu element to 0Cu steel can increase the lattice parameter of the austenitic matrix, which is beneficial for the precipitation of κ-carbide"
+  },
+  {
+    "chunk_id": "chunk_0001",
+    "claim": "A composition boundary formula for intragranular κ-carbide precipitation is: 0.208(wt.%C) + 0.098(wt.%Al) = 1 - 0.0054(wt.%Mn).",
+    "validation_status": "evidence_not_found",
+    "evidence_text": "a composition boundary formula for the precipitation of intragranular κ-carbides in Fe-Mn-Al-C steel is as follows: 0.208(wt.% C) + 0.098(wt.% Al) = 1 - 0.0054(wt.% Mn)"
+  },
+  {
+    "chunk_id": "chunk_0001",
+    "claim": "The interfacial energy of κ-carbide with austenitic matrix is 0.025 J/m^2 and of Cu-rich phase with austenitic matrix is 0.086 J/m^2, both below 0.1 J/m^2.",
+    "validation_status": "evidence_not_found",
+    "evidence_text": "The interfacial energy of κ-carbide precipitates in Fe-Mn-Al-C steel is 0.025 J/m^2 ... The interfacial energy of Cu in austenitic matrix is 0.086 J/m^2"
+  },
+  {
+    "chunk_id": "chunk_0001",
+    "claim": "The interfacial energy of κ-carbide with austenitic matrix (0.025 J/m^2) is lower than that of Cu-rich phase (0.086 J/m^2), explaining earlier precipitation of κ-carbide during aging.",
+    "validation_status": "evidence_not_found",
+    "evidence_text": "The interfacial energy of κ-carbide with austenitic matrix is lower than Cu-rich phase with austenitic matrix. Therefore, in the early stage of aging treatment, κ-carbide precipitate earlier than Cu-rich phases"
+  }
+]
