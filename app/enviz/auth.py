@@ -6,6 +6,7 @@ import hashlib
 import hmac
 import json
 import os
+import re
 import time
 from dataclasses import dataclass
 
@@ -40,10 +41,11 @@ DEFAULT_USERS = {
 class User:
     username: str
     display_name: str
+    workspace: str | None = None
 
     @property
     def user_dir(self):
-        path = USERS_DIR / self.username
+        path = USERS_DIR / safe_workspace(self.workspace or self.username)
         path.mkdir(parents=True, exist_ok=True)
         return path
 
@@ -72,7 +74,7 @@ def users_config() -> dict:
 
 
 def public_user(user: User) -> dict:
-    return {"username": user.username, "display_name": user.display_name}
+    return {"username": user.username, "display_name": user.display_name, "workspace": user.workspace or user.username}
 
 
 def verify_credentials(username: str, password: str) -> User | None:
@@ -84,7 +86,7 @@ def verify_credentials(username: str, password: str) -> User | None:
     actual = hashlib.sha256(password.encode("utf-8")).hexdigest()
     if not hmac.compare_digest(expected, actual):
         return None
-    return User(username=username, display_name=str(rec.get("display_name") or username))
+    return _user_from_record(username, rec)
 
 
 def set_session_cookie(response, user: User) -> None:
@@ -113,7 +115,23 @@ def user_from_session(enviz_session: str | None) -> User | None:
     rec = users_config().get(username)
     if not isinstance(rec, dict):
         return None
-    return User(username=username, display_name=str(rec.get("display_name") or username))
+    return _user_from_record(username, rec)
+
+
+def _user_from_record(username: str, rec: dict) -> User:
+    workspace = str(rec.get("workspace") or username)
+    safe_workspace(workspace)
+    return User(
+        username=username,
+        display_name=str(rec.get("display_name") or username),
+        workspace=workspace,
+    )
+
+
+def safe_workspace(name: str) -> str:
+    if not re.fullmatch(r"[A-Za-z0-9_.-]+", name):
+        raise RuntimeError(f"Invalid workspace name: {name!r}")
+    return name
 
 
 def _secret() -> bytes:

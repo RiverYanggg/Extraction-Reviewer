@@ -143,8 +143,9 @@
 
 打开工具后先登录。默认本地账号为 `annotator1`、`annotator2`、`annotator3`、`annotator4`，管理员可在部署环境中替换为正式账号。
 
-- 每个账号的标注文件独立保存在 `data/users/<账号>/annotations/`。
-- 每个账号可见的论文由 `data/users/<账号>/assignments.json` 控制，格式为 `{"papers":["paper_id_1","paper_id_2"]}`。
+- 每个账号有独立工作区，默认目录名等于账号名，也可由管理员配置 `workspace`。
+- 每个账号的标注文件独立保存在 `data/users/<工作区目录>/annotations/`。
+- 每个账号可见的论文由 `data/users/<工作区目录>/assignments.json` 控制，格式为 `{"papers":["paper_id_1","paper_id_2"]}`。
 - 同一篇论文给不同账号标注时，进度、修改、补充字段、导出结果互不影响。
 - 右下角 AI 助手的历史对话也按账号隔离。
 - 退出登录前会尝试保存当前草稿。
@@ -174,6 +175,6 @@
 - **改错了怎么办？** Windows 按 `Ctrl+Z`、Mac 按 `⌘Z` 撤销，或把值改回原值（会自动回到未处理），或在右栏点「重置」。
 - **null 字段一定要处理吗？** 建议处理：确认「确实没有」（计为 TN），或补成正确值（计为召回）。未处理的会算作 pending，不计入 P/R。
 - **证据高亮不到？** 说明该字段的 evidence 定位不到（少数源数据路径不自洽）。可对照 PDF/原文人工核对，并在右栏手动修正证据块 ID。
-- **数据会丢吗？** 不会。所有标注写入 `data/users/<账号>/annotations/`，与原始抽取结果隔离；自动保存 + 暂存 + 跨重启保留。
+- **数据会丢吗？** 不会。所有标注写入 `data/users/<工作区目录>/annotations/`，与原始抽取结果隔离；自动保存 + 暂存 + 跨重启保留。
 - **在哪里改账号密码？** 推荐在项目根目录 `.env` 里配置 `ENVIZ_USERS_JSON` 覆盖默认账号；格式见 `.env.example`。密码不要写明文，先生成 SHA-256 后填入 `password_sha256`。
-- **在哪里分配论文？** 编辑 `data/users/<账号>/assignments.json`。只把该用户应看到的 `paper_id` 放进 `papers` 数组；未出现在数组里的论文，该用户无法在列表、详情、PDF、图片、导出接口中访问。
+- **在哪里分配论文？** 编辑 `data/users/<工作区目录>/assignments.json`。只把该用户应看到的 `paper_id` 放进 `papers` 数组；未出现在数组里的论文，该用户无法在列表、详情、PDF、图片、导出接口中访问。

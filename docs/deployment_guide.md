@@ -178,16 +178,22 @@ http://review.example.com
 python3 -c "import hashlib; print(hashlib.sha256('你的密码'.encode()).hexdigest())"
 ```
 
-`.env` 示例：
+`.env` 示例。`workspace` 是该账号在 `data/users/` 下的工作区目录名；不写时默认等于登录账号。
 
 ```env
-ENVIZ_USERS_JSON={"user1":{"display_name":"User 1","password_sha256":"替换为密码SHA256"}}
+ENVIZ_USERS_JSON={"user1":{"display_name":"User 1","workspace":"user1","password_sha256":"替换为密码SHA256"}}
 ```
 
 如果要配置多个账号：
 
 ```env
-ENVIZ_USERS_JSON={"user1":{"display_name":"User 1","password_sha256":"hash1"},"user2":{"display_name":"User 2","password_sha256":"hash2"}}
+ENVIZ_USERS_JSON={"xuben":{"display_name":"Xuben","workspace":"xuben","password_sha256":"hash1"},"sunyandong":{"display_name":"Sunyandong","workspace":"sunyandong","password_sha256":"hash2"}}
+```
+
+如果你希望工作区目录和账号一致，直接把账号名设置为想要的目录名，并省略 `workspace` 也可以。例如账号 `xuben` 会默认使用：
+
+```text
+data/users/xuben/
 ```
 
 修改 `.env` 后重启服务：
@@ -198,10 +204,10 @@ sudo systemctl restart extraction-reviewer
 
 ## 9. 给用户分配论文
 
-每个用户可见的论文由对应的 `assignments.json` 控制：
+每个用户可见的论文由对应工作区目录下的 `assignments.json` 控制：
 
 ```text
-data/users/<账号>/assignments.json
+data/users/<工作区目录>/assignments.json
 ```
 
 示例：
@@ -217,11 +223,11 @@ data/users/<账号>/assignments.json
 
 只把该用户应看到的 `paper_id` 放进 `papers` 数组。未出现在数组里的论文，该用户无法在列表、详情、PDF、图片、导出接口中访问。
 
-新增账号后，也要创建对应的目录和分配文件：
+新增账号后，也要创建对应的工作区目录和分配文件：
 
 ```bash
-mkdir -p data/users/user1
-nano data/users/user1/assignments.json
+mkdir -p data/users/xuben
+nano data/users/xuben/assignments.json
 ```
 
 ## 10. 用户标注数据位置
@@ -229,13 +235,13 @@ nano data/users/user1/assignments.json
 每个用户的标注结果自动写入：
 
 ```text
-data/users/<账号>/annotations/
+data/users/<工作区目录>/annotations/
 ```
 
 例如：
 
 ```text
-data/users/annotator1/annotations/
+data/users/xuben/annotations/
 ```
 
 这些文件不会提交到 GitHub。建议服务器定期备份整个 `data/users/` 目录。
@@ -270,7 +276,7 @@ sudo journalctl -u extraction-reviewer -n 100
 检查该用户是否有分配文件：
 
 ```text
-data/users/<账号>/assignments.json
+data/users/<工作区目录>/assignments.json
 ```
 
 并确认其中的 `paper_id` 与 `extracted/` 下的目录名完全一致。
