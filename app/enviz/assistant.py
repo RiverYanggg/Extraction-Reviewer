@@ -1,21 +1,17 @@
 """In-app help assistant.
 
 Two layers:
-  1. **Live LLM** — if a usable Anthropic-compatible endpoint is configured
-     (env below), questions are answered by the model, including materials-science
-     domain questions.
+  1. **Live LLM** — if a usable DeepSeek-compatible endpoint is configured,
+     questions are answered by the model, including materials-science domain
+     questions.
   2. **Local FAQ fallback** — a built-in keyword responder for common
      system-operation questions, drawn from the user manual. Always available,
      so the assistant is useful even with no LLM endpoint / no network.
 
 Environment (all optional; first found wins):
-    ENVIZ_ASSISTANT_BASE_URL | ANTHROPIC_BASE_URL   (default api.anthropic.com)
-    ENVIZ_ASSISTANT_API_KEY  | ANTHROPIC_AUTH_TOKEN | ANTHROPIC_API_KEY
-    ENVIZ_ASSISTANT_MODEL    (default claude-sonnet-4-6)
-
-Note: a bare Claude-Code gateway token may be gated to the official CLI and will
-simply fall through to the FAQ — set ENVIZ_ASSISTANT_* to a standard endpoint to
-enable full AI answers.
+    ENVIZ_ASSISTANT_BASE_URL | DEEPSEEK_BASE_URL   (default api.deepseek.com)
+    ENVIZ_ASSISTANT_API_KEY  | DEEPSEEK_API_KEY
+    ENVIZ_ASSISTANT_MODEL    (default deepseek-v4-flash)
 """
 from __future__ import annotations
 
@@ -40,11 +36,10 @@ SYSTEM_PROMPT = """\
 # ---- config --------------------------------------------------------------- #
 def _cfg():
     base = (os.environ.get("ENVIZ_ASSISTANT_BASE_URL")
-            or os.environ.get("ANTHROPIC_BASE_URL") or "https://api.anthropic.com")
+            or os.environ.get("DEEPSEEK_BASE_URL") or "https://api.deepseek.com")
     token = (os.environ.get("ENVIZ_ASSISTANT_API_KEY")
-             or os.environ.get("ANTHROPIC_AUTH_TOKEN")
-             or os.environ.get("ANTHROPIC_API_KEY"))
-    model = os.environ.get("ENVIZ_ASSISTANT_MODEL", "claude-sonnet-4-6")
+             or os.environ.get("DEEPSEEK_API_KEY"))
+    model = os.environ.get("ENVIZ_ASSISTANT_MODEL", "deepseek-v4-flash")
     return base.rstrip("/"), token, model
 
 
@@ -60,21 +55,27 @@ def _llm(messages: list[dict], context: str):
     system = SYSTEM_PROMPT + (f"\n\n当前上下文：\n{context}" if context else "")
     clean = [{"role": m["role"], "content": str(m.get("content", ""))}
              for m in messages if m.get("role") in ("user", "assistant")][-12:]
-    body = json.dumps({"model": model, "max_tokens": 1024,
-                       "system": system, "messages": clean}).encode("utf-8")
-    headers = {"content-type": "application/json", "anthropic-version": "2023-06-01",
-               "x-api-key": token, "authorization": f"Bearer {token}",
-               # help proxies that expect the official client signature
-               "user-agent": "claude-cli/2.1.177 (external, cli)", "x-app": "cli"}
-    req = urllib.request.Request(base + "/v1/messages", data=body, headers=headers, method="POST")
+    body = json.dumps({
+        "model": model,
+        "messages": [{"role": "system", "content": system}] + clean,
+        "max_tokens": 1024,
+        "stream": False,
+    }).encode("utf-8")
+    headers = {"content-type": "application/json", "authorization": f"Bearer {token}"}
+    req = urllib.request.Request(_chat_url(base), data=body, headers=headers, method="POST")
     try:
         with urllib.request.urlopen(req, timeout=60) as resp:
             data = json.loads(resp.read())
-        parts = [b.get("text", "") for b in data.get("content", []) if b.get("type") == "text"]
-        text = "".join(parts).strip()
+        text = data["choices"][0]["message"].get("content", "").strip()
         return text or None
     except (urllib.error.URLError, TimeoutError, ValueError, KeyError):
         return None
+
+
+def _chat_url(base: str) -> str:
+    if base.endswith("/chat/completions"):
+        return base
+    return base.rstrip("/") + "/chat/completions"
 
 
 # ---- local FAQ fallback --------------------------------------------------- #
@@ -132,6 +133,6 @@ def ask(messages: list[dict], context: str = "") -> dict:
         "reply": ("我可以帮你解答系统操作（如何确认/修改/补充/标记、证据高亮、导出、指标、快捷键等）。"
                   "请换个说法或更具体地问，也可以点上方『用户手册』通读。\n\n"
                   "（提示：如需回答材料领域等开放性问题，请为服务配置可用的 LLM 端点："
-                  "设置环境变量 ENVIZ_ASSISTANT_BASE_URL / ENVIZ_ASSISTANT_API_KEY / "
-                  "ENVIZ_ASSISTANT_MODEL 后重启。）"),
+                  "设置环境变量 DEEPSEEK_API_KEY，或 ENVIZ_ASSISTANT_BASE_URL / "
+                  "ENVIZ_ASSISTANT_API_KEY / ENVIZ_ASSISTANT_MODEL 后重启。）"),
     }

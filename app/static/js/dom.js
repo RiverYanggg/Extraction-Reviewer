@@ -45,6 +45,8 @@ export const el = {
   chatLog: $("#chat-log"),
   chatText: $("#chat-text"),
   chatSend: $("#chat-send"),
+  chatSession: $("#chat-session"),
+  chatNew: $("#chat-new"),
   manualView: $("#manual-view"),
   floatResize: $("#float-resize"),
 };

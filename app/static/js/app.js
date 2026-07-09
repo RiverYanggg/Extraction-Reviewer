@@ -210,22 +210,23 @@ function buildLegend() {
 function buildHelp() {
   el.helpBody.innerHTML = `
     <p>本工具用于人工审核结构化抽取结果。<b>颜色</b>=审核状态（一个维度），<b>徽章</b>=证据质量/置信度，避免颜色过载。中间是按 schema 还原的 <b>JSON 树</b>（含预定义 null 字段，均参与指标）。</p>
-    <h3>快捷键</h3>
+    <h3>快捷键（Windows / Mac 均支持）</h3>
     <table>
-      <tr><td><kbd>j</kbd> / <kbd>k</kbd></td><td>下一个 / 上一个字段</td></tr>
-      <tr><td><kbd>c</kbd></td><td>确认</td></tr>
-      <tr><td><kbd>x</kbd></td><td>冲突</td></tr>
-      <tr><td><kbd>r</kbd></td><td>待复核</td></tr>
-      <tr><td><kbd>e</kbd></td><td>编辑当前值</td></tr>
-      <tr><td><kbd>n</kbd> / <kbd>N</kbd></td><td>切换多证据</td></tr>
-      <tr><td><kbd>/</kbd></td><td>聚焦搜索框</td></tr>
-      <tr><td><kbd>⌘/Ctrl</kbd>+<kbd>Z</kbd> / <kbd>⌘/Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>Z</kbd></td><td>撤销 / 重做</td></tr>
-      <tr><td><kbd>⌘/Ctrl</kbd>+<kbd>S</kbd></td><td>暂存草稿</td></tr>
-      <tr><td><kbd>⌘/Ctrl</kbd>+<kbd>P</kbd></td><td>切换论文</td></tr>
-      <tr><td><kbd>?</kbd></td><td>打开/关闭本帮助</td></tr>
+      <tr><th>Windows</th><th>Mac</th><th>作用</th></tr>
+      <tr><td><kbd>j</kbd> / <kbd>k</kbd></td><td><kbd>j</kbd> / <kbd>k</kbd></td><td>下一个 / 上一个字段</td></tr>
+      <tr><td><kbd>c</kbd></td><td><kbd>c</kbd></td><td>确认</td></tr>
+      <tr><td><kbd>x</kbd></td><td><kbd>x</kbd></td><td>冲突</td></tr>
+      <tr><td><kbd>r</kbd></td><td><kbd>r</kbd></td><td>待复核</td></tr>
+      <tr><td><kbd>e</kbd></td><td><kbd>e</kbd></td><td>编辑当前值</td></tr>
+      <tr><td><kbd>n</kbd> / <kbd>Shift</kbd>+<kbd>n</kbd></td><td><kbd>n</kbd> / <kbd>Shift</kbd>+<kbd>n</kbd></td><td>切换多证据</td></tr>
+      <tr><td><kbd>/</kbd></td><td><kbd>/</kbd></td><td>聚焦搜索框</td></tr>
+      <tr><td><kbd>Ctrl</kbd>+<kbd>Z</kbd> / <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>Z</kbd> 或 <kbd>Ctrl</kbd>+<kbd>Y</kbd></td><td><kbd>⌘</kbd>+<kbd>Z</kbd> / <kbd>⌘</kbd>+<kbd>Shift</kbd>+<kbd>Z</kbd></td><td>撤销 / 重做</td></tr>
+      <tr><td><kbd>Ctrl</kbd>+<kbd>S</kbd></td><td><kbd>⌘</kbd>+<kbd>S</kbd></td><td>暂存草稿</td></tr>
+      <tr><td><kbd>Ctrl</kbd>+<kbd>P</kbd></td><td><kbd>⌘</kbd>+<kbd>P</kbd></td><td>切换论文</td></tr>
+      <tr><td><kbd>?</kbd></td><td><kbd>?</kbd></td><td>打开/关闭本帮助</td></tr>
     </table>
     <h3>纠错 + 补齐</h3>
-    <p><b>错误字段</b>：右侧详情框改值并回车。<b>遗漏字段</b>：在 JSON 树目标节点点 <b>＋</b> 就地补充。右下悬浮窗有 <b>AI 助手</b> 和 <b>用户手册</b>。</p>`;
+    <p><b>错误字段</b>：右侧详情框改值并回车。<b>遗漏字段</b>：在 JSON 树目标节点点 <b>＋</b> 就地补充。右下悬浮窗可拖动，内含 <b>AI 助手</b> 和 <b>用户手册</b>。</p>`;
 }
 
 boot();

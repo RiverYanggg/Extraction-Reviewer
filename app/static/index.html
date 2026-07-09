@@ -14,7 +14,7 @@
       <span>Evidence Note Annotator</span>
     </div>
     <div id="paper-switcher">
-      <select id="paper-select" title="切换论文 (Ctrl/⌘+P)"></select>
+      <select id="paper-select" title="切换论文 (Windows: Ctrl+P / Mac: ⌘P)"></select>
     </div>
     <div id="progress-wrap">
       <div id="progress-bar"><div id="progress-fill"></div></div>
@@ -22,9 +22,9 @@
     </div>
     <div class="topbar-actions">
       <span id="save-state" class="save-state" title="自动保存状态">已保存</span>
-      <button id="btn-undo" class="btn ghost" title="撤销 (Ctrl/⌘+Z)">↶</button>
-      <button id="btn-redo" class="btn ghost" title="重做 (Ctrl/⌘+Shift+Z)">↷</button>
-      <button id="btn-save" class="btn ghost" title="暂存草稿 (Ctrl/⌘+S)">暂存</button>
+      <button id="btn-undo" class="btn ghost" title="撤销 (Windows: Ctrl+Z / Mac: ⌘Z)">↶</button>
+      <button id="btn-redo" class="btn ghost" title="重做 (Windows: Ctrl+Shift+Z 或 Ctrl+Y / Mac: ⌘Shift+Z)">↷</button>
+      <button id="btn-save" class="btn ghost" title="暂存草稿 (Windows: Ctrl+S / Mac: ⌘S)">暂存</button>
       <button id="btn-metrics" class="btn ghost" title="查看当前 P/R/F1">指标</button>
       <select id="task-status" class="task-status" title="任务状态">
         <option value="not_started">未开始</option>
@@ -133,6 +133,10 @@
     </div>
     <!-- assistant -->
     <div class="float-body" id="float-assistant">
+      <div class="chat-toolbar">
+        <select id="chat-session" title="历史对话"></select>
+        <button id="chat-new" class="btn ghost" title="新建对话">新建对话</button>
+      </div>
       <div id="chat-log" class="chat-log"></div>
       <div class="chat-input">
         <textarea id="chat-text" rows="2" placeholder="问我：系统怎么用 / 材料概念 / 这个字段对不对…（Enter 发送）"></textarea>
