@@ -13,6 +13,7 @@
       <span class="logo">◆</span>
       <span>Evidence Note Annotator</span>
     </div>
+    <div id="user-badge" class="user-badge hidden"></div>
     <div id="paper-switcher">
       <select id="paper-select" title="切换论文 (Windows: Ctrl+P / Mac: ⌘P)"></select>
     </div>
@@ -33,6 +34,7 @@
       </select>
       <button id="btn-export" class="btn primary" title="导出标注结果">导出</button>
       <button id="btn-help" class="btn ghost" title="快捷键 (?)">?</button>
+      <button id="btn-logout" class="btn ghost" title="退出登录">退出</button>
     </div>
   </header>
 
@@ -119,6 +121,20 @@
     </div>
   </div>
 
+  <!-- ================= Export choice modal ================= -->
+  <div id="export-modal" class="modal hidden">
+    <div class="modal-card">
+      <div class="modal-head"><span>选择导出范围</span><button id="export-close" class="btn ghost">✕</button></div>
+      <div class="modal-body">
+        <p>导出前会先保存当前草稿。全体导出仅包含当前账号已分配的论文。</p>
+        <div class="export-actions">
+          <button id="export-current" class="btn primary">导出当前论文</button>
+          <button id="export-all" class="btn ghost">导出全部分配论文</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <!-- ================= Floating window (AI assistant + manual) ================= -->
   <div id="fab" title="打开助手 / 手册">💬</div>
   <div id="float-win" class="float-win hidden">
@@ -151,6 +167,30 @@
   </div>
 
   <div id="toast" class="toast hidden"></div>
+
+  <!-- ================= Login ================= -->
+  <div id="login-modal" class="login-modal">
+    <form id="login-form" class="login-card">
+      <div class="login-brand">
+        <span class="logo">◆</span>
+        <div>
+          <h1>Evidence Note Annotator</h1>
+          <p>登录后进入独立标注工作区</p>
+        </div>
+      </div>
+      <label>
+        <span>账号</span>
+        <input id="login-username" name="username" autocomplete="username" required />
+      </label>
+      <label>
+        <span>密码</span>
+        <input id="login-password" name="password" type="password" autocomplete="current-password" required />
+      </label>
+      <button id="login-submit" class="btn primary" type="submit">登录</button>
+      <div id="login-error" class="login-error"></div>
+      <p class="login-hint">默认测试账号：annotator1 / annotator2 / annotator3</p>
+    </form>
+  </div>
 
   <script type="module" src="/js/app.js"></script>
 </body>

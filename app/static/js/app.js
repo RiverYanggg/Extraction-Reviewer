@@ -14,6 +14,8 @@ import { renderInspector } from "./inspector.js";
 import { openMetrics } from "./metrics.js";
 import { initFloating } from "./floating.js";
 
+let storeSubscribed = false;
+
 // ---- render loop ----------------------------------------------------------
 function render() {
   if (!store.data) return;
@@ -61,7 +63,18 @@ async function boot() {
   wireGlobalControls();
   wireKeyboard();
   wireDividers();
-  initFloating();
+  wireLogin();
+
+  const user = await requireLogin();
+  if (!user) return;
+  await startWorkspace(user);
+}
+
+async function startWorkspace(user) {
+  ui.user = user;
+  el.userBadge.textContent = user.display_name || user.username;
+  el.userBadge.classList.remove("hidden");
+  initFloating(user);
 
   let papers;
   try { ({ papers } = await api.listPapers()); }
@@ -77,8 +90,22 @@ async function boot() {
     .map((p) => `<option value="${esc(p.paper_id)}">${esc(p.title)} — ${p.progress.pct}%</option>`)
     .join("");
 
-  store.subscribe(render);
+  if (!storeSubscribed) {
+    store.subscribe(render);
+    storeSubscribed = true;
+  }
   await loadPaper(papers[0].paper_id);
+}
+
+async function requireLogin() {
+  try {
+    const { user } = await api.me();
+    hideLogin();
+    return user;
+  } catch {
+    showLogin();
+    return null;
+  }
 }
 
 async function loadPaper(pid) {
@@ -106,6 +133,7 @@ function wireGlobalControls() {
   el.preview.addEventListener("click", openBucketPreview);
   el.taskStatus.addEventListener("change", (e) => store.setTaskStatus(e.target.value));
   el.export.addEventListener("click", onExport);
+  el.logout.addEventListener("click", onLogout);
   el.help.addEventListener("click", () => el.helpModal.classList.remove("hidden"));
   el.helpClose.addEventListener("click", () => el.helpModal.classList.add("hidden"));
   el.helpModal.addEventListener("click", (e) => { if (e.target === el.helpModal) el.helpModal.classList.add("hidden"); });
@@ -113,6 +141,10 @@ function wireGlobalControls() {
   el.metricsModal.addEventListener("click", (e) => { if (e.target === el.metricsModal) el.metricsModal.classList.add("hidden"); });
   el.previewClose.addEventListener("click", () => el.previewModal.classList.add("hidden"));
   el.previewModal.addEventListener("click", (e) => { if (e.target === el.previewModal) el.previewModal.classList.add("hidden"); });
+  el.exportClose.addEventListener("click", () => el.exportModal.classList.add("hidden"));
+  el.exportModal.addEventListener("click", (e) => { if (e.target === el.exportModal) el.exportModal.classList.add("hidden"); });
+  el.exportCurrent.addEventListener("click", () => exportCurrentPaper());
+  el.exportAll.addEventListener("click", () => exportAllPapers());
 
   el.fieldSearch.addEventListener("input", (e) => { ui.search = e.target.value; renderFields(); });
   el.filterStatus.addEventListener("change", (e) => { ui.filterStatus = e.target.value; renderFields(); });
@@ -125,13 +157,63 @@ function wireGlobalControls() {
   });
 }
 
+function wireLogin() {
+  el.loginForm.addEventListener("submit", async (e) => {
+    e.preventDefault();
+    el.loginError.textContent = "";
+    el.loginSubmit.disabled = true;
+    try {
+      const { user } = await api.login(el.loginUsername.value.trim(), el.loginPassword.value);
+      el.loginPassword.value = "";
+      hideLogin();
+      await startWorkspace(user);
+    } catch {
+      el.loginError.textContent = "账号或密码错误";
+    } finally {
+      el.loginSubmit.disabled = false;
+    }
+  });
+}
+
+function showLogin() {
+  el.loginModal.classList.remove("hidden");
+  el.loginUsername.focus();
+}
+
+function hideLogin() {
+  el.loginModal.classList.add("hidden");
+}
+
+async function onLogout() {
+  await store.flush();
+  await api.logout().catch(() => {});
+  ui.user = null;
+  el.userBadge.classList.add("hidden");
+  el.paperSelect.innerHTML = "";
+  el.fieldsList.innerHTML = `<div class="inspector-empty">请先登录。</div>`;
+  el.inspector.innerHTML = `<div class="inspector-empty">选择一个字段以查看证据、置信度与编辑选项。</div>`;
+  showLogin();
+}
+
 async function onExport() {
+  el.exportModal.classList.remove("hidden");
+}
+
+async function exportCurrentPaper() {
+  el.exportModal.classList.add("hidden");
   await store.flush();
   const p = store.progress();
   const unreviewed = p.total - p.done;
   if (unreviewed > 0 && !confirm(`还有 ${unreviewed} 个字段未审核（未确认/未修改）。仍要导出吗？`)) return;
   window.location.href = api.exportUrl(store.paperId);
-  toast("正在生成导出包…");
+  toast("正在生成当前论文导出包…");
+}
+
+async function exportAllPapers() {
+  el.exportModal.classList.add("hidden");
+  await store.flush();
+  window.location.href = api.exportAllUrl();
+  toast("正在生成全部论文导出包…");
 }
 
 // ---- keyboard -------------------------------------------------------------

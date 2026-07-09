@@ -12,15 +12,25 @@ from pathlib import Path
 
 from . import dsl
 from .annotations import load_annotation, progress_of
+from .auth import User
 from .metrics import compute_metrics
 from .slots import PaperModel
 from .utils import deep_copy, now_iso
 
 
-def build_export(pdir: Path, paper_id: str) -> bytes:
+def build_export(pdir: Path, paper_id: str, user: User) -> bytes:
+    files = build_export_files(pdir, paper_id, user)
+    buf = io.BytesIO()
+    with zipfile.ZipFile(buf, "w", zipfile.ZIP_DEFLATED) as z:
+        for name, content in files.items():
+            z.writestr(name, content)
+    return buf.getvalue()
+
+
+def build_export_files(pdir: Path, paper_id: str, user: User) -> dict[str, str]:
     model = PaperModel(pdir)
     slots = model.slots
-    annot = load_annotation(paper_id)
+    annot = load_annotation(paper_id, user)
     fa = annot.get("fields", {})
 
     field_review, diffs = [], []
@@ -50,7 +60,7 @@ def build_export(pdir: Path, paper_id: str) -> bytes:
     meta = model.paper_meta()
 
     manifest = {
-        "paper_id": paper_id, "exported_at": now_iso(),
+        "paper_id": paper_id, "reviewer": user.username, "exported_at": now_iso(),
         "schema": "evidence-annotation-export-v2",
         "task_status": annot.get("task_status"), "progress": prog,
         "metrics_overall": metrics["overall"], "coverage": metrics["coverage"],
@@ -67,20 +77,18 @@ def build_export(pdir: Path, paper_id: str) -> bytes:
     }
     summary_md = _summary_md(paper_id, meta, prog, diffs, annot, metrics)
 
-    buf = io.BytesIO()
-    with zipfile.ZipFile(buf, "w", zipfile.ZIP_DEFLATED) as z:
-        b = paper_id
-        z.writestr(f"{b}/MANIFEST.json", _j(manifest))
-        z.writestr(f"{b}/review_summary.md", summary_md)
-        z.writestr(f"{b}/annotation_state.json", _j(annot))
-        z.writestr(f"{b}/text_extraction.reviewed.json", _j(reviewed))
-        z.writestr(f"{b}/field_review.json", _j({"paper_id": paper_id, "fields": field_review,
-                                                 "added_fields": annot.get("added_fields", [])}))
-        z.writestr(f"{b}/diff.json", _j({"paper_id": paper_id, "changes": diffs}))
-        z.writestr(f"{b}/evaluation_metrics.json", _j(metrics))
-        z.writestr(f"{b}/audit_log.jsonl",
-                   "\n".join(json.dumps(e, ensure_ascii=False) for e in annot.get("audit_log", [])))
-    return buf.getvalue()
+    b = paper_id
+    return {
+        f"{b}/MANIFEST.json": _j(manifest),
+        f"{b}/review_summary.md": summary_md,
+        f"{b}/annotation_state.json": _j(annot),
+        f"{b}/text_extraction.reviewed.json": _j(reviewed),
+        f"{b}/field_review.json": _j({"paper_id": paper_id, "fields": field_review,
+                                      "added_fields": annot.get("added_fields", [])}),
+        f"{b}/diff.json": _j({"paper_id": paper_id, "changes": diffs}),
+        f"{b}/evaluation_metrics.json": _j(metrics),
+        f"{b}/audit_log.jsonl": "\n".join(json.dumps(e, ensure_ascii=False) for e in annot.get("audit_log", [])),
+    }
 
 
 def _j(obj) -> str:

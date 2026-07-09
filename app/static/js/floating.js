@@ -4,16 +4,23 @@ import { store } from "./store.js";
 import { api } from "./api.js";
 import { markdown, esc } from "./util.js";
 
-const CHAT_KEY = "enviz.assistant.sessions.v1";
-const WINDOW_KEY = "enviz.float.window.v1";
+const CHAT_KEY = "enviz.assistant.sessions.v2";
+const WINDOW_KEY = "enviz.float.window.v2";
 
 let sessions = [];
 let activeSessionId = "";
 let manualLoaded = false;
+let activeUserKey = "anonymous";
+let initialized = false;
 
-export function initFloating() {
+export function initFloating(user) {
+  activeUserKey = user?.username || "anonymous";
   loadSessions();
   restoreWindowPlacement();
+  renderSessionPicker();
+  renderChat();
+  if (initialized) return;
+  initialized = true;
   el.fab.addEventListener("click", () => toggleWin(true));
   el.floatMin.addEventListener("click", () => toggleWin(false));
 
@@ -33,8 +40,6 @@ export function initFloating() {
 
   makeDraggable(el.floatWin, el.floatHead);
   makeResizable(el.floatWin, el.floatResize);
-  renderSessionPicker();
-  renderChat();
 }
 
 function toggleWin(show) {
@@ -72,7 +77,7 @@ function greeting() {
 
 function loadSessions() {
   try {
-    const saved = JSON.parse(localStorage.getItem(CHAT_KEY) || "null");
+    const saved = JSON.parse(localStorage.getItem(userStorageKey(CHAT_KEY)) || "null");
     if (saved?.sessions?.length) {
       sessions = saved.sessions.filter((s) => Array.isArray(s.messages));
       activeSessionId = saved.activeSessionId || sessions[0]?.id || "";
@@ -87,7 +92,7 @@ function loadSessions() {
 }
 
 function saveSessions() {
-  localStorage.setItem(CHAT_KEY, JSON.stringify({ sessions, activeSessionId }));
+  localStorage.setItem(userStorageKey(CHAT_KEY), JSON.stringify({ sessions, activeSessionId }));
 }
 
 function createSession() {
@@ -264,7 +269,7 @@ function clamp(value, min, max) {
 
 function saveWindowPlacement() {
   const r = el.floatWin.getBoundingClientRect();
-  localStorage.setItem(WINDOW_KEY, JSON.stringify({
+  localStorage.setItem(userStorageKey(WINDOW_KEY), JSON.stringify({
     left: r.left,
     top: r.top,
     width: r.width,
@@ -274,8 +279,11 @@ function saveWindowPlacement() {
 
 function restoreWindowPlacement() {
   try {
-    const saved = JSON.parse(localStorage.getItem(WINDOW_KEY) || "null");
-    if (!saved) return;
+    const saved = JSON.parse(localStorage.getItem(userStorageKey(WINDOW_KEY)) || "null");
+    if (!saved) {
+      resetWindowPlacement();
+      return;
+    }
     const width = clamp(Number(saved.width) || 420, 300, window.innerWidth - 16);
     const height = clamp(Number(saved.height) || 520, 260, window.innerHeight - 16);
     el.floatWin.style.width = width + "px";
@@ -285,6 +293,19 @@ function restoreWindowPlacement() {
     el.floatWin.style.right = "auto";
     el.floatWin.style.bottom = "auto";
   } catch {
-    localStorage.removeItem(WINDOW_KEY);
+    localStorage.removeItem(userStorageKey(WINDOW_KEY));
   }
+}
+
+function userStorageKey(base) {
+  return `${base}.${activeUserKey}`;
+}
+
+function resetWindowPlacement() {
+  el.floatWin.style.left = "";
+  el.floatWin.style.top = "";
+  el.floatWin.style.width = "";
+  el.floatWin.style.height = "";
+  el.floatWin.style.right = "20px";
+  el.floatWin.style.bottom = "20px";
 }

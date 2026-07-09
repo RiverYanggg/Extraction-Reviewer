@@ -1,19 +1,20 @@
 """Reviewer state persistence + progress.
 
 Annotation documents are keyed by slot id (JSON pointer) and stored one file
-per paper under ``annotations/``. Writes are atomic.
+per paper under ``data/users/<username>/annotations/``. Writes are atomic.
 """
 from __future__ import annotations
 
 import json
 from pathlib import Path
 
-from .config import ANNOT_DIR, ANNOT_SCHEMA_VERSION
+from .auth import User
+from .config import ANNOT_SCHEMA_VERSION
 from .utils import now_iso, try_read_json
 
 
-def annot_path(paper_id: str) -> Path:
-    return ANNOT_DIR / f"{paper_id.replace('/', '_')}.json"
+def annot_path(paper_id: str, user: User) -> Path:
+    return user.annotation_dir / f"{paper_id.replace('/', '_')}.json"
 
 
 def default_annotation(paper_id: str) -> dict:
@@ -30,22 +31,24 @@ def default_annotation(paper_id: str) -> dict:
     }
 
 
-def load_annotation(paper_id: str) -> dict:
-    data = try_read_json(annot_path(paper_id))
+def load_annotation(paper_id: str, user: User) -> dict:
+    data = try_read_json(annot_path(paper_id, user))
     base = default_annotation(paper_id)
     if isinstance(data, dict):
         base.update(data)
     return base
 
 
-def save_annotation(paper_id: str, data: dict) -> dict:
+def save_annotation(paper_id: str, data: dict, user: User) -> dict:
     data["paper_id"] = paper_id
     data["schema_version"] = ANNOT_SCHEMA_VERSION
     data["updated_at"] = now_iso()
-    tmp = annot_path(paper_id).with_suffix(".json.tmp")
+    path = annot_path(paper_id, user)
+    path.parent.mkdir(parents=True, exist_ok=True)
+    tmp = path.with_suffix(".json.tmp")
     with tmp.open("w", encoding="utf-8") as fh:
         json.dump(data, fh, ensure_ascii=False, indent=2)
-    tmp.replace(annot_path(paper_id))
+    tmp.replace(path)
     return data
 
 

@@ -13,6 +13,8 @@ export const el = {
   taskStatus: $("#task-status"),
   export: $("#btn-export"),
   help: $("#btn-help"),
+  logout: $("#btn-logout"),
+  userBadge: $("#user-badge"),
   sourceBlocks: $("#source-blocks"),
   pdfView: $("#pdf-view"),
   sourceScroll: $("#source-scroll"),
@@ -35,6 +37,10 @@ export const el = {
   previewBody: $("#preview-body"),
   previewTitle: $("#preview-title"),
   previewClose: $("#preview-close"),
+  exportModal: $("#export-modal"),
+  exportClose: $("#export-close"),
+  exportCurrent: $("#export-current"),
+  exportAll: $("#export-all"),
   // floating window
   fab: $("#fab"),
   floatWin: $("#float-win"),
@@ -49,9 +55,16 @@ export const el = {
   chatNew: $("#chat-new"),
   manualView: $("#manual-view"),
   floatResize: $("#float-resize"),
+  loginModal: $("#login-modal"),
+  loginForm: $("#login-form"),
+  loginUsername: $("#login-username"),
+  loginPassword: $("#login-password"),
+  loginSubmit: $("#login-submit"),
+  loginError: $("#login-error"),
 };
 
 export const ui = {
+  user: null,
   selectedFieldId: null,
   activeBucketId: null,
   search: "",

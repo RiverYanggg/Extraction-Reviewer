@@ -7,7 +7,9 @@ from pathlib import Path
 APP_DIR = Path(__file__).resolve().parent.parent      # app/
 ROOT = APP_DIR.parent                                 # evidence_note_viewer/
 EXTRACTED_DIR = ROOT / "extracted"                    # read-only pipeline output
-ANNOT_DIR = ROOT / "annotations"                      # writable reviewer state
+DATA_DIR = ROOT / "data"                              # per-user runtime state
+USERS_DIR = DATA_DIR / "users"
+ANNOT_DIR = ROOT / "annotations"                      # legacy shared reviewer state
 STATIC_DIR = APP_DIR / "static"
 DOCS_DIR = ROOT / "docs"
 SCHEMA_PATH = DOCS_DIR / "extraction_schema.json"
@@ -31,6 +33,8 @@ def load_env_file(path: Path = ROOT / ".env") -> None:
 
 load_env_file()
 
+DATA_DIR.mkdir(exist_ok=True)
+USERS_DIR.mkdir(exist_ok=True)
 ANNOT_DIR.mkdir(exist_ok=True)
 
 ANNOT_SCHEMA_VERSION = "annot-v2"     # v2: slot-id (json-pointer) keyed
