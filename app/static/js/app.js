@@ -44,6 +44,8 @@ const ui = {
   filterStatus: "",
   evIndex: 0,          // active evidence index for multi-ref fields
   tab: "source",
+  collapsed: new Set(), // collapsed tree node ids
+  pdfLoaded: false,
 };
 
 // ---- DOM refs -------------------------------------------------------------
@@ -55,15 +57,18 @@ const el = {
   saveState: $("#save-state"),
   undo: $("#btn-undo"),
   redo: $("#btn-redo"),
+  save: $("#btn-save"),
+  metricsBtn: $("#btn-metrics"),
   taskStatus: $("#task-status"),
   export: $("#btn-export"),
   help: $("#btn-help"),
   sourceBlocks: $("#source-blocks"),
-  knowledgeView: $("#knowledge-view"),
+  pdfView: $("#pdf-view"),
   sourceScroll: $("#source-scroll"),
   evidenceStatus: $("#evidence-status"),
   bucketRail: $("#bucket-rail"),
   fieldsList: $("#fields-list"),
+  fieldsScroll: $("#fields-scroll"),
   fieldSearch: $("#field-search"),
   filterStatus: $("#filter-status"),
   inspector: $("#inspector-body"),
@@ -71,6 +76,9 @@ const el = {
   helpModal: $("#help-modal"),
   helpBody: $("#help-body"),
   helpClose: $("#help-close"),
+  metricsModal: $("#metrics-modal"),
+  metricsBody: $("#metrics-body"),
+  metricsClose: $("#metrics-close"),
   toast: $("#toast"),
 };
 
@@ -138,9 +146,12 @@ async function loadPaper(pid) {
   ui.selectedFieldId = null;
   ui.activeBucketId = payload.buckets[0]?.bucket_id || null;
   ui.evIndex = 0;
+  ui.collapsed = new Set();
+  ui.pdfLoaded = false;
   el.paperSelect.value = pid;
+  if (ui.tab === "pdf") switchTab("source"); // reset view for new paper
   renderSourceBlocks();
-  renderKnowledge();
+  preparePdf();
   render();
 }
 
@@ -213,9 +224,19 @@ function selectFirstFieldCiting(blockId) {
   if (f) { selectField(f.field_id); }
 }
 
-// ---- Left: knowledge tab (built once) -------------------------------------
-function renderKnowledge() {
-  el.knowledgeView.innerHTML = miniMarkdown(store.data.knowledge_md || "_无知识摘要_");
+// ---- Left: PDF tab (lazy: iframe created on first switch) -----------------
+function preparePdf() {
+  el.pdfView.innerHTML = store.data.has_pdf
+    ? "" // filled lazily in switchTab
+    : `<div class="pdf-empty">本论文没有可用的 PDF 原文文件。</div>`;
+}
+function ensurePdfLoaded() {
+  if (ui.pdfLoaded || !store.data.has_pdf) return;
+  const frame = document.createElement("iframe");
+  frame.src = store.data.pdf_url;
+  frame.title = "PDF";
+  el.pdfView.replaceChildren(frame);
+  ui.pdfLoaded = true;
 }
 
 // ---- Center: bucket rail --------------------------------------------------
@@ -244,94 +265,179 @@ function renderBucketRail() {
   el.bucketRail.replaceChildren(frag);
 }
 
-// ---- Center: fields list --------------------------------------------------
-function fieldMatchesFilter(f) {
-  const st = store.statusOf(f.field_id);
+// ---- Center: JSON tree ----------------------------------------------------
+function activeBucket() {
+  return store.data.buckets.find((b) => b.bucket_id === ui.activeBucketId);
+}
+
+function leafVisible(field) {
+  const st = store.statusOf(field.field_id);
   if (ui.filterStatus) {
-    if (ui.filterStatus === "no_evidence") { if (!f.no_evidence) return false; }
-    else if (ui.filterStatus === "added") { return false; } // handled separately
+    if (ui.filterStatus === "no_evidence") { if (!field.no_evidence) return false; }
+    else if (ui.filterStatus === "added") return false;
     else if (st !== ui.filterStatus) return false;
   }
   if (ui.search) {
-    const hay = (f.path + " " + (store.currentValue(f) ?? "")).toLowerCase();
+    const hay = (field.path + " " + (store.currentValue(field) ?? "")).toLowerCase();
     if (!hay.includes(ui.search.toLowerCase())) return false;
   }
   return true;
 }
 
+// collect descendant leaf field_ids for a node (cached per render)
+function nodeLeaves(node, acc) {
+  if (node.kind === "leaf") { acc.push(node.field_id); return acc; }
+  for (const c of node.children || []) nodeLeaves(c, acc);
+  return acc;
+}
+
 function renderFields() {
-  const bucket = store.data.buckets.find((b) => b.bucket_id === ui.activeBucketId);
+  const bucket = activeBucket();
   if (!bucket) { el.fieldsList.innerHTML = ""; return; }
-
-  const fieldSet = new Set(bucket.field_ids);
-  const bucketFields = store.data.fields.filter((f) => fieldSet.has(f.field_id));
-
-  // group by section, in the record's authored order
-  const order = bucket.section_order.length ? bucket.section_order : [...new Set(bucketFields.map((f) => f.section))];
-  const bySection = {};
-  for (const f of bucketFields) (bySection[f.section] ||= []).push(f);
+  const filtering = !!(ui.search || (ui.filterStatus && ui.filterStatus !== "added"));
+  const scrollTop = el.fieldsScroll.scrollTop;
 
   const frag = document.createDocumentFragment();
   let shown = 0;
-
-  const addedForBucket = store.doc.added_fields.filter((a) => a.bucket_id === bucket.bucket_id);
-
-  for (const section of order) {
-    const list = (bySection[section] || []).filter(fieldMatchesFilter);
-    const added = ui.filterStatus && ui.filterStatus !== "added" ? [] :
-                  addedForBucket.filter((a) => a.section === section);
-    if (!list.length && !added.length) continue;
-
-    const group = document.createElement("div");
-    group.className = "section-group";
-    const head = document.createElement("div");
-    head.className = "section-head";
-    head.textContent = `${SECTION_LABELS[section] || section} · ${list.length + added.length}`;
-    group.appendChild(head);
-
-    for (const f of list) { group.appendChild(fieldRow(f)); shown++; }
-    for (const a of added) { group.appendChild(addedRow(a)); shown++; }
-    frag.appendChild(group);
+  for (const node of bucket.tree) {
+    const rendered = renderNode(node, 0, bucket, filtering);
+    if (rendered) { frag.appendChild(rendered); shown++; }
+  }
+  // bucket-root added fields (parent not a tree node)
+  const rootAdded = store.doc.added_fields.filter(
+    (a) => a.bucket_id === bucket.bucket_id && !a.parent_id);
+  if ((!ui.filterStatus || ui.filterStatus === "added") && rootAdded.length) {
+    const box = document.createElement("div");
+    box.className = "tguide";
+    for (const a of rootAdded) box.appendChild(addedLeaf(a));
+    frag.appendChild(box);
   }
 
-  // "add field" affordance for this bucket
+  // bucket-level add affordance
   const addBar = document.createElement("button");
   addBar.className = "btn ghost";
-  addBar.style.margin = "6px 6px";
-  addBar.textContent = "＋ 补充字段到该 bucket";
-  addBar.addEventListener("click", () => promptAddField(bucket));
+  addBar.style.margin = "8px 6px";
+  addBar.textContent = "＋ 补充字段到该 bucket 根";
+  addBar.addEventListener("click", () =>
+    openAddForm(addBar, { bucket, parent_id: null, section: bucket.tree[0]?.key || "unmapped_findings", label_path: "" }));
   frag.appendChild(addBar);
 
-  if (!shown) {
+  if (!shown && filtering) {
     const empty = document.createElement("div");
     empty.className = "inspector-empty";
     empty.textContent = "没有符合筛选条件的字段。";
     frag.insertBefore(empty, frag.firstChild);
   }
   el.fieldsList.replaceChildren(frag);
+  el.fieldsScroll.scrollTop = scrollTop;
 }
 
-function fieldRow(f) {
+function renderNode(node, depth, bucket, filtering) {
+  if (node.kind === "leaf") {
+    const f = store.fieldIndex[node.field_id];
+    if (!f) return null;
+    if (filtering && !leafVisible(f)) return null;
+    return leafRow(f, node.label, depth);
+  }
+  // group node
+  const leaves = nodeLeaves(node, []);
+  const visibleLeaves = filtering
+    ? leaves.filter((fid) => store.fieldIndex[fid] && leafVisible(store.fieldIndex[fid]))
+    : leaves;
+  const showAdded = !ui.filterStatus || ui.filterStatus === "added";
+  const addedHere = showAdded
+    ? store.doc.added_fields.filter((a) => a.parent_id === node.id)
+    : [];
+  if (filtering && !visibleLeaves.length && !addedHere.length) return null;
+
+  const wrap = document.createElement("div");
+  const collapsed = ui.collapsed.has(node.id) && !filtering;
+
+  // header
+  const head = document.createElement("div");
+  head.className = `tgroup ${node.kind}` + (collapsed ? " collapsed" : "");
+  head.style.paddingLeft = 4 + depth * 12 + "px";
+  // status mini distribution
+  const dist = { confirmed: 0, modified: 0, needs_review: 0, conflict: 0, added: 0, unprocessed: 0 };
+  for (const fid of leaves) dist[store.statusOf(fid)]++;
+  for (const a of addedHere) dist.added++;
+  const total = (leaves.length + addedHere.length) || 1;
+  const segs = ["confirmed", "modified", "needs_review", "conflict", "added", "unprocessed"]
+    .filter((k) => dist[k])
+    .map((k) => `<span class="bc-seg" style="flex:${dist[k]};background:${STATUS_COLORS[k]}"></span>`)
+    .join("");
+  head.innerHTML = `
+    <span class="tw">▾</span>
+    <span class="tlabel">${esc(node.label)}</span>
+    <span class="tcount">${leaves.length}${addedHere.length ? "+" + addedHere.length : ""}</span>
+    <span class="tmini">${segs}</span>
+    <button class="tadd" title="在此补充字段">＋</button>`;
+  wrap.appendChild(head);
+
+  // children container
+  const kids = document.createElement("div");
+  kids.className = "tchildren tguide" + (collapsed ? " collapsed" : "");
+  for (const c of node.children || []) {
+    const r = renderNode(c, depth + 1, bucket, filtering);
+    if (r) kids.appendChild(r);
+  }
+  for (const a of addedHere) kids.appendChild(addedLeaf(a));
+  wrap.appendChild(kids);
+
+  head.addEventListener("click", (e) => {
+    if (e.target.classList.contains("tadd")) {
+      e.stopPropagation();
+      openAddForm(head, {
+        bucket, parent_id: node.id,
+        section: node.kind === "section" ? node.key : sectionOfNode(bucket, node),
+        label_path: node.label,
+      });
+      return;
+    }
+    if (filtering) return; // don't collapse while filtering
+    if (ui.collapsed.has(node.id)) ui.collapsed.delete(node.id);
+    else ui.collapsed.add(node.id);
+    head.classList.toggle("collapsed");
+    kids.classList.toggle("collapsed");
+  });
+  return wrap;
+}
+
+// find which section a nested node belongs to (walk tree)
+function sectionOfNode(bucket, target) {
+  const walk = (node, sec) => {
+    if (node === target) return sec;
+    for (const c of node.children || []) {
+      const r = walk(c, node.kind === "section" ? node.key : sec);
+      if (r) return r;
+    }
+    return null;
+  };
+  for (const s of bucket.tree) { const r = walk(s, s.key); if (r) return r; }
+  return "unmapped_findings";
+}
+
+function leafRow(f, key, depth) {
   const st = store.statusOf(f.field_id);
   const row = document.createElement("div");
-  row.className = "field-row" + (f.field_id === ui.selectedFieldId ? " selected" : "");
+  row.className = "field-row leaf" + (f.field_id === ui.selectedFieldId ? " selected" : "");
   row.dataset.status = st;
   row.dataset.fieldId = f.field_id;
+  row.style.marginLeft = 4 + depth * 12 + "px";
 
   const val = store.currentValue(f);
   const refs = store.effectiveRefs(f);
-
   const badges = [];
   badges.push(`<span class="badge ${evClass(f.support_label)}" title="${evLabelText(f.support_label)}">${evLabelText(f.support_label)}</span>`);
   if (typeof f.confidence === "number")
-    badges.push(`<span class="badge conf" title="置信度">${f.confidence.toFixed(2)}</span>`);
+    badges.push(`<span class="badge conf">${f.confidence.toFixed(2)}</span>`);
   if (f.contradiction) badges.push(`<span class="badge contra">冲突</span>`);
   badges.push(`<span class="badge refct" title="证据块数量">⛬ ${refs.length}</span>`);
 
   row.innerHTML = `
     <div class="status-bar"></div>
     <div class="field-main">
-      <div class="field-key">${esc(f.label)}</div>
+      <div class="field-key">${esc(key)}</div>
       <div class="field-val ${val === "" || val == null ? "empty" : ""}">${val === "" || val == null ? "（空）" : esc(val)}</div>
       <div class="field-quick">
         <button class="qbtn on-confirm" data-act="confirmed">确认</button>
@@ -340,7 +446,6 @@ function fieldRow(f) {
       </div>
     </div>
     <div class="field-badges">${badges.join("")}</div>`;
-
   row.addEventListener("click", (e) => {
     if (e.target.classList.contains("qbtn")) {
       store.setStatus(f.field_id, e.target.dataset.act);
@@ -352,21 +457,56 @@ function fieldRow(f) {
   return row;
 }
 
-function addedRow(a) {
+function addedLeaf(a) {
   const row = document.createElement("div");
-  row.className = "field-row";
+  row.className = "field-row leaf";
   row.dataset.status = "added";
   row.innerHTML = `
     <div class="status-bar"></div>
     <div class="field-main">
-      <div class="field-key">＋ ${esc(a.path || "(new)")}</div>
-      <div class="field-val">${esc(a.value)}</div>
+      <div class="field-key">＋ ${esc(a.key || a.path || "(new)")}</div>
+      <div class="field-val ${a.value === "" ? "empty" : ""}">${a.value === "" ? "（空）" : esc(a.value)}</div>
     </div>
-    <div class="field-badges"><span class="badge" style="background:var(--st-added);color:#fff">补充</span></div>`;
-  row.addEventListener("click", () => {
+    <div class="field-badges"><span class="badge" style="background:var(--st-added);color:#fff">补充</span>
+      <span class="badge refct" title="删除">✕</span></div>`;
+  row.querySelector(".refct").addEventListener("click", (e) => {
+    e.stopPropagation();
     if (confirm("删除这个补充字段？")) store.removeAddedField(a.temp_id);
   });
   return row;
+}
+
+// inline add-field form, inserted right after `anchor`
+function openAddForm(anchor, ctx) {
+  document.querySelectorAll(".addfield-form").forEach((n) => n.remove());
+  const form = document.createElement("div");
+  form.className = "addfield-form";
+  form.innerHTML = `
+    <input class="af-key" placeholder="字段名 (key)" />
+    <input class="af-val" placeholder="值 (value)" />
+    <button class="af-ok">添加</button>
+    <button class="af-cancel">取消</button>`;
+  anchor.insertAdjacentElement("afterend", form);
+  const keyBox = form.querySelector(".af-key");
+  const valBox = form.querySelector(".af-val");
+  keyBox.focus();
+  const submit = () => {
+    const key = keyBox.value.trim();
+    if (!key) { keyBox.focus(); return; }
+    const label_path = ctx.label_path ? `${ctx.label_path}.${key}` : `${ctx.section}.${key}`;
+    store.addField({
+      bucket_id: ctx.bucket.bucket_id, section: ctx.section,
+      parent_id: ctx.parent_id, key, value: valBox.value, path: label_path,
+    });
+    form.remove();
+    toast("已补充字段");
+  };
+  form.querySelector(".af-ok").addEventListener("click", submit);
+  form.querySelector(".af-cancel").addEventListener("click", () => form.remove());
+  form.addEventListener("keydown", (e) => {
+    if (e.key === "Enter") submit();
+    if (e.key === "Escape") form.remove();
+  });
 }
 
 // ---- selection + highlight ------------------------------------------------
@@ -503,20 +643,6 @@ function renderInspector() {
     }));
 }
 
-// ---- add field ------------------------------------------------------------
-function promptAddField(bucket) {
-  const sections = bucket.section_order.length ? bucket.section_order : ["unmapped_findings"];
-  const section = prompt(`补充字段所属 section：\n可选：${sections.join(", ")}`, sections[0]);
-  if (!section) return;
-  const key = prompt("字段路径/键（例如 properties[2].value 或自定义键）：", "");
-  if (key == null) return;
-  const value = prompt("字段值：", "");
-  if (value == null) return;
-  const path = `${section}.${key}`;
-  store.addField({ bucket_id: bucket.bucket_id, section, path, value });
-  toast("已补充字段");
-}
-
 // ===========================================================================
 // Global controls / tabs / keyboard / dividers
 // ===========================================================================
@@ -527,11 +653,15 @@ function wireGlobalControls() {
   });
   el.undo.addEventListener("click", () => store.undo());
   el.redo.addEventListener("click", () => store.redo());
+  el.save.addEventListener("click", async () => { await store.flush(); toast("已暂存草稿"); });
+  el.metricsBtn.addEventListener("click", openMetrics);
   el.taskStatus.addEventListener("change", (e) => store.setTaskStatus(e.target.value));
   el.export.addEventListener("click", onExport);
   el.help.addEventListener("click", () => el.helpModal.classList.remove("hidden"));
   el.helpClose.addEventListener("click", () => el.helpModal.classList.add("hidden"));
   el.helpModal.addEventListener("click", (e) => { if (e.target === el.helpModal) el.helpModal.classList.add("hidden"); });
+  el.metricsClose.addEventListener("click", () => el.metricsModal.classList.add("hidden"));
+  el.metricsModal.addEventListener("click", (e) => { if (e.target === el.metricsModal) el.metricsModal.classList.add("hidden"); });
 
   el.fieldSearch.addEventListener("input", (e) => { ui.search = e.target.value; renderFields(); });
   el.filterStatus.addEventListener("change", (e) => { ui.filterStatus = e.target.value; renderFields(); });
@@ -551,7 +681,42 @@ function switchTab(tab) {
   document.querySelectorAll("#source-tabs .tab").forEach((t) =>
     t.classList.toggle("active", t.dataset.tab === tab));
   el.sourceBlocks.classList.toggle("hidden", tab !== "source");
-  el.knowledgeView.classList.toggle("hidden", tab !== "knowledge");
+  el.pdfView.classList.toggle("hidden", tab !== "pdf");
+  if (tab === "pdf") ensurePdfLoaded();
+}
+
+async function openMetrics() {
+  await store.flush();
+  el.metricsModal.classList.remove("hidden");
+  el.metricsBody.innerHTML = `<div class="inspector-empty">计算中…</div>`;
+  let m;
+  try {
+    m = await (await fetch(`/api/papers/${encodeURIComponent(store.paperId)}/metrics`)).json();
+  } catch (e) { el.metricsBody.innerHTML = `<div class="inspector-empty">计算失败：${esc(e.message)}</div>`; return; }
+  const ov = m.overall, cov = m.coverage;
+  const pct = (x) => (x * 100).toFixed(1) + "%";
+  const rows = Object.entries(m.per_section).map(([s, v]) =>
+    `<tr><td>${esc(SECTION_LABELS[s] || s)}</td><td>${pct(v.precision)}</td><td>${pct(v.recall)}</td>
+     <td>${pct(v.f1)}</td><td>${v.tp}</td><td>${v.fp}</td><td>${v.fn}</td></tr>`).join("");
+  el.metricsBody.innerHTML = `
+    <div class="metric-headline">
+      <div class="metric-card"><div class="mv">${pct(ov.precision)}</div><div class="ml">Precision</div></div>
+      <div class="metric-card"><div class="mv">${pct(ov.recall)}</div><div class="ml">Recall</div></div>
+      <div class="metric-card"><div class="mv">${pct(ov.f1)}</div><div class="ml">F1</div></div>
+    </div>
+    <div class="metric-cov">
+      TP=${ov.tp} · FP=${ov.fp} · FN=${ov.fn} ｜ 已审 ${cov.reviewed_fields}/${cov.total_fields}
+      (${cov.reviewed_pct}%)，待定 ${cov.pending_fields}，补充 ${cov.added_fields}
+    </div>
+    <p style="font-size:12px;color:var(--ink-soft);margin:0 0 10px">
+      定义：TP=已确认，FP=已修改+冲突，FN=已修改+已补充；待复核/未处理不计入。
+      pred=原始抽取，golden=人工标注结果。
+    </p>
+    <table class="metrics-tbl">
+      <thead><tr><th>section</th><th>P</th><th>R</th><th>F1</th><th>TP</th><th>FP</th><th>FN</th></tr></thead>
+      <tbody>${rows || `<tr><td colspan="7">暂无已审字段</td></tr>`}</tbody>
+    </table>
+    <p style="font-size:11.5px;color:var(--ink-faint);margin-top:10px">导出时会生成 <code>evaluation_metrics.json</code>（同一算法）。</p>`;
 }
 
 async function onExport() {
@@ -586,7 +751,7 @@ function wireKeyboard() {
       case "e": if (ui.selectedFieldId) { const t = $("#insp-val"); if (t) { t.focus(); e.preventDefault(); } } break;
       case "n": cycleEvidence(1); break;
       case "N": cycleEvidence(-1); break;
-      case "Escape": el.helpModal.classList.add("hidden"); break;
+      case "Escape": el.helpModal.classList.add("hidden"); el.metricsModal.classList.add("hidden"); break;
     }
   });
 }
@@ -651,38 +816,15 @@ function buildHelp() {
       <tr><td><kbd>/</kbd></td><td>聚焦搜索框</td></tr>
       <tr><td><kbd>⌘/Ctrl</kbd>+<kbd>Z</kbd></td><td>撤销</td></tr>
       <tr><td><kbd>⌘/Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>Z</kbd></td><td>重做</td></tr>
-      <tr><td><kbd>⌘/Ctrl</kbd>+<kbd>S</kbd></td><td>立即保存</td></tr>
+      <tr><td><kbd>⌘/Ctrl</kbd>+<kbd>S</kbd></td><td>暂存草稿</td></tr>
       <tr><td><kbd>⌘/Ctrl</kbd>+<kbd>P</kbd></td><td>切换论文</td></tr>
       <tr><td><kbd>?</kbd></td><td>打开/关闭本帮助</td></tr>
     </table>
+    <h3>标注 = 纠错 + 补齐</h3>
+    <p><b>错误字段</b>：在右侧详情框直接改值并回车即完成修正（状态变“已修改”）。<br>
+    <b>遗漏字段</b>：在中间 JSON 树里，把鼠标移到任一节点，点节点右侧的 <b>＋</b>，就地在该层级补一个字段（状态“已补充”）。</p>
     <h3>工作流</h3>
-    <p>选择字段 → 左侧自动高亮证据 → 核对/修改值 → 确认或标记 → 自动保存 → 完成后导出。</p>`;
-}
-
-// ---- tiny markdown (knowledge tab only, trusted local content) -----------
-function miniMarkdown(md) {
-  const lines = md.split("\n");
-  let html = "", inCode = false, inList = false;
-  const inline = (s) => esc(s)
-    .replace(/\*\*([^*]+)\*\*/g, "<b>$1</b>")
-    .replace(/\*([^*]+)\*/g, "<i>$1</i>")
-    .replace(/`([^`]+)`/g, "<code>$1</code>");
-  for (const raw of lines) {
-    const line = raw;
-    if (line.trim().startsWith("```")) {
-      inCode = !inCode; html += inCode ? "<pre>" : "</pre>"; continue;
-    }
-    if (inCode) { html += esc(line) + "\n"; continue; }
-    const h = line.match(/^(#{1,6})\s+(.*)$/);
-    if (h) { if (inList) { html += "</ul>"; inList = false; } html += `<h${h[1].length}>${inline(h[2])}</h${h[1].length}>`; continue; }
-    const li = line.match(/^\s*[-*]\s+(.*)$/);
-    if (li) { if (!inList) { html += "<ul>"; inList = true; } html += `<li>${inline(li[1])}</li>`; continue; }
-    if (inList) { html += "</ul>"; inList = false; }
-    if (line.trim() === "") { html += ""; } else { html += `<p>${inline(line)}</p>`; }
-  }
-  if (inList) html += "</ul>";
-  if (inCode) html += "</pre>";
-  return html;
+    <p>选字段 → 左侧自动高亮证据（或切到 PDF 原文）→ 核对/改值/补齐 → 确认或标记 → 自动暂存 → 导出（含 P/R/F1）。</p>`;
 }
 
 boot();

@@ -24,6 +24,8 @@
       <span id="save-state" class="save-state" title="自动保存状态">已保存</span>
       <button id="btn-undo" class="btn ghost" title="撤销 (Ctrl/⌘+Z)">↶</button>
       <button id="btn-redo" class="btn ghost" title="重做 (Ctrl/⌘+Shift+Z)">↷</button>
+      <button id="btn-save" class="btn ghost" title="暂存草稿 (Ctrl/⌘+S)">暂存</button>
+      <button id="btn-metrics" class="btn ghost" title="查看当前 P/R/F1">指标</button>
       <select id="task-status" class="task-status" title="任务状态">
         <option value="not_started">未开始</option>
         <option value="in_progress">进行中</option>
@@ -41,7 +43,7 @@
       <div class="pane-head">
         <div class="tabs" id="source-tabs">
           <button class="tab active" data-tab="source">证据原文</button>
-          <button class="tab" data-tab="knowledge">知识摘要</button>
+          <button class="tab" data-tab="pdf">PDF 原文</button>
         </div>
         <div class="pane-head-right">
           <span id="evidence-status" class="evidence-status"></span>
@@ -49,7 +51,7 @@
       </div>
       <div id="source-scroll" class="pane-body">
         <div id="source-blocks"></div>
-        <div id="knowledge-view" class="hidden"></div>
+        <div id="pdf-view" class="hidden"></div>
       </div>
     </section>
 
@@ -97,6 +99,14 @@
     <div class="modal-card">
       <div class="modal-head"><span>快捷键 & 状态说明</span><button id="help-close" class="btn ghost">✕</button></div>
       <div class="modal-body" id="help-body"></div>
+    </div>
+  </div>
+
+  <!-- ================= Metrics modal ================= -->
+  <div id="metrics-modal" class="modal hidden">
+    <div class="modal-card">
+      <div class="modal-head"><span>标注质量指标（golden=人工标注，pred=原始抽取）</span><button id="metrics-close" class="btn ghost">✕</button></div>
+      <div class="modal-body" id="metrics-body"></div>
     </div>
   </div>
 

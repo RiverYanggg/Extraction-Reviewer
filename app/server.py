@@ -210,6 +210,130 @@ def paper_title(buckets: list[dict], paper_id: str) -> dict:
 
 
 # --------------------------------------------------------------------------- #
+# Nested JSON tree (middle panel) — mirrors the extraction structure so related
+# fields stay grouped, instead of a flat same-level list.
+# --------------------------------------------------------------------------- #
+SECTION_LABELS_ZH = {
+    "papers": "论文元数据", "alloys": "合金成分", "processes": "工艺",
+    "processing_steps": "工艺步骤", "samples": "样品", "structures": "微观结构",
+    "interfaces": "界面", "properties": "性能", "performance": "服役性能",
+    "characterization_methods": "表征方法", "computational_details": "计算细节",
+    "unmapped_findings": "未映射发现",
+}
+
+
+def _element_label(section: str, elem: Any, index: int, loc: str) -> str:
+    """A friendly label for a per-element group node (only shown when a section
+    has more than one element)."""
+    if isinstance(elem, dict):
+        if section == "processing_steps":
+            return f"步骤 {elem.get('sequence', index + 1)} · {elem.get('type') or elem.get('method') or ''}".strip(" ·")
+        if section == "structures":
+            return f"结构 {elem.get('structure_id', index)}"
+        if section == "characterization_methods":
+            return elem.get("technique") or elem.get("characterization_id") or f"方法 {index}"
+        if section == "interfaces":
+            return f"界面 {elem.get('interface_set_id', index)}"
+        if section == "properties":
+            return f"性能集 {elem.get('property_set_id', index)}"
+        if section == "performance":
+            return f"服役 {elem.get('performance_id', index)}"
+        if section == "computational_details":
+            return f"计算 {elem.get('computation_id', index)}"
+        for k in ("sample_id", "alloy_id", "process_id", "paper_id"):
+            if elem.get(k):
+                return str(elem[k])
+    return loc or f"#{index}"
+
+
+def _parse_chain_segments(chain: str) -> list[str]:
+    """Split a `.key[bracket].key…` chain into node labels, merging a bracket
+    into the key it qualifies (e.g. `yield_strength[compression]`)."""
+    parts: list[str] = []
+    for m in _CHAIN_RE.finditer(chain):
+        if m.group(1) is not None:
+            parts.append(m.group(1))
+        else:  # bracket
+            if parts:
+                parts[-1] = parts[-1] + "[" + m.group(2) + "]"
+            else:
+                parts.append("[" + m.group(2) + "]")
+    return parts
+
+
+def _locate_element(section: str, container: Any, rest: str):
+    """Return (loc, elem, index) for the element `rest` addresses, or (None,..)."""
+    if isinstance(container, list):
+        best = None
+        for i, elem in enumerate(container):
+            loc = _element_locator(section, elem, i)
+            if loc and (rest == loc or rest.startswith(loc + ".") or rest.startswith(loc + "[")):
+                if best is None or len(loc) > len(best[0]):
+                    best = (loc, elem, i)
+        return best if best else (None, None, -1)
+    return ("", container, 0)
+
+
+def build_bucket_tree(section_order: list[str], bucket_fields: list[dict], root: dict) -> list[dict]:
+    """Build a collapsible tree per bucket. Leaves carry `field_id`; groups are
+    collapsible. Shared path prefixes are merged (trie insertion)."""
+    by_sec: dict[str, list[dict]] = {}
+    for f in bucket_fields:
+        by_sec.setdefault(f["section"], []).append(f)
+    order = [s for s in section_order if s in by_sec] + [s for s in by_sec if s not in section_order]
+
+    def ensure_child(children: list[dict], key: str, node_id: str) -> dict:
+        for c in children:
+            if c["kind"] == "branch" and c["key"] == key:
+                return c
+        node = {"id": node_id, "key": key, "label": key, "kind": "branch", "children": []}
+        children.append(node)
+        return node
+
+    sections = []
+    for sec in order:
+        fs = by_sec[sec]
+        container = (root or {}).get(sec)
+        sec_node = {"id": f"sec:{sec}", "key": sec, "label": SECTION_LABELS_ZH.get(sec, sec),
+                    "kind": "section", "children": []}
+        # group fields by element
+        groups: dict[str, dict] = {}
+        for f in fs:
+            rest = f["path"][len(sec) + 1:]
+            loc, elem, idx = _locate_element(sec, container, rest)
+            key = loc if loc is not None else "(?)"
+            g = groups.setdefault(key, {"label": _element_label(sec, elem, idx, key), "loc": key, "fields": []})
+            chain = rest[len(loc):] if loc else "." + rest
+            g["fields"].append((chain, f))
+
+        multi = len(groups) > 1
+        for loc, g in groups.items():
+            if multi:
+                el_node = {"id": f"el:{sec}:{loc}", "key": loc, "label": g["label"],
+                           "kind": "element", "children": []}
+                sec_node["children"].append(el_node)
+                target = el_node["children"]
+                prefix = f"el:{sec}:{loc}"
+            else:
+                target = sec_node["children"]
+                prefix = f"sec:{sec}"
+            for chain, f in g["fields"]:
+                segs = _parse_chain_segments(chain)
+                if not segs:
+                    continue
+                cur = target
+                path_id = prefix
+                for s in segs[:-1]:
+                    path_id = f"{path_id}/{s}"
+                    cur = ensure_child(cur, s, path_id)["children"]
+                leaf_key = segs[-1]
+                cur.append({"id": f"{path_id}/{leaf_key}", "key": leaf_key, "label": leaf_key,
+                            "kind": "leaf", "field_id": f["field_id"]})
+        sections.append(sec_node)
+    return sections
+
+
+# --------------------------------------------------------------------------- #
 # Annotation state
 # --------------------------------------------------------------------------- #
 def default_annotation(paper_id: str) -> dict:
@@ -314,6 +438,14 @@ def list_papers():
     return {"papers": out}
 
 
+def structured_root(pdir: Path) -> dict:
+    """The structured extraction JSON used both for tree building and export."""
+    root = try_read_json(pdir / "verify" / "text_extraction_fixed.json")
+    if root is None:
+        root = try_read_json(pdir / "final" / "text_extraction.json") or {}
+    return root
+
+
 @app.get("/api/papers/{paper_id}")
 def get_paper(paper_id: str):
     pdir = paper_dir(paper_id)
@@ -321,12 +453,15 @@ def get_paper(paper_id: str):
     fields, field_meta = load_fields(pdir)
     buckets = load_buckets(pdir)
     annot = load_annotation(paper_id)
+    root = structured_root(pdir)
 
-    knowledge = ""
-    kpath = pdir / "final" / "text_knowledge.md"
-    if kpath.exists():
-        knowledge = kpath.read_text(encoding="utf-8")
+    field_by_id = {f["field_id"]: f for f in fields}
+    for b in buckets:
+        bfields = [field_by_id[fid] for fid in b["field_ids"] if fid in field_by_id]
+        b["tree"] = build_bucket_tree(b.get("section_order", []), bfields, root)
+        b.pop("records", None)  # trim payload; tree + fields carry everything the UI needs
 
+    has_pdf = bool(_find_pdf(pdir))
     return {
         "paper_id": paper_id,
         "meta": {**paper_title(buckets, paper_id), **field_meta},
@@ -335,9 +470,29 @@ def get_paper(paper_id: str):
         "buckets": buckets,
         "annotation": annot,
         "progress": progress_of(fields, annot),
-        "knowledge_md": knowledge,
+        "has_pdf": has_pdf,
+        "pdf_url": f"/api/papers/{paper_id}/pdf" if has_pdf else None,
         "asset_base": f"/api/papers/{paper_id}/asset/",
     }
+
+
+def _find_pdf(pdir: Path) -> Optional[Path]:
+    mineru = pdir / "source" / "mineru"
+    if mineru.is_dir():
+        pdfs = sorted(mineru.glob("*_origin.pdf")) or sorted(mineru.glob("*.pdf"))
+        if pdfs:
+            return pdfs[0]
+    return None
+
+
+@app.get("/api/papers/{paper_id}/pdf")
+def get_pdf(paper_id: str):
+    pdir = paper_dir(paper_id)
+    pdf = _find_pdf(pdir)
+    if not pdf:
+        raise HTTPException(status_code=404, detail="No PDF for this paper")
+    return FileResponse(pdf, media_type="application/pdf",
+                        headers={"Content-Disposition": f'inline; filename="{paper_id}.pdf"'})
 
 
 @app.put("/api/papers/{paper_id}/annotation")
@@ -347,6 +502,14 @@ def put_annotation(paper_id: str, body: SaveBody):
     pdir = paper_dir(paper_id)
     fields, _ = load_fields(pdir)
     return {"ok": True, "updated_at": saved["updated_at"], "progress": progress_of(fields, saved)}
+
+
+@app.get("/api/papers/{paper_id}/metrics")
+def get_metrics(paper_id: str):
+    pdir = paper_dir(paper_id)
+    fields, _ = load_fields(pdir)
+    annot = load_annotation(paper_id)
+    return compute_metrics(paper_id, fields, annot)
 
 
 @app.get("/api/papers/{paper_id}/asset/{asset_path:path}")
@@ -439,6 +602,7 @@ def export_paper(paper_id: str):
                                         "reviewed_value": st["current_value"]})
 
     prog = progress_of(fields, annot)
+    metrics = compute_metrics(paper_id, fields, annot)
 
     manifest = {
         "paper_id": paper_id,
@@ -446,12 +610,14 @@ def export_paper(paper_id: str):
         "schema": "evidence-annotation-export-v1",
         "task_status": annot.get("task_status"),
         "progress": prog,
+        "metrics_overall": metrics["overall"],
         "files": {
             "machine": [
                 "annotation_state.json",
                 "text_extraction.reviewed.json",
                 "field_review.json",
                 "diff.json",
+                "evaluation_metrics.json",
                 "audit_log.jsonl",
             ],
             "human": ["review_summary.md", "MANIFEST.json"],
@@ -463,7 +629,7 @@ def export_paper(paper_id: str):
         "unapplied_edits": unapplied_edits,
     }
 
-    summary_md = _render_summary_md(paper_id, field_meta, prog, diffs, annot, buckets)
+    summary_md = _render_summary_md(paper_id, field_meta, prog, diffs, annot, buckets, metrics)
 
     buf = io.BytesIO()
     with zipfile.ZipFile(buf, "w", zipfile.ZIP_DEFLATED) as z:
@@ -474,6 +640,7 @@ def export_paper(paper_id: str):
         z.writestr(f"{base}/text_extraction.reviewed.json", json.dumps(reviewed, ensure_ascii=False, indent=2))
         z.writestr(f"{base}/field_review.json", json.dumps({"paper_id": paper_id, "fields": field_review, "added_fields": annot.get("added_fields", [])}, ensure_ascii=False, indent=2))
         z.writestr(f"{base}/diff.json", json.dumps({"paper_id": paper_id, "changes": diffs}, ensure_ascii=False, indent=2))
+        z.writestr(f"{base}/evaluation_metrics.json", json.dumps(metrics, ensure_ascii=False, indent=2))
         z.writestr(f"{base}/audit_log.jsonl", "\n".join(json.dumps(e, ensure_ascii=False) for e in annot.get("audit_log", [])))
 
     buf.seek(0)
@@ -485,7 +652,85 @@ def export_paper(paper_id: str):
     )
 
 
-def _render_summary_md(paper_id, field_meta, prog, diffs, annot, buckets) -> str:
+def _prf(tp: int, fp: int, fn: int) -> dict:
+    p = tp / (tp + fp) if (tp + fp) else 0.0
+    r = tp / (tp + fn) if (tp + fn) else 0.0
+    f1 = 2 * p * r / (p + r) if (p + r) else 0.0
+    return {"tp": tp, "fp": fp, "fn": fn,
+            "precision": round(p, 4), "recall": round(r, 4), "f1": round(f1, 4)}
+
+
+def compute_metrics(paper_id: str, fields: list[dict], annot: dict) -> dict:
+    """Field-slot precision / recall / F1, treating the reviewer's decisions as
+    the golden truth and the original extraction as the prediction.
+
+    Definitions (unit = one field slot):
+      TP  = confirmed              (model value accepted as correct)
+      FP  = modified + conflict    (model value present but wrong)
+      FN  = modified + added       (correct value missing from prediction:
+                                    modified = substitution, added = omission)
+      pending = needs_review + unprocessed  (undecided → excluded from P/R/F1)
+
+    precision = TP/(TP+FP), recall = TP/(TP+FN), f1 = harmonic mean.
+    Reported overall and per section. Coverage tells you how much of the paper
+    was actually reviewed, so a high F1 on a barely-reviewed paper is visible.
+    """
+    fa = annot.get("fields", {})
+    sec_tp: dict[str, int] = {}
+    sec_fp: dict[str, int] = {}
+    sec_fn: dict[str, int] = {}
+    pending = 0
+    reviewed = 0
+
+    def bump(d, k):
+        d[k] = d.get(k, 0) + 1
+
+    for f in fields:
+        sec = f["section"]
+        st = fa.get(f["field_id"], {}).get("review_status", "unprocessed")
+        if st == "confirmed":
+            bump(sec_tp, sec); reviewed += 1
+        elif st == "modified":
+            bump(sec_fp, sec); bump(sec_fn, sec); reviewed += 1
+        elif st == "conflict":
+            bump(sec_fp, sec); reviewed += 1
+        else:  # needs_review / unprocessed
+            pending += 1
+
+    # reviewer-added fields = omissions (FN) attributed to their section
+    for a in annot.get("added_fields", []):
+        bump(sec_fn, a.get("section", "added"))
+
+    sections = sorted(set(sec_tp) | set(sec_fp) | set(sec_fn))
+    per_section = {
+        s: _prf(sec_tp.get(s, 0), sec_fp.get(s, 0), sec_fn.get(s, 0)) for s in sections
+    }
+    overall = _prf(sum(sec_tp.values()), sum(sec_fp.values()), sum(sec_fn.values()))
+
+    total = len(fields)
+    return {
+        "paper_id": paper_id,
+        "schema": "evidence-annotation-metrics-v1",
+        "definition": {
+            "golden": "reviewer decisions (confirmed value / edited value / added fields)",
+            "prediction": "original extraction values",
+            "unit": "field slot",
+            "TP": "confirmed", "FP": "modified + conflict", "FN": "modified + added",
+            "pending_excluded": "needs_review + unprocessed",
+        },
+        "overall": overall,
+        "per_section": per_section,
+        "coverage": {
+            "total_fields": total,
+            "reviewed_fields": reviewed,
+            "pending_fields": pending,
+            "added_fields": len(annot.get("added_fields", [])),
+            "reviewed_pct": round(100 * reviewed / total, 1) if total else 0.0,
+        },
+    }
+
+
+def _render_summary_md(paper_id, field_meta, prog, diffs, annot, buckets, metrics=None) -> str:
     title = paper_title(buckets, paper_id)
     lines = [
         f"# Review Summary — {title.get('title', paper_id)}",
@@ -498,9 +743,23 @@ def _render_summary_md(paper_id, field_meta, prog, diffs, annot, buckets) -> str
         f"- Reviewer-added fields: {prog['added']}",
         f"- Changed values: {len(diffs)}",
         "",
-        "## Changed fields",
-        "",
     ]
+    if metrics:
+        ov = metrics["overall"]
+        cov = metrics["coverage"]
+        lines += [
+            "## Evaluation (golden = reviewer, pred = original extraction)",
+            "",
+            f"- **Precision {ov['precision']} · Recall {ov['recall']} · F1 {ov['f1']}**",
+            f"- TP={ov['tp']} FP={ov['fp']} FN={ov['fn']} · reviewed {cov['reviewed_fields']}/{cov['total_fields']} ({cov['reviewed_pct']}%), pending {cov['pending_fields']}",
+            "",
+            "| section | P | R | F1 | TP | FP | FN |",
+            "|---|---|---|---|---|---|---|",
+        ]
+        for s, m in metrics["per_section"].items():
+            lines.append(f"| {s} | {m['precision']} | {m['recall']} | {m['f1']} | {m['tp']} | {m['fp']} | {m['fn']} |")
+        lines.append("")
+    lines += ["## Changed fields", ""]
     if diffs:
         for d in diffs:
             lines.append(f"- `{d['path']}` [{d['status']}]")

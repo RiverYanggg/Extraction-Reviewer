@@ -10,7 +10,8 @@
       "Bash(./.venv/bin/python -c \"import fastapi, uvicorn; print\\('fastapi', fastapi.__version__, 'uvicorn', uvicorn.__version__\\)\")",
       "Bash(cd *)",
       "Bash(chmod +x /Users/mac/Desktop/evidence_note_viewer/run.sh)",
-      "Bash(curl *)"
+      "Bash(curl *)",
+      "Bash(./.venv/bin/python -c \"import ast; ast.parse\\(open\\('server.py'\\).read\\(\\)\\); print\\('server.py parses OK'\\)\")"
     ]
   }
 }

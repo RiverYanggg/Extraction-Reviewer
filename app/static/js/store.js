@@ -162,11 +162,11 @@ export class Store {
       { action: "task_status", to: status });
   }
 
-  addField({ bucket_id, section, path, value }) {
+  addField({ bucket_id, section, parent_id = null, key = "", path, value }) {
     const tempId = "A" + (this.doc.added_fields.length + 1).toString().padStart(4, "0");
     this.commit((d) => {
       d.added_fields.push({
-        temp_id: tempId, bucket_id, section, path, value,
+        temp_id: tempId, bucket_id, section, parent_id, key, path, value,
         review_status: "added", note: "", evidence_refs: [],
         created_at: new Date().toISOString(),
       });
