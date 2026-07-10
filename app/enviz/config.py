@@ -12,6 +12,8 @@ USERS_DIR = DATA_DIR / "users"
 ANNOT_DIR = ROOT / "annotations"                      # legacy shared reviewer state
 STATIC_DIR = APP_DIR / "static"
 DOCS_DIR = ROOT / "docs"
+CONFIG_DIR = ROOT / "config"
+USERS_CONFIG_PATH = CONFIG_DIR / "users.json"
 SCHEMA_PATH = DOCS_DIR / "extraction_schema.json"
 MANUAL_PATH = DOCS_DIR / "user_manual.md"
 

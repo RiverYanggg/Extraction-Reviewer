@@ -1,0 +1,12 @@
+{
+  "xuben": {
+    "display_name": "Xuben",
+    "workspace": "xuben",
+    "password_sha256": "replace-with-sha256-of-password"
+  },
+  "sunyandong": {
+    "display_name": "Sunyandong",
+    "workspace": "sunyandong",
+    "password_sha256": "replace-with-sha256-of-password"
+  }
+}

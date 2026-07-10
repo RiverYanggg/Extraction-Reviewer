@@ -1,0 +1,22 @@
+{
+  "Xuben": {
+    "display_name": "Xuben",
+    "workspace": "Xuben",
+    "password_sha256": "0cce7b6d58e25f4d7c2eaa47d8d8315f46595917bf9d5d99fbb1a24881f1f7fe"
+  },
+  "Sunyandong": {
+    "display_name": "Sunyandong",
+    "workspace": "Sunyandong",
+    "password_sha256": "4ee67820a15a485520958d5393ab95c355708b88105f9b46fe3358dfe475c79a"
+  },
+  "Gaojiacheng": {
+    "display_name": "Gaojiacheng",
+    "workspace": "Gaojiacheng",
+    "password_sha256": "26af5c0cc37e25645e66eb9fe7de9aedf76dd56506e0f8ee21b2f399116e19d3"
+  },
+  "Yangzijiang": {
+    "display_name": "Yangzijiang",
+    "workspace": "Yangzijiang",
+    "password_sha256": "a24522ef6dd13ebfd19f709d54de432321cfc4673f7b716987386d39fc83cf4d"
+  }
+}

@@ -10,7 +10,7 @@ import re
 import time
 from dataclasses import dataclass
 
-from .config import USERS_DIR
+from .config import USERS_CONFIG_PATH, USERS_DIR
 
 COOKIE_NAME = "enviz_session"
 SESSION_TTL_SECONDS = 7 * 24 * 60 * 60
@@ -61,6 +61,15 @@ class User:
 
 
 def users_config() -> dict:
+    if USERS_CONFIG_PATH.is_file():
+        try:
+            data = json.loads(USERS_CONFIG_PATH.read_text(encoding="utf-8"))
+        except json.JSONDecodeError as exc:
+            raise RuntimeError(f"{USERS_CONFIG_PATH} is not valid JSON") from exc
+        if not isinstance(data, dict):
+            raise RuntimeError(f"{USERS_CONFIG_PATH} must be a JSON object")
+        return data
+
     raw = os.environ.get("ENVIZ_USERS_JSON", "").strip()
     if not raw:
         return DEFAULT_USERS

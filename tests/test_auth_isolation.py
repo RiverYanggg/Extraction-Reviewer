@@ -19,7 +19,8 @@ class AuthIsolationTest(unittest.TestCase):
         os.environ.update(self._old_env)
 
     def test_default_fourth_account_authenticates(self):
-        user = auth.verify_credentials("annotator4", "Annotator4@2026")
+        with patch("app.enviz.auth.USERS_CONFIG_PATH", Path("/tmp/no-users-json-for-test")):
+            user = auth.verify_credentials("annotator4", "Annotator4@2026")
 
         self.assertIsNotNone(user)
         self.assertEqual(user.username, "annotator4")
@@ -30,8 +31,28 @@ class AuthIsolationTest(unittest.TestCase):
             '"password_sha256":"2bb80d537b1da3e38bd30361aa855686bde0eacd7162fef6a25fe97bf527a25b"}}'
         )
 
-        self.assertIsNotNone(auth.verify_credentials("reviewer", "secret"))
-        self.assertIsNone(auth.verify_credentials("annotator1", "Annotator1@2026"))
+        with patch("app.enviz.auth.USERS_CONFIG_PATH", Path("/tmp/no-users-json-for-test")):
+            self.assertIsNotNone(auth.verify_credentials("reviewer", "secret"))
+            self.assertIsNone(auth.verify_credentials("annotator1", "Annotator1@2026"))
+
+    def test_users_json_file_overrides_env_users_json(self):
+        os.environ["ENVIZ_USERS_JSON"] = (
+            '{"env_user":{"display_name":"Env User",'
+            '"password_sha256":"2bb80d537b1da3e38bd30361aa855686bde0eacd7162fef6a25fe97bf527a25b"}}'
+        )
+        with tempfile.TemporaryDirectory() as tmp:
+            users_path = Path(tmp) / "users.json"
+            users_path.write_text(
+                '{"file_user":{"display_name":"File User","workspace":"file-workspace",'
+                '"password_sha256":"2bb80d537b1da3e38bd30361aa855686bde0eacd7162fef6a25fe97bf527a25b"}}',
+                encoding="utf-8",
+            )
+            with patch("app.enviz.auth.USERS_CONFIG_PATH", users_path):
+                user = auth.verify_credentials("file_user", "secret")
+
+                self.assertIsNotNone(user)
+                self.assertEqual(user.workspace, "file-workspace")
+                self.assertIsNone(auth.verify_credentials("env_user", "secret"))
 
     def test_workspace_can_be_configured_per_account(self):
         os.environ["ENVIZ_USERS_JSON"] = (
@@ -39,12 +60,13 @@ class AuthIsolationTest(unittest.TestCase):
             '"password_sha256":"2bb80d537b1da3e38bd30361aa855686bde0eacd7162fef6a25fe97bf527a25b"}}'
         )
         with tempfile.TemporaryDirectory() as tmp:
-            with patch("app.enviz.auth.USERS_DIR", Path(tmp)):
-                user = auth.verify_credentials("reviewer", "secret")
+            with patch("app.enviz.auth.USERS_CONFIG_PATH", Path("/tmp/no-users-json-for-test")):
+                with patch("app.enviz.auth.USERS_DIR", Path(tmp)):
+                    user = auth.verify_credentials("reviewer", "secret")
 
-                self.assertEqual(user.username, "reviewer")
-                self.assertEqual(user.workspace, "xuben")
-                self.assertEqual(user.user_dir, Path(tmp) / "xuben")
+                    self.assertEqual(user.username, "reviewer")
+                    self.assertEqual(user.workspace, "xuben")
+                    self.assertEqual(user.user_dir, Path(tmp) / "xuben")
 
     def test_annotations_are_isolated_by_user(self):
         with tempfile.TemporaryDirectory() as tmp:
