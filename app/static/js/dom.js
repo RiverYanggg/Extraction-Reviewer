@@ -71,6 +71,7 @@ export const el = {
 export const ui = {
   user: null,
   selectedFieldId: null,
+  pulseFieldId: null,
   activeBucketId: null,
   search: "",
   filterStatus: "",

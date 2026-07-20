@@ -203,14 +203,20 @@ function leafRow(f, key, depth) {
     <div class="field-main">
       <div class="field-key">${esc(key)}</div>
       <div class="field-val ${empty ? "empty" : ""}">${empty ? "（空）" : esc(val)}</div>
-      <div class="field-quick">
-        <button class="qbtn on-confirm" data-act="confirmed">确认</button>
-        <button class="qbtn on-review" data-act="needs_review">待复核</button>
-        <button class="qbtn on-conflict" data-act="conflict">冲突</button>
-      </div>
+    </div>
+    <div class="field-quick">
+      <button class="qbtn on-confirm" data-act="confirmed" title="确认">确认</button>
+      <button class="qbtn on-review" data-act="needs_review" title="待复核">待复核</button>
+      <button class="qbtn on-conflict" data-act="conflict" title="冲突">冲突</button>
     </div>`;
+  // Replay the "settled into a state" pop once, right after the status change.
+  if (ui.pulseFieldId === f.field_id) {
+    row.classList.add("status-pulse");
+    ui.pulseFieldId = null;
+  }
   row.addEventListener("click", (e) => {
     if (e.target.classList.contains("qbtn")) {
+      ui.pulseFieldId = f.field_id;
       store.setStatus(f.field_id, e.target.dataset.act); e.stopPropagation(); return;
     }
     bus.selectField(f.field_id);
