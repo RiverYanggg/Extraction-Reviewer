@@ -13,8 +13,10 @@ import { renderFields, renderBucketRail, openBucketPreview } from "./tree.js";
 import { renderInspector } from "./inspector.js";
 import { openMetrics } from "./metrics.js";
 import { initFloating } from "./floating.js";
+import { PaperPicker } from "./paper-picker.js";
 
 let storeSubscribed = false;
+let paperPicker = null;
 
 // ---- render loop ----------------------------------------------------------
 function render() {
@@ -35,6 +37,9 @@ function renderProgress() {
   const c = p.counts;
   el.progLabel.textContent =
     `${p.done}/${p.total} 已审 (${p.pct}%) · 确认${c.confirmed} 改${c.modified} 冲突${c.conflict} 待复核${c.needs_review} 补充${p.added}`;
+  if (paperPicker && store.paperId && store.doc) {
+    paperPicker.updateProgress(store.paperId, { ...p, task_status: store.doc.task_status });
+  }
 }
 
 function renderSaveState() {
@@ -86,15 +91,37 @@ async function startWorkspace(user) {
     el.fieldsList.innerHTML = `<div class="inspector-empty">未发现任何论文（检查 extracted/ 目录）。</div>`;
     return;
   }
-  el.paperSelect.innerHTML = papers
-    .map((p) => `<option value="${esc(p.paper_id)}">${esc(p.title)} — ${p.progress.pct}%</option>`)
-    .join("");
+  if (!paperPicker) {
+    paperPicker = new PaperPicker({
+      root: el.paperPicker,
+      trigger: el.paperTrigger,
+      menu: el.paperMenu,
+      search: el.paperSearch,
+      list: el.paperList,
+      onSelect: async (paperId) => {
+        await store.flush();
+        await loadPaper(paperId);
+      },
+      onError: renderPaperLoadError,
+    });
+  }
+  paperPicker.setPapers(papers);
 
   if (!storeSubscribed) {
     store.subscribe(render);
     storeSubscribed = true;
   }
-  await loadPaper(papers[0].paper_id);
+  try {
+    await loadPaper(papers[0].paper_id);
+  } catch (error) {
+    paperPicker.markLoadFailed(papers[0].paper_id);
+    renderPaperLoadError(error);
+  }
+}
+
+function renderPaperLoadError(error) {
+  const message = error?.message || String(error);
+  el.fieldsList.innerHTML = `<div class="inspector-empty">无法加载论文：${esc(message)}</div>`;
 }
 
 async function requireLogin() {
@@ -116,7 +143,7 @@ async function loadPaper(pid) {
   ui.activeBucketId = payload.buckets[0]?.bucket_id || null;
   ui.evIndex = 0;
   ui.collapsed = new Set();
-  el.paperSelect.value = pid;
+  paperPicker?.markLoaded(pid);
   if (ui.tab === "pdf") switchTab("source");
   renderSourceBlocks();
   preparePdf();
@@ -125,7 +152,6 @@ async function loadPaper(pid) {
 
 // ---- global controls ------------------------------------------------------
 function wireGlobalControls() {
-  el.paperSelect.addEventListener("change", async (e) => { await store.flush(); await loadPaper(e.target.value); });
   el.undo.addEventListener("click", () => store.undo());
   el.redo.addEventListener("click", () => store.redo());
   el.save.addEventListener("click", async () => { await store.flush(); toast("已暂存草稿"); });
@@ -189,7 +215,9 @@ async function onLogout() {
   await api.logout().catch(() => {});
   ui.user = null;
   el.userBadge.classList.add("hidden");
-  el.paperSelect.innerHTML = "";
+  paperPicker?.close();
+  paperPicker?.setSelected(null);
+  paperPicker?.setPapers([]);
   el.fieldsList.innerHTML = `<div class="inspector-empty">请先登录。</div>`;
   el.inspector.innerHTML = `<div class="inspector-empty">选择一个字段以查看证据、置信度与编辑选项。</div>`;
   showLogin();
@@ -223,7 +251,7 @@ function wireKeyboard() {
     if ((e.metaKey || e.ctrlKey) && e.key.toLowerCase() === "z" && !e.shiftKey) { e.preventDefault(); store.undo(); return; }
     if ((e.metaKey || e.ctrlKey) && (e.key.toLowerCase() === "y" || (e.shiftKey && e.key.toLowerCase() === "z"))) { e.preventDefault(); store.redo(); return; }
     if ((e.metaKey || e.ctrlKey) && e.key.toLowerCase() === "s") { e.preventDefault(); store.flush(); toast("已暂存"); return; }
-    if ((e.metaKey || e.ctrlKey) && e.key.toLowerCase() === "p") { e.preventDefault(); el.paperSelect.focus(); return; }
+    if ((e.metaKey || e.ctrlKey) && e.key.toLowerCase() === "p") { e.preventDefault(); paperPicker?.open(); return; }
     if (typing) return;
 
     switch (e.key) {

@@ -14,8 +14,12 @@
       <span>Evidence Note Annotator</span>
     </div>
     <div id="user-badge" class="user-badge hidden"></div>
-    <div id="paper-switcher">
-      <select id="paper-select" title="切换论文 (Windows: Ctrl+P / Mac: ⌘P)"></select>
+    <div id="paper-picker" class="paper-picker">
+      <button id="paper-trigger" class="paper-trigger" type="button" aria-haspopup="listbox" aria-expanded="false" aria-controls="paper-menu" title="切换论文 (Windows: Ctrl+P / Mac: ⌘P)"></button>
+      <div id="paper-menu" class="paper-menu hidden">
+        <input id="paper-search" type="search" placeholder="搜索标题或 DOI…" aria-label="搜索论文" role="combobox" aria-autocomplete="list" aria-controls="paper-list" aria-expanded="false" />
+        <div id="paper-list" class="paper-list" role="listbox"></div>
+      </div>
     </div>
     <div id="progress-wrap">
       <div id="progress-bar"><div id="progress-fill"></div></div>

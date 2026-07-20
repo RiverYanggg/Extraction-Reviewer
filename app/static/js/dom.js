@@ -2,7 +2,11 @@
 import { $ } from "./util.js";
 
 export const el = {
-  paperSelect: $("#paper-select"),
+  paperPicker: $("#paper-picker"),
+  paperTrigger: $("#paper-trigger"),
+  paperMenu: $("#paper-menu"),
+  paperSearch: $("#paper-search"),
+  paperList: $("#paper-list"),
   progFill: $("#progress-fill"),
   progLabel: $("#progress-label"),
   saveState: $("#save-state"),
