@@ -325,10 +325,15 @@ function buildLegend() {
 function buildHelp() {
   el.helpBody.innerHTML = `
     <p>本工具用于人工审核结构化抽取结果。<b>颜色</b>=审核状态（一个维度），<b>徽章</b>=证据质量/置信度，避免颜色过载。中间是按 schema 还原的 <b>JSON 树</b>（含预定义 null 字段，均参与指标）。</p>
+    <h3>论文选择器</h3>
+    <p>顶栏选择器显示论文的<b>序号、颜色状态点、标题、DOI、已审/总数和百分比</b>，可按标题或 DOI 搜索。用鼠标点击，或按 <kbd>ArrowUp</kbd> / <kbd>ArrowDown</kbd> 移动、<kbd>Enter</kbd> 选择、<kbd>Escape</kbd> 关闭；点击外部也会关闭。Windows 按 <kbd>Ctrl</kbd>+<kbd>P</kbd>、Mac 按 <kbd>⌘</kbd>+<kbd>P</kbd> 可直接打开。</p>
+    <p>论文状态点：<b>绿</b>=100% 完成，<b>琥珀</b>=已审 1–99%，<b>灰</b>=0%，<b>红</b>=已提交但不足 100%。这是论文级进度，不等同于字段的审核状态颜色。</p>
+    <h3>证据公式</h3>
+    <p>证据中的公式默认由本地离线 KaTeX 渲染，支持 <code>$...$</code>、<code>$$...$$</code>、<code>\\(...\\)</code>、<code>\\[...\\]</code>。可切换<b>查看源码 / 渲染公式</b>；非法公式会保留源码并提示解析错误。</p>
     <h3>快捷键（Windows / Mac 均支持）</h3>
     <table>
       <tr><th>Windows</th><th>Mac</th><th>作用</th></tr>
-      <tr><td><kbd>j</kbd> / <kbd>k</kbd></td><td><kbd>j</kbd> / <kbd>k</kbd></td><td>下一个 / 上一个字段</td></tr>
+      <tr><td><kbd>j</kbd> / <kbd>k</kbd></td><td><kbd>j</kbd> / <kbd>k</kbd></td><td>下一个 / 上一个可见字段（跳过折叠分支，仅在越出视区时最小滚动）</td></tr>
       <tr><td><kbd>c</kbd></td><td><kbd>c</kbd></td><td>确认</td></tr>
       <tr><td><kbd>x</kbd></td><td><kbd>x</kbd></td><td>冲突</td></tr>
       <tr><td><kbd>r</kbd></td><td><kbd>r</kbd></td><td>待复核</td></tr>
