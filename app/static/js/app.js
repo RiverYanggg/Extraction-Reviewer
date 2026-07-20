@@ -14,6 +14,7 @@ import { renderInspector } from "./inspector.js";
 import { openMetrics } from "./metrics.js";
 import { initFloating } from "./floating.js";
 import { PaperPicker } from "./paper-picker.js";
+import { isFieldRowNavigable, keepFieldRowVisible } from "./navigation.js";
 
 let storeSubscribed = false;
 let paperPicker = null;
@@ -275,12 +276,14 @@ function wireKeyboard() {
 }
 
 function moveSelection(dir) {
-  const rows = [...el.fieldsList.querySelectorAll(".field-row[data-field-id]")];
+  const rows = [...el.fieldsList.querySelectorAll(".field-row[data-field-id]")]
+    .filter(isFieldRowNavigable);
   if (!rows.length) return;
   let idx = rows.findIndex((r) => r.dataset.fieldId === ui.selectedFieldId);
   idx = Math.max(0, Math.min(rows.length - 1, idx + dir));
-  selectField(rows[idx].dataset.fieldId);
-  rows[idx].scrollIntoView({ block: "nearest" });
+  const fieldId = String(rows[idx].dataset.fieldId);
+  selectField(fieldId);
+  keepFieldRowVisible(el.fieldsList, el.fieldsScroll, fieldId);
 }
 
 // ---- dividers -------------------------------------------------------------
