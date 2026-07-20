@@ -23,6 +23,7 @@ export const el = {
   pdfView: $("#pdf-view"),
   sourceScroll: $("#source-scroll"),
   evidenceStatus: $("#evidence-status"),
+  latexToggle: $("#latex-toggle"),
   bucketRail: $("#bucket-rail"),
   fieldsList: $("#fields-list"),
   fieldsScroll: $("#fields-scroll"),
@@ -77,4 +78,7 @@ export const ui = {
   tab: "source",
   collapsed: new Set(),
   pdfLoaded: false,
+  latexMode: "rendered",
+  latexAvailable: null,
+  latexErrors: 0,
 };

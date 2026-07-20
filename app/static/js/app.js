@@ -8,7 +8,7 @@ import { store } from "./store.js";
 import { el, ui } from "./dom.js";
 import { bus } from "./bus.js";
 import { STATUS_COLORS, esc, toast } from "./util.js";
-import { renderSourceBlocks, preparePdf, switchTab, highlightEvidence, cycleEvidence } from "./source.js";
+import { renderSourceBlocks, preparePdf, switchTab, highlightEvidence, cycleEvidence, setLatexMode } from "./source.js";
 import { renderFields, renderBucketRail, openBucketPreview } from "./tree.js";
 import { renderInspector } from "./inspector.js";
 import { openMetrics } from "./metrics.js";
@@ -175,6 +175,8 @@ function wireGlobalControls() {
 
   el.fieldSearch.addEventListener("input", (e) => { ui.search = e.target.value; renderFields(); });
   el.filterStatus.addEventListener("change", (e) => { ui.filterStatus = e.target.value; renderFields(); });
+  el.latexToggle.addEventListener("click", () =>
+    setLatexMode(ui.latexMode === "rendered" ? "source" : "rendered"));
 
   document.querySelectorAll("#source-tabs .tab").forEach((t) =>
     t.addEventListener("click", () => switchTab(t.dataset.tab)));
