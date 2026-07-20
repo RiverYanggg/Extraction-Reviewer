@@ -22,7 +22,7 @@ export function filterPapers(papers, query) {
   if (!needle) return papers;
 
   return papers.filter((paper) => {
-    const searchable = `${paper.title || ""} ${paper.paper_id || ""}`.toLowerCase();
+    const searchable = `${paper.title || ""} ${paper.doi || ""} ${paper.paper_id || ""}`.toLowerCase();
     return searchable.includes(needle);
   });
 }
@@ -31,6 +31,7 @@ export function normalizePaperSummary(paper, index) {
   const progress = paper.progress || {};
   return {
     paper_id: paper.paper_id,
+    doi: paper.doi || paper.paper_id,
     title: paper.title || paper.paper_id,
     sequence: formatPaperSequence(index),
     done: Number(progress.done) || 0,
@@ -249,7 +250,7 @@ export class PaperPicker {
     }
 
     this.trigger.dataset.state = paper.state.key;
-    this.trigger.title = `${paper.title} · ${paper.paper_id}`;
+    this.trigger.title = `${paper.title} · ${paper.doi}`;
     appendTextElement(this.trigger, "span", "paper-sequence", paper.sequence);
     appendTextElement(this.trigger, "span", "paper-state-dot", "");
     appendTextElement(this.trigger, "span", "paper-trigger-title truncated-title", paper.title);
@@ -282,7 +283,7 @@ export class PaperPicker {
       option.setAttribute("role", "option");
       option.setAttribute("aria-selected", String(paper.paper_id === this.selectedId));
       option.dataset.state = paper.state.key;
-      option.title = `${paper.title} · ${paper.paper_id}`;
+      option.title = `${paper.title} · ${paper.doi}`;
       if (paper.paper_id === this.selectedId) option.classList.add("selected");
       if (index === this.activeIndex) option.classList.add("active");
 
@@ -291,7 +292,7 @@ export class PaperPicker {
       const details = option.ownerDocument.createElement("span");
       details.className = "paper-option-details";
       appendTextElement(details, "span", "paper-option-title truncated-title", paper.title);
-      appendTextElement(details, "span", "paper-option-meta", `${paper.paper_id} · ${paper.done}/${paper.total}`);
+      appendTextElement(details, "span", "paper-option-meta", `${paper.doi} · ${paper.done}/${paper.total}`);
       option.append(details);
       const progress = option.ownerDocument.createElement("span");
       progress.className = "paper-option-progress";

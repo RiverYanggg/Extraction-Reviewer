@@ -37,11 +37,17 @@ test("formatPaperSequence formats a one-based paper sequence", () => {
 
 test("filterPapers matches title and DOI case-insensitively", () => {
   const papers = [
-    { title: "Evidence Synthesis", paper_id: "10.1000/Alpha" },
-    { title: "Clinical Review", paper_id: "10.2000/BETA" },
+    {
+      title: "Evidence Synthesis",
+      paper_id: "10.1016_j.matlet.2024.136522",
+      doi: "10.1016/j.matlet.2024.136522",
+    },
+    { title: "Clinical Review", paper_id: "10.2000_BETA", doi: "10.2000/BETA" },
   ];
 
   assert.deepEqual(filterPapers(papers, "eVIdence"), [papers[0]]);
+  assert.deepEqual(filterPapers(papers, "10.1016/j.matlet.2024.136522"), [papers[0]]);
+  assert.deepEqual(filterPapers(papers, "10.1016_j.matlet"), [papers[0]]);
   assert.deepEqual(filterPapers(papers, "beta"), [papers[1]]);
   assert.deepEqual(filterPapers(papers, "missing"), []);
   assert.equal(filterPapers(papers), papers);
@@ -51,6 +57,7 @@ test("normalizePaperSummary creates a display-ready summary", () => {
   assert.deepEqual(
     normalizePaperSummary({
       paper_id: "10.test/example",
+      doi: "10.test/example-doi",
       title: "Example",
       progress: {
         done: 3,
@@ -61,6 +68,7 @@ test("normalizePaperSummary creates a display-ready summary", () => {
     }, 1),
     {
       paper_id: "10.test/example",
+      doi: "10.test/example-doi",
       title: "Example",
       sequence: "02",
       done: 3,
@@ -72,10 +80,9 @@ test("normalizePaperSummary creates a display-ready summary", () => {
 });
 
 test("normalizePaperSummary falls back to the DOI when title is missing", () => {
-  assert.equal(
-    normalizePaperSummary({ paper_id: "10.test/untitled", progress: {} }, 0).title,
-    "10.test/untitled",
-  );
+  const summary = normalizePaperSummary({ paper_id: "10.test/untitled", progress: {} }, 0);
+  assert.equal(summary.title, "10.test/untitled");
+  assert.equal(summary.doi, "10.test/untitled");
 });
 
 function pickerForChoose(onSelect, onError = () => {}) {
