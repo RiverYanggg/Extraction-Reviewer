@@ -353,11 +353,23 @@ body {
 /* ---------------- Inspector (right) ---------------- */
 #inspector-body { padding: 14px 16px 40vh; }
 .inspector-empty { color: var(--ink-faint); padding: 24px 6px; text-align: center; }
-.insp-path { font-family: var(--mono); font-size: 11.5px; color: var(--ink-soft); word-break: break-all; background: #f3f5f8; padding: 6px 8px; border-radius: 6px; }
+.insp-head { display: flex; align-items: center; gap: 8px; }
+.insp-path { flex: 1; min-width: 0; font-family: var(--mono); font-size: 11.5px; color: var(--ink-soft); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; background: #f3f5f8; padding: 6px 8px; border-radius: 6px; }
+.insp-status { flex: 0 0 auto; font-size: 12px; font-weight: 700; }
 .insp-label { font-size: 11px; text-transform: uppercase; letter-spacing: .4px; color: var(--ink-faint); margin: 14px 0 4px; }
+.insp-label-row { display: flex; align-items: center; justify-content: space-between; gap: 8px; }
+.qchips { display: inline-flex; gap: 4px; flex-wrap: wrap; }
+.qchip { font-size: 10px; padding: 1px 7px; border-radius: 20px; white-space: nowrap; font-weight: 600; text-transform: none; letter-spacing: 0; }
+.qchip.ev-none { background: #fdeede; color: #a56106; }
+.qchip.ev-weak { background: #f6f0dd; color: #7d6413; }
+.qchip.ev-strong { background: #e5f6ee; color: #0d7a48; }
+.qchip.ev-num { background: #e8f0ff; color: #234fb8; }
+.qchip.conf { background: #eef1f5; color: var(--ink-soft); font-family: var(--mono); }
+.qchip.contra { background: #fde0e0; color: #b21f1f; }
+/* Value is the headline of the inspector — reviewers edit it most, so it reads largest. */
 .insp-value textarea {
-  width: 100%; min-height: 60px; padding: 8px; border: 1px solid var(--line-strong);
-  border-radius: 6px; font-family: var(--sans); font-size: 13.5px; resize: vertical; line-height: 1.5;
+  width: 100%; min-height: 64px; padding: 9px 10px; border: 1px solid var(--line-strong);
+  border-radius: 6px; font-family: var(--sans); font-size: 15px; resize: vertical; line-height: 1.5;
 }
 .insp-value textarea:focus { outline: none; border-color: var(--accent); box-shadow: 0 0 0 3px var(--accent-soft); }
 .insp-orig { font-size: 12px; color: var(--ink-soft); background: #f7f8fa; padding: 6px 8px; border-radius: 6px; border-left: 3px solid var(--line-strong); }
@@ -371,18 +383,22 @@ body {
 .btn.review.active, .btn.review:hover { background: var(--st-needs); color: #fff; }
 .btn.reset { border-color: var(--line-strong); color: var(--ink-soft); }
 
-.evidence-list { margin-top: 6px; display: flex; flex-direction: column; gap: 6px; }
+.evidence-list { margin-top: 6px; display: flex; flex-direction: column; gap: 5px; }
 .ev-item {
-  border: 1px solid var(--line); border-radius: 6px; padding: 8px; cursor: pointer;
-  font-size: 12.5px; line-height: 1.5; background: #fff;
+  border: 1px solid var(--line); border-radius: 6px; padding: 6px 8px; cursor: pointer;
+  font-size: 12px; line-height: 1.5; background: #fff;
 }
 .ev-item:hover { border-color: var(--accent); background: var(--accent-soft); }
-.ev-item .ev-head { display: flex; justify-content: space-between; color: var(--ink-faint); font-size: 10.5px; font-family: var(--mono); margin-bottom: 4px; }
-.ev-item .ev-text { color: var(--ink); max-height: 84px; overflow: hidden; }
-.ev-empty { color: var(--ev-none); font-size: 12.5px; background: #fdeede; padding: 8px 10px; border-radius: 6px; }
-.insp-note textarea { width: 100%; min-height: 44px; padding: 8px; border: 1px solid var(--line-strong); border-radius: 6px; font-family: var(--sans); font-size: 12.5px; }
-.insp-support { font-size: 12px; color: var(--ink-soft); line-height: 1.5; }
-.insp-support b { color: var(--ink); }
+.ev-item.active { border-color: var(--accent); box-shadow: 0 0 0 1px var(--accent) inset; }
+.ev-item .ev-head { display: flex; justify-content: space-between; gap: 6px; align-items: center; }
+.ev-item .ev-id { color: var(--ink-soft); font-size: 10.5px; font-family: var(--mono); }
+.ev-item .ev-missing { color: var(--st-conflict); font-size: 10.5px; }
+.ev-item .ev-text { color: var(--ink); margin-top: 3px; max-height: 60px; overflow: hidden; }
+.ev-empty { color: var(--ev-none); font-size: 12px; background: #fdeede; padding: 7px 9px; border-radius: 6px; }
+.insp-refs { width: 100%; margin-top: 6px; padding: 6px 8px; border: 1px solid var(--line-strong); border-radius: 6px; font-family: var(--mono); font-size: 12px; }
+.insp-refs:focus { outline: none; border-color: var(--accent); box-shadow: 0 0 0 3px var(--accent-soft); }
+.insp-reason { font-size: 12px; color: var(--ink-soft); line-height: 1.5; margin-top: 6px; padding-left: 8px; border-left: 2px solid var(--line); }
+.insp-note textarea { width: 100%; min-height: 40px; padding: 8px; border: 1px solid var(--line-strong); border-radius: 6px; font-family: var(--sans); font-size: 12.5px; }
 
 /* ---------------- Legend ---------------- */
 #legend { flex: 0 0 auto; display: flex; gap: 14px; align-items: center; flex-wrap: wrap;
