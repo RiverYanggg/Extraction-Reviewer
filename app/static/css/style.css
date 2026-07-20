@@ -372,7 +372,7 @@ body {
 /* Value is the headline of the inspector — reviewers edit it most, so it reads
    largest. JS auto-grows the height to fit long values; drag still resizes. */
 .insp-value textarea {
-  width: 100%; min-height: 72px; padding: 10px 12px; border: 1px solid var(--line-strong);
+  width: 100%; min-height: 72px; padding: 10px 12px; border: 2px solid var(--ink-faint);
   border-radius: 6px; font-family: var(--sans); font-size: 16px; resize: vertical;
   line-height: 1.55; overflow-y: auto;
 }
@@ -405,10 +405,10 @@ body {
 .ev-empty { color: var(--ev-none); font-size: 12px; background: #fdeede; padding: 7px 9px; border-radius: 6px; }
 /* Editable ref field carries an explicit label so its editability is obvious. */
 .insp-refs-field { display: block; margin-top: 8px; }
-.insp-refs-label { display: block; margin-bottom: 4px; font-size: 11.5px; color: var(--accent); font-weight: 600; }
-.insp-refs { width: 100%; padding: 7px 9px; border: 1px solid var(--accent); border-radius: 6px; font-family: var(--mono); font-size: 12.5px; background: #fbfcff; }
-.insp-refs:hover { border-color: var(--accent); background: #fff; }
-.insp-refs:focus { outline: none; border-color: var(--accent); box-shadow: 0 0 0 3px var(--accent-soft); background: #fff; }
+.insp-refs-label { display: block; margin-bottom: 4px; font-size: 11.5px; color: var(--ink-soft); font-weight: 500; }
+.insp-refs { width: 100%; padding: 7px 9px; border: 1px solid var(--line-strong); border-radius: 6px; font-family: var(--mono); font-size: 12.5px; background: #fff; }
+.insp-refs:hover { border-color: var(--ink-faint); }
+.insp-refs:focus { outline: none; border-color: var(--accent); box-shadow: 0 0 0 3px var(--accent-soft); }
 .insp-reason { font-size: 12px; color: var(--ink-soft); line-height: 1.5; margin-top: 6px; padding-left: 8px; border-left: 2px solid var(--line); }
 .insp-note textarea { width: 100%; min-height: 40px; padding: 8px; border: 1px solid var(--line-strong); border-radius: 6px; font-family: var(--sans); font-size: 12.5px; }
 
