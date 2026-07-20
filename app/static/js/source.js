@@ -2,8 +2,23 @@
 import { el, ui } from "./dom.js";
 import { store } from "./store.js";
 import { bus } from "./bus.js";
+import { getLatexToggleState, hasEvidenceBlocks, renderEvidenceMath } from "./latex.js";
 
-export function renderSourceBlocks() {
+function updateLatexToggle(errors = 0) {
+  const state = getLatexToggleState(ui.latexMode, ui.latexAvailable, errors);
+  el.latexToggle.disabled = state.disabled;
+  el.latexToggle.textContent = state.text;
+  el.latexToggle.title = state.title;
+  el.latexToggle.setAttribute("aria-pressed", String(state.pressed));
+  el.latexToggle.setAttribute("aria-label", state.label);
+}
+
+function updateEvidenceStatus(text) {
+  const suffix = ui.latexErrors ? `公式解析错误 ${ui.latexErrors} 处` : "";
+  el.evidenceStatus.textContent = [text, suffix].filter(Boolean).join(" · ");
+}
+
+function buildSourceBlocks() {
   const frag = document.createDocumentFragment();
   for (const b of store.data.blocks) {
     const div = document.createElement("div");
@@ -33,6 +48,47 @@ export function renderSourceBlocks() {
     frag.appendChild(div);
   }
   el.sourceBlocks.replaceChildren(frag);
+}
+
+export function renderSourceBlocks() {
+  if (!hasEvidenceBlocks(store.data)) {
+    ui.latexAvailable = null;
+    ui.latexErrors = 0;
+    el.sourceBlocks.replaceChildren();
+    updateLatexToggle();
+    updateEvidenceStatus("");
+    return false;
+  }
+
+  buildSourceBlocks();
+
+  if (ui.latexMode === "rendered") {
+    const result = renderEvidenceMath(el.sourceBlocks);
+    ui.latexAvailable = result.available;
+    ui.latexErrors = result.errors;
+    if (!result.available) ui.latexMode = "source";
+    if (result.fatal) {
+      ui.latexMode = "source";
+      buildSourceBlocks();
+      el.sourceBlocks.classList.add("latex-has-errors");
+    }
+    updateLatexToggle(result.errors);
+  } else {
+    ui.latexErrors = 0;
+    el.sourceBlocks.classList.remove("latex-has-errors");
+    updateLatexToggle();
+  }
+  if (!ui.selectedFieldId) updateEvidenceStatus("");
+  return true;
+}
+
+export function setLatexMode(mode) {
+  if (mode !== "rendered" && mode !== "source") return;
+  ui.latexMode = mode;
+  if (!renderSourceBlocks()) return;
+
+  const field = store.fieldIndex[ui.selectedFieldId];
+  if (field) highlightEvidence(store.effectiveRefs(field), { scroll: false });
 }
 
 function selectFirstFieldCiting(blockId) {
@@ -72,7 +128,7 @@ export function highlightEvidence(refs, { scroll } = {}) {
   if (ui.tab !== "source") switchTab("source");
 
   if (!refs || !refs.length) {
-    el.evidenceStatus.textContent = "该字段无证据引用";
+    updateEvidenceStatus("该字段无证据引用");
     return;
   }
   const found = [];
@@ -81,9 +137,9 @@ export function highlightEvidence(refs, { scroll } = {}) {
     if (node) { node.classList.add(i === ui.evIndex ? "hl-active" : "hl-multi"); found.push(node); }
   });
   const missing = refs.length - found.length;
-  el.evidenceStatus.textContent =
+  updateEvidenceStatus(
     `证据 ${refs.length} 块` + (missing ? ` · ${missing} 块无法定位` : "") +
-    (refs.length > 1 ? `（第 ${ui.evIndex + 1}/${refs.length}）` : "");
+    (refs.length > 1 ? `（第 ${ui.evIndex + 1}/${refs.length}）` : ""));
 
   const target = el.sourceBlocks.querySelector(`[data-block-id="${CSS.escape(refs[ui.evIndex] || refs[0])}"]`) || found[0];
   if (target && scroll) {

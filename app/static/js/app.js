@@ -8,13 +8,16 @@ import { store } from "./store.js";
 import { el, ui } from "./dom.js";
 import { bus } from "./bus.js";
 import { STATUS_COLORS, esc, toast } from "./util.js";
-import { renderSourceBlocks, preparePdf, switchTab, highlightEvidence, cycleEvidence } from "./source.js";
+import { renderSourceBlocks, preparePdf, switchTab, highlightEvidence, cycleEvidence, setLatexMode } from "./source.js";
 import { renderFields, renderBucketRail, openBucketPreview } from "./tree.js";
 import { renderInspector } from "./inspector.js";
 import { openMetrics } from "./metrics.js";
 import { initFloating } from "./floating.js";
+import { PaperPicker } from "./paper-picker.js";
+import { isFieldRowNavigable, keepFieldRowVisible } from "./navigation.js";
 
 let storeSubscribed = false;
+let paperPicker = null;
 
 // ---- render loop ----------------------------------------------------------
 function render() {
@@ -35,6 +38,9 @@ function renderProgress() {
   const c = p.counts;
   el.progLabel.textContent =
     `${p.done}/${p.total} 已审 (${p.pct}%) · 确认${c.confirmed} 改${c.modified} 冲突${c.conflict} 待复核${c.needs_review} 补充${p.added}`;
+  if (paperPicker && store.paperId && store.doc) {
+    paperPicker.updateProgress(store.paperId, { ...p, task_status: store.doc.task_status });
+  }
 }
 
 function renderSaveState() {
@@ -86,15 +92,37 @@ async function startWorkspace(user) {
     el.fieldsList.innerHTML = `<div class="inspector-empty">未发现任何论文（检查 extracted/ 目录）。</div>`;
     return;
   }
-  el.paperSelect.innerHTML = papers
-    .map((p) => `<option value="${esc(p.paper_id)}">${esc(p.title)} — ${p.progress.pct}%</option>`)
-    .join("");
+  if (!paperPicker) {
+    paperPicker = new PaperPicker({
+      root: el.paperPicker,
+      trigger: el.paperTrigger,
+      menu: el.paperMenu,
+      search: el.paperSearch,
+      list: el.paperList,
+      onSelect: async (paperId) => {
+        await store.flush();
+        await loadPaper(paperId);
+      },
+      onError: renderPaperLoadError,
+    });
+  }
+  paperPicker.setPapers(papers);
 
   if (!storeSubscribed) {
     store.subscribe(render);
     storeSubscribed = true;
   }
-  await loadPaper(papers[0].paper_id);
+  try {
+    await loadPaper(papers[0].paper_id);
+  } catch (error) {
+    paperPicker.markLoadFailed(papers[0].paper_id);
+    renderPaperLoadError(error);
+  }
+}
+
+function renderPaperLoadError(error) {
+  const message = error?.message || String(error);
+  el.fieldsList.innerHTML = `<div class="inspector-empty">无法加载论文：${esc(message)}</div>`;
 }
 
 async function requireLogin() {
@@ -116,7 +144,7 @@ async function loadPaper(pid) {
   ui.activeBucketId = payload.buckets[0]?.bucket_id || null;
   ui.evIndex = 0;
   ui.collapsed = new Set();
-  el.paperSelect.value = pid;
+  paperPicker?.markLoaded(pid);
   if (ui.tab === "pdf") switchTab("source");
   renderSourceBlocks();
   preparePdf();
@@ -125,7 +153,6 @@ async function loadPaper(pid) {
 
 // ---- global controls ------------------------------------------------------
 function wireGlobalControls() {
-  el.paperSelect.addEventListener("change", async (e) => { await store.flush(); await loadPaper(e.target.value); });
   el.undo.addEventListener("click", () => store.undo());
   el.redo.addEventListener("click", () => store.redo());
   el.save.addEventListener("click", async () => { await store.flush(); toast("已暂存草稿"); });
@@ -148,6 +175,8 @@ function wireGlobalControls() {
 
   el.fieldSearch.addEventListener("input", (e) => { ui.search = e.target.value; renderFields(); });
   el.filterStatus.addEventListener("change", (e) => { ui.filterStatus = e.target.value; renderFields(); });
+  el.latexToggle.addEventListener("click", () =>
+    setLatexMode(ui.latexMode === "rendered" ? "source" : "rendered"));
 
   document.querySelectorAll("#source-tabs .tab").forEach((t) =>
     t.addEventListener("click", () => switchTab(t.dataset.tab)));
@@ -189,7 +218,9 @@ async function onLogout() {
   await api.logout().catch(() => {});
   ui.user = null;
   el.userBadge.classList.add("hidden");
-  el.paperSelect.innerHTML = "";
+  paperPicker?.close();
+  paperPicker?.setSelected(null);
+  paperPicker?.setPapers([]);
   el.fieldsList.innerHTML = `<div class="inspector-empty">请先登录。</div>`;
   el.inspector.innerHTML = `<div class="inspector-empty">选择一个字段以查看证据、置信度与编辑选项。</div>`;
   showLogin();
@@ -223,7 +254,7 @@ function wireKeyboard() {
     if ((e.metaKey || e.ctrlKey) && e.key.toLowerCase() === "z" && !e.shiftKey) { e.preventDefault(); store.undo(); return; }
     if ((e.metaKey || e.ctrlKey) && (e.key.toLowerCase() === "y" || (e.shiftKey && e.key.toLowerCase() === "z"))) { e.preventDefault(); store.redo(); return; }
     if ((e.metaKey || e.ctrlKey) && e.key.toLowerCase() === "s") { e.preventDefault(); store.flush(); toast("已暂存"); return; }
-    if ((e.metaKey || e.ctrlKey) && e.key.toLowerCase() === "p") { e.preventDefault(); el.paperSelect.focus(); return; }
+    if ((e.metaKey || e.ctrlKey) && e.key.toLowerCase() === "p") { e.preventDefault(); paperPicker?.open(); return; }
     if (typing) return;
 
     switch (e.key) {
@@ -247,12 +278,14 @@ function wireKeyboard() {
 }
 
 function moveSelection(dir) {
-  const rows = [...el.fieldsList.querySelectorAll(".field-row[data-field-id]")];
+  const rows = [...el.fieldsList.querySelectorAll(".field-row[data-field-id]")]
+    .filter(isFieldRowNavigable);
   if (!rows.length) return;
   let idx = rows.findIndex((r) => r.dataset.fieldId === ui.selectedFieldId);
   idx = Math.max(0, Math.min(rows.length - 1, idx + dir));
-  selectField(rows[idx].dataset.fieldId);
-  rows[idx].scrollIntoView({ block: "nearest" });
+  const fieldId = String(rows[idx].dataset.fieldId);
+  selectField(fieldId);
+  keepFieldRowVisible(el.fieldsList, el.fieldsScroll, fieldId);
 }
 
 // ---- dividers -------------------------------------------------------------
@@ -292,10 +325,15 @@ function buildLegend() {
 function buildHelp() {
   el.helpBody.innerHTML = `
     <p>本工具用于人工审核结构化抽取结果。<b>颜色</b>=审核状态（一个维度），<b>徽章</b>=证据质量/置信度，避免颜色过载。中间是按 schema 还原的 <b>JSON 树</b>（含预定义 null 字段，均参与指标）。</p>
+    <h3>论文选择器</h3>
+    <p>顶栏选择器显示论文的<b>序号、颜色状态点、标题、DOI、已审/总数和百分比</b>，可按标题或 DOI 搜索。用鼠标点击，或按 <kbd>ArrowUp</kbd> / <kbd>ArrowDown</kbd> 移动、<kbd>Enter</kbd> 选择、<kbd>Escape</kbd> 关闭；点击外部也会关闭。Windows 按 <kbd>Ctrl</kbd>+<kbd>P</kbd>、Mac 按 <kbd>⌘</kbd>+<kbd>P</kbd> 可直接打开。</p>
+    <p>论文状态点：<b>绿</b>=100% 完成，<b>琥珀</b>=已审 1–99%，<b>灰</b>=0%，<b>红</b>=已提交但不足 100%。这是论文级进度，不等同于字段的审核状态颜色。</p>
+    <h3>证据公式</h3>
+    <p>证据中的公式默认由本地离线 KaTeX 渲染，支持 <code>$...$</code>、<code>$$...$$</code>、<code>\\(...\\)</code>、<code>\\[...\\]</code>。可切换<b>查看源码 / 渲染公式</b>；非法公式会保留源码并提示解析错误。</p>
     <h3>快捷键（Windows / Mac 均支持）</h3>
     <table>
       <tr><th>Windows</th><th>Mac</th><th>作用</th></tr>
-      <tr><td><kbd>j</kbd> / <kbd>k</kbd></td><td><kbd>j</kbd> / <kbd>k</kbd></td><td>下一个 / 上一个字段</td></tr>
+      <tr><td><kbd>j</kbd> / <kbd>k</kbd></td><td><kbd>j</kbd> / <kbd>k</kbd></td><td>下一个 / 上一个可见字段（跳过折叠分支，仅在越出视区时最小滚动）</td></tr>
       <tr><td><kbd>c</kbd></td><td><kbd>c</kbd></td><td>确认</td></tr>
       <tr><td><kbd>x</kbd></td><td><kbd>x</kbd></td><td>冲突</td></tr>
       <tr><td><kbd>r</kbd></td><td><kbd>r</kbd></td><td>待复核</td></tr>

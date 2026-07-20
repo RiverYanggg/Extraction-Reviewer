@@ -2,7 +2,11 @@
 import { $ } from "./util.js";
 
 export const el = {
-  paperSelect: $("#paper-select"),
+  paperPicker: $("#paper-picker"),
+  paperTrigger: $("#paper-trigger"),
+  paperMenu: $("#paper-menu"),
+  paperSearch: $("#paper-search"),
+  paperList: $("#paper-list"),
   progFill: $("#progress-fill"),
   progLabel: $("#progress-label"),
   saveState: $("#save-state"),
@@ -19,6 +23,7 @@ export const el = {
   pdfView: $("#pdf-view"),
   sourceScroll: $("#source-scroll"),
   evidenceStatus: $("#evidence-status"),
+  latexToggle: $("#latex-toggle"),
   bucketRail: $("#bucket-rail"),
   fieldsList: $("#fields-list"),
   fieldsScroll: $("#fields-scroll"),
@@ -73,4 +78,7 @@ export const ui = {
   tab: "source",
   collapsed: new Set(),
   pdfLoaded: false,
+  latexMode: "rendered",
+  latexAvailable: null,
+  latexErrors: 0,
 };
