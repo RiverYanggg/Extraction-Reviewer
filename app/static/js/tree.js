@@ -2,7 +2,7 @@
 import { el, ui } from "./dom.js";
 import { store } from "./store.js";
 import { bus } from "./bus.js";
-import { STATUS_COLORS, SECTION_LABELS, esc, evClass, evLabelText, toast } from "./util.js";
+import { STATUS_COLORS, SECTION_LABELS, esc, toast } from "./util.js";
 
 export function activeBucket() {
   return store.data.buckets.find((b) => b.bucket_id === ui.activeBucketId);
@@ -194,13 +194,9 @@ function leafRow(f, key, depth) {
   row.style.marginLeft = 4 + depth * 12 + "px";
 
   const val = store.currentValue(f);
-  const refs = store.effectiveRefs(f);
-  const badges = [];
-  badges.push(`<span class="badge ${evClass(f.support_label)}" title="${evLabelText(f.support_label)}">${evLabelText(f.support_label)}</span>`);
-  if (typeof f.confidence === "number") badges.push(`<span class="badge conf">${f.confidence.toFixed(2)}</span>`);
-  if (f.contradiction) badges.push(`<span class="badge contra">冲突</span>`);
-  badges.push(`<span class="badge refct" title="证据块数量">⛬ ${refs.length}</span>`);
-
+  // Evidence quality, confidence and evidence count are intentionally NOT shown
+  // on the card — reviewers rarely act on them here. They live in the inspector,
+  // which opens on the far right when the field is selected.
   const empty = val === "" || val == null;
   row.innerHTML = `
     <div class="status-bar"></div>
@@ -212,8 +208,7 @@ function leafRow(f, key, depth) {
         <button class="qbtn on-review" data-act="needs_review">待复核</button>
         <button class="qbtn on-conflict" data-act="conflict">冲突</button>
       </div>
-    </div>
-    <div class="field-badges">${badges.join("")}</div>`;
+    </div>`;
   row.addEventListener("click", (e) => {
     if (e.target.classList.contains("qbtn")) {
       store.setStatus(f.field_id, e.target.dataset.act); e.stopPropagation(); return;
