@@ -64,6 +64,20 @@ export function renderInspector() {
     <div class="insp-note"><textarea id="insp-note" placeholder="记录判断依据或给复核人的说明…">${esc(a.note || "")}</textarea></div>`;
 
   const valBox = $i("#insp-val");
+  // Grow the value box to fit its content so long values are never cut off.
+  // The reviewer can still drag to resize; a manual drag pins the height and
+  // switches off auto-fit for that field.
+  const autoGrow = () => {
+    if (valBox.dataset.pinned) return;
+    valBox.style.height = "auto";
+    valBox.style.height = Math.min(valBox.scrollHeight + 2, 420) + "px";
+  };
+  autoGrow();
+  valBox.addEventListener("input", autoGrow);
+  valBox.addEventListener("mouseup", () => {
+    // A resize drag leaves the element height differing from the content fit.
+    if (Math.abs(valBox.clientHeight - valBox.scrollHeight) > 4) valBox.dataset.pinned = "1";
+  });
   valBox.addEventListener("change", () => store.setValue(fid, valBox.value));
   valBox.addEventListener("keydown", (e) => {
     if ((e.metaKey || e.ctrlKey) && e.key === "Enter") { store.setValue(fid, valBox.value); e.preventDefault(); }
