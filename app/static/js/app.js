@@ -9,7 +9,7 @@ import { el, ui } from "./dom.js";
 import { bus } from "./bus.js";
 import { STATUS_COLORS, esc, toast } from "./util.js";
 import { renderSourceBlocks, preparePdf, switchTab, highlightEvidence, cycleEvidence, setLatexMode } from "./source.js";
-import { renderFields, renderBucketRail, openBucketPreview } from "./tree.js";
+import { renderFields, renderBucketRail, openBucketPreview, allGroupIds } from "./tree.js";
 import { renderInspector } from "./inspector.js";
 import { openMetrics } from "./metrics.js";
 import { initFloating } from "./floating.js";
@@ -143,7 +143,9 @@ async function loadPaper(pid) {
   ui.selectedFieldId = null;
   ui.activeBucketId = payload.buckets[0]?.bucket_id || null;
   ui.evIndex = 0;
-  ui.collapsed = new Set();
+  // Start with every JSON group collapsed; the tree opens one level at a
+  // time as the reviewer drills in, instead of dumping the whole structure.
+  ui.collapsed = new Set(allGroupIds());
   paperPicker?.markLoaded(pid);
   if (ui.tab === "pdf") switchTab("source");
   renderSourceBlocks();

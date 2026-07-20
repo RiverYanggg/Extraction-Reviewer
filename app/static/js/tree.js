@@ -18,6 +18,19 @@ function collectLeaves(node, acc = []) {
   return acc;
 }
 
+// collect every non-leaf node id across all buckets, so a freshly loaded
+// paper starts fully collapsed and the tree opens one level at a time.
+export function allGroupIds() {
+  const ids = [];
+  const walk = (node) => {
+    if (node.kind === "leaf") return;
+    if (node.id != null) ids.push(node.id);
+    for (const c of node.children || []) walk(c);
+  };
+  for (const b of store.data?.buckets || []) for (const n of b.tree) walk(n);
+  return ids;
+}
+
 // ---- bucket rail ----------------------------------------------------------
 export function renderBucketRail() {
   const frag = document.createDocumentFragment();
