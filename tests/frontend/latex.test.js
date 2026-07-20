@@ -4,11 +4,76 @@ import fs from "node:fs";
 import katex from "../../app/static/vendor/katex/katex.mjs";
 
 import {
+  extractFailedExpression,
+  failedFormulaCandidates,
   getLatexToggleState,
   hasEvidenceBlocks,
   LATEX_DELIMITERS,
+  LATEX_IGNORED_TAGS,
+  markFailedFormulas,
   renderEvidenceMath,
 } from "../../app/static/js/latex.js";
+
+class FakeNode {
+  constructor(nodeType, ownerDocument) {
+    this.nodeType = nodeType;
+    this.ownerDocument = ownerDocument;
+    this.parentNode = null;
+    this.childNodes = [];
+  }
+
+  append(...nodes) {
+    for (const node of nodes) {
+      node.parentNode = this;
+      this.childNodes.push(node);
+    }
+  }
+
+  insertBefore(node, reference) {
+    const index = this.childNodes.indexOf(reference);
+    node.parentNode = this;
+    this.childNodes.splice(index, 0, node);
+  }
+
+  removeChild(node) {
+    this.childNodes.splice(this.childNodes.indexOf(node), 1);
+    node.parentNode = null;
+  }
+}
+
+class FakeText extends FakeNode {
+  constructor(text, ownerDocument) {
+    super(3, ownerDocument);
+    this.textContent = text;
+  }
+}
+
+class FakeElement extends FakeNode {
+  constructor(tagName, ownerDocument) {
+    super(1, ownerDocument);
+    this.tagName = tagName.toUpperCase();
+    this.className = "";
+    this.attributes = new Map();
+  }
+
+  setAttribute(name, value) {
+    this.attributes.set(name, String(value));
+  }
+
+  get textContent() {
+    return this.childNodes.map((node) => node.textContent).join("");
+  }
+
+  set textContent(value) {
+    this.childNodes = [];
+    if (value !== "") this.append(this.ownerDocument.createTextNode(String(value)));
+  }
+}
+
+class FakeDocument {
+  createElement(tagName) { return new FakeElement(tagName, this); }
+  createTextNode(text) { return new FakeText(text, this); }
+}
 
 function fakeRoot(text = "Original $x$ source") {
   const classes = new Set();
@@ -36,6 +101,90 @@ test("LATEX_DELIMITERS uses the required safe matching order", () => {
       ["$", "$", false],
     ],
   );
+});
+
+test("failedFormulaCandidates returns all supported delimiters longest first", () => {
+  assert.deepEqual(failedFormulaCandidates("\\frac{"), [
+    "$$\\frac{$$",
+    "\\[\\frac{\\]",
+    "\\(\\frac{\\)",
+    "$\\frac{$",
+  ]);
+});
+
+test("extractFailedExpression reads KaTeX auto-render errors", () => {
+  assert.equal(
+    extractFailedExpression("KaTeX auto-render: Failed to parse `\\frac{` with ParseError: Expected '}'"),
+    "\\frac{",
+  );
+  assert.equal(extractFailedExpression("bad formula"), null);
+});
+
+test("markFailedFormulas marks multiple source formulas without touching KaTeX output", () => {
+  const document = new FakeDocument();
+  const root = document.createElement("div");
+  const prose = document.createElement("p");
+  prose.append(document.createTextNode("Before $$\\frac{$$ middle $x$ after \\(\\sqrt{\\)."));
+  const rendered = document.createElement("span");
+  rendered.className = "katex";
+  rendered.append(document.createTextNode("$x$"));
+  root.append(prose, rendered);
+
+  assert.equal(markFailedFormulas(root, ["\\frac{", "x", "\\sqrt{"]), 3);
+
+  const markers = prose.childNodes.filter((node) => node.className === "latex-formula-error");
+  assert.deepEqual(markers.map((node) => node.textContent), ["$$\\frac{$$", "$x$", "\\(\\sqrt{\\)"]);
+  for (const marker of markers) {
+    assert.equal(marker.attributes.get("role"), "note");
+    assert.equal(marker.attributes.get("title"), "公式解析失败，已保留 LaTeX 源码");
+    assert.match(marker.attributes.get("aria-label"), /^公式解析失败，已保留 LaTeX 源码：/);
+    assert.match(marker.attributes.get("aria-label"), new RegExp(marker.textContent.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")));
+  }
+  assert.equal(rendered.textContent, "$x$");
+});
+
+test("markFailedFormulas marks only as many occurrences as auto-render reported", () => {
+  const document = new FakeDocument();
+  const root = document.createElement("div");
+  root.append(document.createTextNode("$$x$$ and $x$"));
+
+  assert.equal(markFailedFormulas(root, ["x"]), 1);
+  assert.equal(root.childNodes.filter((node) => node.className === "latex-formula-error").length, 1);
+  assert.equal(root.textContent, "$$x$$ and $x$");
+});
+
+test("markFailedFormulas skips auto-render ignored tags before the real failure", () => {
+  const document = new FakeDocument();
+  const root = document.createElement("div");
+  const code = document.createElement("code");
+  code.append(document.createTextNode("Example $\\frac{$ source"));
+  const prose = document.createElement("p");
+  prose.append(document.createTextNode("Failed $\\frac{$ source"));
+  root.append(code, prose);
+
+  assert.equal(markFailedFormulas(root, ["\\frac{"]), 1);
+  assert.equal(code.childNodes.some((node) => node.className === "latex-formula-error"), false);
+  assert.equal(prose.childNodes.some((node) => node.className === "latex-formula-error"), true);
+});
+
+test("renderEvidenceMath marks the exact failed formula from auto-render callback", () => {
+  const document = new FakeDocument();
+  const root = document.createElement("div");
+  root.classList = fakeRoot().classList;
+  root.append(document.createTextNode("Valid text and $\\frac{$ source"));
+  const originalWarn = console.warn;
+  const renderer = (_root, options) => {
+    options.errorCallback("KaTeX auto-render: Failed to parse `\\frac{` with", new Error("bad"));
+  };
+
+  console.warn = () => {};
+  try {
+    assert.deepEqual(renderEvidenceMath(root, renderer), { available: true, errors: 1 });
+  } finally {
+    console.warn = originalWarn;
+  }
+  assert.equal(root.childNodes[1].className, "latex-formula-error");
+  assert.equal(root.childNodes[1].textContent, "$\\frac{$");
 });
 
 test("renderEvidenceMath leaves source untouched when renderer is unavailable", () => {
@@ -68,6 +217,7 @@ test("renderEvidenceMath records formula errors and marks the evidence root", ()
   assert.equal(options.throwOnError, true);
   assert.equal(options.strict, "ignore");
   assert.equal(options.trust, false);
+  assert.equal(options.ignoredTags, LATEX_IGNORED_TAGS);
 });
 
 test("renderEvidenceMath restores readable source after a renderer exception", () => {
@@ -150,8 +300,10 @@ test("available toggle state exposes pressed and accessible action labels", () =
   });
 });
 
-test("KaTeX runtime, auto-render helper, stylesheet, and a core font are vendored", () => {
+test("KaTeX runtime, notices, auto-render helper, stylesheet, and a core font are vendored", () => {
   const files = [
+    "app/static/vendor/katex/LICENSE",
+    "app/static/vendor/katex/VENDOR.md",
     "app/static/vendor/katex/katex.min.css",
     "app/static/vendor/katex/katex.min.js",
     "app/static/vendor/katex/contrib/auto-render.min.js",
@@ -159,4 +311,9 @@ test("KaTeX runtime, auto-render helper, stylesheet, and a core font are vendore
   ];
 
   for (const file of files) assert.equal(fs.existsSync(file), true, `${file} should exist`);
+
+  const notice = fs.readFileSync("app/static/vendor/katex/VENDOR.md", "utf8");
+  assert.match(notice, /0\.16\.22/);
+  assert.match(notice, /MIT/i);
+  assert.match(notice, /LICENSE/);
 });

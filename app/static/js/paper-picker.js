@@ -41,6 +41,10 @@ export function normalizePaperSummary(paper, index) {
   };
 }
 
+export function paperTriggerLabel(summary) {
+  return `论文 ${summary.sequence}，${summary.title}，${summary.pct}%，${summary.state.label}；切换论文`;
+}
+
 function appendTextElement(parent, tag, className, text) {
   const node = parent.ownerDocument.createElement(tag);
   if (className) node.className = className;
@@ -246,11 +250,13 @@ export class PaperPicker {
       appendTextElement(this.trigger, "span", "paper-trigger-empty", "暂无论文");
       this.trigger.removeAttribute("data-state");
       this.trigger.title = "切换论文 (Windows: Ctrl+P / Mac: ⌘P)";
+      this.trigger.setAttribute("aria-label", "暂无论文；切换论文");
       return;
     }
 
     this.trigger.dataset.state = paper.state.key;
     this.trigger.title = `${paper.title} · ${paper.doi}`;
+    this.trigger.setAttribute("aria-label", paperTriggerLabel(paper));
     appendTextElement(this.trigger, "span", "paper-sequence", paper.sequence);
     appendTextElement(this.trigger, "span", "paper-state-dot", "");
     appendTextElement(this.trigger, "span", "paper-trigger-title truncated-title", paper.title);

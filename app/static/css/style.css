@@ -198,6 +198,10 @@ body {
 .blk img { max-width: 100%; border: 1px solid var(--line); border-radius: 6px; margin: 4px 0; }
 .blk .katex { line-height: inherit; }
 .blk .katex-display { max-width: 100%; overflow-x: auto; overflow-y: hidden; padding: 2px 0; }
+.latex-formula-error {
+  border-bottom: 1px dashed var(--st-needs); border-radius: 2px;
+  background: #fff9e9; text-decoration: none;
+}
 #source-blocks.latex-has-errors::before {
   content: "部分公式未能渲染，原始内容仍可阅读";
   display: block; margin: 0 8px 8px; padding: 5px 8px; border-left: 3px solid var(--st-needs);

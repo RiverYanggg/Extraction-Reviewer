@@ -7,6 +7,7 @@ import {
   filterPapers,
   formatPaperSequence,
   normalizePaperSummary,
+  paperTriggerLabel,
   PaperPicker,
 } from "../../app/static/js/paper-picker.js";
 
@@ -83,6 +84,18 @@ test("normalizePaperSummary falls back to the DOI when title is missing", () => 
   const summary = normalizePaperSummary({ paper_id: "10.test/untitled", progress: {} }, 0);
   assert.equal(summary.title, "10.test/untitled");
   assert.equal(summary.doi, "10.test/untitled");
+});
+
+test("paperTriggerLabel names the selected paper, progress, state, and action", () => {
+  assert.equal(
+    paperTriggerLabel({
+      sequence: "02",
+      title: "Example paper",
+      pct: 38,
+      state: { key: "in-progress", label: "进行中" },
+    }),
+    "论文 02，Example paper，38%，进行中；切换论文",
+  );
 });
 
 function pickerForChoose(onSelect, onError = () => {}) {
