@@ -24,11 +24,11 @@ export function renderInspector() {
         const blk = store.blockIndex[rid];
         const active = i === ui.evIndex ? " active" : "";
         return `<div class="ev-item${active}" data-idx="${i}" title="${blk ? "点击在左栏定位" : "该证据块不在原文中"}">
-            <div class="ev-head"><span class="ev-id">${esc(rid)}</span>${blk ? "" : `<span class="ev-missing">未找到</span>`}</div>
+            <div class="ev-head"><span class="ev-id">${esc(rid)}</span>${blk ? `<span class="ev-locate">定位 →</span>` : `<span class="ev-missing">⚠ 未找到</span>`}</div>
             ${blk ? `<div class="ev-text">${esc(blk.text.slice(0, 180))}</div>` : ""}
           </div>`;
       }).join("") + `</div>`
-    : `<div class="ev-empty">该字段没有 evidence_ref，请人工核对来源。</div>`;
+    : `<div class="ev-empty">该字段没有 evidence_ref，可在下方手动填写证据块 ID。</div>`;
 
   // Evidence-quality signals (support / confidence / contradiction) are surfaced
   // here as compact chips — they were removed from the center cards to reduce noise.
@@ -56,7 +56,10 @@ export function renderInspector() {
     <div class="insp-label insp-label-row">证据${qualityChips ? `<span class="qchips">${qualityChips}</span>` : ""}</div>
     ${evHtml}
     ${f.reason ? `<div class="insp-reason">${esc(f.reason)}</div>` : ""}
-    <input id="insp-refs" class="insp-refs" value="${esc(refs.join(", "))}" placeholder="逗号分隔的 block id" />
+    <label class="insp-refs-field">
+      <span class="insp-refs-label">✎ 修改证据块 ID（逗号分隔，回车保存）</span>
+      <input id="insp-refs" class="insp-refs" value="${esc(refs.join(", "))}" placeholder="例如：b0042, b0043" />
+    </label>
     <div class="insp-label">备注</div>
     <div class="insp-note"><textarea id="insp-note" placeholder="记录判断依据或给复核人的说明…">${esc(a.note || "")}</textarea></div>`;
 
