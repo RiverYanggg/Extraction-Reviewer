@@ -262,9 +262,19 @@ body {
   border-radius: 5px; font-size: 11px; padding: 0 7px; cursor: pointer; opacity: 0; }
 .tgroup:hover .tadd { opacity: 1; }
 .tgroup .tadd:hover { border-color: var(--st-added); color: var(--st-added); }
-.tgroup.section .tlabel { font-size: 12.5px; color: var(--ink); }
-.tgroup.section { border-bottom: 1px solid var(--line); border-radius: 0; margin-top: 4px; }
-.tgroup.element .tlabel { font-size: 12px; color: var(--accent); }
+
+/* Three group tiers, each visually distinct so the eye can locate a level
+   at a glance: SECTION = top anchor, ELEMENT = accent sub-object, BRANCH = leaf group. */
+.tgroup.section {
+  border-bottom: 1px solid var(--line-strong); border-radius: 0; margin-top: 10px;
+  padding-top: 6px; padding-bottom: 6px;
+}
+.tgroup.section .tlabel {
+  font-size: 14px; font-weight: 700; color: var(--ink); letter-spacing: .2px;
+}
+.tgroup.element .tlabel {
+  font-size: 12.5px; font-weight: 650; color: var(--accent);
+}
 .tgroup.branch .tlabel { font-weight: 500; color: var(--ink-soft); font-size: 12.5px; }
 .tchildren.collapsed { display: none; }
 .tguide { border-left: 1px solid var(--line); margin-left: 11px; padding-left: 6px; }
@@ -285,9 +295,15 @@ body {
 .field-row.selected { border-color: var(--accent); box-shadow: 0 0 0 2px var(--accent-soft); }
 .field-row .status-bar { width: 4px; border-radius: 3px; align-self: stretch; background: var(--st-unprocessed); }
 .field-main { min-width: 0; }
-.field-key { font-size: 11.5px; color: var(--ink-soft); font-family: var(--mono); word-break: break-all; }
-.field-val { font-size: 13.5px; color: var(--ink); margin-top: 2px; word-break: break-word; }
-.field-val.empty { color: var(--ink-faint); font-style: italic; }
+/* Key = quiet mono label with a leading tick; value = the primary content,
+   larger and darker, so the two never blur together when scanning a card. */
+.field-key {
+  font-size: 11px; color: var(--ink-faint); font-family: var(--mono);
+  text-transform: none; letter-spacing: .2px; word-break: break-all;
+}
+.field-key::before { content: "› "; color: var(--line-strong); }
+.field-val { font-size: 14.5px; font-weight: 500; color: var(--ink); margin-top: 3px; word-break: break-word; }
+.field-val.empty { color: var(--ink-faint); font-weight: 400; font-style: italic; }
 .field-badges { display: flex; flex-direction: column; align-items: flex-end; gap: 4px; }
 
 /* Status controls live on the card's right edge; dim until hover/selection
