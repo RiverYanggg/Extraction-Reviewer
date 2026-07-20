@@ -40,9 +40,10 @@ export function renderInspector() {
 
   el.inspector.innerHTML = `
     <div class="insp-head">
-      <div class="insp-path" title="${esc(f.path)}">${esc(f.path)}</div>
+      <div class="insp-key" title="${esc(f.label)}">${esc(f.label)}</div>
       <span class="insp-status" style="color:${STATUS_COLORS[st]}">${STATUS_LABELS[st]}</span>
     </div>
+    <div class="insp-path" title="${esc(f.path)}">${esc(f.path)}</div>
     <div class="insp-label">当前值</div>
     <div class="insp-value"><textarea id="insp-val">${esc(val)}</textarea></div>
     ${changed ? `<div class="insp-orig">原始值：${esc(f.value)}</div>` : ""}
