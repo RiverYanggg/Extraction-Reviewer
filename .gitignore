@@ -6,3 +6,4 @@ data/**
 !data/users/*/assignments.json
 __pycache__/
 *.pyc
+.worktrees/
