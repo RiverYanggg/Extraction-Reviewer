@@ -9,7 +9,7 @@ import { el, ui } from "./dom.js";
 import { bus } from "./bus.js";
 import { STATUS_COLORS, esc, toast } from "./util.js";
 import { renderSourceBlocks, preparePdf, switchTab, highlightEvidence, cycleEvidence, setLatexMode } from "./source.js";
-import { renderFields, renderBucketRail, openBucketPreview } from "./tree.js";
+import { renderFields, renderBucketRail, openBucketPreview, allGroupIds } from "./tree.js";
 import { renderInspector } from "./inspector.js";
 import { openMetrics } from "./metrics.js";
 import { initFloating } from "./floating.js";
@@ -35,9 +35,12 @@ function render() {
 function renderProgress() {
   const p = store.progress();
   el.progFill.style.width = p.pct + "%";
+  // Keep the topbar to the essential progress; the full per-status breakdown
+  // is a hover-away in the title and lives in full in the 指标 panel.
+  el.progLabel.textContent = `${p.done}/${p.total} 已审 (${p.pct}%)`;
   const c = p.counts;
-  el.progLabel.textContent =
-    `${p.done}/${p.total} 已审 (${p.pct}%) · 确认${c.confirmed} 改${c.modified} 冲突${c.conflict} 待复核${c.needs_review} 补充${p.added}`;
+  el.progLabel.title =
+    `确认 ${c.confirmed} · 修改 ${c.modified} · 冲突 ${c.conflict} · 待复核 ${c.needs_review} · 补充 ${p.added}`;
   if (paperPicker && store.paperId && store.doc) {
     paperPicker.updateProgress(store.paperId, { ...p, task_status: store.doc.task_status });
   }
@@ -143,7 +146,9 @@ async function loadPaper(pid) {
   ui.selectedFieldId = null;
   ui.activeBucketId = payload.buckets[0]?.bucket_id || null;
   ui.evIndex = 0;
-  ui.collapsed = new Set();
+  // Start with every JSON group collapsed; the tree opens one level at a
+  // time as the reviewer drills in, instead of dumping the whole structure.
+  ui.collapsed = new Set(allGroupIds());
   paperPicker?.markLoaded(pid);
   if (ui.tab === "pdf") switchTab("source");
   renderSourceBlocks();
@@ -309,17 +314,17 @@ function wireDividers() {
 
 // ---- legend + help --------------------------------------------------------
 function buildLegend() {
+  // Only the status color key stays in the always-visible footer — it decodes
+  // the card status bars. Evidence-quality detail moved into the inspector, so
+  // its badges and the explanatory note no longer clutter the page by default
+  // (the full explanation still lives in the ? help panel).
   const items = [
     ["unprocessed", "未处理"], ["confirmed", "已确认"], ["modified", "已修改"],
     ["needs_review", "待复核"], ["conflict", "冲突"], ["added", "已补充"],
   ];
   el.legend.innerHTML =
-    `<span style="font-weight:600;color:var(--ink)">状态图例：</span>` +
-    items.map(([k, label]) => `<span class="legend-item"><span class="legend-dot" style="background:${STATUS_COLORS[k]}"></span>${label}</span>`).join("") +
-    `<span class="legend-item" style="margin-left:auto"><span class="badge ev-none">缺证据</span></span>
-     <span class="legend-item"><span class="badge ev-weak">弱证据</span></span>
-     <span class="legend-item"><span class="badge ev-strong">证据充分</span></span>
-     <span class="legend-item">颜色=审核状态，徽章=证据质量</span>`;
+    `<span style="font-weight:600;color:var(--ink)">状态：</span>` +
+    items.map(([k, label]) => `<span class="legend-item"><span class="legend-dot" style="background:${STATUS_COLORS[k]}"></span>${label}</span>`).join("");
 }
 
 function buildHelp() {

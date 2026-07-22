@@ -49,6 +49,10 @@ def element_locators(section: str, elem: Any, index: int) -> list[str]:
         v = fn()
         if v and "None" not in v:
             cands.append(v)
+    # Older evidence outputs use a sample-scoped locator without the record ID
+    # for these two sections, e.g. computational_details.<sample_id>.field.
+    if section in {"computational_details", "characterization_methods"} and sid:
+        cands.append(str(sid))
     return cands
 
 
@@ -57,9 +61,15 @@ _ID_LIKE_FIELDS = ("phase_name", "name", "phase", "element", "id", "region",
                    "label", "key", "direction", "technique", "type")
 
 
+def _normalized_locator(value: Any) -> str:
+    """Compare generated IDs with human-readable labels without punctuation noise."""
+    return re.sub(r"[^a-z0-9]+", "", str(value).lower())
+
+
 def _match_list_by_id(lst: list, key: str) -> Optional[int]:
     """Index of a list element identified by an embedded id `key` (case-insensitive)."""
     kl = key.lower()
+    normalized_key = _normalized_locator(key)
     for i, e in enumerate(lst):
         if isinstance(e, dict):
             for fld in _ID_LIKE_FIELDS:
@@ -67,6 +77,16 @@ def _match_list_by_id(lst: list, key: str) -> Optional[int]:
                     return i
             for k, v in e.items():
                 if (k.endswith("_id") or k.endswith("_name")) and v is not None and str(v).lower() == kl:
+                    return i
+    if not normalized_key:
+        return None
+    for i, e in enumerate(lst):
+        if isinstance(e, dict):
+            for fld in _ID_LIKE_FIELDS:
+                if e.get(fld) is not None and _normalized_locator(e[fld]) == normalized_key:
+                    return i
+            for k, v in e.items():
+                if (k.endswith("_id") or k.endswith("_name")) and v is not None and _normalized_locator(v) == normalized_key:
                     return i
     return None
 

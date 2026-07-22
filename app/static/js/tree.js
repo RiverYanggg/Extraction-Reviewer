@@ -2,7 +2,7 @@
 import { el, ui } from "./dom.js";
 import { store } from "./store.js";
 import { bus } from "./bus.js";
-import { STATUS_COLORS, SECTION_LABELS, esc, evClass, evLabelText, toast } from "./util.js";
+import { STATUS_COLORS, SECTION_LABELS, esc, toast } from "./util.js";
 
 export function activeBucket() {
   return store.data.buckets.find((b) => b.bucket_id === ui.activeBucketId);
@@ -16,6 +16,19 @@ function collectLeaves(node, acc = []) {
     else for (const c of n.children || []) collectLeaves(c, acc);
   }
   return acc;
+}
+
+// collect every non-leaf node id across all buckets, so a freshly loaded
+// paper starts fully collapsed and the tree opens one level at a time.
+export function allGroupIds() {
+  const ids = [];
+  const walk = (node) => {
+    if (node.kind === "leaf") return;
+    if (node.id != null) ids.push(node.id);
+    for (const c of node.children || []) walk(c);
+  };
+  for (const b of store.data?.buckets || []) for (const n of b.tree) walk(n);
+  return ids;
 }
 
 // ---- bucket rail ----------------------------------------------------------
@@ -181,28 +194,29 @@ function leafRow(f, key, depth) {
   row.style.marginLeft = 4 + depth * 12 + "px";
 
   const val = store.currentValue(f);
-  const refs = store.effectiveRefs(f);
-  const badges = [];
-  badges.push(`<span class="badge ${evClass(f.support_label)}" title="${evLabelText(f.support_label)}">${evLabelText(f.support_label)}</span>`);
-  if (typeof f.confidence === "number") badges.push(`<span class="badge conf">${f.confidence.toFixed(2)}</span>`);
-  if (f.contradiction) badges.push(`<span class="badge contra">冲突</span>`);
-  badges.push(`<span class="badge refct" title="证据块数量">⛬ ${refs.length}</span>`);
-
+  // Evidence quality, confidence and evidence count are intentionally NOT shown
+  // on the card — reviewers rarely act on them here. They live in the inspector,
+  // which opens on the far right when the field is selected.
   const empty = val === "" || val == null;
   row.innerHTML = `
     <div class="status-bar"></div>
     <div class="field-main">
       <div class="field-key">${esc(key)}</div>
       <div class="field-val ${empty ? "empty" : ""}">${empty ? "（空）" : esc(val)}</div>
-      <div class="field-quick">
-        <button class="qbtn on-confirm" data-act="confirmed">确认</button>
-        <button class="qbtn on-review" data-act="needs_review">待复核</button>
-        <button class="qbtn on-conflict" data-act="conflict">冲突</button>
-      </div>
     </div>
-    <div class="field-badges">${badges.join("")}</div>`;
+    <div class="field-quick">
+      <button class="qbtn on-confirm" data-act="confirmed" title="确认">确认</button>
+      <button class="qbtn on-review" data-act="needs_review" title="待复核">待复核</button>
+      <button class="qbtn on-conflict" data-act="conflict" title="冲突">冲突</button>
+    </div>`;
+  // Replay the "settled into a state" pop once, right after the status change.
+  if (ui.pulseFieldId === f.field_id) {
+    row.classList.add("status-pulse");
+    ui.pulseFieldId = null;
+  }
   row.addEventListener("click", (e) => {
     if (e.target.classList.contains("qbtn")) {
+      ui.pulseFieldId = f.field_id;
       store.setStatus(f.field_id, e.target.dataset.act); e.stopPropagation(); return;
     }
     bus.selectField(f.field_id);
