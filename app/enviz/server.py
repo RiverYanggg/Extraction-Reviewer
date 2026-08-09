@@ -19,7 +19,7 @@ from . import assistant, evidence, manual
 from .annotations import load_annotation, progress_of, save_annotation
 from .assignments import is_assigned, load_assigned_papers
 from .auth import COOKIE_NAME, User, clear_session_cookie, public_user, set_session_cookie, user_from_session, verify_credentials
-from .config import EXTRACTED_DIR, STATIC_DIR
+from .config import AGENTIC_RUNS_ROOT, EXTRACTED_DIR, STATIC_DIR
 from .export import build_export, build_export_files
 from .metrics import compute_metrics
 from .slots import PaperModel
@@ -27,6 +27,10 @@ from .slots import PaperModel
 
 # ---- discovery / validation ---------------------------------------------- #
 def discover_papers() -> list[str]:
+    if AGENTIC_RUNS_ROOT and AGENTIC_RUNS_ROOT.is_dir():
+        return [d.name for d in sorted(AGENTIC_RUNS_ROOT.iterdir())
+                if d.is_dir() and any((run / "viewer" / "extraction_postprocess" / "field_evidence.json").exists()
+                                      for run in (d / "agentic_runs").glob("*") if run.is_dir())]
     if not EXTRACTED_DIR.is_dir():
         return []
     return [d.name for d in sorted(EXTRACTED_DIR.iterdir())
@@ -34,6 +38,14 @@ def discover_papers() -> list[str]:
 
 
 def paper_dir(paper_id: str) -> Path:
+    if AGENTIC_RUNS_ROOT and AGENTIC_RUNS_ROOT.is_dir():
+        runs = sorted(
+            (run for run in (AGENTIC_RUNS_ROOT / paper_id / "agentic_runs").glob("*")
+             if (run / "viewer" / "extraction_postprocess" / "field_evidence.json").exists()),
+            key=lambda run: run.stat().st_mtime, reverse=True,
+        )
+        if runs:
+            return runs[0]
     d = (EXTRACTED_DIR / paper_id).resolve()
     if EXTRACTED_DIR.resolve() not in d.parents or not d.is_dir():
         raise HTTPException(status_code=404, detail=f"Unknown paper: {paper_id}")

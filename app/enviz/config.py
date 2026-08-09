@@ -7,6 +7,7 @@ from pathlib import Path
 APP_DIR = Path(__file__).resolve().parent.parent      # app/
 ROOT = APP_DIR.parent                                 # evidence_note_viewer/
 EXTRACTED_DIR = ROOT / "extracted"                    # read-only pipeline output
+AGENTIC_RUNS_ROOT: Path | None = None
 DATA_DIR = ROOT / "data"                              # per-user runtime state
 USERS_DIR = DATA_DIR / "users"
 ANNOT_DIR = ROOT / "annotations"                      # legacy shared reviewer state
@@ -34,6 +35,9 @@ def load_env_file(path: Path = ROOT / ".env") -> None:
 
 
 load_env_file()
+
+_agentic_root = os.environ.get("ENVIZ_AGENTIC_RUNS_ROOT", "").strip()
+AGENTIC_RUNS_ROOT = Path(_agentic_root).expanduser() if _agentic_root else None
 
 DATA_DIR.mkdir(exist_ok=True)
 USERS_DIR.mkdir(exist_ok=True)

@@ -12,7 +12,32 @@
       "Bash(chmod +x /Users/mac/Desktop/evidence_note_viewer/run.sh)",
       "Bash(curl *)",
       "Bash(./.venv/bin/python -c \"import ast; ast.parse\\(open\\('server.py'\\).read\\(\\)\\); print\\('server.py parses OK'\\)\")",
-      "Bash(env)"
+      "Bash(env)",
+      "Bash(node --test tests/frontend/*.test.js)",
+      "Bash(python3 -m unittest discover -s tests)",
+      "Bash(git checkout *)",
+      "Bash(node --check app/static/js/tree.js)",
+      "Bash(node --check app/static/js/app.js)",
+      "Bash(git add *)",
+      "Bash(git commit -m 'feat: collapse JSON tree by default on paper load *)",
+      "Bash(git commit -m 'feat: enlarge JSON tree disclosure triangle *)",
+      "Bash(git commit -m 'feat: drop evidence/confidence badges from center cards *)",
+      "Bash(node --check app/static/js/dom.js)",
+      "Bash(git commit -m 'feat: move card status controls to the right with a settle animation *)",
+      "Bash(git commit -m 'feat: sharpen field hierarchy and key/value contrast *)",
+      "Bash(node --check app/static/js/inspector.js)",
+      "Bash(git commit -m 'feat: condense inspector and emphasize value + status *)",
+      "Bash(git commit -m 'feat: enlarge core reading and body font sizes *)",
+      "Bash(git commit -m 'feat: trim redundant footer legend and topbar breakdown *)",
+      "Bash(./run.sh)",
+      "Bash(echo \"launched pid $!\")",
+      "Read(//private/tmp/**)",
+      "Bash(kill 96668)",
+      "Bash(rm -f /tmp/enviz_cookies.txt)",
+      "Bash(git commit -m 'feat: headline the field key and enlarge the value in inspector *)",
+      "Bash(git commit -m 'feat: enlarge inspector labels and auto-fit the value box *)",
+      "Bash(git commit -m 'fix: rebalance inspector border weight to match content priority *)",
+      "Bash(git commit -m 'fix: highlight value box, remove blue from evidence ref field *)"
     ]
   }
 }

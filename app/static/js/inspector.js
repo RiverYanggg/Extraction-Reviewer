@@ -55,7 +55,7 @@ export function renderInspector() {
     </div>
     <div class="insp-label insp-label-row">证据${qualityChips ? `<span class="qchips">${qualityChips}</span>` : ""}</div>
     ${evHtml}
-    ${f.reason ? `<div class="insp-reason">${esc(f.reason)}</div>` : ""}
+    ${f.reason ? `<section class="insp-reason"><div class="insp-reason-label">提取 / 证据说明</div><div>${esc(f.reason)}</div></section>` : ""}
     <label class="insp-refs-field">
       <span class="insp-refs-label">✎ 修改证据块 ID（逗号分隔，回车保存）</span>
       <input id="insp-refs" class="insp-refs" value="${esc(refs.join(", "))}" placeholder="例如：b0042, b0043" />

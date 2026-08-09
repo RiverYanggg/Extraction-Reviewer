@@ -68,16 +68,16 @@ ENVIZ_AUTH_SECRET=换成一个很长的随机字符串
 先直接启动服务，确认项目可以运行：
 
 ```bash
-.venv/bin/python -m uvicorn app.enviz.server:app --host 0.0.0.0 --port 8765
+.venv/bin/python -m uvicorn app.enviz.server:app --host 0.0.0.0 --port 8888
 ```
 
 浏览器访问：
 
 ```text
-http://服务器IP:8765
+http://服务器IP:8888
 ```
 
-如果云服务器有安全组或防火墙，需要放行 `8765` 端口；生产环境建议用 Nginx 反向代理后只开放 `80/443`。
+如果云服务器有安全组或防火墙，需要放行 `8888` 端口；生产环境建议用 Nginx 反向代理后只开放 `80/443`。
 
 ## 6. 配置 systemd 后台运行
 
@@ -97,7 +97,7 @@ After=network.target
 [Service]
 WorkingDirectory=/home/ubuntu/Extraction-Reviewer
 EnvironmentFile=/home/ubuntu/Extraction-Reviewer/.env
-ExecStart=/home/ubuntu/Extraction-Reviewer/.venv/bin/python -m uvicorn app.enviz.server:app --host 127.0.0.1 --port 8765
+ExecStart=/home/ubuntu/Extraction-Reviewer/.venv/bin/python -m uvicorn app.enviz.server:app --host 127.0.0.1 --port 8888
 Restart=always
 User=ubuntu
 
@@ -143,7 +143,7 @@ server {
     client_max_body_size 100M;
 
     location / {
-        proxy_pass http://127.0.0.1:8765;
+        proxy_pass http://127.0.0.1:8888;
         proxy_set_header Host $host;
         proxy_set_header X-Real-IP $remote_addr;
         proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
@@ -170,7 +170,7 @@ http://review.example.com
 
 ## 8. 账号与密码配置
 
-用户账号统一在 `config/users.json` 中管理。这个文件比 `.env` 中的 `ENVIZ_USERS_JSON` 优先级更高，更适合多人账号维护。
+当前代码内置了 4 个默认账号。更推荐在服务器 `.env` 中使用 `ENVIZ_USERS_JSON` 覆盖默认账号。
 
 生成密码 SHA-256：
 
@@ -178,21 +178,16 @@ http://review.example.com
 python3 -c "import hashlib; print(hashlib.sha256('你的密码'.encode()).hexdigest())"
 ```
 
-`config/users.json` 示例。`workspace` 是该账号在 `data/users/` 下的工作区目录名；不写时默认等于登录账号。
+`.env` 示例。`workspace` 是该账号在 `data/users/` 下的工作区目录名；不写时默认等于登录账号。
 
-```json
-{
-  "xuben": {
-    "display_name": "Xuben",
-    "workspace": "xuben",
-    "password_sha256": "替换为密码SHA256"
-  },
-  "sunyandong": {
-    "display_name": "Sunyandong",
-    "workspace": "sunyandong",
-    "password_sha256": "替换为密码SHA256"
-  }
-}
+```env
+ENVIZ_USERS_JSON={"user1":{"display_name":"User 1","workspace":"user1","password_sha256":"替换为密码SHA256"}}
+```
+
+如果要配置多个账号：
+
+```env
+ENVIZ_USERS_JSON={"xuben":{"display_name":"Xuben","workspace":"xuben","password_sha256":"hash1"},"sunyandong":{"display_name":"Sunyandong","workspace":"sunyandong","password_sha256":"hash2"}}
 ```
 
 如果你希望工作区目录和账号一致，直接把账号名设置为想要的目录名，并省略 `workspace` 也可以。例如账号 `xuben` 会默认使用：
@@ -201,13 +196,7 @@ python3 -c "import hashlib; print(hashlib.sha256('你的密码'.encode()).hexdig
 data/users/xuben/
 ```
 
-修改 `config/users.json` 后重启服务：
-
-```bash
-sudo systemctl restart extraction-reviewer
-```
-
-如果你暂时不想维护文件，也可以删除 `config/users.json`，改用 `.env` 中的 `ENVIZ_USERS_JSON` 一行配置方式。
+修改 `.env` 后重启服务：
 
 ```bash
 sudo systemctl restart extraction-reviewer
@@ -239,7 +228,6 @@ data/users/<工作区目录>/assignments.json
 ```bash
 mkdir -p data/users/xuben
 nano data/users/xuben/assignments.json
-```
 ```
 
 ## 10. 用户标注数据位置

@@ -28,20 +28,29 @@ def classify_block(text: str) -> dict:
 
 
 def load_blocks(pdir: Path) -> list[dict]:
-    raw = try_read_json(pdir / "verify" / "evidence_blocks.json")
+    view = pdir / "viewer" if (pdir / "viewer").is_dir() else pdir
+    raw = try_read_json(view / "verify" / "evidence_blocks.json")
     if isinstance(raw, list) and raw:
         blocks = raw
+    elif isinstance(raw, dict) and isinstance(raw.get("records"), list):
+        blocks = raw["records"]
     else:
-        alt = try_read_json(pdir / "extraction_postprocess" / "evidence_blocks_without_char.json")
+        alt = try_read_json(view / "extraction_postprocess" / "evidence_blocks_without_char.json")
         blocks = (alt or {}).get("records", []) if isinstance(alt, dict) else []
 
     out = []
     for b in blocks:
         text = b.get("text", "")
+        classified = classify_block(text)
+        viewer_kind = b.get("viewer_kind")
         out.append({
             "block_id": b.get("block_id"), "text": text,
             "char_start": b.get("char_start"), "char_end": b.get("char_end"),
-            **classify_block(text),
+            "page_idx": b.get("page_idx"),
+            "kind": viewer_kind or classified["kind"],
+            "level": b.get("display_level") or classified.get("level"),
+            "heading_text": classified.get("heading_text"),
+            "image_src": classified.get("image_src"),
         })
     if out and all(b["char_start"] is not None for b in out):
         out.sort(key=lambda b: b["char_start"])

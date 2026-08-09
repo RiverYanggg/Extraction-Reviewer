@@ -3,7 +3,7 @@
   "schema_version": "annot-v2",
   "task_status": "in_progress",
   "created_at": "2026-07-09T14:23:06.975308+00:00",
-  "updated_at": "2026-07-09T14:49:19.665924+00:00",
+  "updated_at": "2026-07-09T23:42:20.775720+00:00",
   "fields": {
     "papers/0/title": {
       "review_status": "confirmed",

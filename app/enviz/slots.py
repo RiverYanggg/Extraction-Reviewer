@@ -39,19 +39,23 @@ def _is_leaf(v: Any) -> bool:
 
 
 def structured_root(pdir: Path) -> dict:
-    root = try_read_json(pdir / "verify" / "text_extraction_fixed.json")
+    root = try_read_json(_viewer_dir(pdir) / "verify" / "text_extraction_fixed.json")
     if root is None:
-        root = try_read_json(pdir / "final" / "text_extraction.json") or {}
+        root = try_read_json(_viewer_dir(pdir) / "final" / "text_extraction.json") or {}
     return root
 
 
 def load_field_evidence(pdir: Path) -> dict:
-    return try_read_json(pdir / "extraction_postprocess" / "field_evidence.json") or {}
+    return try_read_json(_viewer_dir(pdir) / "extraction_postprocess" / "field_evidence.json") or {}
 
 
 def load_bucket_defs(pdir: Path) -> list[dict]:
-    sb = try_read_json(pdir / "extraction_postprocess" / "sample_buckets.json") or {}
+    sb = try_read_json(_viewer_dir(pdir) / "extraction_postprocess" / "sample_buckets.json") or {}
     return sb.get("buckets", [])
+
+
+def _viewer_dir(pdir: Path) -> Path:
+    return pdir / "viewer" if (pdir / "viewer").is_dir() else pdir
 
 
 def _element_label(section: str, elem: Any, index: int) -> str:
