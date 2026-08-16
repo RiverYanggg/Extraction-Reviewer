@@ -13,10 +13,11 @@ from __future__ import annotations
 
 from pathlib import Path
 from typing import Any, Optional
+from copy import deepcopy
 
 from . import dsl
 from .config import SECTION_LABELS_ZH
-from .schema import complete_with_schema, load_schema
+from .schema import complete_grouped_sample_records, complete_with_schema, load_schema
 from .utils import try_read_json
 
 # canonical display order of sections within a bucket
@@ -113,6 +114,7 @@ class PaperModel:
         self.pdir = pdir
         self.grouped = grouped_root(pdir)
         self.root = self.grouped if self.grouped is not None else complete_with_schema(structured_root(pdir), load_schema())
+        self.review_root = self._review_root()
         self.source_root = structured_root(pdir)
         self.fe = load_field_evidence(pdir)
         self.bucket_defs = load_bucket_defs(pdir)
@@ -257,17 +259,32 @@ class PaperModel:
     def _enumerate_grouped(self):
         self._bucket_roots: dict[str, list] = {"paper_level": ["paper"]}
         self._bucket_types: dict[str, str] = {"paper_level": "paper_level"}
-        self._walk_slots(self.root.get("paper", {}), ["paper"], "paper")
-        for idx, sample in enumerate(self.root.get("samples", [])):
+        self._walk_slots(self.review_root.get("paper", {}), ["paper"], "paper")
+        for idx, sample in enumerate(self.review_root.get("samples", [])):
             sid = sample.get("sample", {}).get("sample_id") if isinstance(sample, dict) else None
             bucket = sid or f"sample_{idx + 1}"
             self._bucket_roots[bucket] = ["samples", idx]
             self._bucket_types[bucket] = "sample"
             self._walk_slots(sample, ["samples", idx], "sample")
-        if self.root.get("unassigned_sample_records") or self.root.get("unclassified_sections"):
+        if self.review_root.get("unassigned_sample_records") or self.review_root.get("unclassified_sections"):
             for key in ("unassigned_sample_records", "unclassified_sections"):
-                if key in self.root:
-                    self._walk_slots(self.root[key], [key], "paper")
+                if key in self.review_root:
+                    self._walk_slots(self.review_root[key], [key], "paper")
+
+    def _review_root(self) -> dict:
+        if self.grouped is None:
+            return self.root
+        view = deepcopy(self.root)
+        for sample in view.get("samples", []):
+            if isinstance(sample, dict):
+                sample.pop("linked_paper_records", None)
+        return complete_grouped_sample_records(view, load_schema())
+
+    def export_root(self) -> dict:
+        """Return a reviewed grouped artifact without dropping linkage context."""
+        if self.grouped is None:
+            return deepcopy(self.root)
+        return complete_grouped_sample_records(deepcopy(self.root), load_schema())
 
     # -- trees ------------------------------------------------------------ #
     def _subtree(self, node: Any, tokens: list) -> list[dict]:
@@ -325,7 +342,7 @@ class PaperModel:
         if self.grouped is not None:
             out = []
             for bucket, tokens in self._bucket_roots.items():
-                node = dsl.get_by_pointer(self.root, tokens)
+                node = dsl.get_by_pointer(self.review_root, tokens)
                 tree = self._subtree(node, tokens) if not _is_leaf(node) else [{"id": dsl.pointer_str(tokens), "key": str(tokens[-1]), "label": str(tokens[-1]), "kind": "leaf", "field_id": dsl.pointer_str(tokens)}]
                 count = sum(1 for slot in self.slots if slot["field_id"].startswith(dsl.pointer_str(tokens)))
                 out.append({"bucket_id": bucket, "bucket_type": self._bucket_types[bucket], "field_count": count, "tree": tree})

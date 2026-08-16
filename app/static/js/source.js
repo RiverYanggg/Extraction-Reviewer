@@ -4,6 +4,44 @@ import { store } from "./store.js";
 import { bus } from "./bus.js";
 import { getLatexToggleState, hasEvidenceBlocks, renderEvidenceMath } from "./latex.js";
 
+const RICH_TEXT_TAGS = new Set([
+  "table", "thead", "tbody", "tfoot", "tr", "th", "td",
+  "sup", "sub", "br", "strong", "b", "em", "i", "code",
+]);
+const TABLE_ATTRIBUTES = new Set(["colspan", "rowspan"]);
+
+function appendSafeMarkup(target, markup) {
+  const template = document.createElement("template");
+  template.innerHTML = markup || "";
+
+  const copy = (node, parent) => {
+    if (node.nodeType === Node.TEXT_NODE) {
+      parent.appendChild(document.createTextNode(node.textContent));
+      return;
+    }
+    if (node.nodeType !== Node.ELEMENT_NODE) return;
+    const tag = node.tagName.toLowerCase();
+    const destination = RICH_TEXT_TAGS.has(tag) ? document.createElement(tag) : parent;
+    if (destination !== parent) {
+      if ((tag === "td" || tag === "th") && node.attributes) {
+        for (const attribute of node.attributes) {
+          if (TABLE_ATTRIBUTES.has(attribute.name.toLowerCase()) && /^\d+$/.test(attribute.value)) {
+            destination.setAttribute(attribute.name.toLowerCase(), attribute.value);
+          }
+        }
+      }
+      parent.appendChild(destination);
+    }
+    for (const child of node.childNodes) copy(child, destination);
+  };
+
+  for (const node of template.content.childNodes) copy(node, target);
+}
+
+export function richTextMarkupForBlock(block) {
+  return block.kind === "heading" || block.kind === "title" ? block.heading_text : block.text;
+}
+
 function updateLatexToggle(errors = 0) {
   const state = getLatexToggleState(ui.latexMode, ui.latexAvailable, errors);
   el.latexToggle.disabled = state.disabled;
@@ -40,8 +78,9 @@ function buildSourceBlocks() {
       img.onerror = () => img.replaceWith(document.createTextNode(`🖼 ${b.image_src}`));
       div.appendChild(img);
     } else {
-      const txt = document.createElement("span");
-      txt.textContent = b.kind === "heading" || b.kind === "title" ? b.heading_text : b.text;
+      const txt = document.createElement(b.kind === "table" ? "div" : "span");
+      txt.className = b.kind === "table" ? "source-table" : "source-rich";
+      appendSafeMarkup(txt, richTextMarkupForBlock(b));
       div.appendChild(txt);
     }
     div.addEventListener("click", () => selectFirstFieldCiting(b.block_id));

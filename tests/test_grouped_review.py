@@ -2,6 +2,7 @@ import unittest
 
 from app.enviz.export import _apply_added_fields, _grouped_diff
 from app.enviz.metrics import compute_metrics
+from app.enviz.schema import complete_grouped_sample_records
 
 
 class GroupedReviewTest(unittest.TestCase):
@@ -22,6 +23,12 @@ class GroupedReviewTest(unittest.TestCase):
         slots = [{"field_id": "samples/0/value", "section": "sample", "bucket_id": "sample-a", "value": "ok"}]
         metrics = compute_metrics("paper-x", slots, {"fields": {"samples/0/value": {"review_status": "confirmed"}}, "added_fields": []})
         self.assertEqual(metrics["per_bucket"]["sample-a"]["tp"], 1)
+
+    def test_empty_sample_record_list_becomes_null_schema_template(self):
+        root = {"samples": [{"records": {"interfaces": []}}]}
+        schema = {"interfaces": [{"interface_set_id": None, "phase_evolution": None}]}
+        completed = complete_grouped_sample_records(root, schema)
+        self.assertEqual(completed["samples"][0]["records"]["interfaces"], [{"interface_set_id": None, "phase_evolution": None}])
 
 
 if __name__ == "__main__":

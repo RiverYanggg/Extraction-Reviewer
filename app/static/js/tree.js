@@ -24,7 +24,9 @@ export function allGroupIds() {
   const ids = [];
   const walk = (node) => {
     if (node.kind === "leaf") return;
-    if (node.id != null) ids.push(node.id);
+    // Keep each sample's records container open so its first-level review
+    // sections are visible on entry; their own content remains collapsed.
+    if (node.id != null && !node.id.endsWith("/records")) ids.push(node.id);
     for (const c of node.children || []) walk(c);
   };
   for (const b of store.data?.buckets || []) for (const n of b.tree) walk(n);

@@ -63,3 +63,29 @@ def complete_with_schema(root: dict, schema: dict) -> dict:
         for i, elem in enumerate(data_list):
             data_list[i] = _merge(elem, tmpl)
     return root
+
+
+def complete_grouped_sample_records(root: dict, schema: dict) -> dict:
+    """Materialize empty sample-record lists for review without changing source data.
+
+    ``sample_grouped_extraction`` is a reading projection and intentionally
+    uses empty lists for records that were not extracted.  For review, an empty
+    list must expose the schema's first item template as explicit null slots so
+    reviewers can distinguish a verified absence from an omitted extraction.
+    """
+    for sample in root.get("samples", []):
+        if not isinstance(sample, dict):
+            continue
+        records = sample.get("records")
+        if not isinstance(records, dict):
+            continue
+        for section, value in records.items():
+            template = schema.get(section)
+            if not isinstance(template, list) or not template or not isinstance(value, list):
+                continue
+            if not value:
+                records[section] = [_nullify(template[0])]
+            else:
+                for index, item in enumerate(value):
+                    records[section][index] = _merge(item, template[0])
+    return root

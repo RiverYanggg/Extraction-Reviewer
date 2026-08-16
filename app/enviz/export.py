@@ -15,7 +15,7 @@ from .annotations import load_annotation, progress_of
 from .auth import User
 from .metrics import compute_metrics
 from .slots import PaperModel
-from .utils import deep_copy, now_iso
+from .utils import now_iso
 
 
 def build_export(pdir: Path, paper_id: str, user: User) -> bytes:
@@ -34,7 +34,7 @@ def build_export_files(pdir: Path, paper_id: str, user: User) -> dict[str, str]:
     fa = annot.get("fields", {})
 
     field_review, diffs = [], []
-    reviewed = deep_copy(model.root)
+    reviewed = model.export_root()
     unapplied = []
 
     for s in slots:

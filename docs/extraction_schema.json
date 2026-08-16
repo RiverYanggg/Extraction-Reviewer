@@ -15,9 +15,8 @@
     "alloys": [
       {
         "alloy_id": null,
-        "paper_id": null,
         "alloy_name": null,
-        "aliases": [],
+        "description": null,
         "base_element": null,
         "alloying_elements": [],
         "nominal_composition": [
@@ -33,8 +32,6 @@
     "processes": [
       {
         "process_id": null,
-        "paper_id": null,
-        "alloy_id": null,
         "description": null,
         "processes_notes": null
       }
@@ -42,7 +39,6 @@
     "samples": [
       {
         "sample_id": null,
-        "paper_id": null,
         "alloy_id": null,
         "process_id": null
       }
@@ -50,18 +46,12 @@
     "processing_steps": [
       {
         "sample_id": null,
-        "paper_id": null,
         "sequence": null,
         "type": null,
         "method": null,
-        "temperature":{
-          "value": null,
-          "unit": null
-        },
-        "duration":{
-          "value": null,
-          "unit": null
-        },
+        "temperature": null,
+        "unit": null,
+        "duration": null,
         "cooling_medium": null,
         "reduction_ratio": null,
         "processing_steps_notes": null
@@ -128,7 +118,6 @@
         "phases": [
           {
             "interface_id": null,
-            "microstructure_uuid": null,
             "phase_1_name": null,
             "phase_2_name": null,
             "coherence": null
@@ -137,7 +126,6 @@
         "defect_interaction": [
           {
             "interaction_id": null,
-            "microstructure_uuid": null,
             "interaction_type": null,
             "quality_description": null
           }
@@ -291,7 +279,6 @@
       {
         "characterization_id": null,
         "sample_id": null,
-        "microstructure_uuid": null,
         "technique": null,
         "purpose": null,
         "key_findings": null
