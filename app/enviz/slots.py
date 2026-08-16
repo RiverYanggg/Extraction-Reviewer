@@ -45,6 +45,22 @@ def structured_root(pdir: Path) -> dict:
     return root
 
 
+def grouped_root(pdir: Path) -> dict | None:
+    """Return the agentic reading view when it is available.
+
+    The adapter directory can be present beside the published final artifacts,
+    so inspect both locations.  The grouped view is intentionally preferred
+    for review because its root mirrors the paper/sample bucket layout.
+    """
+    candidates = [pdir / "final" / "sample_grouped_extraction.json",
+                  _viewer_dir(pdir) / "final" / "sample_grouped_extraction.json"]
+    for path in candidates:
+        value = try_read_json(path)
+        if isinstance(value, dict) and isinstance(value.get("paper"), dict) and isinstance(value.get("samples"), list):
+            return value
+    return None
+
+
 def load_field_evidence(pdir: Path) -> dict:
     return try_read_json(_viewer_dir(pdir) / "extraction_postprocess" / "field_evidence.json") or {}
 
@@ -95,7 +111,9 @@ class PaperModel:
 
     def __init__(self, pdir: Path):
         self.pdir = pdir
-        self.root = complete_with_schema(structured_root(pdir), load_schema())
+        self.grouped = grouped_root(pdir)
+        self.root = self.grouped if self.grouped is not None else complete_with_schema(structured_root(pdir), load_schema())
+        self.source_root = structured_root(pdir)
         self.fe = load_field_evidence(pdir)
         self.bucket_defs = load_bucket_defs(pdir)
 
@@ -105,7 +123,10 @@ class PaperModel:
         self.slot_index: dict[str, dict] = {}
 
         self._index_evidence()
-        self._enumerate_and_bucket()
+        if self.grouped is not None:
+            self._enumerate_grouped()
+        else:
+            self._enumerate_and_bucket()
 
     # -- evidence + element->bucket from tracked fields ------------------- #
     def _index_evidence(self):
@@ -116,7 +137,9 @@ class PaperModel:
 
         for f in self.fe.get("fields", []):
             path = f.get("path", "")
-            tokens = dsl.resolve_to_pointer(self.root, path)
+            # Evidence paths always address the normalized extraction artifact,
+            # even when the review surface is the derived grouped view.
+            tokens = dsl.resolve_to_pointer(self.source_root, path)
             support = f.get("support", {}) or {}
             refs = support.get("evidence_refs", []) or []
             label = support.get("support_label", "unknown")
@@ -185,7 +208,10 @@ class PaperModel:
 
     def _add_slot(self, value: Any, tokens: list, section: str):
         ptr = dsl.pointer_str(tokens)
-        ev = self.evidence_by_ptr.get(ptr, {})
+        ev = self.evidence_by_ptr.get(ptr, self._grouped_evidence(tokens, value))
+        bucket_id = "paper_level"
+        if self.grouped is not None and len(tokens) >= 2 and tokens[0] == "samples":
+            bucket_id = next((bid for bid, root in self._bucket_roots.items() if root == tokens[:2]), "paper_level")
         slot = {
             "field_id": ptr,
             "pointer": list(tokens),
@@ -202,9 +228,46 @@ class PaperModel:
             "no_evidence": ev.get("no_evidence", not ev),
             "tracked": bool(ev),
             "evidence_field_id": ev.get("evidence_field_id"),
+            "bucket_id": bucket_id,
         }
         self.slots.append(slot)
         self.slot_index[ptr] = slot
+
+    def _grouped_evidence(self, tokens: list, value: Any) -> dict:
+        """Best-effort evidence transfer from normalized source to grouped view.
+
+        The Agentic grouped view omits repeated identifiers and changes array
+        positions.  Matching a uniquely tracked leaf by key/value preserves
+        evidence navigation without inventing provenance for ambiguous values.
+        """
+        if self.grouped is None or not tokens:
+            return {}
+        key = str(tokens[-1])
+        matches = []
+        for pointer, info in self.evidence_by_ptr.items():
+            source_tokens = pointer.split("/")
+            if source_tokens and source_tokens[-1] == key:
+                try:
+                    if dsl.get_by_pointer(self.source_root, [int(t) if t.isdigit() else t for t in source_tokens]) == value:
+                        matches.append(info)
+                except (KeyError, IndexError, TypeError):
+                    continue
+        return matches[0] if len(matches) == 1 else {}
+
+    def _enumerate_grouped(self):
+        self._bucket_roots: dict[str, list] = {"paper_level": ["paper"]}
+        self._bucket_types: dict[str, str] = {"paper_level": "paper_level"}
+        self._walk_slots(self.root.get("paper", {}), ["paper"], "paper")
+        for idx, sample in enumerate(self.root.get("samples", [])):
+            sid = sample.get("sample", {}).get("sample_id") if isinstance(sample, dict) else None
+            bucket = sid or f"sample_{idx + 1}"
+            self._bucket_roots[bucket] = ["samples", idx]
+            self._bucket_types[bucket] = "sample"
+            self._walk_slots(sample, ["samples", idx], "sample")
+        if self.root.get("unassigned_sample_records") or self.root.get("unclassified_sections"):
+            for key in ("unassigned_sample_records", "unclassified_sections"):
+                if key in self.root:
+                    self._walk_slots(self.root[key], [key], "paper")
 
     # -- trees ------------------------------------------------------------ #
     def _subtree(self, node: Any, tokens: list) -> list[dict]:
@@ -259,6 +322,14 @@ class PaperModel:
         return sections
 
     def buckets_payload(self) -> list[dict]:
+        if self.grouped is not None:
+            out = []
+            for bucket, tokens in self._bucket_roots.items():
+                node = dsl.get_by_pointer(self.root, tokens)
+                tree = self._subtree(node, tokens) if not _is_leaf(node) else [{"id": dsl.pointer_str(tokens), "key": str(tokens[-1]), "label": str(tokens[-1]), "kind": "leaf", "field_id": dsl.pointer_str(tokens)}]
+                count = sum(1 for slot in self.slots if slot["field_id"].startswith(dsl.pointer_str(tokens)))
+                out.append({"bucket_id": bucket, "bucket_type": self._bucket_types[bucket], "field_count": count, "tree": tree})
+            return out
         out = []
         # keep declared order; ensure every assigned bucket appears
         declared = [(b["bucket_id"], b.get("bucket_type")) for b in self.bucket_defs]
@@ -285,7 +356,8 @@ class PaperModel:
                 yield from PaperModel._iter_leaf_ids(node.get("children", []))
 
     def paper_meta(self) -> dict:
-        papers = self.root.get("papers") or []
+        base = self.root.get("paper", {}) if self.grouped is not None else self.root
+        papers = base.get("papers") or []
         p = papers[0] if papers else {}
         return {
             "title": p.get("title") or self.pdir.name,

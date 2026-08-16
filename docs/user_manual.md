@@ -67,7 +67,7 @@
 抽取可能漏掉某些信息。补齐方式**贴合 JSON 结构**：
 
 - 在中间 JSON 树里，把鼠标移到**要补充的那一层**节点（section / 元素 / 分支），会出现一个 `＋`。
-- 点 `＋` → 就地弹出小表单，填 `字段名` 与 `值` → 添加。
+- 点 `＋` → 就地弹出小表单，选择「字段」或「对象层级」；对象层级创建后可继续在其下添加字段。
 - 新字段以紫色「已补充」出现在该层级下；点其右侧 `✕` 可删除。
 - 也可用中栏底部「＋ 补充字段到该 bucket 根」补在 bucket 顶层。
 
@@ -130,8 +130,8 @@
 
 - `field_review.json` ★ 权威扁平结果（每字段：原值/审核值/状态/证据/置信度）
 - `evaluation_metrics.json` ★ P/R/F1
-- `text_extraction.reviewed.json` 按你的修改回填后的结构化 JSON
-- `diff.json` 变更集；`annotation_state.json` 原始标注状态（可回灌继续标）
+- `sample_grouped_extraction.reviewed.json` 按论文级与样品级 bucket 回填后的审核结果
+- `diff.json` 按 `paper_level` 与 `samples` 分组的变更集；`annotation_state.json` 原始标注状态（可回灌继续标）
 - `audit_log.jsonl` 操作审计流；`review_summary.md` / `MANIFEST.json` 人工可读汇总
 
 ---

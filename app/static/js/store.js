@@ -162,11 +162,11 @@ export class Store {
       { action: "task_status", to: status });
   }
 
-  addField({ bucket_id, section, parent_id = null, key = "", path, value }) {
+  addField({ bucket_id, section, parent_id = null, key = "", path, value, node_type = "field" }) {
     const tempId = "A" + (this.doc.added_fields.length + 1).toString().padStart(4, "0");
     this.commit((d) => {
       d.added_fields.push({
-        temp_id: tempId, bucket_id, section, parent_id, key, path, value,
+        temp_id: tempId, bucket_id, section, parent_id, key, path, value, node_type,
         review_status: "added", note: "", evidence_refs: [],
         created_at: new Date().toISOString(),
       });
@@ -176,8 +176,38 @@ export class Store {
 
   removeAddedField(tempId) {
     this.commit((d) => {
-      d.added_fields = d.added_fields.filter((a) => a.temp_id !== tempId);
+      const removed = new Set([tempId]);
+      let changed = true;
+      while (changed) {
+        changed = false;
+        for (const item of d.added_fields) {
+          if (removed.has(item.temp_id)) continue;
+          if (removed.has(String(item.parent_id || "").replace(/^added:/, ""))) {
+            removed.add(item.temp_id); changed = true;
+          }
+        }
+      }
+      d.added_fields = d.added_fields.filter((a) => !removed.has(a.temp_id));
     }, { action: "remove_added_field", field_id: tempId });
+  }
+
+  renameAddedField(tempId, key) {
+    const clean = key.trim();
+    if (!clean) return;
+    this.commit((d) => {
+      const target = d.added_fields.find((item) => item.temp_id === tempId);
+      if (!target) return;
+      const oldPath = target.path || target.key;
+      const parentPath = oldPath.includes(".") ? oldPath.slice(0, oldPath.lastIndexOf(".")) : "";
+      const nextPath = parentPath ? `${parentPath}.${clean}` : clean;
+      target.key = clean;
+      target.path = nextPath;
+      for (const item of d.added_fields) {
+        if (item.temp_id !== tempId && item.path?.startsWith(`${oldPath}.`)) {
+          item.path = `${nextPath}${item.path.slice(oldPath.length)}`;
+        }
+      }
+    }, { action: "rename_added_field", field_id: tempId, to: clean });
   }
 
   setBucketStatus(bucketId, status) {

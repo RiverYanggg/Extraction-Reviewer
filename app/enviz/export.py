@@ -44,6 +44,7 @@ def build_export_files(pdir: Path, paper_id: str, user: User) -> dict[str, str]:
         refs = a.get("evidence_refs_override") or s["evidence_refs"]
         field_review.append({
             "slot_id": s["field_id"], "pointer": s["pointer"], "section": s["section"],
+            "bucket_id": s.get("bucket_id", "paper_level"),
             "path": s["path"], "original_value": s["value"], "reviewed_value": rv,
             "review_status": status, "evidence_refs": refs,
             "support_label": s["support_label"], "confidence": s["confidence"],
@@ -51,9 +52,14 @@ def build_export_files(pdir: Path, paper_id: str, user: User) -> dict[str, str]:
         })
         if "current_value" in a and a["current_value"] != s["value"]:
             diffs.append({"slot_id": s["field_id"], "path": s["path"],
+                          "bucket_id": s.get("bucket_id", "paper_level"),
                           "from": s["value"], "to": rv, "status": status})
             if not dsl.set_by_pointer(reviewed, s["pointer"], rv):
                 unapplied.append({"slot_id": s["field_id"], "path": s["path"]})
+
+    added_diffs, added_unapplied = _apply_added_fields(reviewed, annot.get("added_fields", []))
+    diffs.extend(added_diffs)
+    unapplied.extend(added_unapplied)
 
     prog = progress_of(slots, annot)
     metrics = compute_metrics(paper_id, slots, annot)
@@ -65,12 +71,12 @@ def build_export_files(pdir: Path, paper_id: str, user: User) -> dict[str, str]:
         "task_status": annot.get("task_status"), "progress": prog,
         "metrics_overall": metrics["overall"], "coverage": metrics["coverage"],
         "files": {
-            "machine": ["annotation_state.json", "text_extraction.reviewed.json",
+            "machine": ["annotation_state.json", "sample_grouped_extraction.reviewed.json",
                         "field_review.json", "diff.json", "evaluation_metrics.json",
                         "audit_log.jsonl"],
             "human": ["review_summary.md", "MANIFEST.json"],
         },
-        "authoritative_machine_file": "field_review.json",
+        "authoritative_machine_file": "sample_grouped_extraction.reviewed.json",
         "added_field_count": len(annot.get("added_fields", [])),
         "changed_field_count": len(diffs),
         "unapplied_edits": unapplied,
@@ -82,10 +88,11 @@ def build_export_files(pdir: Path, paper_id: str, user: User) -> dict[str, str]:
         f"{b}/MANIFEST.json": _j(manifest),
         f"{b}/review_summary.md": summary_md,
         f"{b}/annotation_state.json": _j(annot),
-        f"{b}/text_extraction.reviewed.json": _j(reviewed),
-        f"{b}/field_review.json": _j({"paper_id": paper_id, "fields": field_review,
+        f"{b}/sample_grouped_extraction.reviewed.json": _j(reviewed),
+        f"{b}/field_review.json": _j({"paper_id": paper_id, "review_target": "sample_grouped_extraction",
+                                      "fields": field_review,
                                       "added_fields": annot.get("added_fields", [])}),
-        f"{b}/diff.json": _j({"paper_id": paper_id, "changes": diffs}),
+        f"{b}/diff.json": _j(_grouped_diff(paper_id, diffs)),
         f"{b}/evaluation_metrics.json": _j(metrics),
         f"{b}/audit_log.jsonl": "\n".join(json.dumps(e, ensure_ascii=False) for e in annot.get("audit_log", [])),
     }
@@ -93,6 +100,53 @@ def build_export_files(pdir: Path, paper_id: str, user: User) -> dict[str, str]:
 
 def _j(obj) -> str:
     return json.dumps(obj, ensure_ascii=False, indent=2)
+
+
+def _grouped_diff(paper_id: str, changes: list[dict]) -> dict:
+    """Keep a flat change list for tooling and expose reviewer-facing buckets."""
+    paper = [change for change in changes if change.get("bucket_id") == "paper_level"]
+    samples: dict[str, list[dict]] = {}
+    for change in changes:
+        bucket = change.get("bucket_id", "paper_level")
+        if bucket != "paper_level":
+            samples.setdefault(bucket, []).append(change)
+    return {"schema": "sample-grouped-review-diff-v1", "paper_id": paper_id,
+            "paper_level": paper, "samples": samples, "changes": changes}
+
+
+def _apply_added_fields(root: dict, added: list[dict]) -> tuple[list[dict], list[dict]]:
+    """Materialize reviewer-created scalar and object nodes into the export."""
+    by_parent: dict[str | None, list[dict]] = {}
+    for item in added:
+        by_parent.setdefault(item.get("parent_id"), []).append(item)
+    changes, unapplied = [], []
+
+    def apply(parent: dict | list, parent_id: str | None):
+        for item in by_parent.get(parent_id, []):
+            key = item.get("key")
+            if not key or not isinstance(parent, dict):
+                unapplied.append({"slot_id": item.get("temp_id"), "path": item.get("path")})
+                continue
+            value = {} if item.get("node_type") == "object" else item.get("value")
+            parent[key] = value
+            changes.append({"slot_id": item.get("temp_id"), "path": item.get("path"),
+                            "bucket_id": item.get("bucket_id", "paper_level"),
+                            "from": None, "to": value, "status": "added"})
+            apply(value, f"added:{item.get('temp_id')}")
+
+    # Existing tree parents are JSON-pointer ids; create additions there first.
+    for parent_id, items in list(by_parent.items()):
+        if parent_id is None or str(parent_id).startswith("added:"):
+            continue
+        try:
+            parent = dsl.get_by_pointer(root, [int(t) if t.isdigit() else t for t in str(parent_id).split("/")])
+        except (KeyError, IndexError, TypeError):
+            for item in items:
+                unapplied.append({"slot_id": item.get("temp_id"), "path": item.get("path")})
+            continue
+        apply(parent, parent_id)
+    apply(root, None)
+    return changes, unapplied
 
 
 def _summary_md(paper_id, meta, prog, diffs, annot, metrics) -> str:

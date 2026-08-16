@@ -7,6 +7,7 @@ from __future__ import annotations
 
 import io
 import json
+import os
 from pathlib import Path
 import zipfile
 
@@ -37,6 +38,20 @@ def discover_papers() -> list[str]:
             if d.is_dir() and (d / "extraction_postprocess" / "field_evidence.json").exists()]
 
 
+def reviewable_paper_ids(user: User) -> list[str]:
+    """Return papers visible to a reviewer in the configured runtime mode.
+
+    Local Agentic result inspection may deliberately expose a whole disposable
+    workspace.  It is opt-in so the normal assignment boundary remains the
+    default for shared deployments.
+    """
+    available = set(discover_papers())
+    allow_all = os.environ.get("ENVIZ_ALLOW_ALL_AGENTIC_PAPERS", "").lower() in {"1", "true", "yes"}
+    if AGENTIC_RUNS_ROOT and allow_all:
+        return sorted(available)
+    return [pid for pid in load_assigned_papers(user) if pid in available]
+
+
 def paper_dir(paper_id: str) -> Path:
     if AGENTIC_RUNS_ROOT and AGENTIC_RUNS_ROOT.is_dir():
         runs = sorted(
@@ -53,7 +68,7 @@ def paper_dir(paper_id: str) -> Path:
 
 
 def assigned_paper_dir(paper_id: str, user: User) -> Path:
-    if not is_assigned(user, paper_id):
+    if paper_id not in set(reviewable_paper_ids(user)):
         raise HTTPException(status_code=404, detail=f"Unknown paper: {paper_id}")
     return paper_dir(paper_id)
 
@@ -87,10 +102,7 @@ def current_user(enviz_session: str | None = Cookie(default=None, alias=COOKIE_N
 @app.get("/api/papers")
 def list_papers(user: User = Depends(current_user)):
     out = []
-    available = set(discover_papers())
-    for pid in load_assigned_papers(user):
-        if pid not in available:
-            continue
+    for pid in reviewable_paper_ids(user):
         model = PaperModel(paper_dir(pid))
         annot = load_annotation(pid, user)
         out.append({
@@ -168,8 +180,7 @@ def export_paper(paper_id: str, user: User = Depends(current_user)):
 
 @app.get("/api/export/all")
 def export_all_papers(user: User = Depends(current_user)):
-    available = set(discover_papers())
-    paper_ids = [pid for pid in load_assigned_papers(user) if pid in available]
+    paper_ids = reviewable_paper_ids(user)
     buf = io.BytesIO()
     with zipfile.ZipFile(buf, "w", zipfile.ZIP_DEFLATED) as z:
         manifest = {

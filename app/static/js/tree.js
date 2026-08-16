@@ -87,7 +87,7 @@ export function renderFields() {
   if ((!ui.filterStatus || ui.filterStatus === "added") && rootAdded.length) {
     const box = document.createElement("div");
     box.className = "tguide";
-    for (const a of rootAdded) box.appendChild(addedLeaf(a));
+    for (const a of rootAdded) box.appendChild(addedNode(a, 0, bucket, filtering));
     frag.appendChild(box);
   }
   const addBar = document.createElement("button");
@@ -150,7 +150,7 @@ function renderNode(node, depth, bucket, filtering) {
     const r = renderNode(c, depth + 1, bucket, filtering);
     if (r) kids.appendChild(r);
   }
-  for (const a of addedHere) kids.appendChild(addedLeaf(a));
+  for (const a of addedHere) kids.appendChild(addedNode(a, depth + 1, bucket, filtering));
   wrap.appendChild(kids);
 
   head.addEventListener("click", (e) => {
@@ -224,6 +224,42 @@ function leafRow(f, key, depth) {
   return row;
 }
 
+function addedNode(a, depth, bucket, filtering) {
+  if (a.node_type !== "object") return addedLeaf(a);
+  const wrap = document.createElement("div");
+  const head = document.createElement("div");
+  head.className = "tgroup branch";
+  head.style.paddingLeft = 4 + depth * 12 + "px";
+  head.innerHTML = `<span class="tw">▾</span><span class="tlabel">＋ ${esc(a.key)}</span><span class="tcount">对象</span><button class="tadd" title="在此补充字段">＋</button><button class="tedit" title="重命名对象">✎</button><button class="tdelete" title="删除对象及其子字段">×</button>`;
+  const kids = document.createElement("div");
+  kids.className = "tchildren tguide";
+  for (const child of store.doc.added_fields.filter((item) => item.parent_id === `added:${a.temp_id}`)) {
+    kids.appendChild(addedNode(child, depth + 1, bucket, filtering));
+  }
+  head.addEventListener("click", (e) => {
+    if (e.target.classList.contains("tadd")) {
+      e.stopPropagation();
+      openAddForm(head, { bucket, parent_id: `added:${a.temp_id}`, section: a.section, label_path: a.path });
+      return;
+    }
+    if (e.target.classList.contains("tedit")) {
+      e.stopPropagation();
+      const key = prompt("对象名称", a.key);
+      if (key != null) store.renameAddedField(a.temp_id, key);
+      return;
+    }
+    if (e.target.classList.contains("tdelete")) {
+      e.stopPropagation();
+      if (confirm("删除该对象及其所有子字段？")) store.removeAddedField(a.temp_id);
+      return;
+    }
+    kids.classList.toggle("collapsed");
+    head.classList.toggle("collapsed");
+  });
+  wrap.append(head, kids);
+  return wrap;
+}
+
 function addedLeaf(a) {
   const row = document.createElement("div");
   row.className = "field-row leaf";
@@ -249,19 +285,31 @@ function openAddForm(anchor, ctx) {
   form.className = "addfield-form";
   form.innerHTML = `
     <input class="af-key" placeholder="字段名 (key)" />
+    <select class="af-kind"><option value="field">字段</option><option value="object">对象层级</option></select>
     <input class="af-val" placeholder="值 (value)" />
     <button class="af-ok">添加</button>
     <button class="af-cancel">取消</button>`;
   anchor.insertAdjacentElement("afterend", form);
   const keyBox = form.querySelector(".af-key");
   const valBox = form.querySelector(".af-val");
+  const kindBox = form.querySelector(".af-kind");
+  const syncKind = () => {
+    const object = kindBox.value === "object";
+    valBox.hidden = object;
+    valBox.disabled = object;
+    if (object) valBox.value = "";
+  };
+  kindBox.addEventListener("change", syncKind);
+  syncKind();
   keyBox.focus();
   const submit = () => {
     const key = keyBox.value.trim();
     if (!key) { keyBox.focus(); return; }
     const label_path = ctx.label_path ? `${ctx.label_path}.${key}` : `${ctx.section}.${key}`;
+    const node_type = kindBox.value;
     store.addField({ bucket_id: ctx.bucket.bucket_id, section: ctx.section,
-                     parent_id: ctx.parent_id, key, value: valBox.value, path: label_path });
+                     parent_id: ctx.parent_id, key, value: node_type === "object" ? {} : valBox.value,
+                     node_type, path: label_path });
     form.remove();
     toast("已补充字段");
   };

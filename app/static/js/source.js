@@ -41,7 +41,7 @@ function buildSourceBlocks() {
       div.appendChild(img);
     } else {
       const txt = document.createElement("span");
-      txt.textContent = b.kind === "heading" ? b.heading_text : b.text;
+      txt.textContent = b.kind === "heading" || b.kind === "title" ? b.heading_text : b.text;
       div.appendChild(txt);
     }
     div.addEventListener("click", () => selectFirstFieldCiting(b.block_id));

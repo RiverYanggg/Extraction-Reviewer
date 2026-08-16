@@ -33,13 +33,20 @@ def _prf(tp: int, fp: int, fn: int) -> dict:
 def compute_metrics(paper_id: str, slots: list[dict], annot: dict) -> dict:
     fa = annot.get("fields", {})
     tp, fp, fn = {}, {}, {}
+    bucket_tp, bucket_fp, bucket_fn = {}, {}, {}
     tn = pending = reviewed = 0
 
     def bump(d, k):
         d[k] = d.get(k, 0) + 1
 
+    def bump_pair(section_map, bucket_map, section, bucket, count_type):
+        bump(section_map, section)
+        bucket_map[bucket] = bucket_map.get(bucket, {"tp": 0, "fp": 0, "fn": 0})
+        bucket_map[bucket][count_type] += 1
+
     for s in slots:
         sec = s["section"]
+        bucket = s.get("bucket_id", "paper_level")
         a = fa.get(s["field_id"], {})
         st = a.get("review_status", "unprocessed")
         ov = s["value"]
@@ -49,26 +56,28 @@ def compute_metrics(paper_id: str, slots: list[dict], annot: dict) -> dict:
             if _is_null(ov):
                 tn += 1
             else:
-                bump(tp, sec)
+                bump_pair(tp, bucket_tp, sec, bucket, "tp")
         elif st == "modified":
             reviewed += 1
             if _is_null(ov) and not _is_null(rv):
-                bump(fn, sec)
+                bump_pair(fn, bucket_fn, sec, bucket, "fn")
             elif not _is_null(ov) and not _is_null(rv):
-                bump(fp, sec); bump(fn, sec)
+                bump_pair(fp, bucket_fp, sec, bucket, "fp"); bump_pair(fn, bucket_fn, sec, bucket, "fn")
             elif not _is_null(ov) and _is_null(rv):
-                bump(fp, sec)
+                bump_pair(fp, bucket_fp, sec, bucket, "fp")
             else:
                 tn += 1
         elif st == "conflict":
             reviewed += 1
             if not _is_null(ov):
-                bump(fp, sec)
+                bump_pair(fp, bucket_fp, sec, bucket, "fp")
         else:
             pending += 1
 
     for added in annot.get("added_fields", []):
-        bump(fn, added.get("section", "added"))
+        section = added.get("section", "added")
+        bucket = added.get("bucket_id", "paper_level")
+        bump_pair(fn, bucket_fn, section, bucket, "fn")
 
     sections = sorted(set(tp) | set(fp) | set(fn))
     per_section = {s: _prf(tp.get(s, 0), fp.get(s, 0), fn.get(s, 0)) for s in sections}
@@ -92,6 +101,10 @@ def compute_metrics(paper_id: str, slots: list[dict], annot: dict) -> dict:
         "overall": overall,
         "per_section": per_section,
         "per_section_labeled": per_section_labeled,
+        "per_bucket": {
+            bucket: _prf(bucket_tp.get(bucket, {}).get("tp", 0), bucket_fp.get(bucket, {}).get("fp", 0), bucket_fn.get(bucket, {}).get("fn", 0))
+            for bucket in sorted(set(bucket_tp) | set(bucket_fp) | set(bucket_fn))
+        },
         "coverage": {
             "total_slots": total, "reviewed_slots": reviewed, "pending_slots": pending,
             "true_negatives": tn, "added_fields": len(annot.get("added_fields", [])),
